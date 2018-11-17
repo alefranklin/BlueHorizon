@@ -25,7 +25,8 @@ DROP TABLE IF EXISTS `rocket_travel`;
 CREATE TABLE `rocket_travel` (
   `id_travel` int(6) unsigned NOT NULL,
   `id_rocket` int(6) unsigned NOT NULL,
-  PRIMARY KEY (`id_travel`,`id_rocket`),
+  `date` date NOT NULL,
+  PRIMARY KEY (`id_travel`,`id_rocket`,`date`),
   KEY `id_rocket` (`id_rocket`),
   CONSTRAINT `rocket_travel_ibfk_1` FOREIGN KEY (`id_travel`) REFERENCES `travels` (`id`),
   CONSTRAINT `rocket_travel_ibfk_2` FOREIGN KEY (`id_rocket`) REFERENCES `rockets` (`id`)
@@ -126,4 +127,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-17  0:49:26
+-- Dump completed on 2018-11-17 19:56:29
