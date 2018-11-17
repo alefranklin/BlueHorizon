@@ -1,3 +1,5 @@
+**run: $sh updateDB.sh USER** per aggiornare il database in automatico
+
 users(**id**, name, lastname, sex, email, password)
 
 | Field | Type | Null | Key | Default | Extra |
