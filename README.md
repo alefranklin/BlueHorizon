@@ -1,3 +1,6 @@
+per generare il vostro file config.php
+**USATE**: cat config-sample.php > config.php
+
 **run: $sh updateDB.sh USER** per aggiornare il database in automatico
 
 users(**id**, name, lastname, sex, email, password)
