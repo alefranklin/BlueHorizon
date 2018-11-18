@@ -39,3 +39,4 @@ rocket_travel(**id_travel***, **id_rocket***)
 | --- | --- | --- | --- | --- | --- |
 | id_travel | int(6) unsigned | NO   | PRI | NULL    |       |
 | id_rocket | int(6) unsigned | NO   | PRI | NULL    |       |
+| data      | data            | NO   | PRI | NULL    |       |
