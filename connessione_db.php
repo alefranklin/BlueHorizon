@@ -6,7 +6,7 @@
     if(!$db){
         $msg='Non riesco a connettermi: errore '.mysql_error(); // questo apparirà solo se ci sarà un errore
         die ($msg);
-        error_log($msg, 3, $log_file);
+        error_log("'$msg'\n", 3, $log_file);
     }
     
 /*
@@ -17,5 +17,5 @@
         error_log($msg, 3, $log_file);
     }
 */
-    error_log('database connesso con successo', 3, $log_file);
+    error_log("database connesso con successo\n", 3, $log_file);
 ?>

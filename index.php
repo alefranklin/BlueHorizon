@@ -13,8 +13,8 @@
 
     <form id="login" action="verifica.php" method="post">
         <fieldset id="inputs">
-            <input id="email" name="email" type="text" placeholder="email" autofocus required>
-            <input id="password" name="password" type="password" placeholder="Password" required>
+            <input id="email" name="email" type="text" placeholder="email" autofocus required value="conrad92@example.org">
+            <input id="password" name="password" type="password" placeholder="Password" required value="3e44fe44">
         </fieldset>
         <fieldset id="actions">
             <input type="submit" id="submit" value="Collegati">
