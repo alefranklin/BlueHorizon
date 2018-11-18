@@ -3,7 +3,7 @@ session_start();
 //se non c'è la sessione registrata
 if (!$_SESSION['autorizzato']) {
   echo "<h1>Area riservata, ACCESS DANIED 'TUUUPIDOOOO.</h1>";
-  echo "Per effettuare il login clicca <a href='index.php'><font color='blue'>qui</font></a>";
+  echo "Per effettuare il login clicca <a href='login.php'><font color='blue'>qui</font></a>";
   die;
 }
 
