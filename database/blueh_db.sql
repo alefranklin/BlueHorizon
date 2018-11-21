@@ -1,6 +1,6 @@
 -- MySQL dump 10.16  Distrib 10.1.37-MariaDB, for debian-linux-gnu (x86_64)
 --
--- Host: localhost    Database: provadb
+-- Host: localhost    Database: sitodb
 -- ------------------------------------------------------
 -- Server version	10.1.37-MariaDB-0+deb9u1
 
@@ -38,6 +38,94 @@ CREATE TABLE `cabin` (
 LOCK TABLES `cabin` WRITE;
 /*!40000 ALTER TABLE `cabin` DISABLE KEYS */;
 /*!40000 ALTER TABLE `cabin` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `orders`
+--
+
+DROP TABLE IF EXISTS `orders`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `orders` (
+  `id` int(6) NOT NULL AUTO_INCREMENT,
+  `id_user` int(6) NOT NULL,
+  `id_travel` int(6) NOT NULL,
+  `id_rc` int(6) NOT NULL,
+  `number_of_seats` int(2) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_orders_id_user` (`id_user`),
+  KEY `fk_orders_id_travel` (`id_travel`),
+  KEY `fk_orders_id_rc` (`id_rc`),
+  CONSTRAINT `fk_orders_id_rc` FOREIGN KEY (`id_rc`) REFERENCES `rocket_cabin` (`id`),
+  CONSTRAINT `fk_orders_id_travel` FOREIGN KEY (`id_travel`) REFERENCES `travels` (`id`),
+  CONSTRAINT `fk_orders_id_user` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `orders`
+--
+
+LOCK TABLES `orders` WRITE;
+/*!40000 ALTER TABLE `orders` DISABLE KEYS */;
+/*!40000 ALTER TABLE `orders` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `rocket_cabin`
+--
+
+DROP TABLE IF EXISTS `rocket_cabin`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `rocket_cabin` (
+  `id` int(6) NOT NULL,
+  `id_rocket` int(6) NOT NULL,
+  `id_cabin` int(6) NOT NULL,
+  `number_of_cabin` int(6) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_rocket` (`id_rocket`,`id_cabin`),
+  KEY `fk_rocket_cabin_id_cabin` (`id_cabin`),
+  CONSTRAINT `fk_rocket_cabin_id_cabin` FOREIGN KEY (`id_cabin`) REFERENCES `cabin` (`id`),
+  CONSTRAINT `fk_rocket_cabin_id_rocket` FOREIGN KEY (`id_rocket`) REFERENCES `rockets` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `rocket_cabin`
+--
+
+LOCK TABLES `rocket_cabin` WRITE;
+/*!40000 ALTER TABLE `rocket_cabin` DISABLE KEYS */;
+/*!40000 ALTER TABLE `rocket_cabin` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `rocket_travel`
+--
+
+DROP TABLE IF EXISTS `rocket_travel`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `rocket_travel` (
+  `id_travel` int(6) NOT NULL,
+  `id_rocket` int(6) NOT NULL,
+  `date` date NOT NULL,
+  PRIMARY KEY (`id_travel`,`id_rocket`,`date`),
+  KEY `fk_rocket_travel_id_rocket` (`id_rocket`),
+  CONSTRAINT `fk_rocket_travel_id_rocket` FOREIGN KEY (`id_rocket`) REFERENCES `rockets` (`id`),
+  CONSTRAINT `fk_rocket_travel_id_travel` FOREIGN KEY (`id_travel`) REFERENCES `travels` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `rocket_travel`
+--
+
+LOCK TABLES `rocket_travel` WRITE;
+/*!40000 ALTER TABLE `rocket_travel` DISABLE KEYS */;
+/*!40000 ALTER TABLE `rocket_travel` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -89,35 +177,6 @@ LOCK TABLES `travels` WRITE;
 /*!40000 ALTER TABLE `travels` ENABLE KEYS */;
 UNLOCK TABLES;
 
-
---
--- Table structure for table `rocket_travel`
---
-
-DROP TABLE IF EXISTS `rocket_travel`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `rocket_travel` (
-  `id_travel` int(6) NOT NULL,
-  `id_rocket` int(6) NOT NULL,
-  `date` date NOT NULL,
-  PRIMARY KEY (`id_travel`,`id_rocket`,`date`),
-  KEY `fk_rocket_travel_id_rocket` (`id_rocket`),
-  CONSTRAINT `fk_rocket_travel_id_rocket` FOREIGN KEY (`id_rocket`) REFERENCES `rockets` (`id`),
-  CONSTRAINT `fk_rocket_travel_id_travel` FOREIGN KEY (`id_travel`) REFERENCES `travels` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `rocket_travel`
---
-
-LOCK TABLES `rocket_travel` WRITE;
-/*!40000 ALTER TABLE `rocket_travel` DISABLE KEYS */;
-/*!40000 ALTER TABLE `rocket_travel` ENABLE KEYS */;
-UNLOCK TABLES;
-
-
 --
 -- Table structure for table `users`
 --
@@ -146,70 +205,6 @@ LOCK TABLES `users` WRITE;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
-
-
-DROP TABLE IF EXISTS `rocket_cabin`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `rocket_cabin` (
-  `id` int(6) NOT NULL,
-  `id_rocket` int(6) NOT NULL,
-  `id_cabin` int(6) NOT NULL,
-  `number_of_cabin` int(6) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `id_rocket` (`id_rocket`,`id_cabin`),
-  KEY `fk_rocket_cabin_id_cabin` (`id_cabin`),
-  CONSTRAINT `fk_rocket_cabin_id_cabin` FOREIGN KEY (`id_cabin`) REFERENCES `cabin` (`id`),
-  CONSTRAINT `fk_rocket_cabin_id_rocket` FOREIGN KEY (`id_rocket`) REFERENCES `rockets` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `rocket_cabin`
---
-
-LOCK TABLES `rocket_cabin` WRITE;
-/*!40000 ALTER TABLE `rocket_cabin` DISABLE KEYS */;
-/*!40000 ALTER TABLE `rocket_cabin` ENABLE KEYS */;
-UNLOCK TABLES;
-
-
---
--- Table structure for table `orders`
---
-
-DROP TABLE IF EXISTS `orders`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `orders` (
-  `id` int(6) NOT NULL AUTO_INCREMENT,
-  `id_user` int(6) NOT NULL,
-  `id_travel` int(6) NOT NULL,
-  `id_rc` int(6) NOT NULL,
-  `number_of_seats` int(2) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `fk_orders_id_user` (`id_user`),
-  KEY `fk_orders_id_travel` (`id_travel`),
-  KEY `fk_orders_id_rc` (`id_rc`),
-  CONSTRAINT `fk_orders_id_rc` FOREIGN KEY (`id_rc`) REFERENCES `rocket_cabin` (`id`),
-  CONSTRAINT `fk_orders_id_travel` FOREIGN KEY (`id_travel`) REFERENCES `travels` (`id`),
-  CONSTRAINT `fk_orders_id_user` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `orders`
---
-
-LOCK TABLES `orders` WRITE;
-/*!40000 ALTER TABLE `orders` DISABLE KEYS */;
-/*!40000 ALTER TABLE `orders` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `rocket_cabin`
---
-
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
@@ -218,4 +213,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-21 13:52:36
+-- Dump completed on 2018-11-21 19:47:37
