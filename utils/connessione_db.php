@@ -8,14 +8,6 @@
         die ($msg);
         error_log("'$msg'\n", 3, $log_file);
     }
-    
-/*
-    $db=mysql_select_db($db_name,$db); // seleziono il database su cui lavorare
-    if(!$db){
-        $msg='Errore nella selezione del database: errore '.mysql_error(); // apparirà se la connessione non andrà a buon fine
-        die ($msg);
-        error_log($msg, 3, $log_file);
-    }
-*/
+
     error_log("database connesso con successo\n", 3, $log_file);
 ?>

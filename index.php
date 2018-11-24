@@ -11,10 +11,10 @@
 <body>
 
     <div>
-        <?php echo "Per effettuare il login clicca <a href='login.php'><font color='blue'>qui</font></a>"; ?>
+        <?php echo "Per effettuare il login clicca <a href='login/login.php'><font color='blue'>qui</font></a>"; ?>
     </div>
     <div>
-        <?php echo "Per effettuare la registrazione clicca <a href='registration.php'><font color='blue'>qui</font></a>"; ?>
+        <?php echo "Per effettuare la registrazione clicca <a href='registration/registration.php'><font color='blue'>qui</font></a>"; ?>
     </div>
 
 </body>

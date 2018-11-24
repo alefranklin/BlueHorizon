@@ -11,5 +11,5 @@ if (!$_SESSION['autorizzato']) {
 session_start();
 $cod = $_SESSION['cod']; //id cod recuperato nel file di verifica
 echo "<h1>Benvenuto nell'area riservata utente rispettabile n° $cod </h1>";
-  echo "Per effettuare il logout clicca <a href='logout.php'><font color='blue'>qui</font></a>";
+  echo "Per effettuare il logout clicca <a href='../login/logout.php'><font color='blue'>qui</font></a>";
 ?>
