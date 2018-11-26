@@ -1,7 +1,7 @@
 <?php
     session_start(); //inizio la sessione
     //includo i file necessari a collegarmi al db con relativo script di accesso
-    include("connessione_db.php");
+    include("../utils/connessione_db.php");
     //include("config.php");  
 
     //variabili POST con anti sql Injection
@@ -38,5 +38,5 @@
     }
     
     /*Redirect alla pagina riservata*/
-    echo '<script language=javascript>document.location.href="privato.php"</script>';
+    echo '<script language=javascript>document.location.href="../user/privato.php"</script>';
 ?>

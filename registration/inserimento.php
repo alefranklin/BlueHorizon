@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    include("connessione_db.php"); // includo il file di connessione al database
+    include("utils/connessione_db.php"); // includo il file di connessione al database
 
     if($_POST["username_reg"] != "" && $_POST["password_reg"]!= "" && $_POST["email_reg"] != "") {  // controllo parametri
         
@@ -26,5 +26,5 @@
         error_log("non ti sei registrato con successo\n", 3, log.txt); // log fallimento
     }
 
-    header("location:privato.php");
+    header("location:user/privato.php");
 ?>
