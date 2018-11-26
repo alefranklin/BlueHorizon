@@ -12,8 +12,7 @@ users(**id**, name, lastname, sex, email, password)
 | lastname | varchar(30)          | NO |     | NULL |                |
 | sex      | enum('M','F','N.D.') | NO |     | NULL |                |
 | email    | varchar(35)          | NO |     | NULL |                |
-| password | varchar(8)           | NO |     | NULL |                |
-
+| password | char(64)             | NO |     | NULL |                |
 
 
 rockets(**id**, model, price)
@@ -24,6 +23,7 @@ rockets(**id**, model, price)
 | model | varchar(20)         | NO   |     | NULL    |                |
 | price | bigint(12) unsigned | YES  |     | NULL    |                |
 
+
 travels(**id**, departure, arrival, date)
 
 | Field | Type | Null | Key | Default | Extra |
@@ -33,6 +33,7 @@ travels(**id**, departure, arrival, date)
 | arrival   | varchar(30)     | NO   |     | NULL    |                |
 | date      | date            | YES  |     | NULL    |                |
 
+
 rocket_travel(**id_travel***, **id_rocket***)
 
 | Field | Type | Null | Key | Default | Extra |
@@ -40,6 +41,7 @@ rocket_travel(**id_travel***, **id_rocket***)
 | id_travel | int(6) unsigned | NO   | PRI | NULL    |       |
 | id_rocket | int(6) unsigned | NO   | PRI | NULL    |       |
 | data      | data            | NO   | PRI | NULL    |       |
+
 
 cabin(**id**, seats, class)
 //unique(seats,class)
@@ -50,6 +52,7 @@ cabin(**id**, seats, class)
 | seats | int(2)                                | NO   | MUL | NULL    |                |
 | class | enum('Standard','Deluxe','SpaceClub') | NO   |     | NULL    |                |
 
+
 rocket_cabin(**id**, id_rocket*, id_cabin*, number_of_cabin)
 //unique(id_rocket, id_cabin)
 
@@ -59,6 +62,7 @@ rocket_cabin(**id**, id_rocket*, id_cabin*, number_of_cabin)
 | id_rocket       | int(6) | NO   | MUL | NULL    |       |
 | id_cabin        | int(6) | NO   | MUL | NULL    |       |
 | number_of_cabin | int(6) | NO   |     | NULL    |       |
+
 
 orders(**id**, id_user*, id_travel*, id_rc*, number_of_seats)
 

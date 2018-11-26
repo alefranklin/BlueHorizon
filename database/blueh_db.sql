@@ -192,7 +192,7 @@ CREATE TABLE `users` (
   `lastname` varchar(30) NOT NULL,
   `sex` enum('M','F','N.D.') NOT NULL,
   `email` varchar(35) NOT NULL,
-  `password` varchar(8) NOT NULL,
+  `password` char(64) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -216,4 +216,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-22 14:15:40
+-- Dump completed on 2018-11-26 14:12:55
