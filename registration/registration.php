@@ -36,13 +36,21 @@
             $uppercase = preg_match('@[A-Z]@', $password);
             $lowercase = preg_match('@[a-z]@', $password);
             $number    = preg_match('@[0-9]@', $password);
+	    
+	    if(!$uppercase) {
+	    	$passwordErr = "Must contain at least one uppercase character<br/>";
+	    }
+	    
+	    if(!$lowercase) {
+	    	$passwordErr = $passwordErr."Must contain at least one lowercase character<br/>";
+	    }
+	    
+	    if(!$number) {
+	    	$passwordErr = $passwordErr."Must contain at least 1 number<br/>";
+	    }
             
-            if(!$uppercase || !$lowercase || !$number || strlen($password) < 8) {
-                $passwordErr = "The requirements:<br/>
-                Must be a minimum of 8 characters<br/>
-                Must contain at least 1 number<br/>
-                Must contain at least one uppercase character<br/>
-                Must contain at least one lowercase character"; 
+            if(strlen($password) < 8) {
+                $passwordErr = $passwordErr."Must be a minimum of 8 characters"; 
             }
         }
         
@@ -93,7 +101,7 @@
             </p>
             <br/>
             <p>
-                Lastname: <input type="text" name="name" value="<?php echo $lastname;?>">
+                Lastname: <input type="text" name="lastname" value="<?php echo $lastname;?>">
                 <span class="error">* <?php echo $lastnameErr;?></span>
             </p>
             <br/>
