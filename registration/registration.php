@@ -90,7 +90,29 @@
         
         //se non si sono verificati errori procedo con la registrazione dei dati
         if(!$error) {
-        
+            include("utils/connessione_db.php"); // includo il file di connessione al database
+
+            // scrivo sul DB
+            $query = "INSERT INTO users (name,lastname,sex,email,password)
+            VALUES ('".$_POST["name"]."','".$_POST["lastname"]."','".$_POST["gender"]."','".$_POST["email"]."','".hash("sha256", $_POST["password"]."salt")."')";
+            
+            try {
+            
+                $ris_reg = $db->query($query) or die (mysql_error()); // se la query fallisce
+            
+            } catch (Exception $e) {
+                print_r($e);
+            }
+
+            //se la registrazione è andata a buon fine
+            if(isset($ris_reg)) {
+
+                //Registro l'autorizzazione dell'utente
+                $_SESSION["autorizzato"] = 1;
+
+            }
+
+            header("location:../user/privato.php");
         }
     }
 
@@ -152,9 +174,9 @@
 
             <div class="group">
                 Gender:
-                <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
-                <input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
-                <input type="radio" name="gender" <?php if (isset($gender) && $gender=="other") echo "checked";?> value="other">Other  
+                <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="F">Female
+                <input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="M">Male
+                <input type="radio" name="gender" <?php if (isset($gender) && $gender=="other") echo "checked";?> value="N.D.">Other  
                 <span class="error">* <?php echo $genderErr;?></span>
             </div>
 
@@ -166,3 +188,4 @@
         
     <body>
 </html>
+
