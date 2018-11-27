@@ -65,14 +65,11 @@
     }
     
     .topnav a:not(:first-of-type){
-        border-left: 1px solid;
-        border-left-color: linear-gradient(white, #404040);
+        border-left: 1px solid lightgray;
     }
     .topnav a:link{
-        color: white;
     }
     .topnav a:visited{
-        color: #a9a9a9;
     }
     
     .topnav a:hover{
