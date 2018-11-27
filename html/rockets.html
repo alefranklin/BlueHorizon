@@ -2,10 +2,10 @@
 	<head>
 		<title> Blue Horizon </title>
 		
-		<base href="rockets.html" target="_blank">
+		<base href="rockets.html">
 		
-		<meta name="description" content="Viaggi spaziali">
-		<meta name="keywords" content="space, rocket, sell, travel">
+		<meta name="description" content="Vendita razzi">
+		<meta name="keywords" content="space, rocket, sell">
         <meta charset="UTF-8">
         
         <link rel="stylesheet" type="text/css" href="../style/style-small.css">
@@ -18,19 +18,18 @@
 	
     <body>
         <div id="header">
-            <a href="index.html"><img id="logo" src="../img/logo-placeholder.png"></a>
+            <img id="logo" src="../img/logo-placeholder.png">
             <!--h1 class="space-font"> <b>BLUE HORIZON</b> </h1>
             <h2 class="space-font"> TO THE INFINITY AND BEYOND </h2> -->
-            <nav> <!-- <-screen reader stuff -->
-                <ul id="menu">
-                    <li><a href="index.html"> HOME   </a></li>
-                    <li><a href="company.html"> COMPANY </a></li>
-                    <li class="active"><a href="rockets.html"> ROCKETS </a></li>
-                    <li><a href="travels.html"> TRAVELS </a></li>
-                    <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                    <i class="fa fa-bars"></i></a></li>
-                </ul>
-            </nav> 
+            
+            <nav id="menu" class="topnav"> <!-- <-screen reader stuff -->
+                	<a class="space-font" href="../index.html"> HOME   </a>
+                    <a class="space-font" href="company.html"> COMPANY </a>
+                    <a class="active space-font" href="rockets.html" onclick="return false;"> ROCKETS </a>
+                    <a class="space-font" href="travels.html"> TRAVELS </a>
+                    <a href="javascript:void(0);" class="icon" onclick="toggleHamburger()">
+                    <i class="fa fa-bars"></i></a>
+            </nav>
         </div>
         <!-- menu -->
            
