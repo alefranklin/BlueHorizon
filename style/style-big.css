@@ -1,12 +1,12 @@
 @media only screen and (min-width: 768px){
     body {
+        overflow: hidden;
         text-align: center;
         margin: auto;
         background-color: darkslategrey;
     }
 
     #header{
-        /*background-image: url(../img/bg-space.jpg);*/
         background-color: #404040;
         margin: auto;
         text-align: left;
@@ -54,7 +54,7 @@
 
    .topnav a{
         float: left;
-        display: inline-block;
+        display: block;
         color: #f2f2f2;
         margin: 18px 0px;
         padding: 5px 15px;
@@ -63,9 +63,86 @@
         height: auto;
         vertical-align: middle;
     }
+    .topnav a.user-icon-container{
+        height: auto;
+        margin: 18px 0px 14px 0px;
+        padding: 3.5px 15px;
+        width: auto;
+        font-size: 21px;
+        text-align: center;
+        
+    }
     
     .topnav a:not(:first-of-type){
         border-left: 1px solid lightgray;
+    }
+    
+    @keyframes enter-animation{
+        from{
+            right:-30%;
+            background-color: transparent;
+        }
+        to{
+            right:0%;
+            background-color: aqua;
+        }
+    }
+    @-webkit-keyframes enter-animation{
+        from{
+            right:-30%;
+            background-color: transparent;
+        }
+        to{
+            right:0%;
+            background-color: aqua;
+        }
+    }
+    
+    @keyframes exit-animation{
+        from{
+            right:0%;
+            background-color: aqua;
+           
+        }
+        to{
+            right:-30%;
+            background-color: transparent; 
+        }
+    }
+    @-webkit-keyframes exit-animation{
+        from{
+            right:0%;
+            background-color: aqua;
+        }
+        to{     
+            right:-30%;
+            background-color: transparent;
+        }
+    }
+    
+    #user-div{
+        position: relative;
+        height: 200px;
+        width: 30%;
+        right: -30%;
+        float: right;
+        background-color: aquamarine;
+    }
+    
+    .initial{
+        display: none;
+    }
+    
+    .enter-animation{
+        -webkit-animation: enter-animation 1s;
+        animation: enter-animation 1s;
+        animation-fill-mode: forwards;
+    }
+    
+    .exit-animation{
+        -webkit-animation: exit-animation 1s;
+        animation: exit-animation 1s;
+        animation-fill-mode: forwards;
     }
     .topnav a:link{
     }
