@@ -1,24 +1,27 @@
 @media only screen and (min-width: 768px){
     body {
-        max-width: 1024px;
         text-align: center;
         margin: auto;
         background-color: darkslategrey;
     }
 
     #header{
-        background-image: url(../img/bg-space.jpg);
+        /*background-image: url(../img/bg-space.jpg);*/
+        background-color: #404040;
         margin: auto;
         text-align: left;
         overflow: hidden;
+        height: 60px;
     }
 
     #logo {
         float: left;
+        position: relative;
+        left: 7%;
         min-height: 20px;
         min-width: 50px;
-        width: 30%;
-        height: auto;
+        width: auto;
+        height: inherit;
         overflow: hidden;
     }
 
@@ -32,36 +35,38 @@
         margin-top: 0px;
     }
     .space-font{
-        color: #FFF;
+        color: darkgray;
         text-align: center;
         font-family: 'lato',sans-serif;
-        font-weight: 300;
-        background: -webkit-linear-gradient(white, #38495a);
+        font-weight: bold;
+        background: -webkit-linear-gradient(white, #5f6d7a);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+    
 
     .topnav {
         float: right;
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: #333;
-    }
-
-    .active{
-        background-color: gray;
+        height: inherit;
+        position: relative;
+        right: 7%;
     }
 
    .topnav a{
         float: left;
-        display: block;
+        display: inline-block;
         color: #f2f2f2;
-        text-align: center;
-        padding: 14px 16px;
+        margin: 18px 0px;
+        padding: 5px 15px;
         text-decoration: none;
-        font-size: 17px;
+        font-size: 15px;
+        height: auto;
+        vertical-align: middle;
+    }
+    
+    .topnav a:not(:first-of-type){
+        border-left: 1px solid;
+        border-left-color: linear-gradient(white, #404040);
     }
     .topnav a:link{
         color: white;
@@ -69,8 +74,16 @@
     .topnav a:visited{
         color: #a9a9a9;
     }
+    
     .topnav a:hover{
-        background-color: dimgray;
+        background: -webkit-linear-gradient(orange, lightgray);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .active{
+        background: -webkit-linear-gradient(#5294e2, #85b4ea);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     .topnav a.icon{
