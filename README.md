@@ -11,7 +11,7 @@ users(**id**, name, lastname, sex, email, password)
 | name     | varchar(30)          | NO |     | NULL |                |
 | lastname | varchar(30)          | NO |     | NULL |                |
 | sex      | enum('M','F','N.D.') | NO |     | NULL |                |
-| email    | varchar(35)          | NO |     | NULL |                |
+| email    | varchar(35)          | NO | PRI | NULL |                |
 | password | char(64)             | NO |     | NULL |                |
 
 
