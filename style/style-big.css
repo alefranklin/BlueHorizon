@@ -170,7 +170,6 @@
     .topnav a.icon{
         display: none;
     }
-<<<<<<< HEAD
     
     #scroll-back-btn{
         color: darkorange;
@@ -187,10 +186,6 @@
         color: #b26200;
     }
 
-    
-=======
-
->>>>>>> 6e57d3a1cbec94aa82e7fc0dddd16075447a272b
     #login input.login-text{
         display: block;
         width: 70%;
