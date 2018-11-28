@@ -50,7 +50,7 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-    
+
 
     .topnav {
         float: right;
@@ -77,13 +77,13 @@
         width: auto;
         font-size: 21px;
         text-align: center;
-        
+
     }
-    
+
     .topnav a:not(:first-of-type){
         border-left: 1px solid lightgray;
     }
-    
+
     @keyframes enter-animation{
         from{
             right:-30%;
@@ -102,27 +102,27 @@
             right: 9px;
         }
     }
-    
+
     @keyframes exit-animation{
         from{
             right: 9px;
-           
+
         }
         to{
             right:-30%;
-            background-color: transparent; 
+            background-color: transparent;
         }
     }
     @-webkit-keyframes exit-animation{
         from{
             right: 9px;
         }
-        to{     
+        to{
             right:-30%;
             background-color: transparent;
         }
     }
-    
+
     #user-div{
         position: fixed;
         height: 150px;
@@ -132,30 +132,30 @@
         float: right;
         background-color: #757575;
         border-radius: 5px;
-        
+
     }
-    
+
     .initial{
         display: none;
     }
-    
+
     .enter-animation{
         -webkit-animation: enter-animation 1s;
         animation: enter-animation 1s;
         animation-fill-mode: forwards;
     }
-    
+
     .exit-animation{
         -webkit-animation: exit-animation 1s;
         animation: exit-animation 1s;
         animation-fill-mode: forwards;
     }
-    
+
     .topnav a:link{
     }
     .topnav a:visited{
     }
-    
+
     .topnav a:hover{
         background: -webkit-linear-gradient(orange, lightgray);
         -webkit-background-clip: text;
@@ -170,6 +170,7 @@
     .topnav a.icon{
         display: none;
     }
+<<<<<<< HEAD
     
     #scroll-back-btn{
         color: darkorange;
@@ -187,6 +188,9 @@
     }
 
     
+=======
+
+>>>>>>> 6e57d3a1cbec94aa82e7fc0dddd16075447a272b
     #login input.login-text{
         display: block;
         width: 70%;
@@ -199,11 +203,11 @@
         text-align: center;
         color: black;
     }
-    
+
     #login input.login-text::placeholder{
         color: black;
     }
-    
+
     #login input.login-button{
         display: block;
         width: 30%;
@@ -212,8 +216,8 @@
         border: none;
         border-radius: 3px;
         vertical-align: middle;
-    } 
-    
+    }
+
     .registration-link{
         font-family: "Arial", sans-serif;
         position: absolute;
