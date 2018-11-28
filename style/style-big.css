@@ -1,15 +1,14 @@
 @media only screen and (min-width: 768px){
     body {
-        overflow: hidden;
         text-align: center;
         margin: auto;
         background-color: #182c43;
     }
 
-		.filler{
-				width: 100%;
-				height: 60px;
-		}
+    #filler{
+        width: 100%;
+        height: 60px;
+    }
 
     #header{
         background-color: #404040;
@@ -172,6 +171,22 @@
         display: none;
     }
     
+    #scroll-back-btn{
+        color: darkorange;
+        font-size: 50px;
+        display: none;
+        border-style: hidden;
+        border-radius: 10px;
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+    }
+    
+    #scroll-back-btn:hover{
+        color: #b26200;
+    }
+
+    
     #login input.login-text{
         display: block;
         width: 70%;
@@ -200,7 +215,7 @@
     } 
     
     .registration-link{
-        font-family: "Impact", sans-serif;
+        font-family: "Arial", sans-serif;
         position: absolute;
         bottom: 1px;
         right: 2px;
