@@ -6,8 +6,16 @@
         background-color: #182c43;
     }
 
+		.filler{
+				width: 100%;
+				height: 60px;
+		}
+
     #header{
         background-color: #404040;
+        position: fixed;
+        top: 0;
+        width: 100%;
         margin: auto;
         text-align: left;
         overflow: hidden;
