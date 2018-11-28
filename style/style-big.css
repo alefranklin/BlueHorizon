@@ -3,7 +3,7 @@
         overflow: hidden;
         text-align: center;
         margin: auto;
-        background-color: darkslategrey;
+        background-color: #182c43;
     }
 
     #header{
@@ -83,8 +83,7 @@
             background-color: transparent;
         }
         to{
-            right:0%;
-            background-color: aqua;
+            right: 9px;
         }
     }
     @-webkit-keyframes enter-animation{
@@ -93,15 +92,13 @@
             background-color: transparent;
         }
         to{
-            right:0%;
-            background-color: aqua;
+            right: 9px;
         }
     }
     
     @keyframes exit-animation{
         from{
-            right:0%;
-            background-color: aqua;
+            right: 9px;
            
         }
         to{
@@ -111,8 +108,7 @@
     }
     @-webkit-keyframes exit-animation{
         from{
-            right:0%;
-            background-color: aqua;
+            right: 9px;
         }
         to{     
             right:-30%;
@@ -122,11 +118,14 @@
     
     #user-div{
         position: relative;
-        height: 200px;
-        width: 30%;
+        height: 25%;
+        width: 25%;
+        top: 9px;
         right: -30%;
         float: right;
-        background-color: aquamarine;
+        background-color: #757575;
+        border-radius: 5px;
+        
     }
     
     .initial{
@@ -144,6 +143,7 @@
         animation: exit-animation 1s;
         animation-fill-mode: forwards;
     }
+    
     .topnav a:link{
     }
     .topnav a:visited{
@@ -163,4 +163,36 @@
     .topnav a.icon{
         display: none;
     }
+    
+    #login input.text{
+        display: block;
+        width: 70%;
+        height: auto;
+        margin: 15px 15%;
+        padding-bottom: 6px;
+        border: none;
+        border-bottom: #39679e 3px solid;
+        background-color: transparent;
+        text-align: center;
+        color: black;
+    }
+    
+    #login input.text::placeholder{
+        color: black;
+    }
+    
+    #login input.text::backdrop{
+        border-bottom-color: red;
+    }
+    
+    #login input.button{
+        display: block;
+        width: 30%;
+        height: 30px;
+        margin: 0px 35%;
+        margin-top: 30px;
+        border: none;
+        border-radius: 3px;
+        vertical-align: middle;
+    }    
 }
