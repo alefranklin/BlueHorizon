@@ -13,6 +13,8 @@
         <link rel="stylesheet" type="text/css" href="../style/style-medium.css">
         <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+				<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <script src="../js/scrpit.js"></script>
 	</head>
 
@@ -29,25 +31,39 @@
                     <a class="space-font" href="company.html"> COMPANY </a>
                     <a class="space-font" href="rockets.html"> ROCKETS </a>
                     <a class="active space-font" href="travels.html" onclick="return false;"> TRAVELS </a>
+										<a href="javascript:void(0); "class="user-icon-container space-font" onclick="toggleUser(0)">
+                        <i class="user-icon fas fa-user"></i>
+                    </a>
                     <a href="javascript:void(0);" class="icon" onclick="toggleHamburger()">
                     <i class="fa fa-bars"></i></a>
             </nav>
         </div>
 
+				<div id="user-div" class="enter-animation">
+            <form id="login" action="verifica.php" method="post">
+                    <input id="email" name="email" type="email" placeholder="Email" autofocus required class="login-text">
+                    <input id="password" name="password" type="password" placeholder="Password" required class="login-text">
+                    <input type="submit" id="submit" value="Login" class="login-button">
+            </form>
+            <div class="registration-link">
+                Non hai un account? <a href="html/registrazione.php"> Registrati qui!</a>
+            </div>
+        </div>
+
 				<div id="travel mars">
-					<img id="mars" src="../img/mars.jpg">
+					<img id="mars" src="../img/marte.jpg">
 					<p class="space-font"> MARTE </p>
 					<p> Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. </p>
 				</div>
 				<br>
 				<div id="travel pluto">
-					<img id="pluto" src="../img/pluto.jpg">
+					<img id="pluto" src="../img/plutone.jpeg">
 					<p class="space-font"> PLUTONE </p>
 					<p> Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. </p>
 				</div>
 				<br>
 				<div id="travel earth">
-					<img id="earth" src="../img/pluto.jpg">
+					<img id="earth" src="../img/terra.jpg">
 					<p class="space-font"> TERRA </p>
 					<p> Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. </p>
 				</div>
