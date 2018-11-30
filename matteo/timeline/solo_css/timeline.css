@@ -1,0 +1,105 @@
+
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+
+html {
+  height: 100%;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+body { 
+  margin:0;
+  padding:0;
+	  perspective: 100px;
+  perspective-origin: 4000px 500px;
+	  transform-style: preserve-3d;
+  height: 100%;
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  font-family: Nunito;
+  font-size: 72px;
+  color: white;
+  background-color: rgba(255,0,0,0.1);
+}
+
+.world {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 8000px;
+  height: 100%;
+  transform-style: inherit;
+  transform: translateZ(0px);
+  z-index: 0;
+  background-size: 50% / cover;
+}
+
+/* For background image to show only
+.float:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left:0;
+  right:0;
+}
+*/
+
+.float {
+  position: absolute;
+  display: inline-block;
+  transform-style: inherit;
+  text-shadow: 5px 10px 20px #000;
+}
+
+.depth5 {
+  transform: translateZ(5px);
+  z-index: 5;
+}
+
+.depth10 {
+  transform: translateZ(10px);
+  z-index: 10;
+}
+
+.depth15 {
+  transform: translateZ(15px);
+  z-index: 15;
+}
+
+.depth20 {
+  transform: translateZ(20px);
+  z-index: 20;
+}
+
+.depth30 {
+  transform: translateZ(30px);
+  z-index: 30;
+}
+
+.purple {
+  color: purple;
+}
+
+.red {
+  color: red;
+}
+
+.blue {
+  color: blue;
+}
+
+.green {
+  color: green;
+}
+
+.panel {
+  width: 150px;
+  height: 200px;
+  background-color: papayawhip;
+  box-shadow: 0 1px 40px black;
+  font-size: 24px;
+  color: black;
+  padding: 20px;
+}

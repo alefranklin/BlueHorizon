@@ -42,7 +42,7 @@
     </div>
   </div>
   <div class="container right">
-      <img src="img/sputnik.jpg" alt="locandina sputnik">
+      <img src="../img/sputnik.jpg" alt="locandina sputnik">
     <div id="a1957" class="content small">
       <h2>1957</h2>
       <p>
