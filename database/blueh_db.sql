@@ -139,7 +139,6 @@ DROP TABLE IF EXISTS `rockets`;
 CREATE TABLE `rockets` (
   `id` int(6) unsigned NOT NULL AUTO_INCREMENT,
   `model` varchar(20) NOT NULL,
-  `price` bigint(12) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -193,8 +192,11 @@ CREATE TABLE `users` (
   `sex` enum('M','F','N.D.') NOT NULL,
   `email` varchar(35) NOT NULL,
   `password` char(64) NOT NULL,
-  PRIMARY KEY (`id`,`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4;
+  `username` varchar(20) NOT NULL,
+  PRIMARY KEY (`id`,`email`,`username`),
+  UNIQUE KEY `email` (`email`),
+  UNIQUE KEY `username` (`username`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -203,7 +205,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Zelma','Treutel','N.D.','conrad92@example.org','3e44fe44'),(2,'Jodie','Gleichner','M','amira12@example.com','c611cc0c'),(3,'Margarette','Quigley','F','dking@example.org','6450f4ed'),(4,'Twila','Hodkiewicz','N.D.','ekeeling@example.org','dd54d377'),(5,'Sonny','Gutkowski','N.D.','dicki.natasha@example.org','9a072b5d'),(6,'Dennis','Casper','F','anabelle.reichert@example.net','04b67e1b'),(7,'Guadalupe','Botsford','N.D.','adele.smitham@example.org','5b446224'),(8,'Eduardo','Altenwerth','M','freddie34@example.com','3254bd29'),(9,'Ralph','Mueller','N.D.','taryn87@example.net','20d05139'),(10,'Idella','Orn','F','ldare@example.org','11f42e4b');
+INSERT INTO `users` VALUES (11,'admin','admin','N.D.','admin@bluehorizon.com','root','admin');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -216,4 +218,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-27 11:58:08
+-- Dump completed on 2018-11-30 12:12:37

@@ -3,7 +3,12 @@ per generare il vostro file config.php
 
 **run: $sh updateDB.sh USER** lper aggiornare il database in automatico
 
-users(**id**, name, lastname, sex, email, password)
+USER ADMIN: admin
+PASSWORD ADMIN: root
+
+users(**id**, name, lastname, sex, **email**, password, **username**)
+//unique(email)
+//unique(username)
 
 | Field | Type | Null | Key | Default | Extra |
 | --- | --- | --- | --- | --- | --- |
@@ -13,6 +18,7 @@ users(**id**, name, lastname, sex, email, password)
 | sex      | enum('M','F','N.D.') | NO |     | NULL |                |
 | email    | varchar(35)          | NO | PRI | NULL |                |
 | password | char(64)             | NO |     | NULL |                |
+| username | varchar(20)          | NO | PRI | NULL |                |
 
 
 rockets(**id**, model, price)
@@ -21,7 +27,6 @@ rockets(**id**, model, price)
 | --- | --- | --- | --- | --- | --- |
 | id    | int(6) unsigned     | NO   | PRI | NULL    | auto_increment |
 | model | varchar(20)         | NO   |     | NULL    |                |
-| price | bigint(12) unsigned | YES  |     | NULL    |                |
 
 
 travels(**id**, departure, arrival, date)
@@ -73,4 +78,3 @@ orders(**id**, id_user*, id_travel*, id_rc*, number_of_seats)
 | id_travel       | int(6) | NO   | MUL | NULL    |                |
 | id_rc           | int(6) | NO   | MUL | NULL    |                |
 | number_of_seats | int(2) | NO   |     | NULL    |                |
-
