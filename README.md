@@ -78,3 +78,10 @@ orders(**id**, id_user*, id_travel*, id_rc*, number_of_seats)
 | id_travel       | int(6) | NO   | MUL | NULL    |                |
 | id_rc           | int(6) | NO   | MUL | NULL    |                |
 | number_of_seats | int(2) | NO   |     | NULL    |                |
+
+images(**path**, **name**)
+
+| Field | Type | Null | Key | Default | Extra |
+| --- | --- | --- | --- | --- | --- |
+| path  | varchar(30) | NO   | PRI | NULL    |       |
+| name  | varchar(10) | NO   | PRI | NULL    |       |
