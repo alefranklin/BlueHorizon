@@ -1,0 +1,38 @@
+.timeline {
+    position:absolute;
+    display:block;
+    
+    height: 500px;
+    width: 2000px;
+    
+    top:0;
+    left:0;
+    
+    background: black;
+    
+    /*
+    transform-origin:right top;
+    transform:rotate(-90deg) translateY(-100px);*/
+    
+    /*
+    overflow-y: auto;
+    overflow-x: hidden;*/
+}
+
+.timeline > div{
+  display:block;
+  padding:5px;
+  background: white;
+  transform:rotate(90deg);
+  transform-origin: right top;
+}
+
+.float {
+    display: inline-block;
+    transform-style: inherit;
+    text-shadow: 5px 10px 20px #000;
+    
+    width:150px;
+    height:400px;
+    margin:100px;
+}

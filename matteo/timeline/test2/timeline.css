@@ -1,3 +1,4 @@
+/*
 .horizontal-scroll-wrapper {
   width: 100px;
   height: 300px;
@@ -16,4 +17,172 @@
     
     transform: rotate(90deg);
   transform-origin: right top;
+}*/
+
+/***********************************************/
+::-webkit-scrollbar{width:2px;height:2px;}
+::-webkit-scrollbar-button{width:2px;height:2px;}
+
+div{
+  box-sizing:border-box;
 }
+
+body {
+  background: #111;
+}
+
+.horizontal-scroll-wrapper{
+  position:absolute;
+  display:block;
+  top:0;
+  left:0;
+  width:80px;
+  max-height:300px;
+  margin:0;
+  background:#abc;
+  overflow-y:auto;
+  overflow-x:hidden;
+  transform:rotate(-90deg) translateY(-80px);
+  transform-origin:right top;
+}
+.horizontal-scroll-wrapper > div{
+  display:block;
+  padding:5px;
+  background:#cab;
+  transform:rotate(90deg);
+  transform-origin: right top;
+}
+
+.squares{
+  padding:60px 0 0 0;
+}
+
+.squares > div{
+  width:60px;
+  height:60px;
+  margin:10px;
+}
+
+.rectangles{
+  top:100px;
+  padding:100px 0 0 0;
+}
+.rectangles > div{
+  width:140px;
+  height:60px;
+  margin:50px 10px;
+  padding:5px;
+  background:#cab;
+  transform:rotate(90deg) translateY(80px);
+  transform-origin: right top;
+}
+
+/******************************************************************/
+
+/*
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+
+html {
+  height: 100%;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+body { 
+  margin:0;
+  padding:0;
+	  perspective: 100px;
+  perspective-origin: 4000px 500px;
+	  transform-style: preserve-3d;
+  height: 100%;
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  font-family: Nunito;
+  font-size: 72px;
+  color: white;
+  background-color: rgba(255,0,0,0.1);
+}
+
+.world {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 8000px;
+  height: 100%;
+  transform-style: inherit;
+  transform: translateZ(0px);
+  z-index: 0;
+  background-image: url("http://1hdwallpapers.com/wallpapers/touhou_project.jpg");
+  background-size: 50% / cover;
+}
+
+/* For background image to show only
+.float:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left:0;
+  right:0;
+}
+*/
+/*
+.float {
+  position: absolute;
+  display: inline-block;
+  transform-style: inherit;
+  text-shadow: 5px 10px 20px #000;
+}
+
+.depth5 {
+  transform: translateZ(5px);
+  z-index: 5;
+}
+
+.depth10 {
+  transform: translateZ(10px);
+  z-index: 10;
+}
+
+.depth15 {
+  transform: translateZ(15px);
+  z-index: 15;
+}
+
+.depth20 {
+  transform: translateZ(20px);
+  z-index: 20;
+}
+
+.depth30 {
+  transform: translateZ(30px);
+  z-index: 30;
+}
+
+.purple {
+  color: purple;
+}
+
+.red {
+  color: red;
+}
+
+.blue {
+  color: blue;
+}
+
+.green {
+  color: green;
+}
+
+.panel {
+  width: 150px;
+  height: 200px;
+  background-color: papayawhip;
+  box-shadow: 0 1px 40px black;
+  font-size: 24px;
+  color: black;
+  padding: 20px;
+}
+*/

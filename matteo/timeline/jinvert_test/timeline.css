@@ -20,7 +20,7 @@ body {
   font-family: Nunito;
   font-size: 72px;
   color: white;
-  background-color: rgba(255,0,0,0.1);
+  background-color: black;
 }
 
 .world {
@@ -32,7 +32,7 @@ body {
   transform-style: inherit;
   transform: translateZ(0px);
   z-index: 0;
-  background-image: url("http://1hdwallpapers.com/wallpapers/touhou_project.jpg");
+  
   background-size: 50% / cover;
 }
 
