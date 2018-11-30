@@ -107,6 +107,8 @@ CREATE TABLE `rocket_cabin` (
   `id_rocket` int(6) unsigned NOT NULL,
   `id_cabin` int(6) NOT NULL,
   `number_of_cabin` int(6) NOT NULL,
+  `price` int(5) unsigned NOT NULL,
+  `free` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_rocket` (`id_rocket`,`id_cabin`),
   KEY `id_cabin` (`id_cabin`),
@@ -162,6 +164,9 @@ DROP TABLE IF EXISTS `rockets`;
 CREATE TABLE `rockets` (
   `id` int(6) unsigned NOT NULL AUTO_INCREMENT,
   `model` varchar(20) NOT NULL,
+  `weight` int(6) unsigned NOT NULL,
+  `height` int(6) unsigned NOT NULL,
+  `nationality` varchar(15) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -187,6 +192,7 @@ CREATE TABLE `travels` (
   `departure` varchar(30) NOT NULL,
   `arrival` varchar(30) NOT NULL,
   `date` date DEFAULT NULL,
+  `description` varchar(300) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -197,7 +203,7 @@ CREATE TABLE `travels` (
 
 LOCK TABLES `travels` WRITE;
 /*!40000 ALTER TABLE `travels` DISABLE KEYS */;
-INSERT INTO `travels` VALUES (1,' Pluto',' Mars','1983-06-07'),(2,'Cape Canaveral',' Moon','2004-12-31'),(3,'Cape Canaveral',' Pluto','1994-04-14'),(4,' Mars',' Mars','2004-01-27'),(5,'Cape Canaveral',' Pluto','1975-01-21'),(6,' Pluto',' Mars','1978-08-09'),(7,' Moon',' Moon','1977-08-16'),(8,'Cape Canaveral',' Mars','1990-03-18'),(9,' Moon',' Mars','1984-04-27'),(10,'Cape Canaveral',' Pluto','2008-12-05');
+INSERT INTO `travels` VALUES (1,' Pluto',' Mars','1983-06-07',''),(2,'Cape Canaveral',' Moon','2004-12-31',''),(3,'Cape Canaveral',' Pluto','1994-04-14',''),(4,' Mars',' Mars','2004-01-27',''),(5,'Cape Canaveral',' Pluto','1975-01-21',''),(6,' Pluto',' Mars','1978-08-09',''),(7,' Moon',' Moon','1977-08-16',''),(8,'Cape Canaveral',' Mars','1990-03-18',''),(9,' Moon',' Mars','1984-04-27',''),(10,'Cape Canaveral',' Pluto','2008-12-05','');
 /*!40000 ALTER TABLE `travels` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -241,4 +247,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-30 15:51:28
+-- Dump completed on 2018-11-30 18:32:34
