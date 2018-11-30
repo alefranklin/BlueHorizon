@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="timeline.css">
 </head>
 <body>
-    <div class="world scroll">
+    <div class="world">
         <div class="float depth20 purple" style="left: 2000px; top: 325px;">CSS</div>
         <div class="float depth10 green" style="left: 1600px; top: 400px;">Java</div>
         <div class="float depth20 blue" style="left: 1800px; top: 300px;">HTML</div>
@@ -19,34 +19,45 @@
     </div>
     
     <script type="text/javascript" src="jquery.jInvertScroll.js"></script>
+    <script type='text/javascript' src='jquery.mousewheel.js'></script>
     <script type="text/javascript">
-    (function($) {
-        var elem = $.jInvertScroll(['.scroll'],        // an array containing the selector(s) for the elements you want to animate
-            {
-            height: 6000,                   // optional: define the height the user can scroll, otherwise the overall length will be taken as scrollable height
-            onScroll: function(percent) {   //optional: callback function that will be called when the user scrolls down, useful for animating other things on the page
-                console.log(percent);
-            }
-        });
-
-        $(window).resize(function() {
-          if ($(window).width() <= 768) {
-            elem.destroy();
-          }
-          else {
-            elem.reinitialize();
-          }
-        });
-    }(jQuery));
     
-    $(function() {
-  $("body").mousewheel(function(event, delta) {
-  this.scrollLeft -= (delta * 30);
-  event.preventDefault();
-  });
-})
+    /*
+        $(function() {
+            $("body").mousewheel(function(event, delta) {
+                this.scrollLeft -= (delta * 30);
+                event.preventDefault();
+            });
+        })*/
+        
+        
+        var scroller = {};
+scroller.e = document.getElementById("b");
+
+if (scroller.e.addEventListener) {
+    scroller.e.addEventListener("mousewheel", MouseWheelHandler, false);
+    scroller.e.addEventListener("DOMMouseScroll", MouseWheelHandler, false);
+} else scroller.e.attachEvent("onmousewheel", MouseWheelHandler);
+
+function MouseWheelHandler(e) {
+
+    // cross-browser wheel delta
+    var e = window.event || e;
+    var delta = - 20 * (Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail))));
+
+    var pst = $('#b').scrollLeft() + delta;
+
+    if (pst < 0) {
+        pst = 0;
+    } else if (pst > $('.world').width()) {
+        pst = $('.world').width();
+    }
+
+    $('#b').scrollLeft(pst);
+
+    return false;
+}
     </script>
-    <script type='text/javascript' src='/js/jquery.mousewheel.min.js'></script>
 </body>
 </html>
 
