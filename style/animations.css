@@ -1,0 +1,73 @@
+
+    @keyframes enter-animation{
+        from{
+            right:-30%;
+            background-color: transparent;
+        }
+        to{
+            right: 9px;
+        }
+    }
+    @-webkit-keyframes enter-animation{
+        from{
+            right:-30%;
+            background-color: transparent;
+        }
+        to{
+            right: 9px;
+        }
+    }
+
+    @keyframes exit-animation{
+        from{
+            right: 9px;
+
+        }
+        to{
+            right:-30%;
+            background-color: transparent;
+        }
+    }
+    @-webkit-keyframes exit-animation{
+        from{
+            right: 9px;
+        }
+        to{
+            right:-30%;
+            background-color: transparent;
+        }
+    }
+    
+    @-webkit-keyframes fade-body-animation{
+        from{
+            opacity: 1;
+        }
+        to {
+            opacity: 0.3;
+        }
+    }
+    @keyframes fade-body-animation{
+        from{
+            opacity: 1;
+        }
+        to {
+            opacity: 0.3;
+        }
+    }
+    
+     @-webkit-keyframes unfade-body-animation{
+        from{
+            opacity: 0.3;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    @keyframes unfade-body-animation{
+        from{
+            opacity: 0.3;
+        }
+        to {
+            opacity: 1;
+        }
+    }

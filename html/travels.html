@@ -20,7 +20,8 @@
 
 
     <body>
-				<!-- menu -->
+		<div id="filler"> </div>	
+        <!-- menu -->
         <div id="header">
             <img id="logo" src="../img/logo-placeholder.png">
             <!--h1 class="space-font"> <b>BLUE HORIZON</b> </h1>
@@ -39,7 +40,7 @@
             </nav>
         </div>
 
-				<div id="user-div" class="enter-animation">
+				<div id="user-div" class="initial">
             <form id="login" action="verifica.php" method="post">
                     <input id="email" name="email" type="email" placeholder="Email" autofocus required class="login-text">
                     <input id="password" name="password" type="password" placeholder="Password" required class="login-text">
@@ -49,24 +50,26 @@
                 Non hai un account? <a href="html/registrazione.php"> Registrati qui!</a>
             </div>
         </div>
-
-				<div id="travel mars">
-					<img id="mars" src="../img/marte.jpg">
-					<p class="space-font"> MARTE </p>
-					<p> Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. </p>
-				</div>
-				<br>
-				<div id="travel pluto">
-					<img id="pluto" src="../img/plutone.jpeg">
-					<p class="space-font"> PLUTONE </p>
-					<p> Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. </p>
-				</div>
-				<br>
-				<div id="travel earth">
-					<img id="earth" src="../img/terra.jpg">
-					<p class="space-font"> TERRA </p>
-					<p> Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. </p>
-				</div>
+        <i onclick="topFunction()" id="scroll-back-btn" class="fas fa-arrow-circle-up"> </i>
+        
+        <h1 id="travels-title" class="space-font">TRAVELS</h1>
+        
+        <div id="travel-list">
+            <div class="travel-panel" id="mars-banner">
+                <p class="space-font"> MARTE </p>
+                <p> Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. </p>
+            </div>
+            <br>
+            <div class="travel-panel" id="pluto-banner">
+                <p class="space-font"> PLUTONE </p>
+                <p> Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. </p>
+            </div>
+            <br>
+            <div class="travel-panel" id="earth-banner">    
+                <p class="space-font"> TERRA </p>
+                <p> Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. </p>
+            </div>
+        </div>
 
     </body>
 

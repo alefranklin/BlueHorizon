@@ -7,7 +7,7 @@
 		<meta name="description" content="Vendita razzi">
 		<meta name="keywords" content="space, rocket, sell">
         <meta charset="UTF-8">
-
+         <link rel="stylesheet" type="text/css" href="style/animations.css">
         <link rel="stylesheet" type="text/css" href="style/style-small.css">
         <link rel="stylesheet" type="text/css" href="style/style-big.css">
         <link rel="stylesheet" type="text/css" href="style/style-medium.css">
@@ -38,23 +38,24 @@
             </nav>
         </div>
         <i onclick="topFunction()" id="scroll-back-btn" class="fas fa-arrow-circle-up"> </i>
-        <div id="user-div" class="enter-animation">
+        <div id="user-div" class="initial">
             <form id="login" action="verifica.php" method="post">
-                    <input id="email" name="email" type="email" placeholder="Email" autofocus required class="login-text">
+                    <input id="email" name="email" type="email" placeholder="Email" required class="login-text">
                     <input id="password" name="password" type="password" placeholder="Password" required class="login-text">
                     <input type="submit" id="submit" value="Login" class="login-button">
             </form>
-            <div class="registration-link">
+            <span class="registration-link">
                 Non hai un account? <a href="html/registrazione.php"> Registrati qui!</a>
-            </div>
+            </span>
         </div>
 
 
         <!-- menu -->
-
-        <div id="presentation">
-        	<h1 class="space-font title"> BLUE <br> HORIZON </h1>
-        	<h2 class="space-font"> Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </h2>
+        <div id="body-page" class="">
+            <div id="presentation">
+                <h1 class="space-font"> BLUE <br> HORIZON </h1>
+                <h2 class="space-font"> Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </h2>
+            </div>
         </div>
 
     </body>
