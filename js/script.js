@@ -9,12 +9,15 @@ function toggleHamburger() {
 
 function toggleUser(){
     var x = document.getElementById("user-div");
+    var y = document.getElementById("body-page");
     if(x.className === "initial"){
         x.className = "exit-animation";
     }
     if(x.className === "enter-animation"){
+        y.className = "unfade-body";
         x.className = "exit-animation";
     } else {
+        y.className = "fade-body";
         x.className = "enter-animation"
     }
 }

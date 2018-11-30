@@ -1,8 +1,19 @@
 @media only screen and (min-width: 768px){
     body {
-        text-align: center;
         margin: auto;
         background-color: #182c43;
+    }
+    
+    .fade-body{
+        animation: fade-body-animation;
+        animation-fill-mode: forwards;
+        animation-duration: 1s;
+    }
+
+    .unfade-body{
+        animation: unfade-body-animation;
+        animation-fill-mode: forwards;
+        animation-duration: 1s;
     }
 
     #filler{
@@ -19,6 +30,7 @@
         text-align: left;
         overflow: hidden;
         height: 60px;
+        opacity: 1;
     }
 
     #logo {
@@ -82,45 +94,6 @@
 
     .topnav a:not(:first-of-type){
         border-left: 1px solid lightgray;
-    }
-
-    @keyframes enter-animation{
-        from{
-            right:-30%;
-            background-color: transparent;
-        }
-        to{
-            right: 9px;
-        }
-    }
-    @-webkit-keyframes enter-animation{
-        from{
-            right:-30%;
-            background-color: transparent;
-        }
-        to{
-            right: 9px;
-        }
-    }
-
-    @keyframes exit-animation{
-        from{
-            right: 9px;
-
-        }
-        to{
-            right:-30%;
-            background-color: transparent;
-        }
-    }
-    @-webkit-keyframes exit-animation{
-        from{
-            right: 9px;
-        }
-        to{
-            right:-30%;
-            background-color: transparent;
-        }
     }
 
     #user-div{
@@ -228,17 +201,42 @@
         
     }
     
+    #mars-banner{
+        background-image: url(../img/marte.jpg);
+  
+    }
+    
+    #earth-banner{
+        background-image: url(../img/terra.jpg);
+  
+    }
+    
+    #pluto-banner{
+        background-image: url(../img/plutone.jpeg);
+  
+    }
+    
     .travel-panel{
         display: inline-block;
-        margin: 10px 0px;
+        margin: 10px 20%;
+        width: 70%;
+        height: 200px;
+        border-radius: 5px;
         background-color: bisque;
+        overflow: hidden;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .travel-panel:hover{
+        opacity: 0.4;
     }
     
     .travel-panel img{
         position: absolute;
         max-width: 100%;
         height: auto;
-        float: left;
     }
     
     
