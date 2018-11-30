@@ -1,4 +1,4 @@
-<?php include('utils/config.php'); ?>
+<?php include('../utils/config.php'); ?>
 <!DOCTYPE html>
 <html>
 <head>

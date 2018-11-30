@@ -1,18 +1,36 @@
 <?php
     session_start();
-    include("utils/connessione_db.php"); // connessione al database
+    include("../utils/connessione_db.php"); // includo il file di connessione al database
     
     $browser = get_browser(null, true);
     //print_r($browser);
 
-    // define variables and set to empty values
-    $nameErr = $lastnameErr = $emailErr = $genderErr = $passwordErr = "";
-    $name = $lastname = $email = $gender = $password = "";
+    // definisco le variabili e le inizializzo vuote
+    $usernameErr = $nameErr = $lastnameErr = $emailErr = $genderErr = $passwordErr = "";
+    $username = $name = $lastname = $email = $gender = $password = "";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
     	
     	$error = false;
     	
+        /* PER QUANDO GESTIREMO ANCHE L'USERNAME
+        if (empty($_POST["username"])) {
+            $usernameErr = "Username is required";
+            $error = true;
+        } else {
+            $username = test_input($_POST["username"]);
+            // guardo se contiene solo lettere o numeri
+            if (!preg_match("/^[a-zA-Z0-9]*$/",$username)) {
+                $usernameErr = "sono ammessi solo lettere e numeri";
+                $error = true;
+            }
+            
+            if(check_username($username)) {
+                $emailErr = "username gia utilizzata";
+                $error = true;
+            }
+        }*/
+        
         if (empty($_POST["name"])) {
             $nameErr = "Name is required";
             $error = true;
@@ -48,20 +66,20 @@
             $lowercase = preg_match('@[a-z]@', $password);
             $number    = preg_match('@[0-9]@', $password);
 	    
-	    if(!$uppercase) {
-	    	$passwordErr = "Must contain at least one uppercase character<br/>";
-	    	$error = true;
-	    }
-	    
-	    if(!$lowercase) {
-	    	$passwordErr = $passwordErr."Must contain at least one lowercase character<br/>";
-	    	$error = true;
-	    }
-	    
-	    if(!$number) {
-	    	$passwordErr = $passwordErr."Must contain at least 1 number<br/>";
-	    	$error = true;
-	    }
+            if(!$uppercase) {
+                $passwordErr = "Must contain at least one uppercase character<br/>";
+                $error = true;
+            }
+
+            if(!$lowercase) {
+                $passwordErr = $passwordErr."Must contain at least one lowercase character<br/>";
+                $error = true;
+            }
+
+            if(!$number) {
+                $passwordErr = $passwordErr."Must contain at least 1 number<br/>";
+                $error = true;
+            }
             
             if(strlen($password) < 8) {
                 $passwordErr = $passwordErr."Must be a minimum of 8 characters";
@@ -79,6 +97,11 @@
                 $emailErr = "Invalid email format";
                 $error = true;
             }
+            
+            if(check_email($email)) {
+                $emailErr = "email gia utilizzata";
+                $error = true;
+            }
         }
 
         if (empty($_POST["gender"])) {
@@ -90,28 +113,28 @@
         
         //se non si sono verificati errori procedo con la registrazione dei dati
         if(!$error) {
-            include("utils/connessione_db.php"); // includo il file di connessione al database
-
+            
             // scrivo sul DB
+            $passwd_hash = myhash($_POST["password"]);
             $query = "INSERT INTO users (name,lastname,sex,email,password)
-            VALUES ('".$_POST["name"]."','".$_POST["lastname"]."','".$_POST["gender"]."','".$_POST["email"]."','".hash("sha256", $_POST["password"]."salt")."')";
+            VALUES ('".$_POST["name"]."','".$_POST["lastname"]."','".$_POST["gender"]."','".$_POST["email"]."','".$passwd_hash."')";
             
             try {
-            
+
                 $ris_reg = $db->query($query) or die (mysql_error()); // se la query fallisce
             
             } catch (Exception $e) {
                 print_r($e);
             }
-
+            
             //se la registrazione è andata a buon fine
             if(isset($ris_reg)) {
 
-                //Registro l'autorizzazione dell'utente
-                $_SESSION["autorizzato"] = 1;
+                get_user($_POST["email"],$_POST["password"]);
 
             }
-
+            
+            // TODO rimandare a index
             header("location:../user/privato.php");
         }
     }
@@ -174,9 +197,9 @@
 
             <div class="group">
                 Gender:
-                <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="F">Female
-                <input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="M">Male
-                <input type="radio" name="gender" <?php if (isset($gender) && $gender=="other") echo "checked";?> value="N.D.">Other  
+                <input type="radio" name="gender" <?php if (isset($gender) && $gender=="F") echo "checked";?> value="F">Female
+                <input type="radio" name="gender" <?php if (isset($gender) && $gender=="M") echo "checked";?> value="M">Male
+                <input type="radio" name="gender" <?php if (isset($gender) && $gender=="N.D.") echo "checked";?> value="N.D.">Other  
                 <span class="error">* <?php echo $genderErr;?></span>
             </div>
 
@@ -186,6 +209,5 @@
         
         <a href="../index.php" id="back">Ritorna al sito</a>
         
-    <body>
+    </body>
 </html>
-
