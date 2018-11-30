@@ -1,5 +1,10 @@
 @media only screen and (min-width: 768px){
     body {
+<<<<<<< Updated upstream
+=======
+        padding-top:60px;
+        text-align: center;
+>>>>>>> Stashed changes
         margin: auto;
         background-color: #182c43;
     }
@@ -56,13 +61,74 @@
     .space-font{
         color: darkgray;
         text-align: center;
-        font-family: 'lato',sans-serif;
+        font-family: 'lato', sans-serif;
         font-weight: bold;
         background: -webkit-linear-gradient(white, #5f6d7a);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 
+    #rockets dt,dd
+    {
+        margin: auto;
+        background-color: #f2f2f2;
+    }
+
+    #rockets dt 
+    {
+        width: 80%;
+        font-size:2em;
+        padding-bottom: 0.5em;
+        padding-top: 0.5em;
+        font-family: 'lato', sans-serif;
+        font-weight: bold;
+        color:#39679e;
+        border: 3px solid #39679e;
+        border-radius: 2em;
+    }
+    
+    #rockets dl 
+    {
+        margin-top: 5em;
+    }
+    #rockets p 
+    {
+        font-size:1em;
+        font-family: 'lato', sans-serif;
+        color: #404040;
+    }
+
+    #rockets h1
+    {
+        color:white;
+        font-size: 4em;
+        font-family: 'lato', sans-serif;
+        padding-top:1em;
+        text-align:left;
+        letter-spacing: 4px;
+        width:75%;
+        margin:auto;
+    }
+
+    #rockets dd
+    {
+        border-width:0px 3px 3px 3px;
+        border-style: solid; 
+        border-color: #39679e;
+        border-bottom-left-radius:2em;
+        border-bottom-right-radius:2em;
+        padding-top:1em;
+        padding-bottom:2em;
+        width:75%;
+        display:inline-block;
+        margin-bottom:2em;
+    }
+    .space-ship
+    {
+        width: 50%;
+        float:left;
+        overflow:auto;
+    }
 
     .topnav {
         float: right;
