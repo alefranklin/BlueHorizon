@@ -10,12 +10,14 @@
         animation: fade-body-animation;
         animation-fill-mode: forwards;
         animation-duration: 1s;
+        pointer-events: none;
     }
 
     .unfade-body{
         animation: unfade-body-animation;
         animation-fill-mode: forwards;
         animation-duration: 1s;
+        pointer-events: all;
     }
 
     #header{
