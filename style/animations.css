@@ -1,4 +1,4 @@
-
+/*animazioni div login*/
     @keyframes enter-animation{
         from{
             right:-30%;
@@ -37,7 +37,8 @@
             background-color: transparent;
         }
     }
-    
+
+    /*animazioni fade body*/
     @-webkit-keyframes fade-body-animation{
         from{
             opacity: 1;
@@ -54,7 +55,7 @@
             opacity: 0.3;
         }
     }
-    
+
      @-webkit-keyframes unfade-body-animation{
         from{
             opacity: 0.3;
