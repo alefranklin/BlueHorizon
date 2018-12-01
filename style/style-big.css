@@ -1,10 +1,7 @@
 @media only screen and (min-width: 768px){
     body {
-<<<<<<< Updated upstream
-=======
         padding-top:60px;
         text-align: center;
->>>>>>> Stashed changes
         margin: auto;
         background-color: #182c43;
     }
@@ -13,17 +10,14 @@
         animation: fade-body-animation;
         animation-fill-mode: forwards;
         animation-duration: 1s;
+        pointer-events: none;
     }
 
     .unfade-body{
         animation: unfade-body-animation;
         animation-fill-mode: forwards;
         animation-duration: 1s;
-    }
-
-    #filler{
-        width: 100%;
-        height: 60px;
+        pointer-events: all;
     }
 
     #header{
