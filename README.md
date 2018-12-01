@@ -25,18 +25,23 @@ rockets(**id**, model, price)
 
 | Field | Type | Null | Key | Default | Extra |
 | --- | --- | --- | --- | --- | --- |
-| id    | int(6) unsigned     | NO   | PRI | NULL    | auto_increment |
-| model | varchar(20)         | NO   |     | NULL    |                |
+| id          | int(6) unsigned     | NO   | PRI | NULL    | auto_increment |
+| model       | varchar(20)         | NO   |     | NULL    |                |
+| weight      | int(6) unsigned     | NO   |     | NULL    |                |
+| height      | int(6) unsigned     | NO   |     | NULL    |                |
+| nationality | varchar(15)         | YES  |     | NULL    |                |
 
 
 travels(**id**, departure, arrival, date)
 
 | Field | Type | Null | Key | Default | Extra |
 | --- | --- | --- | --- | --- | --- |
-| id        | int(6) unsigned | NO   | PRI | NULL    | auto_increment |
-| departure | varchar(30)     | NO   |     | NULL    |                |
-| arrival   | varchar(30)     | NO   |     | NULL    |                |
-| date      | date            | YES  |     | NULL    |                |
+| id          | int(6) unsigned | NO   | PRI | NULL    | auto_increment |
+| departure   | varchar(30)     | NO   |     | NULL    |                |
+| arrival     | varchar(30)     | NO   |     | NULL    |                |
+| date        | date            | YES  |     | NULL    |                |
+| description | varchar(300)    | NO   |     | NULL    |                |
+
 
 
 rocket_travel(**id_travel***, **id_rocket***)
@@ -63,10 +68,12 @@ rocket_cabin(**id**, id_rocket*, id_cabin*, number_of_cabin)
 
 | Field | Type | Null | Key | Default | Extra |
 | --- | --- | --- | --- | --- | --- |
-| id              | int(6) | NO   | PRI | NULL    |       |
-| id_rocket       | int(6) | NO   | MUL | NULL    |       |
-| id_cabin        | int(6) | NO   | MUL | NULL    |       |
-| number_of_cabin | int(6) | NO   |     | NULL    |       |
+| id              | int(6)          | NO   | PRI | NULL    |       |
+| id_rocket       | int(6)          | NO   | MUL | NULL    |       |
+| id_cabin        | int(6)          | NO   | MUL | NULL    |       |
+| number_of_cabin | int(6)          | NO   |     | NULL    |       |
+| price           | int(5) unsigned | NO   |     | NULL    |       |
+| free            | tinyint(1)      | NO   |     | NULL    |       |
 
 
 orders(**id**, id_user*, id_travel*, id_rc*, number_of_seats)

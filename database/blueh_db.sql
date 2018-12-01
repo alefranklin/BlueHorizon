@@ -78,7 +78,18 @@ CREATE TABLE `rocket_cabin` (
   `id` int(6) NOT NULL,
   `id_rocket` int(6) UNSIGNED NOT NULL,
   `id_cabin` int(6) NOT NULL,
+<<<<<<< HEAD
   `number_of_cabin` int(6) NOT NULL
+=======
+  `number_of_cabin` int(6) NOT NULL,
+  `price` int(5) unsigned NOT NULL,
+  `free` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_rocket` (`id_rocket`,`id_cabin`),
+  KEY `id_cabin` (`id_cabin`),
+  CONSTRAINT `rocket_cabin_ibfk_1` FOREIGN KEY (`id_rocket`) REFERENCES `rockets` (`id`),
+  CONSTRAINT `rocket_cabin_ibfk_2` FOREIGN KEY (`id_cabin`) REFERENCES `cabin` (`id`)
+>>>>>>> a0e662d1af599983c7e6b84926ee7f4ee5cbdb59
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -144,6 +155,7 @@ INSERT INTO `travels` (`id`, `departure`, `arrival`, `date`) VALUES
 -- Struttura della tabella `users`
 --
 
+<<<<<<< HEAD
 CREATE TABLE `users` (
   `id` int(6) UNSIGNED NOT NULL,
   `name` varchar(30) NOT NULL,
@@ -152,6 +164,18 @@ CREATE TABLE `users` (
   `email` varchar(35) NOT NULL,
   `password` char(64) NOT NULL,
   `username` varchar(20) NOT NULL
+=======
+DROP TABLE IF EXISTS `rockets`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `rockets` (
+  `id` int(6) unsigned NOT NULL AUTO_INCREMENT,
+  `model` varchar(20) NOT NULL,
+  `weight` int(6) unsigned NOT NULL,
+  `height` int(6) unsigned NOT NULL,
+  `nationality` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+>>>>>>> a0e662d1af599983c7e6b84926ee7f4ee5cbdb59
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -165,6 +189,7 @@ INSERT INTO `users` (`id`, `name`, `lastname`, `sex`, `email`, `password`, `user
 -- Indici per le tabelle scaricate
 --
 
+<<<<<<< HEAD
 --
 -- Indici per le tabelle `cabin`
 --
@@ -177,6 +202,20 @@ ALTER TABLE `cabin`
 --
 ALTER TABLE `images`
   ADD PRIMARY KEY (`path`,`name`);
+=======
+DROP TABLE IF EXISTS `travels`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `travels` (
+  `id` int(6) unsigned NOT NULL AUTO_INCREMENT,
+  `departure` varchar(30) NOT NULL,
+  `arrival` varchar(30) NOT NULL,
+  `date` date DEFAULT NULL,
+  `description` varchar(300) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+>>>>>>> a0e662d1af599983c7e6b84926ee7f4ee5cbdb59
 
 --
 -- Indici per le tabelle `orders`
@@ -187,11 +226,19 @@ ALTER TABLE `orders`
   ADD KEY `id_travel` (`id_travel`),
   ADD KEY `id_user` (`id_user`);
 
+<<<<<<< HEAD
 --
 -- Indici per le tabelle `rockets`
 --
 ALTER TABLE `rockets`
   ADD PRIMARY KEY (`id`);
+=======
+LOCK TABLES `travels` WRITE;
+/*!40000 ALTER TABLE `travels` DISABLE KEYS */;
+INSERT INTO `travels` VALUES (1,' Pluto',' Mars','1983-06-07',''),(2,'Cape Canaveral',' Moon','2004-12-31',''),(3,'Cape Canaveral',' Pluto','1994-04-14',''),(4,' Mars',' Mars','2004-01-27',''),(5,'Cape Canaveral',' Pluto','1975-01-21',''),(6,' Pluto',' Mars','1978-08-09',''),(7,' Moon',' Moon','1977-08-16',''),(8,'Cape Canaveral',' Mars','1990-03-18',''),(9,' Moon',' Mars','1984-04-27',''),(10,'Cape Canaveral',' Pluto','2008-12-05','');
+/*!40000 ALTER TABLE `travels` ENABLE KEYS */;
+UNLOCK TABLES;
+>>>>>>> a0e662d1af599983c7e6b84926ee7f4ee5cbdb59
 
 --
 -- Indici per le tabelle `rocket_cabin`
@@ -285,3 +332,9 @@ ALTER TABLE `rocket_travel`
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+<<<<<<< HEAD
+=======
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2018-11-30 18:32:34
+>>>>>>> a0e662d1af599983c7e6b84926ee7f4ee5cbdb59
