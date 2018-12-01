@@ -75,6 +75,4 @@
     function myhash($str) {
         return hash("sha256", $str."salt");
     }
-
-echo myhash("root");
 ?>
