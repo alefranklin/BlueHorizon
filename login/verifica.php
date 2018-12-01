@@ -3,10 +3,10 @@
     include("../utils/connessione_db.php"); //includo i file necessari a collegarmi al db
 
     //variabili POST con anti sql Injection
-    $email=$db->real_escape_string($_POST['email']); 
+    $username=$db->real_escape_string($_POST['username']); 
     $passwd=$db->real_escape_string($_POST['password']);
 
-    if(get_user($email,$passwd)) {
+    if(get_user($username,$passwd)) {
         
         // redirect alla pagina riservata
         header("location:../user/privato.php");

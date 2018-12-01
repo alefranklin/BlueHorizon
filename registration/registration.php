@@ -13,7 +13,6 @@
     	
     	$error = false;
     	
-        /* PER QUANDO GESTIREMO ANCHE L'USERNAME
         if (empty($_POST["username"])) {
             $usernameErr = "Username is required";
             $error = true;
@@ -29,7 +28,7 @@
                 $emailErr = "username gia utilizzata";
                 $error = true;
             }
-        }*/
+        }
         
         if (empty($_POST["name"])) {
             $nameErr = "Name is required";
@@ -116,8 +115,8 @@
             
             // scrivo sul DB
             $passwd_hash = myhash($_POST["password"]);
-            $query = "INSERT INTO users (name,lastname,sex,email,password)
-            VALUES ('".$_POST["name"]."','".$_POST["lastname"]."','".$_POST["gender"]."','".$_POST["email"]."','".$passwd_hash."')";
+            $query = "INSERT INTO users (username, name,lastname,sex,email,password)
+            VALUES ('".$_POST["username"]."','".$_POST["name"]."','".$_POST["lastname"]."','".$_POST["gender"]."','".$_POST["email"]."','".$passwd_hash."')";
             
             try {
 
@@ -130,7 +129,7 @@
             //se la registrazione è andata a buon fine
             if(isset($ris_reg)) {
 
-                get_user($_POST["email"],$_POST["password"]);
+                get_user($_POST["username"],$_POST["password"]);
 
             }
             
@@ -163,6 +162,14 @@
         <p><span class="error">* required field</span></p>
         <form name="form_registration" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
+            <div class="group">      
+				<input type="text" name="username" value="<?php echo $username;?>" required>
+				<span class="highlight"></span>
+				<span class="bar"></span>
+				<span class="error">* <?php echo $usernameErr;?></span>
+				<label>Username</label>
+			</div>
+            
 			<div class="group">      
 				<input type="text" name="name" value="<?php echo $name;?>" required>
 				<span class="highlight"></span>

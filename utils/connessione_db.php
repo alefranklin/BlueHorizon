@@ -29,14 +29,14 @@
         else return 1;
     }
 
-    function exist($email, $passwd) {
+    function exist($username, $passwd) {
         
         $db = $GLOBALS['db'];
         
         // sha256 della password in questo modo corrisponde con quella del database
         $hash_passwd = myhash($passwd);
         
-        $query = "SELECT * FROM users WHERE email = '$email' AND password = '$hash_passwd' ";
+        $query = "SELECT * FROM users WHERE username = '$username' AND password = '$hash_passwd' ";
         $ris = $db->query($query) or die (mysql_error());
         $data=$ris->fetch_assoc();  
         
@@ -44,11 +44,11 @@
         else return $data;
     }
 
-    function get_user($email, $passwd) {
+    function get_user($username, $passwd) {
         
         $db = $GLOBALS['db'];
         
-        if($user = exist($email, $passwd)) {
+        if($user = exist($username, $passwd)) {
             
             // salvo i dati dello user in session
             $_SESSION['user'] = $user;
@@ -57,7 +57,7 @@
             $_SESSION["autorizzato"] = 1;
             
             // controllo se l'utente è admin
-            if($user['id'] == 1 and $user["name"] == "admin" ) $_SESSION['admin'] = 1;
+            if($user['id'] == 1 and $user["username"] == "admin" ) $_SESSION['admin'] = 1;
             else $_SESSION['admin'] = 0;
             
             return 1;
@@ -75,4 +75,6 @@
     function myhash($str) {
         return hash("sha256", $str."salt");
     }
+
+echo myhash("root");
 ?>
