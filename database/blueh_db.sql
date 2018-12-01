@@ -1,86 +1,111 @@
--- phpMyAdmin SQL Dump
--- version 4.6.6deb4
--- https://www.phpmyadmin.net/
+-- MySQL dump 10.16  Distrib 10.1.34-MariaDB, for debian-linux-gnu (x86_64)
 --
--- Host: localhost:3306
--- Creato il: Dic 01, 2018 alle 01:28
--- Versione del server: 10.1.37-MariaDB-0+deb9u1
--- Versione PHP: 7.0.30-0+deb9u1
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
-
+-- Host: localhost    Database: sitodb
+-- ------------------------------------------------------
+-- Server version	10.1.34-MariaDB-0ubuntu0.18.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Database: `blueh_db`
+-- Table structure for table `cabin`
 --
 
--- --------------------------------------------------------
-
---
--- Struttura della tabella `cabin`
---
-
+DROP TABLE IF EXISTS `cabin`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `cabin` (
-  `id` int(6) NOT NULL,
+  `id` int(6) NOT NULL AUTO_INCREMENT,
   `seats` int(2) NOT NULL,
-  `class` enum('Standard','Deluxe','SpaceClub') NOT NULL
+  `class` enum('Standard','Deluxe','SpaceClub') NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `seats` (`seats`,`class`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Struttura della tabella `images`
+-- Dumping data for table `cabin`
 --
 
+LOCK TABLES `cabin` WRITE;
+/*!40000 ALTER TABLE `cabin` DISABLE KEYS */;
+/*!40000 ALTER TABLE `cabin` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `images`
+--
+
+DROP TABLE IF EXISTS `images`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `images` (
   `path` varchar(30) NOT NULL,
-  `name` varchar(10) NOT NULL
+  `name` varchar(10) NOT NULL,
+  PRIMARY KEY (`path`,`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Struttura della tabella `orders`
+-- Dumping data for table `images`
 --
 
+LOCK TABLES `images` WRITE;
+/*!40000 ALTER TABLE `images` DISABLE KEYS */;
+/*!40000 ALTER TABLE `images` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `orders`
+--
+
+DROP TABLE IF EXISTS `orders`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `orders` (
-  `id` int(6) NOT NULL,
-  `id_user` int(6) UNSIGNED NOT NULL,
-  `id_travel` int(6) UNSIGNED NOT NULL,
+  `id` int(6) NOT NULL AUTO_INCREMENT,
+  `id_user` int(6) unsigned NOT NULL,
+  `id_travel` int(6) unsigned NOT NULL,
   `id_rc` int(6) NOT NULL,
-  `number_of_seat` int(2) NOT NULL
+  `number_of_seat` int(2) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `id_rc` (`id_rc`),
+  KEY `id_travel` (`id_travel`),
+  KEY `id_user` (`id_user`),
+  CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`id_rc`) REFERENCES `rocket_cabin` (`id`),
+  CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`id_travel`) REFERENCES `travels` (`id`),
+  CONSTRAINT `orders_ibfk_3` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Struttura della tabella `rockets`
---
-
-CREATE TABLE `rockets` (
-  `id` int(6) UNSIGNED NOT NULL,
-  `model` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Struttura della tabella `rocket_cabin`
+-- Dumping data for table `orders`
 --
 
+LOCK TABLES `orders` WRITE;
+/*!40000 ALTER TABLE `orders` DISABLE KEYS */;
+/*!40000 ALTER TABLE `orders` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `rocket_cabin`
+--
+
+DROP TABLE IF EXISTS `rocket_cabin`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `rocket_cabin` (
-  `id` int(6) NOT NULL,
-  `id_rocket` int(6) UNSIGNED NOT NULL,
+  `id` int(6) NOT NULL AUTO_INCREMENT,
+  `id_rocket` int(6) unsigned NOT NULL,
   `id_cabin` int(6) NOT NULL,
-<<<<<<< HEAD
-  `number_of_cabin` int(6) NOT NULL
-=======
   `number_of_cabin` int(6) NOT NULL,
   `price` int(5) unsigned NOT NULL,
   `free` tinyint(1) NOT NULL,
@@ -89,82 +114,50 @@ CREATE TABLE `rocket_cabin` (
   KEY `id_cabin` (`id_cabin`),
   CONSTRAINT `rocket_cabin_ibfk_1` FOREIGN KEY (`id_rocket`) REFERENCES `rockets` (`id`),
   CONSTRAINT `rocket_cabin_ibfk_2` FOREIGN KEY (`id_cabin`) REFERENCES `cabin` (`id`)
->>>>>>> a0e662d1af599983c7e6b84926ee7f4ee5cbdb59
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Struttura della tabella `rocket_travel`
+-- Dumping data for table `rocket_cabin`
 --
 
+LOCK TABLES `rocket_cabin` WRITE;
+/*!40000 ALTER TABLE `rocket_cabin` DISABLE KEYS */;
+/*!40000 ALTER TABLE `rocket_cabin` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `rocket_travel`
+--
+
+DROP TABLE IF EXISTS `rocket_travel`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `rocket_travel` (
-  `id_travel` int(6) UNSIGNED NOT NULL,
-  `id_rocket` int(6) UNSIGNED NOT NULL,
-  `date` date NOT NULL
+  `id_travel` int(6) unsigned NOT NULL,
+  `id_rocket` int(6) unsigned NOT NULL,
+  `date` date NOT NULL,
+  PRIMARY KEY (`id_travel`,`id_rocket`,`date`),
+  KEY `id_rocket` (`id_rocket`),
+  CONSTRAINT `rocket_travel_ibfk_1` FOREIGN KEY (`id_travel`) REFERENCES `travels` (`id`),
+  CONSTRAINT `rocket_travel_ibfk_2` FOREIGN KEY (`id_rocket`) REFERENCES `rockets` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dump dei dati per la tabella `rocket_travel`
+-- Dumping data for table `rocket_travel`
 --
 
-INSERT INTO `rocket_travel` (`id_travel`, `id_rocket`, `date`) VALUES
-(1, 1, '1975-01-21'),
-(2, 2, '1977-08-16'),
-(3, 3, '1978-08-09'),
-(4, 1, '1983-06-07'),
-(5, 2, '1984-04-27'),
-(6, 3, '1990-03-18'),
-(7, 1, '1994-04-14'),
-(8, 2, '2004-01-27'),
-(9, 3, '2004-12-31'),
-(10, 1, '2008-12-05');
-
--- --------------------------------------------------------
+LOCK TABLES `rocket_travel` WRITE;
+/*!40000 ALTER TABLE `rocket_travel` DISABLE KEYS */;
+INSERT INTO `rocket_travel` VALUES (1,1,'1975-01-21'),(2,2,'1977-08-16'),(3,3,'1978-08-09'),(4,1,'1983-06-07'),(5,2,'1984-04-27'),(6,3,'1990-03-18'),(7,1,'1994-04-14'),(8,2,'2004-01-27'),(9,3,'2004-12-31'),(10,1,'2008-12-05');
+/*!40000 ALTER TABLE `rocket_travel` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
--- Struttura della tabella `travels`
+-- Table structure for table `rockets`
 --
 
-CREATE TABLE `travels` (
-  `id` int(6) UNSIGNED NOT NULL,
-  `departure` varchar(30) NOT NULL,
-  `arrival` varchar(30) NOT NULL,
-  `date` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dump dei dati per la tabella `travels`
---
-
-INSERT INTO `travels` (`id`, `departure`, `arrival`, `date`) VALUES
-(1, ' Pluto', ' Mars', '1983-06-07'),
-(2, 'Cape Canaveral', ' Moon', '2004-12-31'),
-(3, 'Cape Canaveral', ' Pluto', '1994-04-14'),
-(4, ' Mars', ' Mars', '2004-01-27'),
-(5, 'Cape Canaveral', ' Pluto', '1975-01-21'),
-(6, ' Pluto', ' Mars', '1978-08-09'),
-(7, ' Moon', ' Moon', '1977-08-16'),
-(8, 'Cape Canaveral', ' Mars', '1990-03-18'),
-(9, ' Moon', ' Mars', '1984-04-27'),
-(10, 'Cape Canaveral', ' Pluto', '2008-12-05');
-
--- --------------------------------------------------------
-
---
--- Struttura della tabella `users`
---
-
-<<<<<<< HEAD
-CREATE TABLE `users` (
-  `id` int(6) UNSIGNED NOT NULL,
-  `name` varchar(30) NOT NULL,
-  `lastname` varchar(30) NOT NULL,
-  `sex` enum('M','F','N.D.') NOT NULL,
-  `email` varchar(35) NOT NULL,
-  `password` char(64) NOT NULL,
-  `username` varchar(20) NOT NULL
-=======
 DROP TABLE IF EXISTS `rockets`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
@@ -175,34 +168,22 @@ CREATE TABLE `rockets` (
   `height` int(6) unsigned NOT NULL,
   `nationality` varchar(15) DEFAULT NULL,
   PRIMARY KEY (`id`)
->>>>>>> a0e662d1af599983c7e6b84926ee7f4ee5cbdb59
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dump dei dati per la tabella `users`
+-- Dumping data for table `rockets`
 --
 
-INSERT INTO `users` (`id`, `name`, `lastname`, `sex`, `email`, `password`, `username`) VALUES
-(11, 'admin', 'admin', 'N.D.', 'admin@bluehorizon.com', '879f17afda4a4620870ddd4cb9d665255b46054e4a4297f577d193da17cb7520', 'admin');
+LOCK TABLES `rockets` WRITE;
+/*!40000 ALTER TABLE `rockets` DISABLE KEYS */;
+/*!40000 ALTER TABLE `rockets` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
--- Indici per le tabelle scaricate
+-- Table structure for table `travels`
 --
 
-<<<<<<< HEAD
---
--- Indici per le tabelle `cabin`
---
-ALTER TABLE `cabin`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `seats` (`seats`,`class`);
-
---
--- Indici per le tabelle `images`
---
-ALTER TABLE `images`
-  ADD PRIMARY KEY (`path`,`name`);
-=======
 DROP TABLE IF EXISTS `travels`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
@@ -215,126 +196,55 @@ CREATE TABLE `travels` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
->>>>>>> a0e662d1af599983c7e6b84926ee7f4ee5cbdb59
 
 --
--- Indici per le tabelle `orders`
+-- Dumping data for table `travels`
 --
-ALTER TABLE `orders`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id_rc` (`id_rc`),
-  ADD KEY `id_travel` (`id_travel`),
-  ADD KEY `id_user` (`id_user`);
 
-<<<<<<< HEAD
---
--- Indici per le tabelle `rockets`
---
-ALTER TABLE `rockets`
-  ADD PRIMARY KEY (`id`);
-=======
 LOCK TABLES `travels` WRITE;
 /*!40000 ALTER TABLE `travels` DISABLE KEYS */;
 INSERT INTO `travels` VALUES (1,' Pluto',' Mars','1983-06-07',''),(2,'Cape Canaveral',' Moon','2004-12-31',''),(3,'Cape Canaveral',' Pluto','1994-04-14',''),(4,' Mars',' Mars','2004-01-27',''),(5,'Cape Canaveral',' Pluto','1975-01-21',''),(6,' Pluto',' Mars','1978-08-09',''),(7,' Moon',' Moon','1977-08-16',''),(8,'Cape Canaveral',' Mars','1990-03-18',''),(9,' Moon',' Mars','1984-04-27',''),(10,'Cape Canaveral',' Pluto','2008-12-05','');
 /*!40000 ALTER TABLE `travels` ENABLE KEYS */;
 UNLOCK TABLES;
->>>>>>> a0e662d1af599983c7e6b84926ee7f4ee5cbdb59
 
 --
--- Indici per le tabelle `rocket_cabin`
---
-ALTER TABLE `rocket_cabin`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `id_rocket` (`id_rocket`,`id_cabin`),
-  ADD KEY `id_cabin` (`id_cabin`);
-
---
--- Indici per le tabelle `rocket_travel`
---
-ALTER TABLE `rocket_travel`
-  ADD PRIMARY KEY (`id_travel`,`id_rocket`,`date`),
-  ADD KEY `id_rocket` (`id_rocket`);
-
---
--- Indici per le tabelle `travels`
---
-ALTER TABLE `travels`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indici per le tabelle `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`,`email`,`username`),
-  ADD UNIQUE KEY `email` (`email`),
-  ADD UNIQUE KEY `username` (`username`);
-
---
--- AUTO_INCREMENT per le tabelle scaricate
+-- Table structure for table `users`
 --
 
---
--- AUTO_INCREMENT per la tabella `cabin`
---
-ALTER TABLE `cabin`
-  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT per la tabella `orders`
---
-ALTER TABLE `orders`
-  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT per la tabella `rockets`
---
-ALTER TABLE `rockets`
-  MODIFY `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT per la tabella `rocket_cabin`
---
-ALTER TABLE `rocket_cabin`
-  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT per la tabella `travels`
---
-ALTER TABLE `travels`
-  MODIFY `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
---
--- AUTO_INCREMENT per la tabella `users`
---
-ALTER TABLE `users`
-  MODIFY `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
---
--- Limiti per le tabelle scaricate
---
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `users` (
+  `id` int(6) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) NOT NULL,
+  `lastname` varchar(30) NOT NULL,
+  `sex` enum('M','F','N.D.') NOT NULL,
+  `email` varchar(35) NOT NULL,
+  `password` char(64) NOT NULL,
+  `username` varchar(20) NOT NULL,
+  PRIMARY KEY (`id`,`email`,`username`),
+  UNIQUE KEY `email` (`email`),
+  UNIQUE KEY `username` (`username`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Limiti per la tabella `orders`
+-- Dumping data for table `users`
 --
-ALTER TABLE `orders`
-  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`id_rc`) REFERENCES `rocket_cabin` (`id`),
-  ADD CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`id_travel`) REFERENCES `travels` (`id`),
-  ADD CONSTRAINT `orders_ibfk_3` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`);
 
---
--- Limiti per la tabella `rocket_cabin`
---
-ALTER TABLE `rocket_cabin`
-  ADD CONSTRAINT `rocket_cabin_ibfk_1` FOREIGN KEY (`id_rocket`) REFERENCES `rockets` (`id`),
-  ADD CONSTRAINT `rocket_cabin_ibfk_2` FOREIGN KEY (`id_cabin`) REFERENCES `cabin` (`id`);
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (11,'admin','admin','N.D.','admin@bluehorizon.com','879f17afda4a4620870ddd4cb9d665255b46054e4a4297f577d193da17cb7520','admin');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
---
--- Limiti per la tabella `rocket_travel`
---
-ALTER TABLE `rocket_travel`
-  ADD CONSTRAINT `rocket_travel_ibfk_1` FOREIGN KEY (`id_travel`) REFERENCES `travels` (`id`),
-  ADD CONSTRAINT `rocket_travel_ibfk_2` FOREIGN KEY (`id_rocket`) REFERENCES `rockets` (`id`);
-
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-<<<<<<< HEAD
-=======
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2018-11-30 18:32:34
->>>>>>> a0e662d1af599983c7e6b84926ee7f4ee5cbdb59
