@@ -4,13 +4,14 @@ include("../utils/connessione_db.php"); // includo il file di connessione al dat
 
     //se non c'è la sessione registrata
     if ($_SESSION['autorizzato'] && $_SESSION['admin']) {
+        $auth = 1;
         $title = "Benvenuto nell'area riservata sovrano indiscusso n° ".$_SESSION['user']['id']." del mondo";
         
         $users = get_table('users');
     }
     else {
+        $auth = 0;
         $title = "Area riservata, ACCESS DANIED 'TUUUPIDOOOO";
-        die;
     }
 ?>
 
@@ -41,42 +42,50 @@ include("../utils/connessione_db.php"); // includo il file di connessione al dat
 
     <h1><?= $title; ?></h1>
     
-    <p>
-        <h3>I tuoi dati sono:</h3><br/>
+    <?php if ($auth) { ?>
+    
+        <p>
+            <h3>I tuoi dati sono:</h3><br/>
 
-        <?php foreach($_SESSION['user'] as $key => $value): ?>
-        <?= $key . ' : ' . $value ?><br/>
-        <?php endforeach; ?>
-        autorizzato : <?= $_SESSION['autorizzato']; ?><br/>
-        admin : <?= $_SESSION['admin']; ?><br/>
-    </p>
-    
-    <p>
-        <h3>Lista utenti:</h3><br/>
-    
-        <table>
-            <tr>
-                <th>Username</th>
-                <th>Name</th>
-                <th>Lastname</th>
-                <th>Sex</th>
-                <th>Email</th>
-            </tr>
-            <?php foreach($users as $user): ?>
-            <tr>
-                <td><?= $user['username']; ?></td>
-                <td><?= $user['name']; ?></td>
-                <td><?= $user['lastname']; ?></td>
-                <td><?= $user['sex']; ?></td>
-                <td><?= $user['email']; ?></td>
-            </tr>
+            <?php foreach($_SESSION['user'] as $key => $value): ?>
+            <?= $key . ' : ' . $value ?><br/>
             <?php endforeach; ?>
-        </table>
-    </p>
-    
-    <p>
-        Per effettuare il logout clicca <a href='../login/logout.php'><font color='blue'>qui</font></a>
-    </p>
+            autorizzato : <?= $_SESSION['autorizzato']; ?><br/>
+            admin : <?= $_SESSION['admin']; ?><br/>
+        </p>
+
+        <p>
+            <h3>Lista utenti:</h3><br/>
+
+            <table>
+                <tr>
+                    <th>Username</th>
+                    <th>Name</th>
+                    <th>Lastname</th>
+                    <th>Sex</th>
+                    <th>Email</th>
+                </tr>
+                <?php foreach($users as $user): ?>
+                <tr>
+                    <td><?= $user['username']; ?></td>
+                    <td><?= $user['name']; ?></td>
+                    <td><?= $user['lastname']; ?></td>
+                    <td><?= $user['sex']; ?></td>
+                    <td><?= $user['email']; ?></td>
+                </tr>
+                <?php endforeach; ?>
+            </table>
+        </p>
+
+        <p>
+            Per effettuare il logout clicca <a href='../login/logout.php'><font color='blue'>qui</font></a>
+        </p>
+        
+    <?php } else { ?>
+        <p>
+            Torna alla <a href='../index.php'><font color='blue'>Home</font></a>
+        </p>
+    <?php } ?>
 
 </body>
 </html>
