@@ -8,6 +8,7 @@ include("../utils/connessione_db.php"); // includo il file di connessione al dat
         $title = "Benvenuto nell'area riservata sovrano indiscusso n° ".$_SESSION['user']['id']." del mondo";
         
         $users = get_table('users');
+        $travels = get_table('travels');
     }
     else {
         $auth = 0;
@@ -72,6 +73,27 @@ include("../utils/connessione_db.php"); // includo il file di connessione al dat
                     <td><?= $user['lastname']; ?></td>
                     <td><?= $user['sex']; ?></td>
                     <td><?= $user['email']; ?></td>
+                </tr>
+                <?php endforeach; ?>
+            </table>
+        </p>
+
+        <p>
+            <h3>Lista viaggi:</h3><br/>
+
+            <table>
+                <tr>
+                    <th>Partenza</th>
+                    <th>Arrivo</th>
+                    <th>Data</th>
+                    <th>Descrizione</th>
+                </tr>
+                <?php foreach($travels as $travel): ?>
+                <tr>
+                    <td><?= $travel['departure']; ?></td>
+                    <td><?= $travel['arrival']; ?></td>
+                    <td><?= date("d-m-Y", strtotime($user['date'])); ?></td>
+                    <td><?= $user['description']; ?></td>
                 </tr>
                 <?php endforeach; ?>
             </table>
