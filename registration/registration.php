@@ -7,7 +7,7 @@
 
     // definisco le variabili e le inizializzo vuote
     $usernameErr = $nameErr = $lastnameErr = $emailErr = $genderErr = $passwordErr = "";
-    $username = $name = $lastname = $email = $gender = $password = "";
+    $username = $name = $lastname = $email = $gender = $password = $repeat_password = "";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
     	
@@ -82,6 +82,18 @@
             
             if(strlen($password) < 8) {
                 $passwordErr = $passwordErr."Must be a minimum of 8 characters";
+                $error = true;
+            }
+        }
+        
+        if (empty($_POST["repeat_password"])) {
+            $passwordErr = "reinserisci la password";
+            $error = true;
+        } else {
+            $repeat_password = test_input($_POST["repeat_password"]);
+            
+            if($password != $repeat_password) {
+                $passwordErr = "le passsword non corrispondono";
                 $error = true;
             }
         }
@@ -200,6 +212,13 @@
 				<span class="bar"></span>
 				<span class="error">* <?php echo $passwordErr;?></span>
 				<label>Password</label>
+			</div>
+            
+            <div class="group">      
+				<input type="password" name="repeat_password" value="" required>
+				<span class="highlight"></span>
+				<span class="bar"></span>
+				<label>Ripeti Password</label>
 			</div>
 
             <div class="group">
