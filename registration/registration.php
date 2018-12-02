@@ -120,7 +120,7 @@
             
             try {
 
-                $ris_reg = $db->query($query) or die (mysql_error()); // se la query fallisce
+                $ris_reg = $db->query($query) or die (mysqli_error()); // se la query fallisce
             
             } catch (Exception $e) {
                 print_r($e);
