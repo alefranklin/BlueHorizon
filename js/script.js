@@ -36,3 +36,10 @@ function topFunction() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 } 
+
+function snackMessage(msg){
+    var div = document.getElementById("snackbar");
+    snackbar.innerHTML = msg;
+    div.className = "show";
+    setTimeout(function(){ div.className = div.className.replace("show", ""); }, 3000);
+}
