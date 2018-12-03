@@ -2,7 +2,7 @@
     session_start();
 
     //se non c'è la sessione registrata
-    if ($_SESSION['user']) {
+    if (isset($_SESSION['user'])) {
         $auth = 1;
         $username = $_SESSION['user']['username'];
     }
