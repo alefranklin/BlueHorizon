@@ -7,7 +7,7 @@
 
     // definisco le variabili e le inizializzo vuote
     $usernameErr = $nameErr = $lastnameErr = $emailErr = $genderErr = $passwordErr = "";
-    $username = $name = $lastname = $email = $gender = $password = "";
+    $username = $name = $lastname = $email = $gender = $password = $repeat_password = "";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
     	
@@ -86,6 +86,18 @@
             }
         }
         
+        if (empty($_POST["repeat_password"])) {
+            $passwordErr = "reinserisci la password";
+            $error = true;
+        } else {
+            $repeat_password = test_input($_POST["repeat_password"]);
+            
+            if($password != $repeat_password) {
+                $passwordErr = "le passsword non corrispondono";
+                $error = true;
+            }
+        }
+        
         if (empty($_POST["email"])) {
             $emailErr = "Email is required";
             $error = true;
@@ -120,7 +132,7 @@
             
             try {
 
-                $ris_reg = $db->query($query) or die (mysql_error()); // se la query fallisce
+                $ris_reg = $db->query($query) or die (mysqli_error()); // se la query fallisce
             
             } catch (Exception $e) {
                 print_r($e);
@@ -200,6 +212,13 @@
 				<span class="bar"></span>
 				<span class="error">* <?php echo $passwordErr;?></span>
 				<label>Password</label>
+			</div>
+            
+            <div class="group">      
+				<input type="password" name="repeat_password" value="" required>
+				<span class="highlight"></span>
+				<span class="bar"></span>
+				<label>Ripeti Password</label>
 			</div>
 
             <div class="group">

@@ -8,8 +8,12 @@
 
     if(get_user($username,$passwd)) {
         
-        // redirect alla pagina riservata
-        header("location:../user/privato.php");
+        // se è settata redirigo sulla pagina del sito da cui è arrivato l'utente altrimenti ritorno all'homepage
+        //if (isset($_SERVER['HTTP_REFERER'])) header("location:".$_SERVER['HTTP_REFERER']);
+        //else header("location:../user/privato.php"); // TODO sostitutire con homepage
+        
+        header("location:../user/privato.php"); // da eliminare dopo merge con html
+        
     } else {
         // TODO inviare messaggio di errore
         header("location:../user/privato.php");
