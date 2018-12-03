@@ -12,13 +12,14 @@ users(**id**, name, lastname, sex, **email**, password, **username**)
 
 | Field | Type | Null | Key | Default | Extra |
 | --- | --- | --- | --- | --- | --- |
-| id       | int(6) unsigned      | NO | PRI | NULL | AUTO_INCERMENT |
-| name     | varchar(30)          | NO |     | NULL |                |
-| lastname | varchar(30)          | NO |     | NULL |                |
-| sex      | enum('M','F','N.D.') | NO |     | NULL |                |
-| email    | varchar(35)          | NO | PRI | NULL |                |
-| password | char(64)             | NO |     | NULL |                |
-| username | varchar(20)          | NO | PRI | NULL |                |
+| id       | int(6) unsigned      | NO   | PRI | NULL    | auto_increment |
+| name     | varchar(30)          | NO   |     | NULL    |                |
+| lastname | varchar(30)          | NO   |     | NULL    |                |
+| sex      | enum('M','F','N.D.') | NO   |     | NULL    |                |
+| email    | varchar(35)          | NO   | PRI | NULL    |                |
+| password | char(64)             | NO   |     | NULL    |                |
+| username | varchar(20)          | NO   | PRI | NULL    |                |
+| isAdmin  | tinyint(1)           | NO   |     | 0       |                |
 
 
 rockets(**id**, model, price)
