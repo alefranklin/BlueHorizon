@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include("../utils/connessione_db.php"); //includo i file necessari a collegarmi al db
+    include_once("../utils/connessione_db.php"); //includo i file necessari a collegarmi al db
 
     //se non c'è la sessione registrata
     if ($_SESSION['autorizzato']) {

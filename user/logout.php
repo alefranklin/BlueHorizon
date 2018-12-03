@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include("../utils/config.php");
+    include_once("../utils/config.php");
     
     $_SESSION = array();
     session_destroy(); //distruggo tutte le sessioni

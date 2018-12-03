@@ -1,6 +1,6 @@
 <?php
     session_start(); //inizio la sessione
-    include("../utils/connessione_db.php"); //includo i file necessari a collegarmi al db
+    include_once("../utils/connessione_db.php"); //includo i file necessari a collegarmi al db
 ini_set('display_errors', 1);
 
     //variabili POST con anti sql Injection
