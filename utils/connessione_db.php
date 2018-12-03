@@ -56,17 +56,12 @@
             // registro l'autorizzazione dell'utente ad accedere alle aree riservate
             $_SESSION["autorizzato"] = 1;
             
-            // controllo se l'utente è admin
-            if($user['id'] == 1 and $user["username"] == "admin" ) $_SESSION['admin'] = 1;
-            else $_SESSION['admin'] = 0;
-            
             return 1;
 
         } else {
             
             // nessun accesso alle aree riservate del sito
             $_SESSION["autorizzato"] = 0;
-            $_SESSION['admin'] = 0;
             return 0;
         }
         
@@ -75,6 +70,12 @@
     function myhash($str) {
         return hash("sha256", $str."salt");
     }
+
+    function isAdmin() {
+        if(isset($_SESSION['user'])) {
+            return $_SESSION['user']['isAdmin'];
+        } else return 0;
+    } 
 
     /***************************************** funzioni admin *************************************************************/
     

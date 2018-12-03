@@ -1,8 +1,15 @@
 <?php
     session_start();
+    include("../utils/connessione_db.php"); //includo i file necessari a collegarmi al db
 
     //se non c'è la sessione registrata
     if ($_SESSION['autorizzato']) {
+        
+        if(isAdmin()) {
+            header("location: ../administration/admin.php");
+            die;
+        }
+        
         $auth = 1;
         $title = "Benvenuto nell'area riservata utente rispettabile n° ".$_SESSION['user']['id'];
     }
@@ -19,7 +26,7 @@
     <title>Pannello Admin</title>
 
     <!--Pannello di gestione-->
-    <link href="test.css" rel="stylesheet" type="text/css" />
+    <link href="<?= $base_url."/user/test.css" ?>" rel="stylesheet" type="text/css" />
 
 </head>
 <body>
@@ -34,18 +41,17 @@
             <?= $key . ' : ' . $value ?><br/>
             <?php endforeach; ?>
             autorizzato : <?= $_SESSION['autorizzato']; ?><br/>
-            admin : <?= $_SESSION['admin']; ?><br/>
         </p>
 
         <p>
-            Per effettuare il logout clicca <a href='logout.php'><font color='blue'>qui</font></a>
+            Per effettuare il logout clicca <a href="<?= $base_url."/user/logout.php" ?>"><font color='blue'>qui</font></a>
         </p>
         <p>
-            Torna alla <a href='../index.php'><font color='blue'>Home</font></a>
+            Torna alla <a href="<?= $base_url ?>"><font color='blue'>Home</font></a>
         </p>
     <?php } else { ?>
         <p>
-            Torna alla <a href='../index.php'><font color='blue'>Home</font></a>
+            Torna alla <a href="<?= $base_url ?>"><font color='blue'>Home</font></a>
         </p>
     <?php } ?>
 

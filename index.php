@@ -1,6 +1,7 @@
 <?php
     session_start();
-    
+    include("utils/config.php");
+
     //se non c'è la sessione registrata
     if (isset($_SESSION['user'])) {
         $auth = 1;
@@ -53,7 +54,10 @@
                     <!-- icona user o, se loggato, username -->
                     <?php if ($auth) { ?>
                         
-                        <a class="space-font" href="user/privato.php"> <?= $username ?> </a>
+                        <a class="user-icon-container space-font" href="user/privato.php">
+                            <i class="user-icon fas fa-user"></i>
+                            <?= $username ?>
+                        </a>
                         
                     <?php } else { ?>
                         

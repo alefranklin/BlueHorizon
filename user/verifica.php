@@ -1,6 +1,7 @@
 <?php
     session_start(); //inizio la sessione
     include("../utils/connessione_db.php"); //includo i file necessari a collegarmi al db
+ini_set('display_errors', 1);
 
     //variabili POST con anti sql Injection
     $username=$db->real_escape_string($_POST['username']); 
@@ -8,14 +9,18 @@
 
     if(get_user($username,$passwd)) {
         
-        // se è settata redirigo sulla pagina del sito da cui è arrivato l'utente altrimenti ritorno all'homepage
-        //if (isset($_SERVER['HTTP_REFERER'])) header("location:".$_SERVER['HTTP_REFERER']);
-        //else header("location:../user/privato.php"); // TODO sostitutire con homepage
+        $msg = urlencode ("Benvenuto ".$_SESSION['user']['username']);
         
-        header("location:../user/privato.php"); // da eliminare dopo merge con html
+        // se è settata redirigo sulla pagina del sito da cui è arrivato l'utente altrimenti ritorno all'homepage
+        if (isset($_SERVER['HTTP_REFERER'])) header("location:".$_SERVER['HTTP_REFERER']."?msg=".$msg);
+        else header("location:".$base_url."?msg=".$msg); // homepage
         
     } else {
-        // TODO inviare messaggio di errore
-        header("location:../user/privato.php");
+        // errore
+        $msg = urlencode ("username o password non validi");
+        
+        // se è settata redirigo sulla pagina del sito da cui è arrivato l'utente altrimenti ritorno all'homepage
+        if (isset($_SERVER['HTTP_REFERER'])) header("location:".$_SERVER['HTTP_REFERER']."?msg=".$msg);
+        else header("location:".$base_url."?msg=".$msg); // homepage
     }  
 ?>

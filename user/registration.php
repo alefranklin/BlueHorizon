@@ -162,7 +162,7 @@
 <html>  
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="registration.css">
+        <link rel="stylesheet" type="text/css" href="<?= $base_url."/user/registration.css" ?>">
         
         <style>
             .error {color: #FF0000;}
@@ -172,45 +172,45 @@
     <body>
         <h2>Registrazione</h2>
         <p><span class="error">* required field</span></p>
-        <form name="form_registration" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+        <form name="form_registration" method="post" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>">
 
             <div class="group">      
-				<input type="text" name="username" value="<?php echo $username;?>" required>
+				<input type="text" name="username" value="<?= $username ?>" required>
 				<span class="highlight"></span>
 				<span class="bar"></span>
-				<span class="error">* <?php echo $usernameErr;?></span>
+				<span class="error">* <?= $usernameErr ?></span>
 				<label>Username</label>
 			</div>
             
 			<div class="group">      
-				<input type="text" name="name" value="<?php echo $name;?>" required>
+				<input type="text" name="name" value="<?= $name ?>" required>
 				<span class="highlight"></span>
 				<span class="bar"></span>
-				<span class="error">* <?php echo $nameErr;?></span>
+				<span class="error">* <?= $nameErr ?></span>
 				<label>Name</label>
 			</div>
 
 			<div class="group">      
-				<input type="text" name="lastname" value="<?php echo $lastname;?>" required>
+				<input type="text" name="lastname" value="<?= $lastname ?>" required>
 				<span class="highlight"></span>
 				<span class="bar"></span>
-				<span class="error">* <?php echo $lastnameErr;?></span>
+				<span class="error">* <?= $lastnameErr ?></span>
 				<label>Lastname</label>
 			</div>
 
 			<div class="group">      
-				<input type="text" name="email" value="<?php echo $email;?>" required>
+				<input type="text" name="email" value="<?= $email ?>" required>
 				<span class="highlight"></span>
 				<span class="bar"></span>
-				<span class="error">* <?php echo $emailErr;?></span>
+				<span class="error">* <?= $emailErr ?></span>
 				<label>Email</label>
 			</div>
 
 			<div class="group">      
-				<input type="password" name="password" value="<?php echo $password;?>" required>
+				<input type="password" name="password" value="<?= $password ?>" required>
 				<span class="highlight"></span>
 				<span class="bar"></span>
-				<span class="error">* <?php echo $passwordErr;?></span>
+				<span class="error">* <?= $passwordErr ?></span>
 				<label>Password</label>
 			</div>
             
@@ -226,14 +226,14 @@
                 <input type="radio" name="gender" <?php if (isset($gender) && $gender=="F") echo "checked";?> value="F">Female
                 <input type="radio" name="gender" <?php if (isset($gender) && $gender=="M") echo "checked";?> value="M">Male
                 <input type="radio" name="gender" <?php if (isset($gender) && $gender=="N.D.") echo "checked";?> value="N.D.">Other  
-                <span class="error">* <?php echo $genderErr;?></span>
+                <span class="error">* <?= $genderErr ?></span>
             </div>
 
             <button>Registrati</button>
 
         </form>
         
-        <a href="../index.php" id="back">Ritorna al sito</a>
+        Ritorn alla <a href="<?= $base_url ?>" id="back">Home</a>
         
     </body>
 </html>
