@@ -222,6 +222,7 @@ CREATE TABLE `users` (
   `email` varchar(35) NOT NULL,
   `password` char(64) NOT NULL,
   `username` varchar(20) NOT NULL,
+  `isAdmin` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`,`email`,`username`),
   UNIQUE KEY `email` (`email`),
   UNIQUE KEY `username` (`username`)
@@ -234,7 +235,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'admin','admin','N.D.','admin@bluehorizon.com','879f17afda4a4620870ddd4cb9d665255b46054e4a4297f577d193da17cb7520','admin');
+INSERT INTO `users` VALUES (1,'admin','admin','N.D.','admin@bluehorizon.com','879f17afda4a4620870ddd4cb9d665255b46054e4a4297f577d193da17cb7520','admin',1);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -247,4 +248,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-12-03 15:50:35
+-- Dump completed on 2018-12-03 17:52:41
