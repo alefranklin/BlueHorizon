@@ -1,15 +1,13 @@
 <?php
-session_start();
-$_SESSION = array();
-session_destroy(); //distruggo tutte le sessioni
+    session_start();
+    include("../utils/config.php");
+    
+    $_SESSION = array();
+    session_destroy(); //distruggo tutte le sessioni
+    
+    $msg = urlencode("Arrivederci!"); // invio il messaggio via get
 
-//creo una varibiale con un messaggio
-$msg = "log-out effettuato con successo.";
-
-//la codifico via urlencode informazioni-logout-effettuato-con-successo
-$msg = urlencode($msg); // invio il messaggio via get
-
-//ritorno a index.php usando GET posso recuperare e stampare a schermo il messaggio di avvenuto logout
-header("location: ../index.php?msg=$msg");
-exit();
+    //ritorno a index.php usando GET posso recuperare e stampare a schermo il messaggio di avvenuto logout
+    header("location:".$base_url."?msg=$msg");
+    exit();
 ?>

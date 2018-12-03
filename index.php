@@ -1,14 +1,11 @@
 <?php
     session_start();
+    include("utils/config.php");
 
     //se non c'è la sessione registrata
     if ($_SESSION['user']) {
         $auth = 1;
         $username = $_SESSION['user']['username'];
-    }
-    else {
-        $auth = 0;
-        $title = "Area riservata, ACCESS DANIED 'TUUUPIDOOOO";
     }
 ?>
 
@@ -45,7 +42,10 @@
                     <!-- icona user o, se loggato, username -->
                     <?php if ($auth) { ?>
                         
-                        <a class="space-font" href="user/privato.php"> <?= $username ?> </a>
+                        <a class="user-icon-container space-font" href="user/privato.php">
+                            <i class="user-icon fas fa-user"></i>
+                            <?= $username ?>
+                        </a>
                         
                     <?php } else { ?>
                         

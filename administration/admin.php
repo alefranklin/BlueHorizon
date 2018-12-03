@@ -1,9 +1,9 @@
 <?php
     session_start();
-include("../utils/connessione_db.php"); // includo il file di connessione al database
+    include("../utils/connessione_db.php"); // includo il file di connessione al database
 
     //se non c'è la sessione registrata
-    if ($_SESSION['autorizzato'] && $_SESSION['admin']) {
+    if ($_SESSION['autorizzato'] && isAdmin()) {
         $auth = 1;
         $title = "Benvenuto nell'area riservata sovrano indiscusso n° ".$_SESSION['user']['id']." del mondo";
         
@@ -52,7 +52,6 @@ include("../utils/connessione_db.php"); // includo il file di connessione al dat
             <?= $key . ' : ' . $value ?><br/>
             <?php endforeach; ?>
             autorizzato : <?= $_SESSION['autorizzato']; ?><br/>
-            admin : <?= $_SESSION['admin']; ?><br/>
         </p>
 
         <p>
@@ -100,12 +99,15 @@ include("../utils/connessione_db.php"); // includo il file di connessione al dat
         </p>
 
         <p>
-            Per effettuare il logout clicca <a href='../login/logout.php'><font color='blue'>qui</font></a>
+            Per effettuare il logout clicca <a href="<?= $base_url."/user/logout.php" ?>"><font color='blue'>qui</font></a>
+        </p>
+        <p>
+            Torna alla <a href="<?= $base_url ?>"><font color='blue'>Home</font></a>
         </p>
         
     <?php } else { ?>
         <p>
-            Torna alla <a href='../index.php'><font color='blue'>Home</font></a>
+            Torna alla <a href="<?= $base_url ?>"><font color='blue'>Home</font></a>
         </p>
     <?php } ?>
 
