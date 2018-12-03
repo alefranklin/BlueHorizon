@@ -38,7 +38,10 @@
         </p>
 
         <p>
-            Per effettuare il logout clicca <a href='../login/logout.php'><font color='blue'>qui</font></a>
+            Per effettuare il logout clicca <a href='logout.php'><font color='blue'>qui</font></a>
+        </p>
+        <p>
+            Torna alla <a href='../index.php'><font color='blue'>Home</font></a>
         </p>
     <?php } else { ?>
         <p>
