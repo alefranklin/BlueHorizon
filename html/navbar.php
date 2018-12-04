@@ -8,7 +8,7 @@
 ini_set('display_errors', 1);
 ?>
 
-<img id="logo" src="<?= $host_path."img/logo-placeholder.png" ?>">
+<img id="logo" src="<?= $host_path."img/logo-placeholder.png" ?>" alt="Logo Blue Horizon">
 <nav id="menu" class="topnav"> <!-- <-screen reader stuff -->
         <a class="active space-font" href="index.php" onclick="return false;"> HOME </a>
         <a class="space-font" href="html/company.php"> COMPANY </a>

@@ -15,7 +15,7 @@
 
         <link rel="stylesheet" type="text/css" href="<?= $host_path."style/animations.css" ?>">
 
-        <link rel="stylesheet" type="text/css" href="<?= $base_url."/style/style-small.css" ?>">
+        <link rel="stylesheet" type="text/css" href="<?= $host_path."style/style-small.css" ?>">
 
         <link rel="stylesheet" type="text/css" href="<?= $host_path."style/style-big.css" ?>">
 
@@ -27,7 +27,7 @@
 
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-        <script src="<?= $local_path."/js/script.js" ?>"></script>
+        <script src="<?= $host_path."js/script.js" ?>"></script>
         
         <!-- tag specifici -->
         <?php 
