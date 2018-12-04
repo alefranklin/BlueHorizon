@@ -30,12 +30,7 @@ ini_set('display_errors', 1);
             </a>
 
             <!-- login form -->
-<<<<<<< HEAD
             <?php include($local_path."user/login-form.php"); ?>
-=======
-            <?php include($base_url."/user/login-form.php"); ?>
->>>>>>> f1c3e2467c61c81e66e3d0b73292a75221f0ab2d
-
         <?php } ?>
 
         <!-- icona hamburger -->

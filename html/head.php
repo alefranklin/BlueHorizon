@@ -35,12 +35,4 @@
                 customPageHeader();
             }
         ?>
-<<<<<<< HEAD
-    </head>
-=======
-    </head>
-    
-    <body>
-        
-    <?php ini_set('display_errors', 1); // stampo gli errori ?>
->>>>>>> f1c3e2467c61c81e66e3d0b73292a75221f0ab2d
+    </head>    

@@ -12,11 +12,7 @@
 
 
 <!-- head -->
-<<<<<<< HEAD
 <?php include($local_path."html/head.php"); ?>
-=======
-<?php include("html/head.php"); echo $_SERVER["DOCUMENT_ROOT"];?>
->>>>>>> f1c3e2467c61c81e66e3d0b73292a75221f0ab2d
 
 <!-- body -->
 <div id="header">
