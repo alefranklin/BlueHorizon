@@ -1,5 +1,3 @@
-<?php include_once("../utils/config.php"); ?>
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -34,7 +32,7 @@
 
         <script src="<?= $base_url."/js/script.js" ?>"></script>
         
-        <!-- aggiungo i tag specifici per la pagina -->
+        <!-- tag specifici -->
         <?php 
             if (function_exists('customPageHeader')) {
                 customPageHeader();
@@ -43,3 +41,5 @@
     </head>
     
     <body>
+        
+    <?php ini_set('display_errors', 1); // stampo gli errori ?>

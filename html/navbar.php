@@ -1,7 +1,9 @@
 <?php
-    session_start();
-    include_once("../utils/config.php");
-print_r(get_included_files());
+    //se non c'è la sessione registrata
+    if (isset($_SESSION['user'])) {
+        $auth = 1;
+        $username = $_SESSION['user']['username'];
+    } else $auth = 0;
 
 ini_set('display_errors', 1);
 ?>
@@ -28,7 +30,7 @@ ini_set('display_errors', 1);
             </a>
 
             <!-- login form -->
-            <?php include("user/login-form.php"); ?>
+            <?php include($base_url."/user/login-form.php"); ?>
 
         <?php } ?>
 
