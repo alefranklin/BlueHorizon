@@ -4,16 +4,27 @@
         $auth = 1;
         $username = $_SESSION['user']['username'];
     } else $auth = 0;
+    
+    // prendo il nome della pagi attiva
+    $active = end(split('-',$_SERVER['REQUEST_URI']))
+    
+    // link delle pagine
+    $home = "index.php";
+    $company = "company.php";
+    $rockets = "rockets.php";
+    $travels = "travels.php";
+
 
 ini_set('display_errors', 1);
+
 ?>
 
 <img id="logo" src="<?= $host_path."img/logo-placeholder.png" ?>">
 <nav id="menu" class="topnav"> <!-- <-screen reader stuff -->
-        <a class="active space-font" href="index.php" onclick="return false;"> HOME </a>
-        <a class="space-font" href="html/company.php"> COMPANY </a>
-        <a class="space-font" href="html/rockets.php"> ROCKETS </a>
-        <a class="space-font" href="html/travels.php"> TRAVELS </a>
+        <a class="<?= ($active == $home) ? "active" ?> space-font" href="<?= $host_path."index.php" ?>" > HOME </a>
+        <a class="space-font" href="<?= $host_path."html/company.php" ?>" > COMPANY </a>
+        <a class="space-font" href="<?= $host_path."html/rockets.php" ?>" > ROCKETS </a>
+        <a class="space-font" href="<?= $host_path."html/travels.php" ?>" > TRAVELS </a>
 
         <!-- icona user o, se loggato, username -->
         <?php if ($auth) { ?>

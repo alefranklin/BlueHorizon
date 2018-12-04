@@ -18,6 +18,4 @@
 </div>
 
 <!-- footer -->
-<?php include("footer.php"); 
-
-print_r(get_included_files()); ?>
+<?php include("footer.php"); ?>

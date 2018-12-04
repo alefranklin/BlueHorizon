@@ -27,7 +27,7 @@
 
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-        <script src="<?= $local_path."/js/script.js" ?>"></script>
+        <script src="<?= $host_path."js/script.js" ?>"></script>
         
         <!-- tag specifici -->
         <?php 
