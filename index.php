@@ -6,10 +6,9 @@
     if (isset($_SESSION['user'])) {
         $auth = 1;
         $username = $_SESSION['user']['username'];
-    }
-    else {
+    } else {
         $auth = 0;
-        $title = "Area riservata, ACCESS DANIED 'TUUUPIDOOOO";
+        $title = "Area riservata - ACCESS DENIED";
     }
 ?>
 
@@ -32,7 +31,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <script src="js/script.js"></script>
-	</head>        
+	</head>
     <?php
         if(isset($_SESSION['snackmsg'])){
             echo '<body onload="snackMessage(\''.$_SESSION['snackmsg'].'\')">';
@@ -50,26 +49,26 @@
                     <a class="space-font" href="html/company.html"> COMPANY </a>
                     <a class="space-font" href="html/rockets.html"> ROCKETS </a>
                     <a class="space-font" href="html/travels.html"> TRAVELS </a>
-                    
+
                     <!-- icona user o, se loggato, username -->
                     <?php if ($auth) { ?>
-                        
+
                         <a class="user-icon-container space-font" href="user/privato.php">
                             <i class="user-icon fas fa-user"></i>
                             <?= $username ?>
                         </a>
-                        
+
                     <?php } else { ?>
-                        
+
                         <a href="javascript:void(0); "class="user-icon-container space-font" onclick="toggleUser(0)">
                             <i class="user-icon fas fa-user"></i>
                         </a>
-                        
+
                         <!-- login form -->
-                        <?php include("user/login.php"); ?>
-                        
-                    <?php } ?>
-                    
+                        <?php include("user/login.php");
+
+                        } ?>
+
                     <!-- icona hamburger -->
                     <a href="javascript:void(0);" class="icon" onclick="toggleHamburger()">
                         <i class="fa fa-bars"></i>
@@ -81,13 +80,13 @@
         <!-- menu -->
         <div id="body-page" class="">
 						<i onclick="topFunction()" id="scroll-back-btn" class="fas fa-arrow-circle-up"> </i>
-						
+
             <div id="presentation">
                 <h1 class="space-font"> BLUE <br> HORIZON </h1>
                 <h2 class="space-font"> Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </h2>
             </div>
         </div>
-        
+
         <div id="snackbar">
         </div>
 

@@ -6,13 +6,13 @@
     if ($_SESSION['autorizzato'] && isAdmin()) {
         $auth = 1;
         $title = "Benvenuto nell'area riservata sovrano indiscusso n° ".$_SESSION['user']['id']." del mondo";
-        
+
         $users = get_table('users');
         $travels = get_table('travels');
     }
     else {
         $auth = 0;
-        $title = "Area riservata, ACCESS DANIED 'TUUUPIDOOOO";
+        $title = "Area riservata - ACCESS DENIED";
     }
 ?>
 
@@ -24,7 +24,7 @@
 
     <!--Pannello di gestione-->
     <link href="test.css" rel="stylesheet" type="text/css" />
-    
+
     <style type="text/css">
         table {
             border-collapse: collapse;
@@ -42,9 +42,9 @@
 <body>
 
     <h1><?= $title; ?></h1>
-    
+
     <?php if ($auth) { ?>
-    
+
         <p>
             <h3>I tuoi dati sono:</h3><br/>
 
@@ -104,7 +104,7 @@
         <p>
             Torna alla <a href="<?= $base_url ?>"><font color='blue'>Home</font></a>
         </p>
-        
+
     <?php } else { ?>
         <p>
             Torna alla <a href="<?= $base_url ?>"><font color='blue'>Home</font></a>
