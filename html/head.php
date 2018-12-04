@@ -1,4 +1,4 @@
-<?php include("../utils/config.php"); ?>
+<?php include_once("../utils/config.php"); ?>
 
 <!DOCTYPE html>
 <html>
@@ -43,11 +43,3 @@
     </head>
     
     <body>
-        
-<!doctype html>
-<html>
-  <head>
-    
-    
-  </head>
-  <body>

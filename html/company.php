@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include("utils/config.php");
+    include("../utils/config.php");
 ini_set('display_errors', 1);
 
 echo "1".$_SERVER['SCRIPT_FILENAME']."</br>";
@@ -24,12 +24,14 @@ echo "4".$_SERVER['QUERY_STRING']."</br>";
 
 
 <!-- head -->
-<?php include($base_url."/html/head.php"); ?>
+<?php include("head.php"); ?>
 
 <!-- body -->
 <div id="header">
-    <?php include($base_url."/html/navbar.php"); ?>
+    <?php include("navbar.php"); ?>
 </div>
 
 <!-- footer -->
-<?php include($base_url."/html/footer.php"); ?>
+<?php include("footer.php"); 
+
+print_r(get_included_files()); ?>

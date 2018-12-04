@@ -1,4 +1,12 @@
-<img id="logo" src="img/logo-placeholder.png">
+<?php
+    session_start();
+    include_once("../utils/config.php");
+print_r(get_included_files());
+
+ini_set('display_errors', 1);
+?>
+
+<img id="logo" src="<?= $base_url."img/logo-placeholder.png" ?>">
 <nav id="menu" class="topnav"> <!-- <-screen reader stuff -->
         <a class="active space-font" href="index.php" onclick="return false;"> HOME </a>
         <a class="space-font" href="html/company.php"> COMPANY </a>
@@ -20,7 +28,7 @@
             </a>
 
             <!-- login form -->
-            <?php include_once("user/login-form.php"); ?>
+            <?php include("user/login-form.php"); ?>
 
         <?php } ?>
 

@@ -1,4 +1,6 @@
 <?php
+    include_once("../utils/config.php");
+ini_set('display_errors', 1);
     $verifica = $base_url."/user/verifica.php";
     $registration = $base_url."/user/registration.php";
 ?>

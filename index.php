@@ -28,7 +28,7 @@ echo "4".$_SERVER['QUERY_STRING']."</br>";
 
 <!-- body -->
 <div id="header">
-    <?php include("html/navbar.php"); ?>
+    <?php include($base_url."/html/navbar.php"); ?>
 </div>
 
 
@@ -43,4 +43,5 @@ echo "4".$_SERVER['QUERY_STRING']."</br>";
 </div>
 
 <!-- footer -->
-<?php include("html/footer.php"); ?>
+<?php include($base_url."/html/footer.php"); 
+print_r(get_included_files()); ?>
