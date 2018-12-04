@@ -13,9 +13,9 @@
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<title> Blue Horizon </title>
+		<title> Blue Horizon - Home </title>
 
 		<base href="index.html">
 
@@ -43,7 +43,7 @@
         }
     ?>
         <div id="header">
-            <img id="logo" src="img/logo-placeholder.png">
+            <img id="logo" alt="Blue Horizon Logo" src="img/logo-placeholder.png">
             <nav id="menu" class="topnav"> <!-- <-screen reader stuff -->
                 	<a class="active space-font" href="index.php" onclick="return false;"> HOME </a>
                     <a class="space-font" href="html/company.html"> COMPANY </a>
@@ -61,6 +61,7 @@
                     <?php } else { ?>
 
                         <a href="javascript:void(0); "class="user-icon-container space-font" onclick="toggleUser(0)">
+                            <p hidden> Login </p>
                             <i class="user-icon fas fa-user"></i>
                         </a>
 
@@ -70,7 +71,8 @@
                         } ?>
 
                     <!-- icona hamburger -->
-                    <a href="javascript:void(0);" class="icon" onclick="toggleHamburger()">
+                    <a href="javascript:void(0);" class="icon" onclick="toggleHamburger()" te>
+                        <p hidden> Menu </p>
                         <i class="fa fa-bars"></i>
                     </a>
             </nav>
