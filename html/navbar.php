@@ -1,9 +1,9 @@
 <img id="logo" src="img/logo-placeholder.png">
 <nav id="menu" class="topnav"> <!-- <-screen reader stuff -->
         <a class="active space-font" href="index.php" onclick="return false;"> HOME </a>
-        <a class="space-font" href="html/company.html"> COMPANY </a>
-        <a class="space-font" href="html/rockets.html"> ROCKETS </a>
-        <a class="space-font" href="html/travels.html"> TRAVELS </a>
+        <a class="space-font" href="html/company.php"> COMPANY </a>
+        <a class="space-font" href="html/rockets.php"> ROCKETS </a>
+        <a class="space-font" href="html/travels.php"> TRAVELS </a>
 
         <!-- icona user o, se loggato, username -->
         <?php if ($auth) { ?>

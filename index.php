@@ -7,7 +7,6 @@ echo "1".$_SERVER['SCRIPT_FILENAME']."</br>";
 echo "2".$_SERVER['REQUEST_URI']."</br>";
 echo "3".$_SERVER['PHP_SELF']."</br>";
 echo "4".$_SERVER['QUERY_STRING']."</br>";
-echo(__DIR__);
 
     //se non c'è la sessione registrata
     if (isset($_SESSION['user'])) {
@@ -15,21 +14,21 @@ echo(__DIR__);
         $username = $_SESSION['user']['username'];
     } else $auth = 0;
 
-    $PageTitle="New Page Title";
+    $PageTitle="Blue Horizon";
 
     function customPageHeader() { ?>
 
-        <!--Arbitrary HTML Tags-->
+        <!-- aggiungere tag specifici per questa pagina -->
 
 <?php } ?>
 
 
 <!-- head -->
-<?php include_once($base_url."/html/head.php"); ?>
+<?php include("html/head.php"); ?>
 
 <!-- body -->
 <div id="header">
-    <?php include_once($base_url."/html/navbar.php"); ?>
+    <?php include("html/navbar.php"); ?>
 </div>
 
 
@@ -44,4 +43,4 @@ echo(__DIR__);
 </div>
 
 <!-- footer -->
-<?php include_once($base_url."/html/footer.php"); ?>
+<?php include("html/footer.php"); ?>

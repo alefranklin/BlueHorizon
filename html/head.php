@@ -1,4 +1,4 @@
-<?php include_once("../utils/config.php"); ?>
+<?php include("../utils/config.php"); ?>
 
 <!DOCTYPE html>
 <html>
@@ -16,13 +16,13 @@
 
         <meta charset="UTF-8">
 
-        <link rel="stylesheet" type="text/css" href="<?= $base_url."style/animations.css" ?>">
+        <link rel="stylesheet" type="text/css" href="<?= $base_url."/style/animations.css" ?>">
 
-        <link rel="stylesheet" type="text/css" href="<?= $base_url."style/style-small.css" ?>">
+        <link rel="stylesheet" type="text/css" href="<?= $base_url."/style/style-small.css" ?>">
 
-        <link rel="stylesheet" type="text/css" href="<?= $base_url."style/style-big.css" ?>">
+        <link rel="stylesheet" type="text/css" href="<?= $base_url."/style/style-big.css" ?>">
 
-        <link rel="stylesheet" type="text/css" href="<?= $base_url."style/style-medium.css" ?>">
+        <link rel="stylesheet" type="text/css" href="<?= $base_url."/style/style-medium.css" ?>">
 
         <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 
@@ -32,7 +32,7 @@
 
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-        <script src="<?= $base_url."js/script.js" ?>"></script>
+        <script src="<?= $base_url."/js/script.js" ?>"></script>
         
         <!-- aggiungo i tag specifici per la pagina -->
         <?php 
