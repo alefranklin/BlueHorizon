@@ -235,7 +235,8 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'admin','admin','N.D.','admin@bluehorizon.com','879f17afda4a4620870ddd4cb9d665255b46054e4a4297f577d193da17cb7520','admin',1);
+INSERT INTO `users` VALUES (1,'admin','admin','N.D.','admin@bluehorizon.com','879f17afda4a4620870ddd4cb9d665255b46054e4a4297f577d193da17cb7520','admin',1), (2, 'Alessandro', 'Franchin', 'F', 'alefrank@bluehorizon.com', '7A37B85C8918EAC19A9089C0FA5A2AB4DCE3F90528DCDEEC108B23DDF3607B99', 'Hesken', 0),
+                           (3, 'Matteo', 'Pagotto', 'F', 'matteopagotto@bluehorizon.com', '7A37B85C8918EAC19A9089C0FA5A2AB4DCE3F90528DCDEEC108B23DDF3607B99', 'Madteo', 0);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
