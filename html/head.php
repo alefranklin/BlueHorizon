@@ -3,7 +3,7 @@
         <!-- aggiungo tag generici -->
 		<title><?= isset($PageTitle) ? $PageTitle : "Blue Horizon" ?></title>
 
-		<!-- <base href="<?= $local_path ?>"> -->
+		<!-- <base href="<?= $base_url ?>"> -->
         
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         
@@ -15,7 +15,7 @@
 
         <link rel="stylesheet" type="text/css" href="<?= $host_path."style/animations.css" ?>">
 
-        <link rel="stylesheet" type="text/css" href="<?= $host_path."style/style-small.css" ?>">
+        <link rel="stylesheet" type="text/css" href="<?= $base_url."/style/style-small.css" ?>">
 
         <link rel="stylesheet" type="text/css" href="<?= $host_path."style/style-big.css" ?>">
 
@@ -29,10 +29,18 @@
 
         <script src="<?= $local_path."/js/script.js" ?>"></script>
         
-        <!-- aggiungo i tag specifici per la pagina -->
+        <!-- tag specifici -->
         <?php 
             if (function_exists('customPageHeader')) {
                 customPageHeader();
             }
         ?>
+<<<<<<< HEAD
     </head>
+=======
+    </head>
+    
+    <body>
+        
+    <?php ini_set('display_errors', 1); // stampo gli errori ?>
+>>>>>>> f1c3e2467c61c81e66e3d0b73292a75221f0ab2d

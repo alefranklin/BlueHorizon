@@ -2,14 +2,6 @@
 <?php
     session_start();
     include("utils/config.php");
-ini_set('display_errors', 1);
-
-    //se non c'è la sessione registrata
-    if (isset($_SESSION['user'])) {
-        $auth = 1;
-        $username = $_SESSION['user']['username'];
-    } else $auth = 0;
-
     $PageTitle="Blue Horizon";
 
     function customPageHeader() { ?>
@@ -20,7 +12,11 @@ ini_set('display_errors', 1);
 
 
 <!-- head -->
+<<<<<<< HEAD
 <?php include($local_path."html/head.php"); ?>
+=======
+<?php include("html/head.php"); echo $_SERVER["DOCUMENT_ROOT"];?>
+>>>>>>> f1c3e2467c61c81e66e3d0b73292a75221f0ab2d
 
 <!-- body -->
 <div id="header">
