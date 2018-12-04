@@ -1,13 +1,5 @@
 <?php
-    session_start();
-    include("../utils/config.php");
-ini_set('display_errors', 1);
-
-echo "1".$_SERVER['SCRIPT_FILENAME']."</br>";
-echo "2".$_SERVER['REQUEST_URI']."</br>";
-echo "3".$_SERVER['PHP_SELF']."</br>";
-echo "4".$_SERVER['QUERY_STRING']."</br>";
-
+    include_once("../utils/config.php");
     //se non c'è la sessione registrata
     if (isset($_SESSION['user'])) {
         $auth = 1;
@@ -24,11 +16,11 @@ echo "4".$_SERVER['QUERY_STRING']."</br>";
 
 
 <!-- head -->
-<?php include("head.php"); ?>
+<?php include($local_path."html/head.php"); ?>
 
 <!-- body -->
 <div id="header">
-    <?php include("navbar.php"); ?>
+    <?php include($local_path."html/navbar.php"); ?>
 </div>
 
 <!-- footer -->

@@ -13,7 +13,7 @@ ini_set('display_errors', 1);
         
         // se è settata redirigo sulla pagina del sito da cui è arrivato l'utente altrimenti ritorno all'homepage
         if (isset($_SERVER['HTTP_REFERER'])) header("location:".$_SERVER['HTTP_REFERER']."?msg=".$msg);
-        else header("location:".$base_url."?msg=".$msg); // homepage
+        else header("location:".$local_path."?msg=".$msg); // homepage
         
     } else {
         // errore
@@ -21,6 +21,6 @@ ini_set('display_errors', 1);
         
         // se è settata redirigo sulla pagina del sito da cui è arrivato l'utente altrimenti ritorno all'homepage
         if (isset($_SERVER['HTTP_REFERER'])) header("location:".$_SERVER['HTTP_REFERER']."?msg=".$msg);
-        else header("location:".$base_url."?msg=".$msg); // homepage
+        else header("location:".$local_path."?msg=".$msg); // homepage
     }  
 ?>

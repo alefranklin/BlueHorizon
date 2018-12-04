@@ -1,12 +1,9 @@
-<?php include_once("../utils/config.php"); ?>
-
 <!DOCTYPE html>
-<html>
 	<head>
         <!-- aggiungo tag generici -->
 		<title><?= isset($PageTitle) ? $PageTitle : "Blue Horizon" ?></title>
 
-		<!-- <base href="<?= $base_url ?>"> -->
+		<!-- <base href="<?= $local_path ?>"> -->
         
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         
@@ -16,13 +13,11 @@
 
         <meta charset="UTF-8">
 
-        <link rel="stylesheet" type="text/css" href="<?= $base_url."/style/animations.css" ?>">
+        <link rel="stylesheet" type="text/css" href="<?= $host_path."style/animations.css" ?>">
 
-        <link rel="stylesheet" type="text/css" href="<?= $base_url."/style/style-small.css" ?>">
+        <link rel="stylesheet" type="text/css" href="<?= $host_path."style/style-small.css" ?>">
 
-        <link rel="stylesheet" type="text/css" href="<?= $base_url."/style/style-big.css" ?>">
-
-        <link rel="stylesheet" type="text/css" href="<?= $base_url."/style/style-medium.css" ?>">
+        <link rel="stylesheet" type="text/css" href="<?= $host_path."style/style-big.css" ?>">
 
         <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 
@@ -32,7 +27,7 @@
 
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-        <script src="<?= $base_url."/js/script.js" ?>"></script>
+        <script src="<?= $local_path."/js/script.js" ?>"></script>
         
         <!-- aggiungo i tag specifici per la pagina -->
         <?php 
@@ -41,5 +36,3 @@
             }
         ?>
     </head>
-    
-    <body>

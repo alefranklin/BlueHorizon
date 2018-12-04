@@ -9,15 +9,16 @@
 
 	//URL PER HTACCESS
 
-	$base_url = "http://localhost/BlueHorizon";
+	$local_path = $_SERVER['DOCUMENT_ROOT']."/BlueHorizon/"; //usato per gli include
+    $host_path = "http://localhost/BlueHorizon/"; //usato per le cose di stile(css, immagini)
 
 	//connessione DB
 
 	$host = "localhost";
 
-	$db_user = "user"; //<--- cambiate con il vostro utente del database
+	$db_user = "root"; //<--- cambiate con il vostro utente del database
 
-	$db_psw = "password";  //<--- mette la vostra password del database
+	$db_psw = "";  //<--- mette la vostra password del database
 
 	$db_name = "blueh_db";
 ?>

@@ -162,7 +162,7 @@
 <html>  
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="<?= $base_url."/user/registration.css" ?>">
+        <link rel="stylesheet" type="text/css" href="<?= $local_path."/user/registration.css" ?>">
         
         <style>
             .error {color: #FF0000;}
@@ -233,7 +233,7 @@
 
         </form>
         
-        Ritorn alla <a href="<?= $base_url ?>" id="back">Home</a>
+        Ritorn alla <a href="<?= $local_path ?>" id="back">Home</a>
         
     </body>
 </html>
