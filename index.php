@@ -53,9 +53,11 @@
                     <!-- icona user o, se loggato, username -->
                     <?php if ($auth) { ?>
 
-                        <a class="user-icon-container space-font" href="user/privato.php">
-                            <i class="user-icon fas fa-user"></i>
-                            <?= $username ?>
+                        <a class="space-font" href="user/privato.php">
+                            <?php 
+                                $username = strtoupper($username);
+                                echo $username;
+                            ?>
                         </a>
 
                     <?php } else { ?>
