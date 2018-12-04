@@ -17,10 +17,10 @@
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang='it'>
 <head>
 
-    <title>Pannello Admin</title>
+    <title>Blue Horizon - Pannello Admin</title>
 
     <!--Pannello di gestione-->
     <link href="test.css" rel="stylesheet" type="text/css" />
@@ -46,7 +46,7 @@
     <?php if ($auth) { ?>
 
         <p>
-            <h3>I tuoi dati sono:</h3><br/>
+            <h2>I tuoi dati sono:</h2><br/>
 
             <?php foreach($_SESSION['user'] as $key => $value): ?>
             <?= $key . ' : ' . $value ?><br/>
@@ -64,7 +64,7 @@
                     <th>Lastname</th>
                     <th>Sex</th>
                     <th>Email</th>
-                    <th>Username</th>
+                    <th>isAdmin</th>
                 </tr>
                 <?php foreach($users as $user): ?>
                 <tr>
@@ -73,7 +73,7 @@
                     <td><?= $user['lastname']; ?></td>
                     <td><?= $user['sex']; ?></td>
                     <td><?= $user['email']; ?></td>
-                    <td><?= $user['username']; ?></td>
+                    <td><?= $user['isAdmin'] ?></td>
                 </tr>
                 <?php endforeach; ?>
             </table>
@@ -94,7 +94,7 @@
                     <td><?= $travel['departure']; ?></td>
                     <td><?= $travel['arrival']; ?></td>
                     <td><?= date("d-m-Y", strtotime($travel['date'])); ?></td>
-                    <td><?= $user['description']; ?></td>
+                    <td><?= $travel['description']; ?></td>
                 </tr>
                 <?php endforeach; ?>
             </table>
