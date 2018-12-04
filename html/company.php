@@ -1,3 +1,4 @@
+<html lang="it">
 <?php
     include_once("../utils/config.php");
     $PageTitle="Company";
@@ -13,9 +14,14 @@
 <?php include($local_path."html/head.php"); ?>
 
 <!-- body -->
-<div id="header">
-    <?php include($local_path."html/navbar.php"); ?>
-</div>
-
+<body>
+    <div id="header">
+        <?php include($local_path."html/navbar.php"); ?>
+    </div>
+    <div id="body-page" class="">
+    <i onclick="topFunction()" id="scroll-back-btn" class="fas fa-arrow-circle-up"> </i>
 <!-- footer -->
-<?php include("footer.php"); ?>
+<?php include($local_path."html/footer.php"); ?>
+    </div>
+</body>
+</html>
