@@ -64,6 +64,7 @@
                     <th>Lastname</th>
                     <th>Sex</th>
                     <th>Email</th>
+                    <th>Username</th>
                 </tr>
                 <?php foreach($users as $user): ?>
                 <tr>
@@ -72,6 +73,7 @@
                     <td><?= $user['lastname']; ?></td>
                     <td><?= $user['sex']; ?></td>
                     <td><?= $user['email']; ?></td>
+                    <td><?= $user['username']; ?></td>
                 </tr>
                 <?php endforeach; ?>
             </table>
@@ -91,7 +93,7 @@
                 <tr>
                     <td><?= $travel['departure']; ?></td>
                     <td><?= $travel['arrival']; ?></td>
-                    <td><?= date("d-m-Y", strtotime($user['date'])); ?></td>
+                    <td><?= date("d-m-Y", strtotime($travel['date'])); ?></td>
                     <td><?= $user['description']; ?></td>
                 </tr>
                 <?php endforeach; ?>
