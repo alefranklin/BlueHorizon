@@ -19,7 +19,7 @@ ini_set('display_errors', 1);
 
 ?>
 
-<img id="logo" src="<?= $host_path."img/logo-placeholder.png" ?>">
+<img id="logo" src="<?= $host_path."img/logo-placeholder.png" ?>" alt="Logo Blue Horizon">
 <nav id="menu" class="topnav"> <!-- <-screen reader stuff -->
         <a class="<?= ($active == $home) ? "active" ?> space-font" href="<?= $host_path."index.php" ?>" > HOME </a>
         <a class="space-font" href="<?= $host_path."html/company.php" ?>" > COMPANY </a>
@@ -31,13 +31,13 @@ ini_set('display_errors', 1);
 
             <a class="user-icon-container space-font" href="user/privato.php">
                 <i class="user-icon fas fa-user"></i>
-                <?= $username ?>
+                <span class="hide">Pagina Utente</span><?= $username ?>
             </a>
 
         <?php } else { ?>
 
             <a href="javascript:void(0); "class="user-icon-container space-font" onclick="toggleUser(0)">
-                <i class="user-icon fas fa-user"></i>
+                <i class="user-icon fas fa-user"></i><span class="hide">Login</span>
             </a>
 
             <!-- login form -->
@@ -46,6 +46,6 @@ ini_set('display_errors', 1);
 
         <!-- icona hamburger -->
         <a href="javascript:void(0);" class="icon" onclick="toggleHamburger()">
-            <i class="fa fa-bars"></i>
+            <i class="fa fa-bars"></i><span class="hide">Menu</span>
         </a>
 </nav>

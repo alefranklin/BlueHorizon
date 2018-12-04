@@ -1,4 +1,4 @@
-<html>
+<html lang="it">
 <?php
     session_start();
     include("utils/config.php");

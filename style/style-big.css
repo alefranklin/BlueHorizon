@@ -167,6 +167,10 @@
         border-radius: 5px;
 
     }
+    
+    .hide{
+        display: none;
+    }
 
     .initial{
         display: none;

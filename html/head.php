@@ -15,7 +15,7 @@
 
         <link rel="stylesheet" type="text/css" href="<?= $host_path."style/animations.css" ?>">
 
-        <link rel="stylesheet" type="text/css" href="<?= $base_url."/style/style-small.css" ?>">
+        <link rel="stylesheet" type="text/css" href="<?= $host_path."style/style-small.css" ?>">
 
         <link rel="stylesheet" type="text/css" href="<?= $host_path."style/style-big.css" ?>">
 
