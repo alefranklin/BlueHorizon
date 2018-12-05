@@ -1,4 +1,3 @@
-<html lang="it">
 <?php
     session_start();
     include("utils/config.php");
@@ -32,7 +31,3 @@
 
 <!-- footer -->
 <?php include($local_path."html/footer.php"); ?>
-    
-</body>
-</html>
-    

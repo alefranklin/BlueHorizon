@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="it">
 	<head>
         <!-- aggiungo tag generici -->
 		<title><?= isset($PageTitle) ? $PageTitle : "Blue Horizon" ?></title>

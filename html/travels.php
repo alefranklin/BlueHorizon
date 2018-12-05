@@ -1,4 +1,3 @@
-<html lang="it">
 <?php
     include_once("../utils/config.php");
     $PageTitle="Company";
@@ -19,7 +18,7 @@
         <?php include($local_path."html/navbar.php"); ?>
     </div>
     <div id="body-page" class="">
-    <i onclick="topFunction()" id="scroll-back-btn" class="fas fa-arrow-circle-up"> </i>
+        
         <h1 id="travels-title" class="space-font">TRAVELS</h1>
 
         <div id="travel-list">
@@ -61,6 +60,6 @@
 	            </div>
 	        </div>
 				</div>	
-    </body>
 
-<html>
+<!-- footer -->
+<?php include($local_path."html/footer.php"); ?>

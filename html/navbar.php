@@ -1,5 +1,4 @@
 <?php
-    //se non c'è la sessione registrata
     include_once($local_path."utils/utility.php");
     if (isset($_SESSION['user'])) {
         $auth = 1;
@@ -21,16 +20,12 @@ ini_set('display_errors', 1);
 <div id="skip">
 <a href="#body-page">Skip to main content</a></div>
 <img id="logo" src="<?= $host_path."img/logo-placeholder.png" ?>" alt="Logo Blue Horizon">
-<nav id="menu" class="topnav"> <!-- <-screen reader stuff -->
-        <!--<a class="active space-font" href="index.php"> HOME </a>
-        <a class="space-font" href="html/company.php"> COMPANY </a>
-        <a class="space-font" href="html/rockets.php"> ROCKETS </a>
-        <a class="space-font" href="html/travels.php"> TRAVELS </a>-->
-
-        <a class="<?php setActive($self,$home)?>space-font" href="<?= $host_path."index.php" ?>" > HOME </a>
-        <a class="<?php setActive($self,$company)?>space-font" href="<?= $host_path."html/company.php" ?>" > COMPANY </a>
-        <a class="<?php setActive($self,$rockets)?>space-font" href="<?= $host_path."html/rockets.php" ?>" > ROCKETS </a>
-        <a class="<?php setActive($self,$travels)?>space-font" href="<?= $host_path."html/travels.php" ?>" > TRAVELS </a>
+<nav id="menu" class="topnav">
+    
+        <a class="<?php setActive($self,$home)?> space-font" href="<?= $host_path."index.php" ?>" > HOME </a>
+        <a class="<?php setActive($self,$company)?> space-font" href="<?= $host_path."html/company.php" ?>" > COMPANY </a>
+        <a class="<?php setActive($self,$rockets)?> space-font" href="<?= $host_path."html/rockets.php" ?>" > ROCKETS </a>
+        <a class="<?php setActive($self,$travels)?> space-font" href="<?= $host_path."html/travels.php" ?>" > TRAVELS </a>
 
         <!-- icona user o, se loggato, username -->
         <?php if ($auth) { ?>
