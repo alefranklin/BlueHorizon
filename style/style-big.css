@@ -156,6 +156,18 @@
         border-left: 1px solid lightgray;
     }
 
+    #skip{
+        position: absolute;
+        height: 20px;
+        top: -20px;
+        width: 100%;
+    }
+    
+    #skip a{
+        width: 100%;
+        max-height: 20px;
+        text-align: center;
+    }
     #user-div{
         position: fixed;
         height: 140px;
@@ -166,6 +178,10 @@
         background-color: #757575;
         border-radius: 5px;
 
+    }
+    
+    .hide{
+        display: none;
     }
 
     .initial{
@@ -198,6 +214,7 @@
         background: -webkit-linear-gradient(#5294e2, #85b4ea);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        pointer-events: none;
     }
 
     .topnav a.icon{

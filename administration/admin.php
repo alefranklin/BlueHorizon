@@ -99,15 +99,15 @@
         </p>
 
         <p>
-            Per effettuare il logout clicca <a href="<?= $base_url."/user/logout.php" ?>"><font color='blue'>qui</font></a>
+            Per effettuare il logout clicca <a href="<?= $local_path."/user/logout.php" ?>"><font color='blue'>qui</font></a>
         </p>
         <p>
-            Torna alla <a href="<?= $base_url ?>"><font color='blue'>Home</font></a>
+            Torna alla <a href="<?= $local_path ?>"><font color='blue'>Home</font></a>
         </p>
 
     <?php } else { ?>
         <p>
-            Torna alla <a href="<?= $base_url ?>"><font color='blue'>Home</font></a>
+            Torna alla <a href="<?= $local_path ?>"><font color='blue'>Home</font></a>
         </p>
     <?php } ?>
 

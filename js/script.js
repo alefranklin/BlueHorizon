@@ -7,12 +7,14 @@ function toggleHamburger() {
     }
 }
 
-function toggleUser(){
+function toggleUser() {
     var x = document.getElementById("user-div");
     var y = document.getElementById("body-page");
+    
     if(x.className === "initial"){
         x.className = "exit-animation";
     }
+    
     if(x.className === "enter-animation"){
         y.className = "unfade-body";
         x.className = "exit-animation";
@@ -25,10 +27,13 @@ function toggleUser(){
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
+    
+    var btn = document.getElementById("scroll-back-btn");
+    
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        document.getElementById("scroll-back-btn").style.display = "block";
+        btn.style.display = "block";
     } else {
-        document.getElementById("scroll-back-btn").style.display = "none";
+        btn.style.display = "none";
     }
 }
 

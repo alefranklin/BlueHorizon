@@ -1,6 +1,6 @@
 <?php
     /***************************************** connessione al database ****************************************************/
-    include("config.php"); 
+    include_once("config.php"); 
 
     // ip locale, login, password e nome database
     $db = new mysqli($host,$db_user,$db_psw, $db_name) or die ('Non riesco a connettermi: errore '.mysqli_error());
