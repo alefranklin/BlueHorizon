@@ -22,10 +22,10 @@ ini_set('display_errors', 1);
 <img id="logo" src="<?= $host_path."img/logo-placeholder.png" ?>" alt="Logo Blue Horizon">
 <nav id="menu" class="topnav">
     
-        <a class="<?php setActive($self,$home)?> space-font" href="<?= $host_path."index.php" ?>" > HOME </a>
-        <a class="<?php setActive($self,$company)?> space-font" href="<?= $host_path."html/company.php" ?>" > COMPANY </a>
-        <a class="<?php setActive($self,$rockets)?> space-font" href="<?= $host_path."html/rockets.php" ?>" > ROCKETS </a>
-        <a class="<?php setActive($self,$travels)?> space-font" href="<?= $host_path."html/travels.php" ?>" > TRAVELS </a>
+        <a class="<?= setActive($self,$home) ?>" href="<?= $host_path."index.php" ?>" > HOME </a>
+        <a class="<?= setActive($self,$company) ?>" href="<?= $host_path."html/company.php" ?>" > COMPANY </a>
+        <a class="<?= setActive($self,$rockets) ?>" href="<?= $host_path."html/rockets.php" ?>" > ROCKETS </a>
+        <a class="<?= setActive($self,$travels) ?>" href="<?= $host_path."html/travels.php" ?>" > TRAVELS </a>
 
         <!-- icona user o, se loggato, username -->
         <?php if ($auth) { ?>
