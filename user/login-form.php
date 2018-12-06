@@ -1,7 +1,7 @@
 <?php
 ini_set('display_errors', 1);
-    $verifica = $local_path."user/verifica.php";
-    $registration = $local_path."user/registration.php";
+    $verifica = $host_path."user/verifica.php";
+    $registration = $host_path."user/registration.php";
 ?>
 
 <div id="user-div" class="initial">

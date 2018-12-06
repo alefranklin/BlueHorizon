@@ -36,4 +36,19 @@
                 customPageHeader();
             }
         ?>
-    </head>    
+    </head>
+    
+    <?php 
+        if(isset($_SESSION['snackmsg'])) { ?>
+        
+            <body onload="snackMessage(<?= $_SESSION["snackmsg"] ?>)">
+        
+    <?php
+            if(strpos($_SESSION['snackmsg'], 'log-out') !== true){
+                $_SESSION = array();
+                session_destroy();
+            }
+        } else { ?>
+            <body>
+    <?php
+        } ?>

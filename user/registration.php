@@ -146,7 +146,7 @@
             }
             
             // TODO rimandare a index
-            header("location:../user/privato.php");
+            header("location:".$host_path."user/privato.php");
         }
     }
 

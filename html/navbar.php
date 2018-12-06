@@ -30,7 +30,7 @@ ini_set('display_errors', 1);
         <!-- icona user o, se loggato, username -->
         <?php if ($auth) { ?>
 
-            <a class="user-icon-container space-font" href="user/privato.php">
+            <a class="user-icon-container space-font" href="<?= $host_path."user/privato.php" ?>">
                 <i class="user-icon fas fa-user"></i>
                 <span class="hide">Pagina Utente</span><?= $username ?>
             </a>

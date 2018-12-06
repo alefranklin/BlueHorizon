@@ -6,7 +6,7 @@
     if ($_SESSION['autorizzato']) {
         
         if(isAdmin()) {
-            header("location: ../administration/admin.php");
+            header("location:".$host_path."administration/admin.php");
             die;
         }
         
@@ -26,7 +26,7 @@
     <title>Pannello Admin</title>
 
     <!--Pannello di gestione-->
-    <link href="<?= $local_path."/user/test.css" ?>" rel="stylesheet" type="text/css" />
+    <link href="<?= $host_path."user/test.css" ?>" rel="stylesheet" type="text/css" />
 
 </head>
 <body>
@@ -44,14 +44,14 @@
         </p>
 
         <p>
-            Per effettuare il logout clicca <a href="<?= $local_path."/user/logout.php" ?>"><font color='blue'>qui</font></a>
+            Per effettuare il logout clicca <a href="<?= $host_path."user/logout.php" ?>"><font color='blue'>qui</font></a>
         </p>
         <p>
-            Torna alla <a href="<?= $local_path ?>"><font color='blue'>Home</font></a>
+            Torna alla <a href="<?= $host_path ?>"><font color='blue'>Home</font></a>
         </p>
     <?php } else { ?>
         <p>
-            Torna alla <a href="<?= $local_path ?>"><font color='blue'>Home</font></a>
+            Torna alla <a href="<?= $host_path ?>"><font color='blue'>Home</font></a>
         </p>
     <?php } ?>
 
