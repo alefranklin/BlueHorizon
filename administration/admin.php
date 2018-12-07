@@ -1,6 +1,7 @@
 <?php
     session_start();
     include("../utils/connessione_db.php"); // includo il file di connessione al database
+    include_once("../utils/config.php");
 
     //se non c'è la sessione registrata
     if ($_SESSION['autorizzato'] && isAdmin()) {
@@ -14,33 +15,40 @@
         $auth = 0;
         $title = "Area riservata - ACCESS DENIED";
     }
-?>
+    
+    $PageTitle="Pannello Admin";
 
-<!DOCTYPE html>
-<html>
-<head>
+    function customPageHeader() { ?>
 
-    <title>Pannello Admin</title>
+        <!-- aggiungere tag specifici per questa pagina -->
+        <!--Pannello di gestione-->
+        <link href="test.css" rel="stylesheet" type="text/css" />
 
-    <!--Pannello di gestione-->
-    <link href="test.css" rel="stylesheet" type="text/css" />
+        <style type="text/css">
+            table {
+                border-collapse: collapse;
+            }
+            tr {
+                font-weight:bold;
+                background-color: lightgrey;
+            }
+            table, th, td {
+                border: 1px solid black;
+            }
+        </style>
 
-    <style type="text/css">
-        table {
-            border-collapse: collapse;
-        }
-        tr {
-            font-weight:bold;
-            background-color: lightgrey;
-        }
-        table, th, td {
-            border: 1px solid black;
-        }
-    </style>
+<?php } ?>
 
-</head>
-<body>
 
+<!-- head -->
+<?php include($local_path."html/head.php"); ?>
+
+<!-- body -->
+<div id="header">
+    <?php include($local_path."html/navbar.php"); ?>
+</div>
+
+<div id="body-page" class="">
     <h1><?= $title; ?></h1>
 
     <?php if ($auth) { ?>
@@ -101,15 +109,8 @@
         <p>
             Per effettuare il logout clicca <a href="<?= $host_path."user/logout.php" ?>"><font color='blue'>qui</font></a>
         </p>
-        <p>
-            Torna alla <a href="<?= $host_path ?>"><font color='blue'>Home</font></a>
-        </p>
-
-    <?php } else { ?>
-        <p>
-            Torna alla <a href="<?= $host_path ?>"><font color='blue'>Home</font></a>
-        </p>
     <?php } ?>
+</div>
 
-</body>
-</html>
+<!-- footer -->
+<?php include($local_path."html/footer.php"); ?>

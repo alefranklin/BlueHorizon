@@ -1,6 +1,7 @@
 <?php
     session_start();
     include_once("../utils/connessione_db.php"); //includo i file necessari a collegarmi al db
+    include_once("../utils/config.php");
 
     //se non c'è la sessione registrata
     if ($_SESSION['autorizzato']) {
@@ -17,20 +18,29 @@
         $auth = 0;
         $title = "Area riservata, ACCESS DANIED 'TUUUPIDOOOO";
     }
-?>
+    
+    $PageTitle="Company";
 
-<!DOCTYPE html>
-<html>
-<head>
+    function customPageHeader() { ?>
 
-    <title>Pannello Admin</title>
+        <!-- aggiungere tag specifici per questa pagina -->
+        
+        <!--Pannello di gestione-->
+        <link href="<?= $host_path."user/test.css" ?>" rel="stylesheet" type="text/css" />
 
-    <!--Pannello di gestione-->
-    <link href="<?= $host_path."user/test.css" ?>" rel="stylesheet" type="text/css" />
+<?php } ?>
 
-</head>
-<body>
 
+<!-- head -->
+<?php include($local_path."html/head.php"); ?>
+
+<!-- body -->
+<div id="header">
+    <?php include($local_path."html/navbar.php"); ?>
+</div>
+
+<div id="body-page" class="">
+    
     <h1><?= $title; ?></h1>
     
     <?php if ($auth) { ?>
@@ -55,5 +65,7 @@
         </p>
     <?php } ?>
 
-</body>
-</html>
+</div>
+
+<!-- footer -->
+<?php include($local_path."html/footer.php"); ?>
