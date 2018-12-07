@@ -8,8 +8,8 @@
         $auth = 1;
         $title = "Benvenuto nell'area riservata sovrano indiscusso n° ".$_SESSION['user']['id']." del mondo";
 
-        $users = get_table('users');
-        $travels = get_table('travels');
+        $table_users = get_table('users');
+        $table_travels = get_table('travels');
     }
     else {
         $auth = 0;
@@ -73,13 +73,13 @@
                     <th>Sex</th>
                     <th>Email</th>
                 </tr>
-                <?php foreach($users as $user): ?>
+                <?php foreach($table_users as $user): ?>
                 <tr>
-                    <td><?= $user['username']; ?></td>
-                    <td><?= $user['name']; ?></td>
-                    <td><?= $user['lastname']; ?></td>
-                    <td><?= $user['sex']; ?></td>
-                    <td><?= $user['email']; ?></td>
+                    <td><?= $user['username'] ?></td>
+                    <td><?= $user['name'] ?></td>
+                    <td><?= $user['lastname'] ?></td>
+                    <td><?= $user['sex'] ?></td>
+                    <td><?= $user['email'] ?></td>
                 </tr>
                 <?php endforeach; ?>
             </table>
@@ -95,12 +95,12 @@
                     <th>Data</th>
                     <th>Descrizione</th>
                 </tr>
-                <?php foreach($travels as $travel): ?>
+                <?php foreach($table_travels as $travel): ?>
                 <tr>
-                    <td><?= $travel['departure']; ?></td>
-                    <td><?= $travel['arrival']; ?></td>
-                    <td><?= date("d-m-Y", strtotime($user['date'])); ?></td>
-                    <td><?= $user['description']; ?></td>
+                    <td><?= $travel['departure'] ?></td>
+                    <td><?= $travel['arrival'] ?></td>
+                    <td><?= date("Y-m-d", strtotime($travel['date'])) ?></td>
+                    <td><?= $travel['description'] ?></td>
                 </tr>
                 <?php endforeach; ?>
             </table>
