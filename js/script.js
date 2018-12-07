@@ -43,8 +43,13 @@ function topFunction() {
 } 
 
 function snackMessage(msg){
-    var div = document.getElementById("snackbar");
-    snackbar.innerHTML = msg;
-    div.className = "show";
-    setTimeout(function(){ div.className = div.className.replace("show", ""); }, 3000);
+    var request = new XMLHttpRequest();
+    request.open("GET", "../utils/messages.xml", false);
+    request.send();
+    var xml = request.responseXML;
+    var users = xml.getElementsByTagName("message");
+    var snackMsg = document.getElementById("snack-msg");
+    var snackImg = document.getElementById("snack-img");
+    
+    
 }
