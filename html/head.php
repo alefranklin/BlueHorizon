@@ -5,9 +5,9 @@
 		<title><?= isset($PageTitle) ? $PageTitle : "Blue Horizon" ?></title>
 
 		<!-- <base href="<?= $base_url ?>"> -->
-        
+
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-        
+
         <meta name="description" content="Vendita razzi">
 
         <meta name="keywords" content="space, rocket, sell">
@@ -29,20 +29,20 @@
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
         <script src="<?= $host_path."js/script.js" ?>"></script>
-        
+
         <!-- tag specifici -->
-        <?php 
+        <?php
             if (function_exists('customPageHeader')) {
                 customPageHeader();
             }
         ?>
     </head>
-    
-    <?php 
+
+    <?php
         if(isset($_SESSION['snackmsg'])) { ?>
-        
+
             <body onload="snackMessage(<?= $_SESSION["snackmsg"] ?>)">
-        
+
     <?php
             if(strpos($_SESSION['snackmsg'], 'log-out') !== true){
                 $_SESSION = array();
