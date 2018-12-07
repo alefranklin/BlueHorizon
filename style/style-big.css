@@ -30,6 +30,7 @@
         overflow: hidden;
         height: 60px;
         opacity: 1;
+        z-index: 1;
     }
 
     #logo {
@@ -177,6 +178,7 @@
         float: right;
         background-color: #757575;
         border-radius: 5px;
+        z-index: 1;
 
     }
     
