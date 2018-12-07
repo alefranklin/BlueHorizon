@@ -50,7 +50,10 @@ DROP TABLE IF EXISTS `images`;
 CREATE TABLE `images` (
   `path` varchar(30) NOT NULL,
   `name` varchar(10) NOT NULL,
-  PRIMARY KEY (`path`,`name`)
+  `id_travel` int(6) unsigned DEFAULT NULL,
+  PRIMARY KEY (`path`,`name`),
+  KEY `id_travel` (`id_travel`),
+  CONSTRAINT `images_ibfk_1` FOREIGN KEY (`id_travel`) REFERENCES `travels` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -192,7 +195,7 @@ CREATE TABLE `travels` (
   `departure` varchar(30) NOT NULL,
   `arrival` varchar(30) NOT NULL,
   `date` date DEFAULT NULL,
-  `description` varchar(300) NOT NULL,
+  `description` text NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -248,4 +251,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-12-07 12:50:50
+-- Dump completed on 2018-12-07 16:19:30
