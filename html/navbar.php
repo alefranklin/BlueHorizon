@@ -18,7 +18,8 @@ ini_set('display_errors', 1);
 
 ?>
 <div id="skip">
-<a href="#body-page">Skip to main content</a></div>
+    <a href="#body-page">Skip to main content</a>
+</div>
 <img id="logo" src="<?= $host_path."img/logo-placeholder.png" ?>" alt="Logo Blue Horizon">
 <nav id="menu" class="topnav">
     
