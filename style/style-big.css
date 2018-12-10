@@ -68,7 +68,7 @@
         background-color: #f2f2f2;
     }
 
-    #rockets dt 
+    #rockets dt
     {
         width: 80%;
         font-size:2em;
@@ -80,12 +80,12 @@
         border: 3px solid #39679e;
         border-radius: 2em;
     }
-    
-    #rockets dl 
+
+    #rockets dl
     {
         margin-top: 5em;
     }
-    #rockets p 
+    #rockets p
     {
         font-size:1em;
         font-family: 'lato', sans-serif;
@@ -107,7 +107,7 @@
     #rockets dd
     {
         border-width:0px 3px 3px 3px;
-        border-style: solid; 
+        border-style: solid;
         border-color: #39679e;
         border-bottom-left-radius:2em;
         border-bottom-right-radius:2em;
@@ -162,7 +162,7 @@
         top: -20px;
         width: 100%;
     }
-    
+
     #skip a{
         width: 100%;
         max-height: 20px;
@@ -179,7 +179,7 @@
         border-radius: 5px;
 
     }
-    
+
     .hide{
         display: none;
     }
@@ -220,7 +220,7 @@
     .topnav a.icon{
         display: none;
     }
-    
+
     #scroll-back-btn{
         color: darkorange;
         font-size: 50px;
@@ -231,7 +231,7 @@
         bottom: 30px;
         right: 30px;
     }
-    
+
     #scroll-back-btn:hover{
         color: #b26200;
     }
@@ -271,51 +271,80 @@
         font-size: 12px;
         color: white;
     }
-    
-    #snackbar {
-    visibility: hidden;
-    min-width: 250px;
-    margin-left: -125px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    border-radius: 2px;
-    padding: 16px;
-    position: fixed;
-    z-index: 1;
-    left: 50%;
-    bottom: 30px;
-    font-size: 17px;
-}
-    
-    #snackbar.show {
-        visibility: visible;
-        -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-        animation: fadein 0.5s, fadeout 0.5s 2.5s;
-    }
 
-    
+
+        #snack-div {
+          visibility: hidden;
+          min-width: 250px;
+          margin-left: -125px;
+          background-color: #333;
+          color: #fff;
+          text-align: center;
+          border-radius: 10px;
+          padding: 10px;
+          position: fixed;
+          z-index: 1;
+          left: 50%;
+          bottom: 30px;
+          font-size: 17px;
+        }
+
+        #snack-div.show {
+            visibility: visible;
+            -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+
+        #snack-div.good{
+          border-bottom: 3px green solid;
+        }
+
+        #snack-div.bad{
+          border-bottom: 3px red solid;
+        }
+
+        #snack-img{
+          display: block;
+          width: 20%;
+          float: left;
+        }
+
+        #snack-img.good{
+          color: green;
+        }
+
+        #snack-img.bad{
+          color: red;
+        }
+
+        #snack-msg{
+          float: right;
+          display: block;
+          width: 80%;
+        }
+
+
     #travel-list{
         max-width: 70%;
         margin: 40px 15%;
-        
+
     }
-    
+
     #mars-banner{
         background-image: url(../img/marte.jpg);
-  
+
     }
-    
+
     #earth-banner{
         background-image: url(../img/terra.jpg);
-  
+
     }
-    
+
     #pluto-banner{
         background-image: url(../img/plutone.jpeg);
-  
+
     }
-    
+
     .travel-panel{
         display: inline-block;
         margin: 10px 20%;
@@ -328,16 +357,16 @@
         background-size: cover;
         background-repeat: no-repeat;
     }
-    
+
     .travel-panel:hover{
         opacity: 0.4;
     }
-    
+
     .travel-panel img{
         position: absolute;
         max-width: 100%;
         height: auto;
     }
-    
-    
+
+
 }
