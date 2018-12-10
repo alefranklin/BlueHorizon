@@ -10,6 +10,6 @@
     </message>
     <message id="3">
         <type>bad</type>
-        <content>Porcamadonna</content>
+        <content>Username o password non validi</content>
     </message>
 </messages>
