@@ -40,14 +40,11 @@
 
     <?php
         if(isset($_GET['snackmsg'])) { ?>
-
+            
             <body onload="snackMessage(<?= $_GET["snackmsg"] ?>)">
 
     <?php
-            if(strpos($_SESSION['snackmsg'], 'log-out') !== true){
-                $_SESSION = array();
-                session_destroy();
-            }
+         
         } else { ?>
             <body>
     <?php

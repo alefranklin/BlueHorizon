@@ -8,4 +8,8 @@
         <type>good</type>
         <content>Log-out effettuato</content>
     </message>
+    <message id="3">
+        <type>bad</type>
+        <content>Porcamadonna</content>
+    </message>
 </messages>
