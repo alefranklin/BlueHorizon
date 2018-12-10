@@ -50,7 +50,10 @@ DROP TABLE IF EXISTS `images`;
 CREATE TABLE `images` (
   `path` varchar(30) NOT NULL,
   `name` varchar(10) NOT NULL,
-  PRIMARY KEY (`path`,`name`)
+  `id_travel` int(6) unsigned DEFAULT NULL,
+  PRIMARY KEY (`path`,`name`),
+  KEY `id_travel` (`id_travel`),
+  CONSTRAINT `images_ibfk_1` FOREIGN KEY (`id_travel`) REFERENCES `travels` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -108,7 +111,7 @@ CREATE TABLE `rocket_cabin` (
   `id_cabin` int(6) NOT NULL,
   `number_of_cabin` int(6) NOT NULL,
   `price` int(5) unsigned NOT NULL,
-  `free` tinyint(1) NOT NULL,
+  `free` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_rocket` (`id_rocket`,`id_cabin`),
   KEY `id_cabin` (`id_cabin`),
@@ -192,7 +195,7 @@ CREATE TABLE `travels` (
   `departure` varchar(30) NOT NULL,
   `arrival` varchar(30) NOT NULL,
   `date` date DEFAULT NULL,
-  `description` varchar(300) NOT NULL,
+  `description` text NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -226,7 +229,7 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`,`email`,`username`),
   UNIQUE KEY `email` (`email`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -235,8 +238,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'admin','admin','N.D.','admin@bluehorizon.com','879f17afda4a4620870ddd4cb9d665255b46054e4a4297f577d193da17cb7520','admin',1), (2, 'Alessandro', 'Franchin', 'F', 'alefrank@bluehorizon.com', '7A37B85C8918EAC19A9089C0FA5A2AB4DCE3F90528DCDEEC108B23DDF3607B99', 'Hesken', 0),
-                           (3, 'Matteo', 'Pagotto', 'F', 'matteopagotto@bluehorizon.com', '7A37B85C8918EAC19A9089C0FA5A2AB4DCE3F90528DCDEEC108B23DDF3607B99', 'Madteo', 0);
+INSERT INTO `users` VALUES (1,'admin','admin','N.D.','admin@bluehorizon.com','879f17afda4a4620870ddd4cb9d665255b46054e4a4297f577d193da17cb7520','admin',1),(2,'Alessandro','Franchin','F','alefrank@bluehorizon.com','7A37B85C8918EAC19A9089C0FA5A2AB4DCE3F90528DCDEEC108B23DDF3607B99','Hesken',0),(3,'Matteo','Pagotto','F','matteopagotto@bluehorizon.com','7A37B85C8918EAC19A9089C0FA5A2AB4DCE3F90528DCDEEC108B23DDF3607B99','Madteo',0);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -249,4 +251,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-12-03 17:52:41
+-- Dump completed on 2018-12-07 16:19:30
