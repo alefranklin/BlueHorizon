@@ -162,7 +162,7 @@
 <html>  
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="<?= $local_path."/user/registration.css" ?>">
+        <link rel="stylesheet" type="text/css" href="<?= $local_path."../style/registration.css" ?>">
         
         <style>
             .error {color: #FF0000;}

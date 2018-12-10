@@ -62,7 +62,9 @@
         -webkit-text-fill-color: transparent;
     }
 
-    #rockets dt,dd
+    Rockets css
+
+#rockets dt,dd
     {
         margin: auto;
         background-color: #f2f2f2;
@@ -73,6 +75,8 @@
         width: 80%;
         font-size:2em;
         padding-bottom: 0.5em;
+        background-color:white;
+        margin:auto;
         padding-top: 0.5em;
         font-family: 'lato', sans-serif;
         font-weight: bold;
@@ -97,11 +101,12 @@
         color:white;
         font-size: 4em;
         font-family: 'lato', sans-serif;
-        padding-top:1em;
+        padding-top:2em;
         text-align:left;
         letter-spacing: 4px;
         width:75%;
         margin:auto;
+        text-shadow: 5px 4px 2px #000000;
     }
 
     #rockets dd
@@ -339,5 +344,48 @@
         height: auto;
     }
     
-    
+    #company-content
+    {
+        max-width:80%;
+        overflow: hidden;
+        margin:auto;
+        margin-top:5em;
+        padding-bottom:1.5em;
+    }
+
+    #company-content h1
+    {
+        color:white;
+        font-family: 'lato', sans-serif;
+        text-align:left;
+        font-size: 4em;
+        margin-bottom:2em;
+        text-shadow: 5px 4px 2px #000000;
+    }
+
+    #company-content p 
+    {
+        color:white;
+        text-shadow: 1px 1px 1px #000000;
+        font-family: 'lato', sans-serif;
+        text-align:left;
+        width:50%;
+        float:left;
+        margin:0;
+        vertical-align:top;
+    }
+
+    #company-content img
+    {
+        width:40%;    
+        margin-left:2em;    
+        box-shadow:0px 5px 8px #000000;
+        margin-bottom:0.5em;
+    }
+
+    #company-content img, #company-content p 
+    {
+        display:inline-block;
+    }
+
 }
