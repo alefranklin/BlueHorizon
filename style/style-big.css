@@ -68,7 +68,7 @@
         background-color: #f2f2f2;
     }
 
-    #rockets dt 
+    #rockets dt
     {
         width: 80%;
         font-size:2em;
@@ -80,12 +80,12 @@
         border: 3px solid #39679e;
         border-radius: 2em;
     }
-    
-    #rockets dl 
+
+    #rockets dl
     {
         margin-top: 5em;
     }
-    #rockets p 
+    #rockets p
     {
         font-size:1em;
         font-family: 'lato', sans-serif;
@@ -107,7 +107,7 @@
     #rockets dd
     {
         border-width:0px 3px 3px 3px;
-        border-style: solid; 
+        border-style: solid;
         border-color: #39679e;
         border-bottom-left-radius:2em;
         border-bottom-right-radius:2em;
@@ -156,13 +156,13 @@
         border-left: 1px solid lightgray;
     }
 
-    #skip{
-        position: absolute;
+    .skip{
+        position: fixed;
         height: 20px;
         top: -20px;
         width: 100%;
     }
-    
+
     #skip a{
         width: 100%;
         max-height: 20px;
@@ -179,7 +179,7 @@
         border-radius: 5px;
 
     }
-    
+
     .hide{
         display: none;
     }
@@ -220,7 +220,7 @@
     .topnav a.icon{
         display: none;
     }
-    
+
     #scroll-back-btn{
         color: darkorange;
         font-size: 50px;
@@ -231,7 +231,7 @@
         bottom: 30px;
         right: 30px;
     }
-    
+
     #scroll-back-btn:hover{
         color: #b26200;
     }
@@ -271,7 +271,7 @@
         font-size: 12px;
         color: white;
     }
-    
+
     #snackbar {
     visibility: hidden;
     min-width: 250px;
@@ -287,35 +287,35 @@
     bottom: 30px;
     font-size: 17px;
 }
-    
+
     #snackbar.show {
         visibility: visible;
         -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
         animation: fadein 0.5s, fadeout 0.5s 2.5s;
     }
 
-    
+
     #travel-list{
         max-width: 70%;
         margin: 40px 15%;
-        
+
     }
-    
+
     #mars-banner{
         background-image: url(../img/marte.jpg);
-  
+
     }
-    
+
     #earth-banner{
         background-image: url(../img/terra.jpg);
-  
+
     }
-    
+
     #pluto-banner{
         background-image: url(../img/plutone.jpeg);
-  
+
     }
-    
+
     .travel-panel{
         display: inline-block;
         margin: 10px 20%;
@@ -328,16 +328,16 @@
         background-size: cover;
         background-repeat: no-repeat;
     }
-    
+
     .travel-panel:hover{
         opacity: 0.4;
     }
-    
+
     .travel-panel img{
         position: absolute;
         max-width: 100%;
         height: auto;
     }
-    
-    
+
+
 }

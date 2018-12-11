@@ -24,7 +24,7 @@
         <dl>
             <dt> Name 1 </dt>
             <dd>
-                <img class="space-ship" src="../img/hyperion-shuttle.jpg" />
+                <img class="space-ship" src="../img/hyperion-shuttle.jpg" alt="spacecrafts-1"/>
                 <p> description description description description description description
                 description description description description description description
                 description description description description description description
@@ -33,7 +33,7 @@
 
             <dt>Name 2</dt>
             <dd>
-                <img class="space-ship" src="../img/ship2.png">
+                <img class="space-ship" src="../img/ship2.png" alt="spacecrafts-2"/>
                 <p>
                 description description description description description description
                 description description description description description description
@@ -43,7 +43,7 @@
 
             <dt>Name 3</dt>
             <dd>
-                <img class="space-ship" src="../img/ship3.jpeg">
+                <img class="space-ship" src="../img/ship3.jpeg" alt="spacecrafts-3"/>
                 <p>
                 description description description description description description
                 description description description description description description

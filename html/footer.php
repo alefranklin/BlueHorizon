@@ -8,5 +8,9 @@
     </div>
 </div>
 
+<div role="contentinfo" class="hide">
+  <p>Put copyright, etc. here.</p>
+</div>
+
 </body>
 </html>
