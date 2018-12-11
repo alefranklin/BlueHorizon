@@ -1,7 +1,20 @@
 <?php
     session_start();
-    include_once("../utils/connessione_db.php"); // includo il file di connessione al database
+    include("../utils/connessione_db.php"); // includo il file di connessione al database
+    include_once("../utils/config.php");
+
+    //se non c'è la sessione registrata
+    if (!isAdmin()) {
+        $msg = "ACCESS DANIED";
+    }
     
+    $PageTitle="Pannello Admin | travels";
+
+    function customPageHeader() { ?>
+
+        <!-- aggiungere tag specifici per questa pagina -->
+<?php }
+
     // definisco le variabili e le inizializzo vuote
     $departureErr = $arrivalErr = $dateErr = $descriptionErr = "";
     $departure = $arrival = $date = $description = "";
@@ -55,22 +68,18 @@
             $error = true;
         } else {
             $description = test_input($_POST["description"]);
-            // check if name only contains letters and whitespace
-            if (!preg_match("/^[a-zA-Z]*$/",$description)) {
-                $descriptionErr = "Only letters are allowed";
-                $error = true;
-            }
             
             if(strlen($description) < 100) {
-                $passwordErr = $passwordErr."Must be a minimum of 100 characters";
+                $descriptionErr = $descriptionErr."Must be a minimum of 100 characters";
                 $error = true;
             }
             
             if(strlen($description) > 65000) {
-                $passwordErr = $passwordErr."Must be a maximum of 65000 characters";
+                $descriptionErr = $descriptionErr."Must be a maximum of 65000 characters";
                 $error = true;
             }
         }
+echo $error;
         
         //se non si sono verificati errori procedo con la registrazione dei dati
         if(!$error) {
@@ -79,12 +88,14 @@
             $query = "INSERT INTO travels (departure, arrival, date, description)
             VALUES ('$departure','$arrival','$date','$description')";
             
-            $ris_reg = $db->query($query) or die (mysqli_error()); // se la query fallisce
+            $ris_reg = $db->query($query); //or die(mysqli_error()); // se la query fallisce
             
+echo "sono qua ";
+                
             //se la registrazione è andata a buon fine
             if(isset($ris_reg)) {
 
-                // genera un messaggio sandwich
+                //TODO genera un messaggio sandwich
 
             }
             
@@ -108,59 +119,61 @@
     }
 ?>
 
-<!DOCTYPE HTML> 
-<html>  
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="<?= $host_path."/user/registration.css" ?>">
+
+<!-- head -->
+<?php include($local_path."html/head.php"); ?>
+    
+<?php if(isAdmin()) { ?>
+    
+    <h2>aggiungi viaggio</h2>
+    <p><span class="error">* required field</span></p>
+
+    <form name="form_manage_travels" method="post" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>">
+
+        <div class="group">      
+            <input type="text" name="departure" value="<?= $departure ?>" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <span class="error">* <?= $departureErr ?></span>
+            <label>Departure</label>
+        </div>
+
+        <div class="group">      
+            <input type="text" name="arrival" value="<?= $arrival ?>" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <span class="error">* <?= $arrivalErr ?></span>
+            <label>Arrival</label>
+        </div>
+
+        <div class="group">      
+            <textarea rows="10" cols="80" name="description" required><?= $description ?></textarea>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <span class="error">* <?= $descriptionErr ?></span>
+            <label>Description</label>
+        </div>
+
+        <div class="group">      
+            <input type="date" name="date" value="<?= $date ?>" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <span class="error">* <?= $dateErr ?></span>
+            <label>Date</label>
+        </div>
+
+        <button>Aggiungi</button>
+
+    </form>
+
+    <!-- rimando alla pagina di amministrazione -->
+    Ritorn alla <a href="<?= $host_path."administration/admin.php" ?>" id="back">Pagina di Amministrazione</a>
+
+<?php } else { ?>
+    
+    <h2><?= $msg ?></h2>
+
+<?php } ?>
         
-        <style>
-            .error {color: #FF0000;}
-        </style>
-        
-    </head>
-    <body>
-        <h2>Registrazione</h2>
-        <p><span class="error">* required field</span></p>
-        <form name="form_manage_travels" method="post" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>">
-
-            <div class="group">      
-				<input type="text" name="departure" value="<?= $departure ?>" required>
-				<span class="highlight"></span>
-				<span class="bar"></span>
-				<span class="error">* <?= $departureErr ?></span>
-				<label>Departure</label>
-			</div>
-            
-			<div class="group">      
-				<input type="text" name="arrival" value="<?= $arrival ?>" required>
-				<span class="highlight"></span>
-				<span class="bar"></span>
-				<span class="error">* <?= $arrivalErr ?></span>
-				<label>Arrival</label>
-			</div>
-
-			<div class="group">      
-                <textarea rows="10" cols="80" name="description" value="<?= $description ?>" required></textarea>
-				<span class="highlight"></span>
-				<span class="bar"></span>
-				<span class="error">* <?= $descriptionErr ?></span>
-				<label>Description</label>
-			</div>
-
-			<div class="group">      
-				<input type="date" name="date" value="<?= $date ?>" required>
-				<span class="highlight"></span>
-				<span class="bar"></span>
-				<span class="error">* <?= $dateErr ?></span>
-				<label>Date</label>
-			</div>
-
-            <button>Aggiungi</button>
-
-        </form>
-        
-        Ritorn alla <a href="<?= $host_path."/user/registration.css" ?>" id="back">Pagina di Amministrazione</a>
-        
-    </body>
-</html>
+<!-- footer -->
+<?php include($local_path."html/footer.php"); ?>
