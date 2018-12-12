@@ -1,7 +1,10 @@
 <?php
     /*********************************************** config ***************************************************************/
 
-    include_once("config.php"); 
+    include_once("config.php");
+    
+    // flag di debug mode 1 or 0
+    $GLOBALS['debug'] = 1;
 
     /***************************************** connessione al database ****************************************************/
 
@@ -78,6 +81,15 @@
         if (isset($_SESSION['user'])) {
             return 1;
         } else return 0;
+    }
+
+    function smartRedir($msg) {
+        if (isset($_SERVER['HTTP_REFERER'])) header("location:".$_SERVER['HTTP_REFERER']."?snackmsg=".$msg);
+        else header("location:".$local_path."?snackmsg=".$msg); // homepage
+    }
+
+    function displayErrors() {
+        if($GLOBALS['debug']) ini_set('display_errors', 1);
     }
 
     /***************************************** funzioni admin *************************************************************/

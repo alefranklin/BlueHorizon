@@ -1,7 +1,8 @@
 <?php
     session_start();
     include_once("utils/utility.php");
-
+    displayErrors();
+    
     $PageTitle="Blue Horizon";
 
     function customPageHeader() { ?>

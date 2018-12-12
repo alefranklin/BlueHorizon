@@ -1,6 +1,7 @@
 <?php
     session_start();
     include_once("../utils/utility.php"); // includo il file di connessione al database
+    displayErrors();
     
     $browser = get_browser(null, true);
     //print_r($browser);
@@ -129,14 +130,8 @@
             $passwd_hash = myhash($_POST["password"]);
             $query = "INSERT INTO users (username, name,lastname,sex,email,password)
             VALUES ('$username','$name','$lastname','$gender','$email','$passwd_hash')";
-            
-            try {
 
-                $ris_reg = $db->query($query) or die (mysqli_error()); // se la query fallisce
-            
-            } catch (Exception $e) {
-                print_r($e);
-            }
+            $ris_reg = $db->query($query) or die (mysqli_error()); // se la query fallisce
             
             //se la registrazione è andata a buon fine
             if(isset($ris_reg)) {

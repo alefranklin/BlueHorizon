@@ -10,7 +10,9 @@
         $table_travels = get_table('travels');
     }
     else {
-        $title = "Area riservata - ACCESS DENIED";
+        $msg = 4; //ACCESS DANIED
+        
+        smartRedir($msg);
     }
     
     $PageTitle="Pannello Admin";
@@ -76,7 +78,7 @@
                     <td><?= $user['sex'] ?></td>
                     <td><?= $user['email'] ?></td>
                     <td><a href="edit-user.php?id='<?= $user['id'] ?>">Edit</a></td>
-                    <td><a href="delete-user.php?id=<?= $user['id'] ?>">Delete</a></td>
+                    <td><a href="delete.php?id=<?= $user['id'] ?>&table=users">Delete</a></td>
                 </tr>
                 <?php } ?>
             </table>
@@ -100,7 +102,7 @@
                     <td><?= date("Y-m-d", strtotime($travel['date'])) ?></td>
                     <td><?= $travel['description'] ?></td>
                     <td><a href="edit-travel.php?id='<?= $travel['id'] ?>">Edit</a></td>
-                    <td><a href="delete-travel.php?id=<?= $travel['id'] ?>">Delete</a></td>
+                    <td><a href="delete.php?id=<?= $travel['id'] ?>&table=travels">Delete</a></td>
                 </tr>
                 <?php } ?>
             </table>

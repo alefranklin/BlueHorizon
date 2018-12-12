@@ -1,11 +1,10 @@
 <?php
     session_start();
-    include("../utils/connessione_db.php"); // includo il file di connessione al database
-    include_once("../utils/config.php");
+    include("../utils/utility.php"); // includo il file di connessione al database
+    displayErrors();
 
-    //se non c'è la sessione registrata
     if (!isAdmin()) {
-        $msg = "ACCESS DANIED";
+        $msg = 4;
     }
     
     $PageTitle="Pannello Admin | travels";
@@ -88,7 +87,7 @@ echo $error;
             $query = "INSERT INTO travels (departure, arrival, date, description)
             VALUES ('$departure','$arrival','$date','$description')";
             
-            $ris_reg = $db->query($query); //or die(mysqli_error()); // se la query fallisce
+            $ris_reg = $db->query($query) or die(mysqli_error()); // se la query fallisce
             
 echo "sono qua ";
                 
@@ -169,11 +168,7 @@ echo "sono qua ";
     <!-- rimando alla pagina di amministrazione -->
     Ritorn alla <a href="<?= $host_path."administration/admin.php" ?>" id="back">Pagina di Amministrazione</a>
 
-<?php } else { ?>
-    
-    <h2><?= $msg ?></h2>
-
-<?php } ?>
+<?php } else smartRedir($msg); ?>
         
 <!-- footer -->
 <?php include($local_path."html/footer.php"); ?>
