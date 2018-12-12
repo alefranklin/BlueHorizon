@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include("utils/config.php");
+    include_once("utils/utility.php");
 
     $PageTitle="Blue Horizon";
 

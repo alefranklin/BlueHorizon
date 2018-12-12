@@ -1,18 +1,15 @@
 <?php
     session_start();
-    include("../utils/connessione_db.php"); // includo il file di connessione al database
-    include_once("../utils/config.php");
+    include("../utils/utility.php"); // includo il file di connessione al database
 
     //se non c'è la sessione registrata
-    if ($_SESSION['autorizzato'] && isAdmin()) {
-        $auth = 1;
+    if (isAuth() && isAdmin()) {
         $title = "Benvenuto nell'area riservata sovrano indiscusso n° ".$_SESSION['user']['id']." del mondo";
 
         $table_users = get_table('users');
         $table_travels = get_table('travels');
     }
     else {
-        $auth = 0;
         $title = "Area riservata - ACCESS DENIED";
     }
     
@@ -39,7 +36,6 @@
 
 <?php } ?>
 
-
 <!-- head -->
 <?php include($local_path."html/head.php"); ?>
 
@@ -51,7 +47,7 @@
 <div id="body-page" class="">
     <h1><?= $title; ?></h1>
 
-    <?php if ($auth) { ?>
+    <?php if (isAuth()) { ?>
 
         <p>
             <h3>I tuoi dati sono:</h3><br/>

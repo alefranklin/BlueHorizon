@@ -1,21 +1,17 @@
 <?php
     session_start();
-    include_once("../utils/connessione_db.php"); //includo i file necessari a collegarmi al db
-    include_once("../utils/config.php");
+    include_once("../utils/utility.php"); //includo i file necessari a collegarmi al db
 
     //se non c'è la sessione registrata
-    if ($_SESSION['autorizzato']) {
+    if (isAuth()) {
         
         if(isAdmin()) {
             header("location:".$host_path."administration/admin.php");
             die;
         }
-        
-        $auth = 1;
         $title = "Benvenuto nell'area riservata utente rispettabile n° ".$_SESSION['user']['id'];
     }
     else {
-        $auth = 0;
         $title = "Area riservata, ACCESS DANIED 'TUUUPIDOOOO";
     }
     
@@ -30,7 +26,6 @@
 
 <?php } ?>
 
-
 <!-- head -->
 <?php include($local_path."html/head.php"); ?>
 
@@ -43,7 +38,7 @@
     
     <h1><?= $title; ?></h1>
     
-    <?php if ($auth) { ?>
+    <?php if (isAuth()) { ?>
         <p>
             <h3>I tuoi dati sono:</h3><br/>
 

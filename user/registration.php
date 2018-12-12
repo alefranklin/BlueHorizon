@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include_once("../utils/connessione_db.php"); // includo il file di connessione al database
+    include_once("../utils/utility.php"); // includo il file di connessione al database
     
     $browser = get_browser(null, true);
     //print_r($browser);
@@ -223,9 +223,9 @@
 
             <div class="group">
                 Gender:
-                <input type="radio" name="gender" <?= (isset($gender) && $gender=="F") ? "checked" ?> value="F">Female
-                <input type="radio" name="gender" <?= (isset($gender) && $gender=="M") ? "checked" ?> value="M">Male
-                <input type="radio" name="gender" <?= (isset($gender) && $gender=="N.D.") ? "checked" ?> value="N.D.">Other  
+                <input type="radio" name="gender" <?= (isset($gender) && $gender=="F") ? "checked" : "" ?> value="F">Female
+                <input type="radio" name="gender" <?= (isset($gender) && $gender=="M") ? "checked" : "" ?> value="M">Male
+                <input type="radio" name="gender" <?= (isset($gender) && $gender=="N.D.") ? "checked" : "" ?> value="N.D.">Other  
                 <span class="error">* <?= $genderErr ?></span>
             </div>
 
@@ -233,7 +233,7 @@
 
         </form>
         
-        Ritorn alla <a href="<?= $local_path ?>" id="back">Home</a>
+        Ritorn alla <a href="<?= $host_path ?>" id="back">Home</a>
         
     </body>
 </html>
