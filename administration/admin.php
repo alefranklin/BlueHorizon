@@ -59,7 +59,7 @@
             <?php foreach($_SESSION['user'] as $key => $value): ?>
             <?= $key . ' : ' . $value ?><br/>
             <?php endforeach; ?>
-            autorizzato : <?= $_SESSION['autorizzato']; ?><br/>
+            <?= 'auth : ' . $auth ?><br/>
         </p>
 
         <p>
@@ -73,16 +73,19 @@
                     <th>Sex</th>
                     <th>Email</th>
                 </tr>
-                <?php foreach($table_users as $user): ?>
+                <?php while($user = $table_users->fetch_assoc()) { ?>
                 <tr>
                     <td><?= $user['username'] ?></td>
                     <td><?= $user['name'] ?></td>
                     <td><?= $user['lastname'] ?></td>
                     <td><?= $user['sex'] ?></td>
                     <td><?= $user['email'] ?></td>
+                    <td><a href="edit-user.php?id='<?= $user['id'] ?>">Edit</a></td>
+                    <td><a href="delete-user.php?id=<?= $user['id'] ?>">Delete</a></td>
                 </tr>
-                <?php endforeach; ?>
+                <?php } ?>
             </table>
+            <a href="<?= $host_path."user/registration.php" ?>">Aggiungi</a>
         </p>
 
         <p>
@@ -101,9 +104,12 @@
                     <td><?= $travel['arrival'] ?></td>
                     <td><?= date("Y-m-d", strtotime($travel['date'])) ?></td>
                     <td><?= $travel['description'] ?></td>
+                    <td><a href="edit-travel.php?id='<?= $travel['id'] ?>">Edit</a></td>
+                    <td><a href="delete-travel.php?id=<?= $travel['id'] ?>">Delete</a></td>
                 </tr>
                 <?php endforeach; ?>
             </table>
+            <a href="add-travel.php">Aggiungi</a>
         </p>
 
         <p>

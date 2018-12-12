@@ -86,11 +86,6 @@
         $query = "SELECT * FROM ".$table;
         $ris = $db->query($query) or die (mysqli_error());
         
-        $data= array();
-        
-        while($row = $ris->fetch_assoc()) {
-            $data[] = $row;
-        }
-        return $data;
+        return $ris;
     }
 ?>
