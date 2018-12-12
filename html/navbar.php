@@ -1,9 +1,9 @@
 <?php
     include_once($local_path."utils/utility.php");
-    if (isset($_SESSION['user'])) {
-        $auth = 1;
+    
+    if (isAuth()) {
         $username = $_SESSION['user']['username'];
-    } else $auth = 0;
+    }
     
     
     $self = $_SERVER['PHP_SELF'];
@@ -28,7 +28,7 @@ ini_set('display_errors', 1);
         <a class="<?= setActive($self,$travels) ?>" href="<?= $host_path."html/travels.php" ?>" > TRAVELS </a>
 
         <!-- icona user o, se loggato, username -->
-        <?php if ($auth) { ?>
+        <?php if (isAuth()) { ?>
 
             <a class="user-icon-container space-font" href="<?= $host_path."user/privato.php" ?>">
                 <i class="user-icon fas fa-user"></i>

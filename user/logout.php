@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include_once("../utils/config.php");
+    include_once("../utils/utility.php");
     
     //creo una varibiale con un messaggio
     $_SESSION['snackmsg'] = "log-out effettuato con successo.";
