@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include "../utils/utility.php"; // includo il file di connessione al database
+    include $_SERVER['DOCUMENT_ROOT']."/BlueHorizon/utils/utility.php"; // includo il file di connessione al database
     include 'functions.php';
     displayErrors();
 
@@ -10,7 +10,7 @@
         die();
     }
     
-    $PageTitle="Pannello Admin | travels";
+    $PageTitle="Pannello Admin";
 
     function customPageHeader() { ?>
 
@@ -21,9 +21,13 @@
     $departureErr = $arrivalErr = $dateErr = $descriptionErr = "";
     $departure = $arrival = $date = $description = "";
     
-    pushTravelVar();
+    $section = $db->real_escape_string($_GET['section']);
+    
+    pushVar($section);
     
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        
+        pushVar($section);
 
     	$error = false;
     	
@@ -104,6 +108,10 @@ echo "sono qua ";
             
             // rimando alla pagina di amministrazione
             header("location:".$host_path."administration/admin.php");
+            
+            deleteVar($section);
+            $msg = 5;
+            smartRedit($msg);
         }
     }
 

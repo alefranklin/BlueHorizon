@@ -87,7 +87,7 @@
             </tr>
             <?php } ?>
         </table>
-        <a href="<?= $host_path."user/registration.php" ?>">Aggiungi</a>
+        <a href="add.php?section=user">Aggiungi</a>
     </p>
 
     <p>
@@ -111,7 +111,7 @@
             </tr>
             <?php } ?>
         </table>
-        <a href="add.php">Aggiungi</a>
+        <a href="add.php?section=travel">Aggiungi</a>
     </p>
 
     <p>
