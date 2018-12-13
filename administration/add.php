@@ -1,10 +1,13 @@
 <?php
     session_start();
-    include("../utils/utility.php"); // includo il file di connessione al database
+    include "../utils/utility.php"; // includo il file di connessione al database
+    include 'functions.php';
     displayErrors();
 
     if (!isAdmin()) {
         $msg = 4;
+        smartRedir($msg);
+        die();
     }
     
     $PageTitle="Pannello Admin | travels";
@@ -18,8 +21,10 @@
     $departureErr = $arrivalErr = $dateErr = $descriptionErr = "";
     $departure = $arrival = $date = $description = "";
     
+    pushTravelVar();
+    
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    	
+
     	$error = false;
     	
         // partenza
@@ -78,7 +83,6 @@
                 $error = true;
             }
         }
-echo $error;
         
         //se non si sono verificati errori procedo con la registrazione dei dati
         if(!$error) {
@@ -122,53 +126,49 @@ echo "sono qua ";
 <!-- head -->
 <?php include($local_path."html/head.php"); ?>
     
-<?php if(isAdmin()) { ?>
-    
-    <h2>aggiungi viaggio</h2>
-    <p><span class="error">* required field</span></p>
+<h2>aggiungi viaggio</h2>
+<p><span class="error">* required field</span></p>
 
-    <form name="form_manage_travels" method="post" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>">
+<form name="form_manage_travels" method="post" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>">
 
-        <div class="group">      
-            <input type="text" name="departure" value="<?= $departure ?>" required>
-            <span class="highlight"></span>
-            <span class="bar"></span>
-            <span class="error">* <?= $departureErr ?></span>
-            <label>Departure</label>
-        </div>
+    <div class="group">      
+        <input type="text" name="departure" value="<?= $departure ?>" required>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <span class="error">* <?= $departureErr ?></span>
+        <label>Departure</label>
+    </div>
 
-        <div class="group">      
-            <input type="text" name="arrival" value="<?= $arrival ?>" required>
-            <span class="highlight"></span>
-            <span class="bar"></span>
-            <span class="error">* <?= $arrivalErr ?></span>
-            <label>Arrival</label>
-        </div>
+    <div class="group">      
+        <input type="text" name="arrival" value="<?= $arrival ?>" required>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <span class="error">* <?= $arrivalErr ?></span>
+        <label>Arrival</label>
+    </div>
 
-        <div class="group">      
-            <textarea rows="10" cols="80" name="description" required><?= $description ?></textarea>
-            <span class="highlight"></span>
-            <span class="bar"></span>
-            <span class="error">* <?= $descriptionErr ?></span>
-            <label>Description</label>
-        </div>
+    <div class="group">      
+        <textarea rows="10" cols="80" name="description" required><?= $description ?></textarea>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <span class="error">* <?= $descriptionErr ?></span>
+        <label>Description</label>
+    </div>
 
-        <div class="group">      
-            <input type="date" name="date" value="<?= $date ?>" required>
-            <span class="highlight"></span>
-            <span class="bar"></span>
-            <span class="error">* <?= $dateErr ?></span>
-            <label>Date</label>
-        </div>
+    <div class="group">      
+        <input type="date" name="date" value="<?= $date ?>" required>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <span class="error">* <?= $dateErr ?></span>
+        <label>Date</label>
+    </div>
 
-        <button>Aggiungi</button>
+    <button>Aggiungi</button>
 
-    </form>
+</form>
 
-    <!-- rimando alla pagina di amministrazione -->
-    Ritorn alla <a href="<?= $host_path."administration/admin.php" ?>" id="back">Pagina di Amministrazione</a>
-
-<?php } else smartRedir($msg); ?>
+<!-- rimando alla pagina di amministrazione -->
+Ritorn alla <a href="<?= $host_path."administration/admin.php" ?>" id="back">Pagina di Amministrazione</a>
         
 <!-- footer -->
 <?php include($local_path."html/footer.php"); ?>

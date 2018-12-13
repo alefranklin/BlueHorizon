@@ -3,17 +3,13 @@
 
     include_once("config.php");
     
-    // flag di debug mode 1 or 0
-    $GLOBALS['debug'] = 1;
+    // flag di debug mode (1 or 0)
+    $DEBUG = 1;
 
     /***************************************** connessione al database ****************************************************/
 
     // ip locale, login, password e nome database
     $db = new mysqli($host,$db_user,$db_psw, $db_name) or die ('Non riesco a connettermi: errore '.mysqli_error());
-    
-    // rendo globale db per poterlo usare nelle funzioni
-    $GLOBALS['db'] = $db;
-
 
     /***************************************** funzioni utili *************************************************************/
 
@@ -28,7 +24,7 @@
 
     function check_email($email) {
         
-        $db = $GLOBALS['db'];
+        global $db;
         
         $ris = $db->query("SELECT * FROM users WHERE email = '$email'") or die (mysqli_error());  
         if($ris->fetch_assoc() == NULL) return 0;
@@ -37,7 +33,7 @@
 
     function exist($username, $passwd) {
         
-        $db = $GLOBALS['db'];
+        global $db;
         
         // sha256 della password in questo modo corrisponde con quella del database
         $hash_passwd = myhash($passwd);
@@ -52,7 +48,7 @@
 
     function get_user($username, $passwd) {
         
-        $db = $GLOBALS['db'];
+        global $db;
         
         if($user = exist($username, $passwd)) {
             
@@ -89,7 +85,8 @@
     }
 
     function displayErrors() {
-        if($GLOBALS['debug']) ini_set('display_errors', 1);
+        global $DEBUG;
+        if($DEBUG) ini_set('display_errors', 1);
     }
 
     /***************************************** funzioni admin *************************************************************/
@@ -102,7 +99,7 @@
 
     function get_table($table) {
         
-        $db = $GLOBALS['db'];
+        global $db;
         
         $query = "SELECT * FROM ".$table;
         $ris = $db->query($query) or die (mysqli_error());
