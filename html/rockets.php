@@ -1,9 +1,6 @@
 <?php
     session_start();
     include_once("../utils/utility.php");
-
-    displayErrors();
-
     $PageTitle="Rockets";
 
     function customPageHeader() { ?>

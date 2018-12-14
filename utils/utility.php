@@ -4,8 +4,8 @@
     include_once("config.php");
     
     // flag di debug mode (1 or 0)
-    $DEBUG = 1;
-
+    $DEBUG = 0;
+    displayErrors($DEBUG);
     /***************************************** connessione al database ****************************************************/
 
     // ip locale, login, password e nome database
@@ -80,13 +80,21 @@
     }
 
     function smartRedir($msg) {
-        if (isset($_SERVER['HTTP_REFERER'])) header("location:".$_SERVER['HTTP_REFERER']."?snackmsg=".$msg);
-        else header("location:".$local_path."?snackmsg=".$msg); // homepage
+        global $local_path;
+        if (isset($_SERVER['HTTP_REFERER'])){
+            if (strpos($_SERVER['HTTP_REFERER'], '?') !== false) {
+                $prev_page = explode('?', $_SERVER['HTTP_REFERER'])[0];
+                header("location:".$prev_page);
+            } else {
+                header("location:".$_SERVER['HTTP_REFERER']."?snackmsg=".$msg);
+            }
+        } else {
+            header("location:".$local_path."?snackmsg=".$msg); // homepage
+        }
     }
 
-    function displayErrors() {
-        global $DEBUG;
-        if($DEBUG) ini_set('display_errors', 1);
+    function displayErrors($DEBUG) {
+        ini_set('display_errors', $DEBUG);
     }
 
     /***************************************** funzioni admin *************************************************************/

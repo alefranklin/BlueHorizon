@@ -1,7 +1,6 @@
 <?php
     session_start();
     include("../utils/utility.php"); // includo il file di connessione al database
-    displayErrors();
 
     //se non è admin
     if (!isAdmin()) {

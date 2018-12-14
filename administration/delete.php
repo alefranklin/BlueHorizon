@@ -2,8 +2,6 @@
     session_start();
     include("../utils/utility.php"); // includo il file di connessione al database
 
-    displayErrors();
-
     if (!isAdmin()) {
         $msg = 4;
         smartRedir($msg);

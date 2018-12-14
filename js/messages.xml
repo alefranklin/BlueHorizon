@@ -14,10 +14,10 @@
     </message>
     <message id="4">
         <type>bad</type>
-        <content>ACCESS DANIED</content>
+        <content>Access Denied</content>
     </message>
     <message id="5">
         <type>good</type>
-        <content>OK</content>
+        <content>Ok</content>
     </message>
 </messages>

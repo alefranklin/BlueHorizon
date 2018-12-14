@@ -1,9 +1,6 @@
 <?php
     session_start(); //inizio la sessione
     include_once("../utils/utility.php"); //includo i file necessari a collegarmi al db
-    
-    displayErrors();
-
     //variabili POST con anti sql Injection
     $username=$db->real_escape_string($_POST['username']);
     $passwd=$db->real_escape_string($_POST['password']);

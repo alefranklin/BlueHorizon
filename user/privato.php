@@ -2,9 +2,6 @@
     session_start();
     include_once("../utils/utility.php"); //includo i file necessari a collegarmi al db
 
-    displayErrors();
-
-
     //se non c'è la sessione registrata
     if (isAuth()) {
         
