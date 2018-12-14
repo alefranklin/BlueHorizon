@@ -162,8 +162,8 @@
         border-left: 1px solid lightgray;
     }
 
-    #skip{
-        position: absolute;
+    .skip{
+        position: fixed;
         height: 20px;
         top: -20px;
         width: 100%;

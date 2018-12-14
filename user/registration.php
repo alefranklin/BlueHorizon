@@ -130,8 +130,7 @@
            // scrivo sul DB
            $passwd_hash = myhash($_POST["password"]);
            $query = "INSERT INTO users (username, name,lastname,sex,email,password)
-           VALUES ('".$_POST["username"]."','".$_POST["name"]."','".$_POST["lastname"]."','".$_POST["gender"]."','".$_POST["email"]."','".$passwd_hash."')";
-
+           VALUES ('$username','$name','$lastname','$gender','$email','$passwd_hash')";
            try {
 
                $ris_reg = $db->query($query) or die (mysqli_error()); // se la query fallisce
@@ -224,4 +223,3 @@
   </div>
 </div>
 </body>
-</html>

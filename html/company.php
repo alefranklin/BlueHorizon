@@ -1,5 +1,6 @@
 <?php
-    include_once("../utils/config.php");
+    session_start();
+    include_once("../utils/utility.php");
     $PageTitle="Company";
 
     function customPageHeader() { ?>
