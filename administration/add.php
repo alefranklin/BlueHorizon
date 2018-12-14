@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include $_SERVER['DOCUMENT_ROOT']."/BlueHorizon/utils/utility.php"; // includo il file di connessione al database
+    include "../utils/utility.php"; // includo il file di connessione al database
     include 'functions.php';
     displayErrors();
 
