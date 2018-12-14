@@ -34,7 +34,7 @@ ini_set('display_errors', 1);
       <?php if ($auth) { ?>
           <a class="user-icon-container space-font" href="<?= $host_path."user/privato.php" ?>">
               <i class="user-icon fas fa-user"></i>
-              <span class="hide">Pagina Utente</span><?= $username ?>
+              <span class="hide">Pagina Utente</span><span class="navbar-username"><?= strtoupper($username) ?></span>
           </a>
       <?php } else { ?>
           <a href="javascript:void(0); "class="user-icon-container space-font" onclick="toggleUser(0)">

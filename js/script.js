@@ -1,26 +1,26 @@
 function toggleHamburger() {
-    var x = document.getElementById("menu");
-    if (x.className === "topnav") {
-        x.className += " responsive";
+    var menu = document.getElementById("menu");
+    if (menu.className === "topnav") {
+        menu.className += " responsive";
     } else {
-        x.className = "topnav";
+        menu.className = "topnav";
     }
 }
 
 function toggleUser() {
-    var x = document.getElementById("user-div");
-    var y = document.getElementById("body-page");
+    var userDiv = document.getElementById("user-div");
+    var bodyPage = document.getElementById("body-page");
 
-    if(x.className === "initial"){
-        x.className = "exit-animation";
-    }
-
-    if(x.className === "enter-animation"){
-        y.className = "unfade-body";
-        x.className = "exit-animation";
+    if(userDiv.className === "initial"){
+        userDiv.className = "enter-animation";
     } else {
-        y.className = "fade-body";
-        x.className = "enter-animation"
+      if(userDiv.className === "enter-animation"){
+          bodyPage.className = "unfade-body";
+          userDiv.className = "exit-animation";
+      } else {
+          bodyPage.className = "fade-body";
+          userDiv.className = "enter-animation"
+      }
     }
 }
 
@@ -43,7 +43,7 @@ function topFunction() {
 }
 
 function snackMessage(msg){
-  var snackDiv = document.getElementById("snack-div")
+  var snackDiv = document.getElementById("snackDiv")
   var snackMsg = document.getElementById("snack-msg");
   var snackImg = document.getElementById("snack-img");
   var message;

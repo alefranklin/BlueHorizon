@@ -9,7 +9,6 @@
         <!-- aggiungere tag specifici per questa pagina -->
 
 <?php } ?>
-
 <!-- head -->
 <?php include($local_path."html/head.php"); ?>
 

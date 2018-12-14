@@ -142,6 +142,12 @@
         height: auto;
         vertical-align: middle;
     }
+    .topnav span.navbar-username{
+        font-size: 15px;
+        margin: 18px 0px;
+        padding: 0px 5px;
+        vertical-align: center;
+    }
     .topnav a.user-icon-container{
         height: auto;
         margin: 18px 0px 14px 0px;
@@ -280,7 +286,7 @@
           background-color: #333;
           color: #fff;
           text-align: center;
-          border-radius: 10px;
+          border-radius: 16px;
           padding: 10px;
           position: fixed;
           z-index: 1;
@@ -367,6 +373,42 @@
         max-width: 100%;
         height: auto;
     }
+/*
+    CLASSI PER REGISTRAZIONE
+*/
 
+    #registration-div{
+        background-color: aqua;
+        width: 70%;
+        height: auto;
+        margin: 0 15%;
+        overflow: hidden;
+    }
+
+    #required-fields{
+        top: 0px;
+        left: 0px;
+        float: left;
+    }
+
+    #form-div{
+        float: left;
+        top: 30px;
+    }
+
+    .text-group{
+        width: 70%;
+        float: left;
+        margin: 2px 15%;
+    }
+
+    .error{
+        float: right;
+    }
+
+    .sex-radio{}
+/*
+    FINE CLASSI PER REGISTRAZIONE
+*/
 
 }
