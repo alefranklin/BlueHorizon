@@ -8,6 +8,10 @@
     </div>
 </div>
 
+<div id="skip-footer" class="skip">
+  <a href="#menu"> Skip to Menu </a>
+</div>
+
 <div role="contentinfo" class="hide">
   <p>Put copyright, etc. here.</p>
 </div>

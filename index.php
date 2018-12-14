@@ -29,8 +29,6 @@
     </div>
 </div>
 
-<div id="skip-footer" class="skip">
-  <a href="#menu"> Skip to Menu </a>
-</div>
+
 <!-- footer -->
 <?php include($local_path."html/footer.php"); ?>
