@@ -30,6 +30,7 @@
         overflow: hidden;
         height: 60px;
         opacity: 1;
+        z-index: 1;
     }
 
     #logo {
@@ -399,14 +400,49 @@
     .text-group{
         width: 70%;
         float: left;
-        margin: 2px 15%;
+        margin: 3px 15%;
+    }
+
+    .input-text{
+      border: solid 1px lightgray;
+      border-radius: 25px;
+      width: 200px;
+      height: 30px;
+      padding: 0px 5px;
+      text-align: center;
+      background-color: #e9e9e9;
+    }
+
+    .input-text::placeholder{
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .input-submit{
+      border: solid 1px lightgray;
+      border-radius: 3px;
+      height: 30px;
+      margin-top: 30px;
+      width: 200px;
+      background-color: lightgray;
     }
 
     .error{
         float: right;
     }
 
-    .sex-radio{}
+    #gender-select{
+      height: 30px;
+      width: auto;
+      border: solid 1px lightgray;
+      border-radius: 25px;
+      margin-top: 5px;
+    }
+
+    .select-placeholder{
+      color: darkgray;
+    }
 /*
     FINE CLASSI PER REGISTRAZIONE
 */
