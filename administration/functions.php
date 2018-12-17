@@ -5,23 +5,23 @@
     function pushVar($section) {
         
         switch ($section) {
-
-            case "user":
+            $vars = array();
+            case "add-user":
                 $vars = array('username', 'usernameErr', 'name', 'nameErr', 'lastname', 'lastnameErr',
                               'email', 'emailErr', 'gender', 'genderErr', 'password', 'passwordErr', 'repeat_password');
                 break;
 
-            case "travel":
+            case "add-travel":
                 $vars = array('departure', 'departureErr', 'arrival', 'arrivalErr', 'date', 'dateErr', 'description', 'descriptionErr');
                 break;
 
-            case "rocket":
+            case "add-rocket":
 
                 break;
         }
         
         foreach($vars as $v) {
-            $_SESSION['var'][$section][$v] = ($_SERVER["REQUEST_METHOD"] == "POST") ? $_POST[$v] : "";
+            $_SESSION['var'][$section][$v] = ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST[$v])) ? $_POST[$v] : "";
         }
     }
 
@@ -37,7 +37,7 @@
         switch ($section) {
 
             /*******************************CONTROLLI USER ********************************************/
-            case "user":
+            case "add-user":
                 if (empty($_POST["username"])) {
                     $_SESSION[$section]['usernameErr'] = "Username is required";
                     $error = true;
@@ -149,7 +149,7 @@
                 break;
 
             /*******************************CONTROLLI TRAVEL ********************************************/
-            case "travel":
+            case "add-travel":
                 // partenza
                 if (empty($_POST["departure"])) {
                     $_SESSION[$section]['departureErr'] = "La partenza è necessaria";
@@ -209,7 +209,7 @@
                 break;
 
             /*******************************CONTROLLI ROCKETS ********************************************/
-            case "rockets":
+            case "add-rockets":
                 break;
         }
         
@@ -238,17 +238,17 @@
         
         switch ($section) {
 
-            case "user":
+            case "add-user":
 ?>
                 
 <?php           
                 break;
 
-            case "travel":
+            case "add-travel":
 ?>                
                 <h2>aggiungi viaggio</h2>
                 <p><span class="error">* required field</span></p>
-                <form name="form_manage_travels" method="post" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>">
+                <form name="form_manage_travels" method="post" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]."?section=$section") ?>">
 
                     <div class="group">      
                         <input type="text" name="departure" value="<?= $_SESSION[$section]['departure'] ?>" required>
@@ -288,7 +288,7 @@
 <?php
                 break;
 
-            case "rocket":
+            case "add-rocket":
 ?>
                 
 <?php

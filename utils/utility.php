@@ -4,7 +4,7 @@
     include_once("config.php");
     
     // flag di debug mode (1 or 0)
-    $DEBUG = 0;
+    $DEBUG = 1;
     displayErrors($DEBUG);
     /***************************************** connessione al database ****************************************************/
 
@@ -81,15 +81,16 @@
 
     function smartRedir($msg) {
         global $local_path;
+        
         if (isset($_SERVER['HTTP_REFERER'])){
-            if (strpos($_SERVER['HTTP_REFERER'], '?') !== false) {
-                $prev_page = explode('?', $_SERVER['HTTP_REFERER'])[0];
-                header("location:".$prev_page);
-            } else {
-                header("location:".$_SERVER['HTTP_REFERER']."?snackmsg=".$msg);
-            }
+
+            $prev_page = current(explode('?', $_SERVER['HTTP_REFERER']));
+            return $prev_page;
+            //header("location:$prev_pag"."?snackmsg=$msg");
+            
         } else {
-            header("location:".$local_path."?snackmsg=".$msg); // homepage
+            
+            //header("location:$local_path"."?snackmsg=$msg"); // homepage
         }
     }
 

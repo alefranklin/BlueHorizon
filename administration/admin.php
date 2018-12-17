@@ -58,9 +58,10 @@
         <?= $key . ' : ' . $value ?><br/>
         <?php endforeach; ?>
         
-        <?php foreach($_SESSION['var'] as $key => $value): ?>
+        <?php foreach($_SESSION['var']["travel"] as $key => $value): ?>
         <?= $key . ' : ' . $value ?><br/>
         <?php endforeach; ?>
+        
     </p>
 
     <p>
@@ -86,7 +87,7 @@
             </tr>
             <?php } ?>
         </table>
-        <a href="add.php?section=user">Aggiungi</a>
+        <a href="add.php?section=add-user">Aggiungi</a>
     </p>
 
     <p>
@@ -110,7 +111,7 @@
             </tr>
             <?php } ?>
         </table>
-        <a href="add.php?section=travel">Aggiungi</a>
+        <a href="add.php?section=add-travel">Aggiungi</a>
     </p>
 
     <p>
