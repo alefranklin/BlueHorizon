@@ -33,16 +33,14 @@ rockets(**id**, model, price)
 | nationality | varchar(15)         | YES  |     | NULL    |                |
 
 
-travels(**id**, departure, arrival, date)
+travels(**id**, description, departure*, arrival*)
 
 | Field | Type | Null | Key | Default | Extra |
 | --- | --- | --- | --- | --- | --- |
 | id          | int(6) unsigned | NO   | PRI | NULL    | auto_increment |
-| departure   | varchar(30)     | NO   |     | NULL    |                |
-| arrival     | varchar(30)     | NO   |     | NULL    |                |
-| date        | date            | YES  |     | NULL    |                |
-| description | varchar(300)    | NO   |     | NULL    |                |
-
+| description | text            | NO   |     | NULL    |                |
+| departure   | int(6) unsigned | NO   | MUL | NULL    |                |
+| arrival     | int(6) unsigned | NO   | MUL | NULL    |                |
 
 
 rocket_travel(**id_travel***, **id_rocket***)
@@ -87,9 +85,38 @@ orders(**id**, id_user*, id_travel*, id_rc*, number_of_seats)
 | id_rc           | int(6) | NO   | MUL | NULL    |                |
 | number_of_seats | int(2) | NO   |     | NULL    |                |
 
+
+planets(**id**, name, info, mass, temperature)
+
+| Field | Type | Null | Key | Default | Extra |
+| --- | --- | --- | --- | --- | --- |
+| id          | int(6) unsigned | NO   | PRI | NULL    |       |
+| name        | varchar(20)     | NO   |     | NULL    |       |
+| info        | text            | NO   |     | NULL    |       |
+| mass        | int(10)         | NO   |     | NULL    |       |
+| temperature | int(10)         | NO   |     | NULL    |       |
+
+
 images(**path**, **name**)
 
 | Field | Type | Null | Key | Default | Extra |
 | --- | --- | --- | --- | --- | --- |
-| path  | varchar(30) | NO   | PRI | NULL    |       |
-| name  | varchar(10) | NO   | PRI | NULL    |       |
+| path  | varchar(30)     | NO   |     | NULL    |       |
+| name  | varchar(10)     | NO   |     | NULL    |       |
+| id    | int(6) unsigned | NO   | PRI | NULL    |       |
+
+
+img_planet(**id_planet***, **id_img***)
+
+| Field | Type | Null | Key | Default | Extra |
+| --- | --- | --- | --- | --- | --- |
+| id_planet | int(6) unsigned | NO   | PRI | NULL    |       |
+| id_img    | int(6) unsigned | NO   | PRI | NULL    |       |
+
+
+img_planet(**id_travel***, **id_img***)
+
+| Field | Type | Null | Key | Default | Extra |
+| --- | --- | --- | --- | --- | --- |
+| id_travel | int(6) unsigned | NO   | PRI | NULL    |       |
+| id_img    | int(6) unsigned | NO   | PRI | NULL    |       |

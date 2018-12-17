@@ -1,8 +1,6 @@
 <?php
    session_start();
-   include_once("../utils/connessione_db.php"); // includo il file di connessione al database
-   include("../utils/config.php");
-
+   include_once("../utils/utility.php"); // includo il file di connessione al database
 
    $browser = get_browser(null, true);
    //print_r($browser);
@@ -122,6 +120,7 @@
            $error = true;
        } else {
            $gender = test_input($_POST["gender"]);
+           echo $gender;
        }
 
        //se non si sono verificati errori procedo con la registrazione dei dati
@@ -165,61 +164,65 @@
 <div id="body-page">
   <h2 class="space-font">REGISTRAZIONE</h2>
   <div id="registration-div">
-    <p><span id="required-fields">* required fields</span></p> 
+    <p><span id="required-fields">* required fields</span></p>
     <div id="form-div">
       <form name="form_registration" method="post" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>">
          <div class="text-group">
-            <input type="text" name="username" value="<?= $username ?>" required placeholder="Username">
+            <input type="text" class="input-text" name="username" value="<?= $username ?>" required placeholder="Username">
             <span class="highlight">*</span>
             <span class="bar"/>
             <span class="error"><?= $usernameErr ?></span>
             <label class="hide">Username</label>
          </div>
          <div class="text-group">
-            <input type="text" name="name" value="<?= $name ?>" required placeholder="Name">
+            <input type="text" class="input-text" name="name" value="<?= $name ?>" required placeholder="Name">
             <span class="highlight">*</span>
             <span class="bar"/>
             <span class="error"> <?= $nameErr ?></span>
             <label class="hide">Name</label>
          </div>
          <div class="text-group">
-            <input type="text" name="lastname" value="<?= $lastname ?>" required placeholder="Last Name">
+            <input type="text" class="input-text" name="lastname" value="<?= $lastname ?>" required placeholder="Last Name">
             <span class="highlight">*</span>
             <span class="bar"/>
             <span class="error"> <?= $lastnameErr ?></span>
             <label class="hide">Lastname</label>
          </div>
          <div class="text-group">
-            <input type="text" name="email" value="<?= $email ?>" required placeholder="Email">
+            <input type="text" class="input-text" name="email" value="<?= $email ?>" required placeholder="Email">
             <span class="highlight">*</span>
             <span class="bar"/>
             <span class="error"> <?= $emailErr ?></span>
             <label class="hide">Email</label>
          </div>
          <div class="text-group">
-            <input type="password" name="password" value="<?= $password ?>" required placeholder="Password">
+            <input type="password" class="input-text" name="password" value="<?= $password ?>" required placeholder="Password">
             <span class="highlight">*</span>
             <span class="bar"/>
             <span class="error"> <?= $passwordErr ?></span>
             <label class="hide">Password</label>
          </div>
          <div class="text-group">
-            <input type="password" name="repeat_password" value="" required placeholder="Conferma Password">
+            <input type="password" id="repeat_password" class="input-text" name="repeat_password" value="" required placeholder="Conferma Password">
             <span class="highlight">*</span>
             <span class="bar"/>
             <span class="error"> <?= $passwordRepeatErr ?></span>
-            <label class="hide">Ripeti Password</label>
+            <label for="repeat_password" class="hide">Ripeti Password</label>
          </div>
          <div class="text-group">
-            Gender:
-            <input type="radio" name="gender" class="sex-radio"<?= (isset($gender) && $gender=="F") ? "checked" : "" ?> value="F">Female
-            <input type="radio" name="gender" class="sex-radio"<?= (isset($gender) && $gender=="M") ? "checked" : "" ?> value="M">Male
-            <input type="radio" name="gender" class="sex-radio"<?= (isset($gender) && $gender=="N.D.") ? "checked" : "" ?> value="N.D.">Other
-            <span class="error"> <?= $genderErr ?></span>
+           <label for="gender-select" class="hide"> Gender </label>
+            <select id="gender-select" name="gender" required>
+                <option class="select-placeholder" value="" disabled selected hidden>Gender</option>
+                <option value="M" <?= (isset($gender) && $gender=="M") ? 'selected' : "" ?>>Male</option>
+                <option value="F" <?= (isset($gender) && $gender=="F") ? 'selected' : "" ?>>Female</option>
+                <option value="N.D." <?= (isset($gender) && $gender=="N.D.") ? 'selected' : "" ?>>Other</option>
+            </select>
          </div>
-         <button>Registrati</button>
+         <input type="submit" name="registration" value="Register" class="input-submit"></input>
       </form>
     </div>
   </div>
 </div>
+
+
 </body>

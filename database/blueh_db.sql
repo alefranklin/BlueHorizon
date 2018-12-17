@@ -50,10 +50,8 @@ DROP TABLE IF EXISTS `images`;
 CREATE TABLE `images` (
   `path` varchar(30) NOT NULL,
   `name` varchar(10) NOT NULL,
-  `id_travel` int(6) unsigned DEFAULT NULL,
-  PRIMARY KEY (`path`,`name`),
-  KEY `id_travel` (`id_travel`),
-  CONSTRAINT `images_ibfk_1` FOREIGN KEY (`id_travel`) REFERENCES `travels` (`id`) ON DELETE CASCADE
+  `id` int(6) unsigned NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -64,6 +62,58 @@ CREATE TABLE `images` (
 LOCK TABLES `images` WRITE;
 /*!40000 ALTER TABLE `images` DISABLE KEYS */;
 /*!40000 ALTER TABLE `images` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `img_planet`
+--
+
+DROP TABLE IF EXISTS `img_planet`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `img_planet` (
+  `id_planet` int(6) unsigned NOT NULL,
+  `id_img` int(6) unsigned NOT NULL,
+  PRIMARY KEY (`id_planet`,`id_img`),
+  KEY `id_img` (`id_img`),
+  CONSTRAINT `img_planet_ibfk_1` FOREIGN KEY (`id_img`) REFERENCES `images` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `img_planet_ibfk_2` FOREIGN KEY (`id_planet`) REFERENCES `planets` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `img_planet`
+--
+
+LOCK TABLES `img_planet` WRITE;
+/*!40000 ALTER TABLE `img_planet` DISABLE KEYS */;
+/*!40000 ALTER TABLE `img_planet` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `img_travel`
+--
+
+DROP TABLE IF EXISTS `img_travel`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `img_travel` (
+  `id_travel` int(6) unsigned NOT NULL,
+  `id_img` int(6) unsigned NOT NULL,
+  PRIMARY KEY (`id_travel`,`id_img`),
+  KEY `id_img` (`id_img`),
+  CONSTRAINT `img_travel_ibfk_1` FOREIGN KEY (`id_img`) REFERENCES `images` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `img_travel_ibfk_2` FOREIGN KEY (`id_travel`) REFERENCES `travels` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `img_travel`
+--
+
+LOCK TABLES `img_travel` WRITE;
+/*!40000 ALTER TABLE `img_travel` DISABLE KEYS */;
+/*!40000 ALTER TABLE `img_travel` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -96,6 +146,32 @@ CREATE TABLE `orders` (
 LOCK TABLES `orders` WRITE;
 /*!40000 ALTER TABLE `orders` DISABLE KEYS */;
 /*!40000 ALTER TABLE `orders` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `planets`
+--
+
+DROP TABLE IF EXISTS `planets`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `planets` (
+  `id` int(6) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(20) NOT NULL,
+  `info` text NOT NULL,
+  `mass` int(10) NOT NULL,
+  `temperature` int(10) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `planets`
+--
+
+LOCK TABLES `planets` WRITE;
+/*!40000 ALTER TABLE `planets` DISABLE KEYS */;
+/*!40000 ALTER TABLE `planets` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -192,11 +268,14 @@ DROP TABLE IF EXISTS `travels`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `travels` (
   `id` int(6) unsigned NOT NULL AUTO_INCREMENT,
-  `departure` varchar(30) NOT NULL,
-  `arrival` varchar(30) NOT NULL,
-  `date` date DEFAULT NULL,
-  `description` varchar(300) NOT NULL,
-  PRIMARY KEY (`id`)
+  `description` text NOT NULL,
+  `departure` int(6) unsigned NOT NULL,
+  `arrival` int(6) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `departure` (`departure`),
+  KEY `arrival` (`arrival`),
+  CONSTRAINT `travels_ibfk_1` FOREIGN KEY (`departure`) REFERENCES `planets` (`id`),
+  CONSTRAINT `travels_ibfk_2` FOREIGN KEY (`arrival`) REFERENCES `planets` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -206,7 +285,7 @@ CREATE TABLE `travels` (
 
 LOCK TABLES `travels` WRITE;
 /*!40000 ALTER TABLE `travels` DISABLE KEYS */;
-INSERT INTO `travels` VALUES (1,' Pluto',' Mars','1983-06-07',''),(2,'Cape Canaveral',' Moon','2004-12-31',''),(3,'Cape Canaveral',' Pluto','1994-04-14',''),(4,' Mars',' Mars','2004-01-27',''),(5,'Cape Canaveral',' Pluto','1975-01-21',''),(6,' Pluto',' Mars','1978-08-09',''),(7,' Moon',' Moon','1977-08-16',''),(8,'Cape Canaveral',' Mars','1990-03-18',''),(9,' Moon',' Mars','1984-04-27',''),(10,'Cape Canaveral',' Pluto','2008-12-05','');
+INSERT INTO `travels` VALUES (1,'',0,0),(2,'',0,0),(3,'',0,0),(4,'',0,0),(5,'',0,0),(6,'',0,0),(7,'',0,0),(8,'',0,0),(9,'',0,0),(10,'',0,0);
 /*!40000 ALTER TABLE `travels` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -251,4 +330,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-12-07 16:07:59
+-- Dump completed on 2018-12-17 11:17:21
