@@ -156,7 +156,7 @@ DROP TABLE IF EXISTS `planets`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `planets` (
-  `id` int(6) unsigned NOT NULL,
+  `id` int(6) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(20) NOT NULL,
   `info` text NOT NULL,
   `mass` int(10) NOT NULL,
@@ -268,10 +268,14 @@ DROP TABLE IF EXISTS `travels`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `travels` (
   `id` int(6) unsigned NOT NULL AUTO_INCREMENT,
-  `departure` varchar(30) NOT NULL,
-  `arrival` varchar(30) NOT NULL,
   `description` text NOT NULL,
-  PRIMARY KEY (`id`)
+  `departure` int(6) unsigned NOT NULL,
+  `arrival` int(6) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `departure` (`departure`),
+  KEY `arrival` (`arrival`),
+  CONSTRAINT `travels_ibfk_1` FOREIGN KEY (`departure`) REFERENCES `planets` (`id`),
+  CONSTRAINT `travels_ibfk_2` FOREIGN KEY (`arrival`) REFERENCES `planets` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -281,7 +285,7 @@ CREATE TABLE `travels` (
 
 LOCK TABLES `travels` WRITE;
 /*!40000 ALTER TABLE `travels` DISABLE KEYS */;
-INSERT INTO `travels` VALUES (1,' Pluto',' Mars',''),(2,'Cape Canaveral',' Moon',''),(3,'Cape Canaveral',' Pluto',''),(4,' Mars',' Mars',''),(5,'Cape Canaveral',' Pluto',''),(6,' Pluto',' Mars',''),(7,' Moon',' Moon',''),(8,'Cape Canaveral',' Mars',''),(9,' Moon',' Mars',''),(10,'Cape Canaveral',' Pluto','');
+INSERT INTO `travels` VALUES (1,'',0,0),(2,'',0,0),(3,'',0,0),(4,'',0,0),(5,'',0,0),(6,'',0,0),(7,'',0,0),(8,'',0,0),(9,'',0,0),(10,'',0,0);
 /*!40000 ALTER TABLE `travels` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -326,4 +330,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-12-17 10:47:45
+-- Dump completed on 2018-12-17 11:17:13

@@ -33,14 +33,14 @@ rockets(**id**, model, price)
 | nationality | varchar(15)         | YES  |     | NULL    |                |
 
 
-travels(**id**, departure, arrival, description)
+travels(**id**, description, departure*, arrival*)
 
 | Field | Type | Null | Key | Default | Extra |
 | --- | --- | --- | --- | --- | --- |
 | id          | int(6) unsigned | NO   | PRI | NULL    | auto_increment |
-| departure   | varchar(30)     | NO   |     | NULL    |                |
-| arrival     | varchar(30)     | NO   |     | NULL    |                |
 | description | text            | NO   |     | NULL    |                |
+| departure   | int(6) unsigned | NO   | MUL | NULL    |                |
+| arrival     | int(6) unsigned | NO   | MUL | NULL    |                |
 
 
 rocket_travel(**id_travel***, **id_rocket***)
