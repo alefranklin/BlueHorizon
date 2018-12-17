@@ -102,6 +102,7 @@
         letter-spacing: 4px;
         width:75%;
         margin:auto;
+        
     }
 
     #rockets dd
@@ -411,4 +412,11 @@
     FINE CLASSI PER REGISTRAZIONE
 */
 
+    #company-content h1
+    {
+        color:white;
+        font-family: 'lato', 'sans-serif';
+        text-align:left;
+        text-shadow: rgba(0,0,0,1);
+    }
 }
