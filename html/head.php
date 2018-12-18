@@ -40,11 +40,8 @@
 
     <?php
         if(isset($_GET['snackmsg'])) { ?>
-            
             <body onload="snackMessage(<?= $_GET["snackmsg"] ?>)">
-
     <?php
-         
         } else { ?>
             <body>
     <?php

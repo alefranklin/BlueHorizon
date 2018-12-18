@@ -1,7 +1,7 @@
 <?php
     session_start();
     include_once("utils/utility.php");
-    
+
     $PageTitle="Blue Horizon";
 
     function customPageHeader() { ?>
@@ -17,8 +17,6 @@
 <div id="header">
     <?php include($local_path."html/navbar.php"); ?>
 </div>
-
-<a href="administration/add.php"> bella </a>
 
 <!-- menu -->
 <div id="body-page" class="" role="main">
