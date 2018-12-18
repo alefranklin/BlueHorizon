@@ -133,9 +133,9 @@ CREATE TABLE `orders` (
   KEY `id_rc` (`id_rc`),
   KEY `id_travel` (`id_travel`),
   KEY `id_user` (`id_user`),
-  CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`id_rc`) REFERENCES `rocket_cabin` (`id`),
-  CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`id_travel`) REFERENCES `travels` (`id`),
-  CONSTRAINT `orders_ibfk_3` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`)
+  CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`id_rc`) REFERENCES `rocket_cabin` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`id_travel`) REFERENCES `travels` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `orders_ibfk_3` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -191,8 +191,8 @@ CREATE TABLE `rocket_cabin` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_rocket` (`id_rocket`,`id_cabin`),
   KEY `id_cabin` (`id_cabin`),
-  CONSTRAINT `rocket_cabin_ibfk_1` FOREIGN KEY (`id_rocket`) REFERENCES `rockets` (`id`),
-  CONSTRAINT `rocket_cabin_ibfk_2` FOREIGN KEY (`id_cabin`) REFERENCES `cabin` (`id`)
+  CONSTRAINT `rocket_cabin_ibfk_1` FOREIGN KEY (`id_rocket`) REFERENCES `rockets` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `rocket_cabin_ibfk_2` FOREIGN KEY (`id_cabin`) REFERENCES `cabin` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -218,8 +218,8 @@ CREATE TABLE `rocket_travel` (
   `date` date NOT NULL,
   PRIMARY KEY (`id_travel`,`id_rocket`,`date`),
   KEY `id_rocket` (`id_rocket`),
-  CONSTRAINT `rocket_travel_ibfk_1` FOREIGN KEY (`id_travel`) REFERENCES `travels` (`id`),
-  CONSTRAINT `rocket_travel_ibfk_2` FOREIGN KEY (`id_rocket`) REFERENCES `rockets` (`id`)
+  CONSTRAINT `rocket_travel_ibfk_1` FOREIGN KEY (`id_travel`) REFERENCES `travels` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `rocket_travel_ibfk_2` FOREIGN KEY (`id_rocket`) REFERENCES `rockets` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -274,8 +274,8 @@ CREATE TABLE `travels` (
   PRIMARY KEY (`id`),
   KEY `departure` (`departure`),
   KEY `arrival` (`arrival`),
-  CONSTRAINT `travels_ibfk_1` FOREIGN KEY (`departure`) REFERENCES `planets` (`id`),
-  CONSTRAINT `travels_ibfk_2` FOREIGN KEY (`arrival`) REFERENCES `planets` (`id`)
+  CONSTRAINT `travels_ibfk_1` FOREIGN KEY (`departure`) REFERENCES `planets` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `travels_ibfk_2` FOREIGN KEY (`arrival`) REFERENCES `planets` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
