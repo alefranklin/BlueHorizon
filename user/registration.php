@@ -165,54 +165,48 @@
   <h2 class="space-font">REGISTRAZIONE</h2>
   <div id="registration-div">
     <p><span id="required-fields">* required fields</span></p>
+    <br>
     <div id="form-div">
       <form name="form_registration" method="post" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>">
          <div class="text-group">
-            <input type="text" class="input-text" name="username" value="<?= $username ?>" required placeholder="Username">
-            <span class="highlight">*</span>
-            <span class="bar"/>
-            <span class="error"><?= $usernameErr ?></span>
+            <input type="text" class="inputText" name="username" value="<?= $username ?>" required/>
+            <span class="floating-label">* Username</span>
             <label class="hide">Username</label>
          </div>
+         <span class="error"><?= $usernameErr ?></span>
          <div class="text-group">
-            <input type="text" class="input-text" name="name" value="<?= $name ?>" required placeholder="Name">
-            <span class="highlight">*</span>
-            <span class="bar"/>
-            <span class="error"> <?= $nameErr ?></span>
+            <input type="text" class="inputText" name="name" value="<?= $name ?>" required>
+            <span class="floating-label">* Name</span>
             <label class="hide">Name</label>
          </div>
+         <span class="error"> <?= $nameErr ?></span>
          <div class="text-group">
-            <input type="text" class="input-text" name="lastname" value="<?= $lastname ?>" required placeholder="Last Name">
-            <span class="highlight">*</span>
-            <span class="bar"/>
-            <span class="error"> <?= $lastnameErr ?></span>
+            <input type="text" class="inputText" name="lastname" value="<?= $lastname ?>" required>
+            <span class="floating-label">*Last Name</span>            <span class="error"> <?= $lastnameErr ?></span>
             <label class="hide">Lastname</label>
          </div>
          <div class="text-group">
-            <input type="text" class="input-text" name="email" value="<?= $email ?>" required placeholder="Email">
-            <span class="highlight">*</span>
-            <span class="bar"/>
-            <span class="error"> <?= $emailErr ?></span>
+            <input type="text" class="inputText" name="email" value="<?= $email ?>" required>
+            <span class="floating-label">* Email</span>
             <label class="hide">Email</label>
          </div>
+         <span class="error"> <?= $emailErr ?></span>
          <div class="text-group">
-            <input type="password" class="input-text" name="password" value="<?= $password ?>" required placeholder="Password">
-            <span class="highlight">*</span>
-            <span class="bar"/>
-            <span class="error"> <?= $passwordErr ?></span>
+            <input type="password" class="inputText" name="password" value="<?= $password ?>" required>
+            <span class="floating-label">* Password</span>
             <label class="hide">Password</label>
          </div>
+         <span class="error"> <?= $passwordErr ?></span>
          <div class="text-group">
-            <input type="password" id="repeat_password" class="input-text" name="repeat_password" value="" required placeholder="Conferma Password">
-            <span class="highlight">*</span>
-            <span class="bar"/>
-            <span class="error"> <?= $passwordRepeatErr ?></span>
+            <input type="password" id="repeat_password" class="inputText" name="repeat_password" value="" required>
+            <span class="floating-label">* Repeat Password</span>
             <label for="repeat_password" class="hide">Ripeti Password</label>
          </div>
+         <span class="error"> <?= $passwordRepeatErr ?></span>
          <div class="text-group">
            <label for="gender-select" class="hide"> Gender </label>
-            <select id="gender-select" name="gender" required>
-                <option class="select-placeholder" value="" disabled selected hidden>Gender</option>
+            <select id="gender-select" name="gender" class="minimal" required>
+                <option class="select-placeholder" value="" disabled selected hidden>* Gender</option>
                 <option value="M" <?= (isset($gender) && $gender=="M") ? 'selected' : "" ?>>Male</option>
                 <option value="F" <?= (isset($gender) && $gender=="F") ? 'selected' : "" ?>>Female</option>
                 <option value="N.D." <?= (isset($gender) && $gender=="N.D.") ? 'selected' : "" ?>>Other</option>
