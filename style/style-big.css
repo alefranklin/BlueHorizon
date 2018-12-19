@@ -443,4 +443,12 @@
          transition: 0.2s ease all;
     }
     /* FINE CLASSI PER FORM */
+
+    #company-content h1
+    {
+        color:white;
+        font-family: 'lato', 'sans-serif';
+        text-align:left;
+        text-shadow: rgba(0,0,0,1);
+    }
 }
