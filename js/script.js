@@ -43,14 +43,12 @@ function topFunction() {
 }
 
 function snackMessage(msg){
-  var snackDiv = document.getElementById("snackDiv")
+  var snackDiv = document.getElementById("snack-div")
   var snackMsg = document.getElementById("snack-msg");
   var snackImg = document.getElementById("snack-img");
   var message;
   var message_type;
   var message_content;
-
-  xd = 10;
   var request = new XMLHttpRequest();
   request.open("GET", "http://localhost/BlueHorizon/js/messages.xml");
   request.send();
