@@ -1,6 +1,6 @@
 -- MySQL dump 10.16  Distrib 10.1.34-MariaDB, for debian-linux-gnu (x86_64)
 --
--- Host: localhost    Database: sitodb
+-- Host: localhost    Database: testdb
 -- ------------------------------------------------------
 -- Server version	10.1.34-MariaDB-0ubuntu0.18.04.1
 
@@ -213,13 +213,15 @@ DROP TABLE IF EXISTS `rocket_travel`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `rocket_travel` (
-  `id_travel` int(6) unsigned NOT NULL,
-  `id_rocket` int(6) unsigned NOT NULL,
+  `id` int(6) unsigned NOT NULL AUTO_INCREMENT,
+  `travel_id` int(6) unsigned NOT NULL,
+  `rocket_id` int(6) unsigned NOT NULL,
   `date` date NOT NULL,
-  PRIMARY KEY (`id_travel`,`id_rocket`,`date`),
-  KEY `id_rocket` (`id_rocket`),
-  CONSTRAINT `rocket_travel_ibfk_1` FOREIGN KEY (`id_travel`) REFERENCES `travels` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `rocket_travel_ibfk_2` FOREIGN KEY (`id_rocket`) REFERENCES `rockets` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+  PRIMARY KEY (`id`),
+  KEY `travel_id` (`travel_id`),
+  KEY `rocket_id` (`rocket_id`),
+  CONSTRAINT `rocket_travel_ibfk_1` FOREIGN KEY (`travel_id`) REFERENCES `travels` (`id`),
+  CONSTRAINT `rocket_travel_ibfk_2` FOREIGN KEY (`rocket_id`) REFERENCES `rockets` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -229,7 +231,6 @@ CREATE TABLE `rocket_travel` (
 
 LOCK TABLES `rocket_travel` WRITE;
 /*!40000 ALTER TABLE `rocket_travel` DISABLE KEYS */;
-INSERT INTO `rocket_travel` VALUES (1,1,'1975-01-21'),(2,2,'1977-08-16'),(3,3,'1978-08-09'),(4,1,'1983-06-07'),(5,2,'1984-04-27'),(6,3,'1990-03-18'),(7,1,'1994-04-14'),(8,2,'2004-01-27'),(9,3,'2004-12-31'),(10,1,'2008-12-05');
 /*!40000 ALTER TABLE `rocket_travel` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -285,7 +286,6 @@ CREATE TABLE `travels` (
 
 LOCK TABLES `travels` WRITE;
 /*!40000 ALTER TABLE `travels` DISABLE KEYS */;
-INSERT INTO `travels` VALUES (1,'',0,0),(2,'',0,0),(3,'',0,0),(4,'',0,0),(5,'',0,0),(6,'',0,0),(7,'',0,0),(8,'',0,0),(9,'',0,0),(10,'',0,0);
 /*!40000 ALTER TABLE `travels` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -330,4 +330,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-12-17 11:17:21
+-- Dump completed on 2018-12-19 14:28:12
