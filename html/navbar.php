@@ -1,6 +1,6 @@
 <?php
     include_once($local_path."utils/utility.php");
-    
+
     if (isAuth()) {
         $username = $_SESSION['user']['username'];
     }
