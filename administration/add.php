@@ -69,7 +69,7 @@ echo "sono qua ";
 <!-- head -->
 <?php include($local_path."html/head.php"); ?>
 
-<?php print_r($_SESSION["var"][$section]); ?>
+<?php //print_r($_SESSION["var"][$section]); ?>
 
 <?php form($section); ?>
 
