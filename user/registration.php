@@ -179,30 +179,31 @@
             <span class="floating-label">* Name</span>
             <label class="hide">Name</label>
          </div>
-         <span class="error"> <?= $nameErr ?></span>
+         <span class="error"><?= $nameErr ?></span>
          <div class="text-group">
             <input type="text" class="inputText" name="lastname" value="<?= $lastname ?>" required>
-            <span class="floating-label">*Last Name</span>            <span class="error"> <?= $lastnameErr ?></span>
+            <span class="floating-label">*Last Name</span>
             <label class="hide">Lastname</label>
          </div>
+         <span class="error"><?= $lastnameErr ?></span>
          <div class="text-group">
             <input type="text" class="inputText" name="email" value="<?= $email ?>" required>
             <span class="floating-label">* Email</span>
             <label class="hide">Email</label>
          </div>
-         <span class="error"> <?= $emailErr ?></span>
+         <span class="error"><?= $emailErr ?></span>
          <div class="text-group">
             <input type="password" class="inputText" name="password" value="<?= $password ?>" required>
             <span class="floating-label">* Password</span>
             <label class="hide">Password</label>
          </div>
-         <span class="error"> <?= $passwordErr ?></span>
+         <span class="error"><?= $passwordErr ?></span>
          <div class="text-group">
             <input type="password" id="repeat_password" class="inputText" name="repeat_password" value="" required>
             <span class="floating-label">* Repeat Password</span>
             <label for="repeat_password" class="hide">Ripeti Password</label>
          </div>
-         <span class="error"> <?= $passwordRepeatErr ?></span>
+         <span class="error"><?= $passwordRepeatErr ?></span>
          <div class="text-group">
            <label for="gender-select" class="hide"> Gender </label>
             <select id="gender-select" name="gender" class="minimal" required>
