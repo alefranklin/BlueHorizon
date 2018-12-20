@@ -48,10 +48,10 @@
 
 -- cabin  
   -- add
-  INSERT INTO cabin (seats, class) VALUES ($number_of_seat, $class);
+  INSERT INTO cabin (seats, class) VALUES ($seats, $class);
 
   -- update
-  UPDATE cabin SET seats = $number_of_seat, class = $class;
+  UPDATE cabin SET seats = $seats, class = $class;
 
   -- delete
   DELETE FROM cabin WHERE id = $cabin_id;
@@ -109,8 +109,10 @@
 
 -- orders
   -- add
-  INSERT INTO orders (id_user, id_travel, id_rc, )
+  INSERT INTO orders (id_user, id_travel, id_rc, number_of_seat) VALUES ($user_id, $travel_id, $rc_id, $number_of_seat);
 
   -- update
+  UPDATE orders SET id_user = $user_id, id_travel = $travel_id, id_rc = $rc_id, number_of_seat = $number_of_seat;
 
   -- delete
+  DELETE FROM orders WHERE id = $order_id;
