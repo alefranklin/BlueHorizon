@@ -1,0 +1,462 @@
+@media only screen and (min-width: 768px){
+    body {
+        padding-top:60px;
+        text-align: center;
+        margin: auto;
+        background-color: #182c43;
+    }
+
+    .fade-body{
+        animation: fade-body-animation;
+        animation-fill-mode: forwards;
+        animation-duration: 1s;
+        pointer-events: none;
+    }
+
+    .unfade-body{
+        animation: unfade-body-animation;
+        animation-fill-mode: forwards;
+        animation-duration: 1s;
+        pointer-events: all;
+    }
+
+    #header{
+        background-color: #404040;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        margin: auto;
+        text-align: left;
+        overflow: hidden;
+        height: 60px;
+        opacity: 1;
+        z-index: 1;
+    }
+
+    #logo {
+        float: left;
+        position: relative;
+        left: 7%;
+        min-height: 20px;
+        min-width: 50px;
+        width: auto;
+        height: inherit;
+        overflow: hidden;
+    }
+
+    h1{
+        font-size: 3em;
+        letter-spacing: 5px;
+    }
+    h2{
+        font-size: 1.8em;
+        letter-spacing: 3px;
+        margin-top: 0px;
+    }
+    .space-font{
+        color: darkgray;
+        text-align: center;
+        font-family: 'lato', sans-serif;
+        font-weight: bold;
+        background: -webkit-linear-gradient(white, #5f6d7a);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    #rockets dt,dd
+    {
+        margin: auto;
+        background-color: #f2f2f2;
+    }
+
+    #rockets dt
+    {
+        width: 80%;
+        font-size:2em;
+        padding-bottom: 0.5em;
+        padding-top: 0.5em;
+        font-family: 'lato', sans-serif;
+        font-weight: bold;
+        color:#39679e;
+        border: 3px solid #39679e;
+        border-radius: 2em;
+    }
+
+    #rockets dl
+    {
+        margin-top: 5em;
+    }
+    #rockets p
+    {
+        font-size:1em;
+        font-family: 'lato', sans-serif;
+        color: #404040;
+    }
+
+    #rockets h1
+    {
+        color:white;
+        font-size: 4em;
+        font-family: 'lato', sans-serif;
+        padding-top:1em;
+        text-align:left;
+        letter-spacing: 4px;
+        width:75%;
+        margin:auto;
+        
+    }
+
+    #rockets dd
+    {
+        border-width:0px 3px 3px 3px;
+        border-style: solid;
+        border-color: #39679e;
+        border-bottom-left-radius:2em;
+        border-bottom-right-radius:2em;
+        padding-top:1em;
+        padding-bottom:2em;
+        width:73%;
+        display:inline-block;
+        margin-bottom:2em;
+    }
+    .space-ship
+    {
+        width: 50%;
+        float:left;
+        overflow:auto;
+    }
+
+    .topnav {
+        float: right;
+        height: inherit;
+        position: relative;
+        right: 7%;
+    }
+
+   .topnav a{
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        margin: 18px 0px;
+        padding: 5px 15px;
+        text-decoration: none;
+        font-size: 15px;
+        height: auto;
+        vertical-align: middle;
+    }
+    .topnav span.navbar-username{
+        font-size: 15px;
+        margin: 18px 0px;
+        padding: 0px 5px;
+        vertical-align: center;
+    }
+    .topnav a.user-icon-container{
+        height: auto;
+        margin: 18px 0px 14px 0px;
+        padding: 3.5px 15px;
+        width: auto;
+        font-size: 21px;
+        text-align: center;
+
+    }
+
+    .topnav a:not(:first-of-type){
+        border-left: 1px solid lightgray;
+    }
+
+    .skip{
+        position: fixed;
+        height: 20px;
+        top: -20px;
+        width: 100%;
+    }
+
+    #skip a{
+        width: 100%;
+        max-height: 20px;
+        text-align: center;
+    }
+    #user-div{
+        position: fixed;
+        height: 140px;
+        width: 25%;
+        top: 69px;
+        right: -30%;
+        float: right;
+        background-color: #757575;
+        border-radius: 5px;
+
+    }
+
+    .hide{
+        display: none;
+    }
+
+    .initial{
+        display: none;
+    }
+
+    .enter-animation{
+        -webkit-animation: enter-animation 1s;
+        animation: enter-animation 1s;
+        animation-fill-mode: forwards;
+    }
+
+    .exit-animation{
+        -webkit-animation: exit-animation 1s;
+        animation: exit-animation 1s;
+        animation-fill-mode: forwards;
+    }
+
+    .topnav a:link{
+    }
+    .topnav a:visited{
+    }
+
+    .topnav a:hover{
+        background: -webkit-linear-gradient(orange, lightgray);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .active{
+        background: -webkit-linear-gradient(#5294e2, #85b4ea);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        pointer-events: none;
+    }
+
+    .topnav a.icon{
+        display: none;
+    }
+
+    #scroll-back-btn{
+        color: darkorange;
+        font-size: 50px;
+        display: none;
+        border-style: hidden;
+        border-radius: 10px;
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+    }
+
+    #scroll-back-btn:hover{
+        color: #b26200;
+    }
+
+    #login input.login-text{
+        display: block;
+        width: 70%;
+        height: 20px;
+        margin: 15px 15%;
+        padding-bottom: 6px;
+        border: none;
+        border-bottom: #39679e 3px solid;
+        background-color: transparent;
+        text-align: center;
+        color: black;
+    }
+
+    #login input.login-text::placeholder{
+        color: black;
+    }
+
+    #login input.login-button{
+        display: block;
+        width: 30%;
+        height: 30px;
+        margin: 15px 35% 5px 35%;
+        border: none;
+        border-radius: 3px;
+        vertical-align: middle;
+    }
+
+    .registration-link{
+        font-family: "Arial", sans-serif;
+        position: absolute;
+        bottom: 1px;
+        right: 2px;
+        font-size: 12px;
+        color: white;
+    }
+
+
+        #snack-div {
+          visibility: hidden;
+          min-width: 250px;
+          margin-left: -125px;
+          background-color: #333;
+          color: #fff;
+          text-align: center;
+          border-radius: 16px;
+          padding: 10px;
+          position: fixed;
+          z-index: 1;
+          left: 50%;
+          bottom: 30px;
+          font-size: 17px;
+        }
+
+        #snack-div.show {
+            visibility: visible;
+            -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+
+        #snack-div.good{
+          border-bottom: 3px green solid;
+        }
+
+        #snack-div.bad{
+          border-bottom: 3px red solid;
+        }
+
+        #snack-img{
+          display: block;
+          width: 20%;
+          float: left;
+        }
+
+        #snack-img.good{
+          color: green;
+        }
+
+        #snack-img.bad{
+          color: red;
+        }
+
+        #snack-msg{
+          float: right;
+          display: block;
+          width: 80%;
+        }
+
+
+    #travel-list{
+        max-width: 70%;
+        margin: 40px 15%;
+
+    }
+
+    #mars-banner{
+        background-image: url(../img/marte.jpg);
+
+    }
+
+    #earth-banner{
+        background-image: url(../img/terra.jpg);
+
+    }
+
+    #pluto-banner{
+        background-image: url(../img/plutone.jpeg);
+
+    }
+
+    .travel-panel{
+        display: inline-block;
+        margin: 10px 20%;
+        width: 70%;
+        height: 200px;
+        border-radius: 5px;
+        background-color: bisque;
+        overflow: hidden;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .travel-panel:hover{
+        opacity: 0.4;
+    }
+
+    .travel-panel img{
+        position: absolute;
+        max-width: 100%;
+        height: auto;
+    }
+/*
+    CLASSI PER REGISTRAZIONE
+*/
+
+    #registration-div{
+        background-color: aqua;
+        width: 70%;
+        height: auto;
+        margin: 0 15%;
+        overflow: hidden;
+    }
+
+    #required-fields{
+        top: 0px;
+        left: 0px;
+        float: left;
+    }
+
+    #form-div{
+        float: left;
+        top: 30px;
+    }
+
+    .text-group{
+        width: 70%;
+        float: left;
+        margin: 3px 15%;
+    }
+
+    .input-text{
+      border: solid 1px lightgray;
+      border-radius: 25px;
+      width: 200px;
+      height: 30px;
+      padding: 0px 5px;
+      text-align: center;
+      background-color: #e9e9e9;
+    }
+
+    .input-text::placeholder{
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .input-submit{
+      border: solid 1px lightgray;
+      border-radius: 3px;
+      height: 30px;
+      margin-top: 30px;
+      width: 200px;
+      background-color: lightgray;
+    }
+
+    .error{
+        float: right;
+    }
+
+    #gender-select{
+      height: 30px;
+      width: auto;
+      border: solid 1px lightgray;
+      border-radius: 25px;
+      margin-top: 5px;
+    }
+
+    .select-placeholder{
+      color: darkgray;
+    }
+/*
+    FINE CLASSI PER REGISTRAZIONE
+*/
+
+<<<<<<< HEAD
+    #company-content h1
+    {
+        color:white;
+        font-family: 'lato', 'sans-serif';
+        text-align:left;
+        text-shadow: rgba(0,0,0,1);
+    }
+}
+=======
+}
+>>>>>>> cd16b01eff727ce0bfc37d05a2f945dac3ec2ae3
