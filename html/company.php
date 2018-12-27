@@ -28,7 +28,7 @@
         non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 
     </p>
-    <img src="../img/Imageph.jpg" alt="company" />
+<img src="../img/Imageph.jpg" alt="company" />
   </div>
 </div>
 

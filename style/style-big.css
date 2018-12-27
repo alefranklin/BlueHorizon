@@ -103,6 +103,7 @@
         letter-spacing: 4px;
         width:75%;
         margin:auto;
+        text-shadow: 3px 3px 0px black;
     }
 
     #rockets dd
@@ -452,6 +453,35 @@
         color:white;
         font-family: 'lato', 'sans-serif';
         text-align:left;
-        text-shadow: rgba(0,0,0,1);
+        text-shadow: 3px 3px 0px black;
+        width:80%;
+        margin:auto;
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+    }
+
+    #company-content p,img
+    {
+      display: inline-block;
+      overflow: hidden;
+      width:80%;
+      margin:auto;
+      padding-bottom: 2em;
+    }
+    #company-content p
+    {
+      color: white;
+      text-align:left;
+      text-shadow: 2px 2px 0px black;
+      width:39%;
+      vertical-align: top;
+      margin-right: 1em;
+    }
+
+    #company-content img
+    {
+        width: 39%;
+        margin: auto;
+        right:0;
     }
 }
