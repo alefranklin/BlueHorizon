@@ -109,7 +109,7 @@
 
         global $db;
 
-        $query = "SELECT * FROM ".$table;
+        $query = "SELECT * FROM $table";
         $ris = $db->query($query) or die (mysqli_error());
 
         return $ris;

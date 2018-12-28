@@ -20,4 +20,8 @@
         <type>good</type>
         <content>Ok</content>
     </message>
+    <message id="6">
+        <type>bad</type>
+        <content>Errore</content>
+    </message>
 </messages>

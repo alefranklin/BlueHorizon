@@ -9,8 +9,6 @@
         die();
     }
 
-
-
     $PageTitle="Pannello Admin";
 
     function customPageHeader() { ?>
@@ -23,16 +21,15 @@
         </style>
 <?php }
 
-    // definisco le variabili e le inizializzo vuote
-    $departureErr = $arrivalErr = $dateErr = $descriptionErr = "";
-    $departure = $arrival = $date = $description = "";
-
+    // ottengo la sezione del sito da gestire
     $section = $db->real_escape_string($_GET['section']);
 
+    // definisco le variabili richieste per la specifica sezione e le inizializzo vuote
     pushVar($section);
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
+        // aggiorno le variabili di sezione
         pushVar($section);
 
         //se non si sono verificati errori procedo con la registrazione dei dati

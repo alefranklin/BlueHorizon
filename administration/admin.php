@@ -6,14 +6,17 @@
     if (!isAdmin()) {
         $msg = 4;
         smartRedir($msg);
-        die();  
+        die();
     }
-    
+
     $title = "Benvenuto nell'area riservata sovrano indiscusso n° ".$_SESSION['user']['id']." del mondo";
 
-    $table_users = get_table('users');
-    $table_travels = get_table('travels');
-    
+    // TODO modificare get_table in modo da poter chiedere tutti o alcuni parametri
+
+    $tables['users'] = get_table('users');
+    $tables['travels'] = get_table('travels');
+    $tables['planets'] = get_table('planets');
+
     $PageTitle="Pannello Admin";
 
     function customPageHeader() { ?>
@@ -51,20 +54,20 @@
 <div id="body-page" class="">
     <h1><?= $title; ?></h1>
 
-    <p>
+    <div id="personali">
         <h3>I tuoi dati sono:</h3><br/>
 
         <?php foreach($_SESSION['user'] as $key => $value): ?>
         <?= $key . ' : ' . $value ?><br/>
         <?php endforeach; ?>
-        
+
         <?php foreach($_SESSION['var']["travel"] as $key => $value): ?>
         <?= $key . ' : ' . $value ?><br/>
         <?php endforeach; ?>
-        
-    </p>
 
-    <p>
+    </div>
+
+    <div id="users">
         <h3>Lista utenti:</h3><br/>
 
         <table>
@@ -75,22 +78,22 @@
                 <th>Sex</th>
                 <th>Email</th>
             </tr>
-            <?php while($user = $table_users->fetch_assoc()) { ?>
+            <?php while($row = $tables['users']->fetch_assoc()) { ?>
             <tr>
-                <td><?= $user['username'] ?></td>
-                <td><?= $user['name'] ?></td>
-                <td><?= $user['lastname'] ?></td>
-                <td><?= $user['sex'] ?></td>
-                <td><?= $user['email'] ?></td>
-                <td><a href="edit-user.php?id='<?= $user['id'] ?>">Edit</a></td>
-                <td><a href="delete.php?id=<?= $user['id'] ?>&table=users">Delete</a></td>
+                <td><?= $row['username'] ?></td>
+                <td><?= $row['name'] ?></td>
+                <td><?= $row['lastname'] ?></td>
+                <td><?= $row['sex'] ?></td>
+                <td><?= $row['email'] ?></td>
+                <td><a href="manage.php?id='<?= $row['id'] ?>">Edit</a></td>
+                <td><a href="delete.php?id=<?= $row['id'] ?>&table=users">Delete</a></td>
             </tr>
             <?php } ?>
         </table>
-        <a href="add.php?section=add-user">Aggiungi</a>
-    </p>
+        <a href="manage.php?section=add-user">Aggiungi</a>
+    </div>
 
-    <p>
+    <div id="travels">
         <h3>Lista viaggi:</h3><br/>
 
         <table>
@@ -100,19 +103,43 @@
                 <th>Data</th>
                 <th>Descrizione</th>
             </tr>
-            <?php while($travel = $table_travels->fetch_assoc()) { ?>
+            <?php while($row = $tables['travels']->fetch_assoc()) { ?>
             <tr>
-                <td><?= $travel['departure'] ?></td>
-                <td><?= $travel['arrival'] ?></td>
-                <td><?= date("Y-m-d", strtotime($travel['date'])) ?></td>
-                <td><?= $travel['description'] ?></td>
-                <td><a href="edit-travel.php?id='<?= $travel['id'] ?>">Edit</a></td>
-                <td><a href="delete.php?id=<?= $travel['id'] ?>&table=travels">Delete</a></td>
+                <td><?= $row['departure'] ?></td>
+                <td><?= $row['arrival'] ?></td>
+                <td><?= date("Y-m-d", strtotime($row['date'])) ?></td>
+                <td><?= $row['description'] ?></td>
+                <td><a href="manage.php?id='<?= $row['id'] ?>">Edit</a></td>
+                <td><a href="delete.php?id=<?= $row['id'] ?>&table=travels">Delete</a></td>
             </tr>
             <?php } ?>
         </table>
-        <a href="add.php?section=add-travel">Aggiungi</a>
-    </p>
+        <a href="manage.php?section=add-travel">Aggiungi</a>
+    </div>
+
+    <div id="planets">
+        <h3>Lista viaggi:</h3><br/>
+
+        <table>
+            <tr>
+                <th>Nome</th>
+                <th>Massa</th>
+                <th>Temperatura</th>
+                <th>Descrizine</th>
+            </tr>
+            <?php while($row = $tables['planets']->fetch_assoc()) { ?>
+            <tr>
+                <td><?= $row['name'] ?></td>
+                <td><?= $row['mass'] ?></td>
+                <td><?= $row['temperature'] ?></td>
+                <td><?= $row['info'] ?></td>
+                <td><a href="manage.php?id='<?= $row['id'] ?>">Edit</a></td>
+                <td><a href="delete.php?id=<?= $row['id'] ?>&table=planets">Delete</a></td>
+            </tr>
+            <?php } ?>
+        </table>
+        <a href="manage.php?section=add-planet">Aggiungi</a>
+    </div>
 
     <p>
         Per effettuare il logout clicca <a href="<?= $host_path."user/logout.php" ?>"><font color='blue'>qui</font></a>
