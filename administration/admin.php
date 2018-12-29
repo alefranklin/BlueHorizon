@@ -27,18 +27,29 @@
 
         <style type="text/css">
             body {
-                color: white;
+                color: black;
+                background-color: white;
             }
             table {
                 border-collapse: collapse;
             }
+
             tr {
                 font-weight:bold;
-                background-color: darkgray;
+                background-color: #efefef;
             }
-            table, th, td {
-                border: 1px solid black;
+
+            .glowing-border {
+                border: 3px solid white;
+                /*border-radius: 7px;*/
             }
+
+            .glowing-border:hover {
+                outline: none;
+                border-color: #87c9ff;
+                box-shadow: 0 0 10px #9ecaed;
+            }
+
         </style>
 
 <?php } ?>
@@ -77,14 +88,16 @@
                 <th>Lastname</th>
                 <th>Sex</th>
                 <th>Email</th>
+                <th>Admin</th>
             </tr>
             <?php while($row = $tables['users']->fetch_assoc()) { ?>
-            <tr>
+            <tr class="glowing-border">
                 <td><?= $row['username'] ?></td>
                 <td><?= $row['name'] ?></td>
                 <td><?= $row['lastname'] ?></td>
                 <td><?= $row['sex'] ?></td>
                 <td><?= $row['email'] ?></td>
+                <td><?= $row['isAdmin'] ?></td>
                 <td><a href="manage.php?id='<?= $row['id'] ?>">Edit</a></td>
                 <td><a href="delete.php?id=<?= $row['id'] ?>&table=users">Delete</a></td>
             </tr>
