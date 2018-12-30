@@ -28,9 +28,7 @@
 
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-        <script src="<?= $host_path."js/script.js" ?>"></script>
-
-        <!-- tag specifici -->
+        <!-- carico i tag specifici -->
         <?php
             if (function_exists('customPageHeader')) {
                 customPageHeader();

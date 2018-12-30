@@ -22,35 +22,21 @@
     function customPageHeader() { ?>
 
         <!-- aggiungere tag specifici per questa pagina -->
-        <!--Pannello di gestione-->
-        <link href="test.css" rel="stylesheet" type="text/css" />
+        <link href="admin.css" rel="stylesheet" type="text/css" />
 
-        <style type="text/css">
-            body {
-                color: black;
-                background-color: white;
-            }
-            table {
-                border-collapse: collapse;
-            }
+        <link
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous" />
 
-            tr {
-                font-weight:bold;
-                background-color: #efefef;
-            }
+        <link
+      	rel="stylesheet"
+      	href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.4.0/css/perfect-scrollbar.min.css"
+      	integrity="sha256-Eff0vTAskMNGMXDva8NMruf8ex6k9EuZ4QXf09lxwaQ="
+      	crossorigin="anonymous" />
 
-            .glowing-border {
-                border: 3px solid white;
-                /*border-radius: 7px;*/
-            }
-
-            .glowing-border:hover {
-                outline: none;
-                border-color: #87c9ff;
-                box-shadow: 0 0 10px #9ecaed;
-            }
-
-        </style>
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" />
 
 <?php } ?>
 
@@ -58,6 +44,7 @@
 <?php include($local_path."html/head.php"); ?>
 
 <!-- body -->
+
 <div id="header">
     <?php include($local_path."html/navbar.php"); ?>
 </div>
@@ -76,6 +63,209 @@
         <?= $key . ' : ' . $value ?><br/>
         <?php endforeach; ?>
 
+    </div>
+
+    <div class="container-table100">
+			<div class="wrap-table100">
+
+        <div class="table100 ver5 m-b-110">
+          <div class="table100-head">
+            <table>
+              <thead>
+                <tr class="row100 head">
+                  <th class="cell100 column1">Class name</th>
+                  <th class="cell100 column2">Type</th>
+                  <th class="cell100 column3">Hours</th>
+                  <th class="cell100 column4">Trainer</th>
+                  <th class="cell100 column5">Spots</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+
+          <div class="table100-body js-pscroll">
+            <table>
+              <tbody>
+                <tr class="row100 body">
+                  <td class="cell100 column1">Like a butterfly</td>
+                  <td class="cell100 column2">Boxing</td>
+                  <td class="cell100 column3">9:00 AM - 11:00 AM</td>
+                  <td class="cell100 column4">Aaron Chapman</td>
+                  <td class="cell100 column5">10</td>
+                </tr>
+
+                <tr class="row100 body">
+                  <td class="cell100 column1">Mind & Body</td>
+                  <td class="cell100 column2">Yoga</td>
+                  <td class="cell100 column3">8:00 AM - 9:00 AM</td>
+                  <td class="cell100 column4">Adam Stewart</td>
+                  <td class="cell100 column5">15</td>
+                </tr>
+
+                <tr class="row100 body">
+                  <td class="cell100 column1">Crit Cardio</td>
+                  <td class="cell100 column2">Gym</td>
+                  <td class="cell100 column3">9:00 AM - 10:00 AM</td>
+                  <td class="cell100 column4">Aaron Chapman</td>
+                  <td class="cell100 column5">10</td>
+                </tr>
+
+                <tr class="row100 body">
+                  <td class="cell100 column1">Wheel Pose Full Posture</td>
+                  <td class="cell100 column2">Yoga</td>
+                  <td class="cell100 column3">7:00 AM - 8:30 AM</td>
+                  <td class="cell100 column4">Donna Wilson</td>
+                  <td class="cell100 column5">15</td>
+                </tr>
+
+                <tr class="row100 body">
+                  <td class="cell100 column1">Playful Dancer's Flow</td>
+                  <td class="cell100 column2">Yoga</td>
+                  <td class="cell100 column3">8:00 AM - 9:00 AM</td>
+                  <td class="cell100 column4">Donna Wilson</td>
+                  <td class="cell100 column5">10</td>
+                </tr>
+
+                <tr class="row100 body">
+                  <td class="cell100 column1">Zumba Dance</td>
+                  <td class="cell100 column2">Dance</td>
+                  <td class="cell100 column3">5:00 PM - 7:00 PM</td>
+                  <td class="cell100 column4">Donna Wilson</td>
+                  <td class="cell100 column5">20</td>
+                </tr>
+
+                <tr class="row100 body">
+                  <td class="cell100 column1">Cardio Blast</td>
+                  <td class="cell100 column2">Gym</td>
+                  <td class="cell100 column3">5:00 PM - 7:00 PM</td>
+                  <td class="cell100 column4">Randy Porter</td>
+                  <td class="cell100 column5">10</td>
+                </tr>
+
+                <tr class="row100 body">
+                  <td class="cell100 column1">Pilates Reformer</td>
+                  <td class="cell100 column2">Gym</td>
+                  <td class="cell100 column3">8:00 AM - 9:00 AM</td>
+                  <td class="cell100 column4">Randy Porter</td>
+                  <td class="cell100 column5">10</td>
+                </tr>
+
+                <tr class="row100 body">
+                  <td class="cell100 column1">Supple Spine and Shoulders</td>
+                  <td class="cell100 column2">Yoga</td>
+                  <td class="cell100 column3">6:30 AM - 8:00 AM</td>
+                  <td class="cell100 column4">Randy Porter</td>
+                  <td class="cell100 column5">15</td>
+                </tr>
+
+                <tr class="row100 body">
+                  <td class="cell100 column1">Yoga for Divas</td>
+                  <td class="cell100 column2">Yoga</td>
+                  <td class="cell100 column3">9:00 AM - 11:00 AM</td>
+                  <td class="cell100 column4">Donna Wilson</td>
+                  <td class="cell100 column5">20</td>
+                </tr>
+
+                <tr class="row100 body">
+                  <td class="cell100 column1">Virtual Cycle</td>
+                  <td class="cell100 column2">Gym</td>
+                  <td class="cell100 column3">8:00 AM - 9:00 AM</td>
+                  <td class="cell100 column4">Randy Porter</td>
+                  <td class="cell100 column5">20</td>
+                </tr>
+
+                <tr class="row100 body">
+                  <td class="cell100 column1">Like a butterfly</td>
+                  <td class="cell100 column2">Boxing</td>
+                  <td class="cell100 column3">9:00 AM - 11:00 AM</td>
+                  <td class="cell100 column4">Aaron Chapman</td>
+                  <td class="cell100 column5">10</td>
+                </tr>
+
+                <tr class="row100 body">
+                  <td class="cell100 column1">Mind & Body</td>
+                  <td class="cell100 column2">Yoga</td>
+                  <td class="cell100 column3">8:00 AM - 9:00 AM</td>
+                  <td class="cell100 column4">Adam Stewart</td>
+                  <td class="cell100 column5">15</td>
+                </tr>
+
+                <tr class="row100 body">
+                  <td class="cell100 column1">Crit Cardio</td>
+                  <td class="cell100 column2">Gym</td>
+                  <td class="cell100 column3">9:00 AM - 10:00 AM</td>
+                  <td class="cell100 column4">Aaron Chapman</td>
+                  <td class="cell100 column5">10</td>
+                </tr>
+
+                <tr class="row100 body">
+                  <td class="cell100 column1">Wheel Pose Full Posture</td>
+                  <td class="cell100 column2">Yoga</td>
+                  <td class="cell100 column3">7:00 AM - 8:30 AM</td>
+                  <td class="cell100 column4">Donna Wilson</td>
+                  <td class="cell100 column5">15</td>
+                </tr>
+
+                <tr class="row100 body">
+                  <td class="cell100 column1">Playful Dancer's Flow</td>
+                  <td class="cell100 column2">Yoga</td>
+                  <td class="cell100 column3">8:00 AM - 9:00 AM</td>
+                  <td class="cell100 column4">Donna Wilson</td>
+                  <td class="cell100 column5">10</td>
+                </tr>
+
+                <tr class="row100 body">
+                  <td class="cell100 column1">Zumba Dance</td>
+                  <td class="cell100 column2">Dance</td>
+                  <td class="cell100 column3">5:00 PM - 7:00 PM</td>
+                  <td class="cell100 column4">Donna Wilson</td>
+                  <td class="cell100 column5">20</td>
+                </tr>
+
+                <tr class="row100 body">
+                  <td class="cell100 column1">Cardio Blast</td>
+                  <td class="cell100 column2">Gym</td>
+                  <td class="cell100 column3">5:00 PM - 7:00 PM</td>
+                  <td class="cell100 column4">Randy Porter</td>
+                  <td class="cell100 column5">10</td>
+                </tr>
+
+                <tr class="row100 body">
+                  <td class="cell100 column1">Pilates Reformer</td>
+                  <td class="cell100 column2">Gym</td>
+                  <td class="cell100 column3">8:00 AM - 9:00 AM</td>
+                  <td class="cell100 column4">Randy Porter</td>
+                  <td class="cell100 column5">10</td>
+                </tr>
+
+                <tr class="row100 body">
+                  <td class="cell100 column1">Supple Spine and Shoulders</td>
+                  <td class="cell100 column2">Yoga</td>
+                  <td class="cell100 column3">6:30 AM - 8:00 AM</td>
+                  <td class="cell100 column4">Randy Porter</td>
+                  <td class="cell100 column5">15</td>
+                </tr>
+
+                <tr class="row100 body">
+                  <td class="cell100 column1">Yoga for Divas</td>
+                  <td class="cell100 column2">Yoga</td>
+                  <td class="cell100 column3">9:00 AM - 11:00 AM</td>
+                  <td class="cell100 column4">Donna Wilson</td>
+                  <td class="cell100 column5">20</td>
+                </tr>
+
+                <tr class="row100 body">
+                  <td class="cell100 column1">Virtual Cycle</td>
+                  <td class="cell100 column2">Gym</td>
+                  <td class="cell100 column3">8:00 AM - 9:00 AM</td>
+                  <td class="cell100 column4">Randy Porter</td>
+                  <td class="cell100 column5">20</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div id="users">
@@ -158,6 +348,30 @@
         Per effettuare il logout clicca <a href="<?= $host_path."user/logout.php" ?>"><font color='blue'>qui</font></a>
     </p>
 </div>
+
+<!--===============================================================================================-->
+<script
+src="https://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
+<!--===============================================================================================-->
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.4.0/perfect-scrollbar.min.js"
+integrity="sha256-pOydVY7re8c1n+fEgg3uoslR/di9NMsOFXJ0Esf2xjQ="
+crossorigin="anonymous"></script>
+
+<script>
+  $('.js-pscroll').each(function(){
+    var ps = new PerfectScrollbar(this);
+
+    $(window).on('resize', function(){
+      ps.update();
+    })
+  });
+</script>
+
+<script src="js/main.js"></script>
+<!--===============================================================================================-->
 
 <!-- footer -->
 <?php include($local_path."html/footer.php"); ?>
