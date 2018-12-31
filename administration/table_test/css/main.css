@@ -1,8 +1,5 @@
-
-
 /*//////////////////////////////////////////////////////////////////
 [ FONT ]*/
-
 
 @font-face {
   font-family: 'Lato', sans-serif;
@@ -136,8 +133,8 @@ iframe {
 
 .container-table100 {
   width: 100%;
-  min-height: 100vh;
-  background: #fff;
+  min-height: 50vh;
+  background: transparent/*#fff*/;
 
   display: -webkit-box;
   display: -webkit-flex;

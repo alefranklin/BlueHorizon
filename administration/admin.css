@@ -1,12 +1,10 @@
-body, html {
-	height: 100%;
-	font-family: sans-serif;
+@font-face {
+  font-family: 'Lato', sans-serif;
 }
 
 body {
     color: black;
 
-    /* background */
     background-color: white;
     background: url("../img/admin-bg.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -14,110 +12,62 @@ body {
     -o-background-size: cover;
     background-size: cover;
 }
+
 table {
     border-collapse: collapse;
+    width: 100%;
 }
 
-tr {
-    font-weight:bold;
-    background-color: #efefef;
+thead, tbody, tr, td, th { display: block; }
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
 }
 
-.glowing-border {
-    border: 2px solid white;
-    /*border-radius: 7px;*/
+tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
 }
 
-.glowing-border:hover {
-    outline: none;
-    border-color: #87c9ff;
-    box-shadow: 0 0 10px #9ecaed;
+thead th {
+    height: 30px;
+
+    /*text-align: left;*/
 }
 
-/*==================================================================
-[ Ver5 ]*/
-.table100.ver5 {
-  margin-right: -30px;
+tbody {
+    height: 400px;
+    overflow-y: auto;
 }
 
-.table100.ver5 .table100-head {
-  padding-right: 30px;
+thead {
+    /* fallback */
+    background-color: #000;
+    color: white;
+    font-family: 'Lato'
+    font-weight: 700;
 }
 
-.table100.ver5 th {
-  font-family: Lato-Bold;
-  font-size: 14px;
-  color: #555555;
-  line-height: 1.4;
-  text-transform: uppercase;
 
-  background-color: transparent;
+tbody td, thead th {
+    width: 50px;
+    float: left;
 }
 
-.table100.ver5 td {
-  font-family: Lato-Regular;
-  font-size: 15px;
-  color: #808080;
-  line-height: 1.4;
 
-  background-color: #f7f7f7;
-}
+.higlight:hover {
+  background-color: #e2e2e2;
 
-.table100.ver5 .table100-body tr {
-  overflow: hidden;
-  border-bottom: 10px solid #fff;
-  border-radius: 10px;
+  outline: none;
+  border-color: #87caff;
+  box-shadow: 0 0 10px #ed9e9e;
 }
 
-.table100.ver5 .table100-body table {
-  border-collapse: separate;
-  border-spacing: 0 10px;
-}
-.table100.ver5 .table100-body td {
-    border: solid 1px transparent;
-    border-style: solid none;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-.table100.ver5 .table100-body td:first-child {
-    border-left-style: solid;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-}
-.table100.ver5 .table100-body td:last-child {
-    border-right-style: solid;
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-.table100.ver5 tr:hover td {
-  background-color: #ebebeb;
-  cursor: pointer;
-}
-
-.table100.ver5 .table100-head th {
-  padding-top: 25px;
-  padding-bottom: 25px;
-}
-
-/*---------------------------------------------*/
-
-.table100.ver5 {
-  overflow: hidden;
-}
-
-.table100.ver5 .table100-body{
-  padding-right: 30px;
-}
-
-.table100.ver5 .ps__rail-y {
-  right: 0px;
-}
-
-.table100.ver5 .ps__rail-y::before {
-  background-color: #ebebeb;
-}
-
-.table100.ver5 .ps__rail-y .ps__thumb-y::before {
-  background-color: #cccccc;
+.responsive {
+  width: 50%;
+  overflow-x:auto;
 }
