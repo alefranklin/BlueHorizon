@@ -20,17 +20,19 @@ ini_set('display_errors', 1);
     <a href="#body-page">Skip to main content</a>
 </div>
 
-
+<div id="header_nav">
 <!-- keep role for screen reader -->
-
-<img id="logo" role="banner" src="<?= $host_path."img/logo-placeholder.png" ?>" alt="Logo BlueHorizon">
+<h1>Blue Horizon</h1>
+<!--<img id="logo" role="banner" src="<?= $host_path."img/logo-placeholder.png" ?>" alt="Logo BlueHorizon"> -->
 <nav id="menu" class="topnav">
-      <a class="<?= setActive($self,$home) ?>" href="<?= $host_path."index.php" ?>" > HOME </a>
-      <a class="<?= setActive($self,$company) ?>" href="<?= $host_path."html/company.php" ?>" > COMPANY </a>
-      <a class="<?= setActive($self,$rockets) ?>" href="<?= $host_path."html/rockets.php" ?>" > ROCKETS </a>
-      <a class="<?= setActive($self,$travels) ?>" href="<?= $host_path."html/travels.php" ?>" > TRAVELS </a>
+    <ul>
+      <li><a class="<?= setActive($self,$home) ?>" href="<?= $host_path."index.php" ?>" > HOME </a></li>
+      <li><a class="<?= setActive($self,$company) ?>" href="<?= $host_path."html/company.php" ?>" > COMPANY </a></li>
+      <li><a class="<?= setActive($self,$rockets) ?>" href="<?= $host_path."html/rockets.php" ?>" > ROCKETS </a></li>
+      <li><a class="<?= setActive($self,$travels) ?>" href="<?= $host_path."html/travels.php" ?>" > TRAVELS </a></li>
+      
       <!-- icona user o, se loggato, username -->
-        <?php if (isAuth()) { ?>
+      <li>  <?php if (isAuth()) { ?>
           <a class="user-icon-container space-font" href="<?= $host_path."user/privato.php" ?>">
               <i class="user-icon fas fa-user"></i>
               <span class="hide">Pagina Utente</span><span class="navbar-username"><?= strtoupper($username) ?></span>
@@ -40,6 +42,8 @@ ini_set('display_errors', 1);
               <i class="user-icon fas fa-user" aria-label="LOGIN"></i>
               <span class="hide">LOGIN</span>
           </a>
+      </li>
+    </ul>
           <!-- login form -->
           <?php include($local_path."user/login-form.php"); ?>
       <?php } ?>
@@ -49,3 +53,4 @@ ini_set('display_errors', 1);
           <i class="fa fa-bars"></i>
       </a>
 </nav>
+</div>

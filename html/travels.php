@@ -20,35 +20,32 @@
 
 <div id="body-page" class="">
 
-    <h1 id="travels-title" class="space-font">TRAVELS</h1>
+    <h1 id="travels-title" class="space-font">Our Travels</h1>
 
     <div id="travel-list">
       <a href="../struttura_pacchetto_viaggio/planets.php/" title="See more infos about our Mars trip">
         <div class="travel-panel" id="mars-banner">
-            <p class="space-font"> MARTE </p>
+            <h1 class="space-font"> MARTE </h1>
             <p> Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. </p>
         </div>
       </a>
         <br>
       <a href="../struttura_pacchetto_viaggio/planets.php/" title="See more infos about our Pluton trip">
         <div class="travel-panel" id="pluto-banner">
-            <p class="space-font"> PLUTONE </p>
+            <h1 class="space-font"> PLUTONE </h1>
             <p> Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. </p>
         </div>
       </a>
         <br>
       <a href="../struttura_pacchetto_viaggio/planets.php/" title="See more infos about our Earth trip">
         <div class="travel-panel" id="earth-banner">
-            <p class="space-font"> TERRA </p>
+            <h1 class="space-font"> TERRA </h1>
             <p> Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. </p>
         </div>
       </a>
     </div>
 </div>
-            <div id="body-page" class="">
-        <i onclick="topFunction()" id="scroll-back-btn" class="fas fa-arrow-circle-up"> </i>
-
-            </div>
+<i onclick="topFunction()" id="scroll-back-btn" class="fas fa-arrow-circle-up"> </i>
 
 <!-- footer -->
 <?php include($local_path."html/footer.php"); ?>

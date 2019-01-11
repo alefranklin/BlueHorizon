@@ -1,7 +1,7 @@
 <?php
     session_start();
     include_once("../utils/utility.php");
-    $PageTitle="Company";
+    $PageTitle="Destination";
 
     function customPageHeader() { ?>
 
@@ -21,7 +21,25 @@
 <div id="body-page">
   <div id="planet-layout">
     <h1> Planet Name </h1>
-    <img src="../img/planet_ph.png" id="pianeta" alt="pianeta" />
+    <img src="../img/planetph.jpg" alt="pianeta" />
+    <table id="flight-infos">
+      <tr>
+        <th> Date </th> 
+        <th> Adult </th>
+        <th> Child </th>
+        <th> Group </th>
+        <th> First-class </th>
+        <th> Choose </th>
+      </tr>
+      <tr>
+        <td> DDDD </td>
+        <td> $$$$ </td>
+        <td> $$$$ </td>
+        <td> $$$$ </td>
+        <td> $$$$ </td>
+        <td> $$$$ </td>
+      </tr>
+    </table>      
     <p> description description description description description description description
     description description description description description description description
     description description description description description description description

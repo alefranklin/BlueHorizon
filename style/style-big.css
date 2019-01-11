@@ -1,9 +1,11 @@
 @media only screen and (min-width: 768px){
     body {
-        padding-top:60px;
-        text-align: center;
-        margin: auto;
-        background-color: #182c43;
+        /*padding-top:60px;*/
+        /*margin: auto;
+        width:80%;*/
+        margin:0;
+        background-color: #ffffff;
+       /* background-image: linear-gradient( white 75%, rgb(132, 132, 134))*/
     }
 
     .fade-body{
@@ -20,17 +22,17 @@
         pointer-events: all;
     }
 
-    #header{
-        background-color: #404040;
-        position: fixed;
-        top: 0;
+    #header_nav{
+        /*background-color: #404040;*/
+        position:relative;
+        vertical-align: top;
         width: 100%;
-        margin: auto;
         text-align: left;
-        overflow: hidden;
-        height: 60px;
+        /*overflow: hidden;*/
+        height: 180px;
         opacity: 1;
         z-index: 1;
+        background-image: linear-gradient(to bottom right,rgb(71, 200, 243), rgb(39, 39, 90))
     }
 
     #logo {
@@ -44,81 +46,102 @@
         overflow: hidden;
     }
 
-    h1{
-        font-size: 3em;
-        letter-spacing: 5px;
-    }
-    h2{
-        font-size: 1.8em;
-        letter-spacing: 3px;
-        margin-top: 0px;
-    }
-    .space-font{
-        color: darkgray;
-        text-align: center;
-        font-family: 'lato', sans-serif;
-        font-weight: bold;
-        background: -webkit-linear-gradient(white, #5f6d7a);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+    #body-page
+    {
+        position: relative;
+        top: 3em;
+        width:80%;
+        margin:auto;
     }
 
-    #rockets dt,dd
-    {
-        margin: auto;
-        background-color: #f2f2f2;
+    #header_nav h1{
+        position: absolute;
+        bottom:0.5em;
+        left:10%;
+        font-size: 4.5em;
+        letter-spacing: 5px;
+        text-align:left;
+        margin:auto;
+        width:80%;
+        font-family: 'lato', sans-serif;
+        /*margin-top:2em;
+        margin-bottom:2em;*/
+        color:white;
+        text-shadow: 2px 2px 2px black;
+    }
+    #presentation p{
+        font-size: 1.5em;
+        width:100%;
+        margin: 0px;
+        text-align:left;
+        padding-left:1em;
+        border-left: 2px solid rgb(81, 106, 190);
+        color: rgb(78, 78, 78);
+    }
+    .space-font{
+        
+        /*text-align: center;*/
+        font-family: 'lato', sans-serif;        
+        margin-top:0;
+        /*font-weight: bold;*/
+        /*background: -webkit-linear-gradient(white, #5f6d7a);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;*/
     }
 
     #rockets dt
     {
-        width: 80%;
-        font-size:2em;
+        font-size:1.5em;
         padding-bottom: 0.5em;
         padding-top: 0.5em;
+        padding-left:0.5em;
         font-family: 'lato', sans-serif;
         font-weight: bold;
-        color:#39679e;
-        border: 3px solid #39679e;
-        border-radius: 2em;
+        color:rgb(78, 78, 78);
+        border: 3px solid rgb(78, 78, 78);
+        border-radius: 0.3em;
+        border-bottom-left-radius:0;
+        border-bottom-right-radius:0;
+    }
+
+    #rockets dd
+    {
+        border: 3px solid rgb(78, 78, 78);
+        border-top:none;
+        border-radius:0.3em;
+        border-top-left-radius: 0;
+        border-top-right-radius:0;
+        padding: 2em;
+        display:inline-block;
+        margin:0;
+        margin-bottom:2em;
+        position: relative;
     }
 
     #rockets dl
     {
         margin-top: 5em;
     }
+
     #rockets p
     {
         font-size:1em;
         font-family: 'lato', sans-serif;
         color: #404040;
+        position: absolute;
+        right:0;
+        width:35%;
     }
 
     #rockets h1
     {
-        color:white;
-        font-size: 4em;
+        color: rgb(78, 78, 78);
         font-family: 'lato', sans-serif;
-        padding-top:1em;
         text-align:left;
-        letter-spacing: 4px;
-        width:75%;
-        margin:auto;
-        text-shadow: 3px 3px 0px black;
+        font-size:2.6em;
+        margin:0;
     }
 
-    #rockets dd
-    {
-        border-width:0px 3px 3px 3px;
-        border-style: solid;
-        border-color: #39679e;
-        border-bottom-left-radius:2em;
-        border-bottom-right-radius:2em;
-        padding-top:1em;
-        padding-bottom:2em;
-        width:73%;
-        display:inline-block;
-        margin-bottom:2em;
-    }
     .space-ship
     {
         width: 50%;
@@ -133,17 +156,12 @@
         right: 7%;
     }
 
-   .topnav a{
-        float: left;
-        display: block;
-        color: #f2f2f2;
-        margin: 18px 0px;
-        padding: 5px 15px;
+    .topnav a 
+    {
         text-decoration: none;
-        font-size: 15px;
-        height: auto;
-        vertical-align: middle;
+        color:white;
     }
+
     .topnav span.navbar-username{
         font-size: 15px;
         margin: 18px 0px;
@@ -160,7 +178,7 @@
 
     }
 
-    .topnav a:not(:first-of-type){
+    .topnav ul li:not(:first-of-type){
         border-left: 1px solid lightgray;
     }
 
@@ -208,26 +226,66 @@
         animation-fill-mode: forwards;
     }
 
-    .topnav a:link{
+    .topnav ul
+    { 
+        list-style-type:none;
+        margin-top:1em;
+        margin-bottom:1em;
+        padding:0;
+        
+    }
+
+    .topnav li 
+    {
+        display:inline-block;
+        height:1.5em;
+        margin-left:0.5em;
+        padding-left:0.5em;
     }
     .topnav a:visited{
     }
 
-    .topnav a:hover{
-        background: -webkit-linear-gradient(orange, lightgray);
+    .topnav ul li:not(:last-child) a:hover:before{
+        /*background: -webkit-linear-gradient(orange, lightgray);
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        -webkit-text-fill-color: transparent;*/
+        visibility: visible;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
     }
     .active{
-        background: -webkit-linear-gradient(#5294e2, #85b4ea);
+        /*background: -webkit-linear-gradient(#5294e2, #85b4ea);
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        pointer-events: none;
+        -webkit-text-fill-color: transparent;*/
+        /*pointer-events: none;*/
+        color:white;
+        font-weight: bold;
     }
 
     .topnav a.icon{
         display: none;
     }
+
+    .topnav ul li  a
+    {
+        position:relative;
+        padding-bottom:0.3em;
+    }
+
+    .topnav ul li:not(:last-child) a:before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: white;
+        visibility: hidden;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
+      }
 
     #scroll-back-btn{
         color: darkorange;
@@ -282,7 +340,7 @@
 
 
         #snack-div {
-          visibility: hidden;
+          visibility: hidden; 
           min-width: 250px;
           margin-left: -125px;
           background-color: #333;
@@ -333,9 +391,10 @@
 
 
     #travel-list{
-        max-width: 70%;
-        margin: 40px 15%;
-
+        margin:auto;
+        margin-right:0;
+        margin-left:0;
+        
     }
 
     #mars-banner{
@@ -344,7 +403,7 @@
     }
 
     #earth-banner{
-        background-image: url(../img/terra.jpg);
+        background-image: url(../img/bg-travel-earth.jpg);
 
     }
 
@@ -353,21 +412,51 @@
 
     }
 
+    #travels-title
+    {
+        color: rgb(78, 78, 78);
+        font-family: 'lato', sans-serif;
+        margin-bottom:2em;
+        font-size:2.6em;
+    }
+
     .travel-panel{
         display: inline-block;
-        margin: 10px 20%;
-        width: 70%;
-        height: 200px;
+        width: 100%;
+        height: 20em;
         border-radius: 5px;
         background-color: bisque;
         overflow: hidden;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
+        margin-bottom:2em;
+        position: relative;
+    }
+
+    .travel-panel h1
+    {
+        color:white;
+        font-family: 'lato', 'sans-serif';
+        position: absolute;
+        left:1em;
+        top:1em;
+    }
+
+    .travel-panel p
+    {
+        position: absolute;
+        right:2em;
+        top:1em;
+        width:35%;
+        color:white;
+        text-align:justify;
+        font-family: 'lato', 'sans-serif';
+
     }
 
     .travel-panel:hover{
-        opacity: 0.4;
+        box-shadow: -3px -3px darkorange, 3px -3px darkorange, -3px 3px darkorange, 3px 3px darkorange, 0 0 50px black;
     }
 
     .travel-panel img{
@@ -448,33 +537,39 @@
     FINE CLASSI PER REGISTRAZIONE
 */
 
-    #company-content h1
+    #company-content
     {
-        color:white;
-        font-family: 'lato', 'sans-serif';
-        text-align:left;
-        text-shadow: 3px 3px 0px black;
-        width:80%;
-        margin:auto;
-        margin-top: 1.5em;
-        margin-bottom: 1.5em;
+        position:relative;
     }
 
-    #company-content p,img
+    #company-content h1
     {
-      display: inline-block;
-      overflow: hidden;
-      width:80%;
-      margin:auto;
-      padding-bottom: 2em;
+        color:rgb(78, 78, 78);
+        font-family: 'lato', 'sans-serif';
+        text-align:left;
+        margin:auto;
+        margin-bottom: 1.5em;
+        text-shadow: none;
+        font-size:2.6em;
     }
+
+    #company-content p, #company-content img
+    {
+        display:inline-block;
+        width:100%;
+        margin:auto;
+        overflow:auto;
+        margin-bottom:5em;
+    }
+
     #company-content p
     {
-      color: white;
+      color: rgb(78, 78, 78);
       text-align:left;
-      text-shadow: 2px 2px 0px black;
       width:39%;
       vertical-align: top;
+      font-family: 'lato', 'sans-serif';
+      font-size: 1.5em;
       margin-right: 1em;
     }
 
@@ -482,6 +577,58 @@
     {
         width: 39%;
         margin: auto;
+        height:auto;
+        position: absolute;
         right:0;
+        border: 3px solid grey;
+    }
+
+    #planet-layout h1
+    {
+      font-family: 'lato', 'sans-serif';
+      color: rgb(78, 78, 78);
+      text-align:left;
+      font-size:2.6em;
+      border-bottom: 2px solid rgba(255,255,255,0.5);
+      margin:0;
+      margin-bottom: 1em;
+    }
+
+    #planet-layout img, #planet-layout table
+    {
+      display: inline-block;
+    }
+
+    #planet-layout p
+    {
+        font-family: 'lato', 'sans-serif';
+        color:rgb(78, 78, 78);
+        ;
+    }
+
+    #planet-layout table th, #planet-layout table td
+    {
+        border: 2px solid rgb(78, 78, 78);
+        color:rgb(78, 78, 78);
+        font-family: 'lato', 'sans-serif';
+    }
+
+    #planet-layout th, #planet-layout td
+    {
+        padding:0.5em;
+    }
+
+    #planet-layout table
+    {
+        border-collapse: collapse;
+        float:right;
+    }
+
+    #planet-layout img
+    {
+        border-right: 2px solid rgba(255,255,255,0.5);
+        width:38%;
+        vertical-align: top;
+        margin-right: 2em;
     }
 }
