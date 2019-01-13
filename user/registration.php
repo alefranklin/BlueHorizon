@@ -162,9 +162,9 @@
    <?php include($local_path."html/navbar.php"); ?>
 </div>
 <div id="body-page">
-  <h2 class="space-font">REGISTRAZIONE</h2>
+  <h2 id="reg-title" class="space-font">REGISTRAZIONE</h2>
   <div id="registration-div">
-    <p><span id="required-fields">* required fields</span></p>
+    <span id="required-fields">* required fields</span>
     <div id="form-div">
       <form name="form_registration" method="post" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>">
          <div class="text-group">
@@ -172,42 +172,42 @@
             <span class="highlight">*</span>
             <span class="bar"/>
             <span class="error"><?= $usernameErr ?></span>
-            <label class="hide">Username</label>
+            <label>Username</label>
          </div>
          <div class="text-group">
             <input type="text" class="input-text" name="name" value="<?= $name ?>" required placeholder="Name">
             <span class="highlight">*</span>
             <span class="bar"/>
             <span class="error"> <?= $nameErr ?></span>
-            <label class="hide">Name</label>
+            <label>Name</label>
          </div>
          <div class="text-group">
             <input type="text" class="input-text" name="lastname" value="<?= $lastname ?>" required placeholder="Last Name">
             <span class="highlight">*</span>
             <span class="bar"/>
             <span class="error"> <?= $lastnameErr ?></span>
-            <label class="hide">Lastname</label>
+            <label>Lastname</label>
          </div>
          <div class="text-group">
             <input type="text" class="input-text" name="email" value="<?= $email ?>" required placeholder="Email">
             <span class="highlight">*</span>
             <span class="bar"/>
             <span class="error"> <?= $emailErr ?></span>
-            <label class="hide">Email</label>
+            <label>Email</label>
          </div>
          <div class="text-group">
             <input type="password" class="input-text" name="password" value="<?= $password ?>" required placeholder="Password">
             <span class="highlight">*</span>
             <span class="bar"/>
             <span class="error"> <?= $passwordErr ?></span>
-            <label class="hide">Password</label>
+            <label>Password</label>
          </div>
          <div class="text-group">
             <input type="password" id="repeat_password" class="input-text" name="repeat_password" value="" required placeholder="Conferma Password">
             <span class="highlight">*</span>
             <span class="bar"/>
             <span class="error"> <?= $passwordRepeatErr ?></span>
-            <label for="repeat_password" class="hide">Ripeti Password</label>
+            <label for="repeat_password">Ripeti Password</label>
          </div>
          <div class="text-group">
            <label for="gender-select" class="hide"> Gender </label>
@@ -218,7 +218,7 @@
                 <option value="N.D." <?= (isset($gender) && $gender=="N.D.") ? 'selected' : "" ?>>Other</option>
             </select>
          </div>
-         <input type="submit" name="registration" value="Register" class="input-submit"></input>
+         <input type="submit" name="registration" value="Register" class="input-submit">
       </form>
     </div>
   </div>

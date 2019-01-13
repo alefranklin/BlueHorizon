@@ -468,37 +468,73 @@
     CLASSI PER REGISTRAZIONE
 */
 
-    #registration-div{
-        background-color: aqua;
-        width: 70%;
+    #registration-div
+    {
+        border: 3px solid rgb(78, 78, 78);
+        border-radius: 5px;
+        border-top-left-radius:0;
+        background-color: lightgrey;
+        width: 100%;
         height: auto;
-        margin: 0 15%;
+        margin: auto;
         overflow: hidden;
+        position: relative;
+        margin-bottom:3em;
+        z-index:-1;
     }
 
     #required-fields{
-        top: 0px;
-        left: 0px;
-        float: left;
+        position: absolute;
+        bottom:0;
+        right:0;
+        padding: 0 0.5em 0.5em 0;
     }
 
-    #form-div{
-        float: left;
-        top: 30px;
+    #reg-title
+    {
+        padding-left:10px;
+        position:relative;
+        top: 3px;
+        border:3px solid rgb(78, 78, 78);
+        border-bottom:none;
+        border-top-left-radius:5px;
+        border-top-right-radius:5px;
+        background-color: lightgrey;
+        width:200px;
+        margin:0;
+    }
+
+    #form-div
+    {
+        padding-bottom:0.5em;
+        padding-top:1.5em;
+    }
+
+    #required-fields, #form-div
+    {
+        display:inline-block;
     }
 
     .text-group{
-        width: 70%;
-        float: left;
-        margin: 3px 15%;
+        float: right;
+        margin:auto;
+        margin-bottom:0.5em;
+        margin-right:0.5em;
+        width:80%;
+    }
+
+    .text-group label
+    {
+        font-family: 'lato', 'sans-serif';
+        color: rgb(78, 78, 78);
+        font-weight: bold;
     }
 
     .input-text{
-      border: solid 1px lightgray;
-      border-radius: 25px;
-      width: 200px;
+      border: solid 1px rgb(78, 78, 78);
+      border-radius: 5px;
+      width: 100%;
       height: 30px;
-      padding: 0px 5px;
       text-align: center;
       background-color: #e9e9e9;
     }
@@ -509,13 +545,26 @@
       left: 0;
     }
 
-    .input-submit{
-      border: solid 1px lightgray;
-      border-radius: 3px;
-      height: 30px;
-      margin-top: 30px;
+    .input-submit:hover
+    {
+        border:3px solid rgb(78, 78, 78);
+    }
+    
+    .input-submit
+    {
+      color:white;
+      font-weight:bold;
+      font-family: 'lato', 'sans-serif';
+      text-shadow: 2px 2px 2px black;
+      font-size:20px;
+      border: solid 1px rgb(39, 39, 90);
+      border-radius: 5px;
+      height: 40px;
       width: 200px;
-      background-color: lightgray;
+      background-image: linear-gradient(to top left,rgb(71, 200, 243), rgb(39, 39, 90));
+      position:relative;
+      z-index:2;
+      left:18em;
     }
 
     .error{
@@ -525,13 +574,14 @@
     #gender-select{
       height: 30px;
       width: auto;
-      border: solid 1px lightgray;
-      border-radius: 25px;
+      border: solid 1px rgb(78, 78, 78);
+      border-radius: 5px;
       margin-top: 5px;
+      background-color: #e9e9e9;
     }
 
     .select-placeholder{
-      color: darkgray;
+      color: rgb(78, 78, 78);
     }
 /*
     FINE CLASSI PER REGISTRAZIONE
@@ -630,5 +680,7 @@
         width:38%;
         vertical-align: top;
         margin-right: 2em;
+        width:18em;
+        height:auto;
     }
 }
