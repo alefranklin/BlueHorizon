@@ -204,8 +204,8 @@
         right: -30%;
         float: right;
         background-color: white;
-        border: 3px solid lightgreen;
-        border-radius: 5px;
+        /*border: 3px solid lightgreen;*/
+        border-radius: 10px;
         box-shadow: 0 0 10px black;
     }
 
@@ -213,6 +213,8 @@
     {
         background-image: linear-gradient(to top left,rgb(71, 200, 243), rgb(39, 39, 90));
         margin:0;
+        border-top-left-radius:10px;
+        border-top-right-radius:10px;
         padding-top:0.5em;
         padding-bottom:0.5em;
         font-size:2em;
@@ -220,7 +222,17 @@
         font-family:'lato', sans-serif;
         color:white;
         text-shadow: 2px 2px 2px black;
-        border-bottom: 3px solid lightgreen;
+        border-bottom: 3px solid darkorange;
+    }
+
+    #username:focus
+    {
+        outline:none;
+    }
+
+    #password:focus
+    {
+        outline:none;
     }
 
     .hide{
@@ -327,7 +339,7 @@
         margin: 15px 15%;
         padding-bottom: 6px;
         border: none;
-        border-bottom: #39679e 3px solid;
+        border-bottom: #39679e 2px solid;
         border-radius:5px;
         background-color: transparent;
         text-align: center;
