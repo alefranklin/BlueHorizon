@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Dic 24, 2018 alle 19:30
+-- Creato il: Gen 16, 2019 alle 15:46
 -- Versione del server: 10.1.37-MariaDB
 -- Versione PHP: 7.3.0
 
@@ -156,10 +156,20 @@ INSERT INTO `planets` (`id`, `name`, `info`, `mass`, `temperature`) VALUES
 CREATE TABLE `rockets` (
   `id` int(6) UNSIGNED NOT NULL,
   `model` varchar(20) NOT NULL,
-  `weight` int(6) UNSIGNED NOT NULL,
-  `height` int(6) UNSIGNED NOT NULL,
-  `nationality` varchar(15) DEFAULT NULL
+  `weight` float UNSIGNED NOT NULL,
+  `height` float UNSIGNED NOT NULL,
+  `nationality` varchar(15) DEFAULT NULL,
+  `length` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dump dei dati per la tabella `rockets`
+--
+
+INSERT INTO `rockets` (`id`, `model`, `weight`, `height`, `nationality`, `length`) VALUES
+(1, 'Star Booster', 4315680000, 290, 'U.S.A.', 1600),
+(2, 'Millenium Balcon', 198, 6, 'U.S.A.', 38.4),
+(3, 'Arcasia', 3000, 25, 'Cina', 410);
 
 -- --------------------------------------------------------
 
@@ -362,13 +372,13 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT per la tabella `planets`
 --
 ALTER TABLE `planets`
-  MODIFY `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT per la tabella `rockets`
 --
 ALTER TABLE `rockets`
-  MODIFY `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT per la tabella `rocket_cabin`
