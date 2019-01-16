@@ -22,7 +22,7 @@ ini_set('display_errors', 1);
 
 <div id="header_nav">
 <!-- keep role for screen reader -->
-<h1>Blue Horizon</h1>
+<h1 id="title">Blue Horizon</h1>
 <!--<img id="logo" role="banner" src="<?= $host_path."img/logo-placeholder.png" ?>" alt="Logo BlueHorizon"> -->
 <nav id="menu" class="topnav">
     <ul>

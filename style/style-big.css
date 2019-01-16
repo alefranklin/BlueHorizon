@@ -32,7 +32,7 @@
         height: 180px;
         opacity: 1;
         z-index: 1;
-        background-image: linear-gradient(to bottom right,rgb(71, 200, 243), rgb(39, 39, 90))
+        background-image: linear-gradient(to top left,rgb(71, 200, 243), rgb(39, 39, 90));
     }
 
     #logo {
@@ -54,7 +54,7 @@
         margin:auto;
     }
 
-    #header_nav h1{
+    #title{
         position: absolute;
         bottom:0.5em;
         left:10%;
@@ -194,16 +194,33 @@
         max-height: 20px;
         text-align: center;
     }
+    
     #user-div{
+        text-align:center;
         position: fixed;
-        height: 140px;
+        height: 19em;
         width: 25%;
         top: 69px;
         right: -30%;
         float: right;
-        background-color: #757575;
+        background-color: white;
+        border: 3px solid lightgreen;
         border-radius: 5px;
+        box-shadow: 0 0 10px black;
+    }
 
+    #user-div h1
+    {
+        background-image: linear-gradient(to top left,rgb(71, 200, 243), rgb(39, 39, 90));
+        margin:0;
+        padding-top:0.5em;
+        padding-bottom:0.5em;
+        font-size:2em;
+        font-weight:bold;
+        font-family:'lato', sans-serif;
+        color:white;
+        text-shadow: 2px 2px 2px black;
+        border-bottom: 3px solid lightgreen;
     }
 
     .hide{
@@ -304,12 +321,14 @@
 
     #login input.login-text{
         display: block;
+        font-family: 'lato', sans-serif;
         width: 70%;
         height: 20px;
         margin: 15px 15%;
         padding-bottom: 6px;
         border: none;
         border-bottom: #39679e 3px solid;
+        border-radius:5px;
         background-color: transparent;
         text-align: center;
         color: black;
@@ -317,25 +336,42 @@
 
     #login input.login-text::placeholder{
         color: black;
+        font-family: 'lato', sans-serif;
     }
 
     #login input.login-button{
+        font-family: 'lato', sans-serif;
         display: block;
-        width: 30%;
-        height: 30px;
-        margin: 15px 35% 5px 35%;
-        border: none;
+        width: 70%;
+        height: 50px;
+        margin: auto;
+        border:none;
+        /*border: 3px solid #39679e;*/
+        background-image:linear-gradient(orange, darkorange);
+        box-shadow: 0 5px 10px rgb(82, 44, 1);
+        border-radius: 5px;
+        font-weight:bold;
+        font-size:1em;
+        letter-spacing: 2px;
+        color:white;
+        text-shadow: 2px 2px 2px black;
         border-radius: 3px;
         vertical-align: middle;
     }
 
     .registration-link{
-        font-family: "Arial", sans-serif;
-        position: absolute;
-        bottom: 1px;
-        right: 2px;
+        font-family: 'lato', sans-serif;
         font-size: 12px;
-        color: white;
+        color: rgb(78, 78, 78);
+        position:relative;
+        top:1.5em;
+    }
+
+    .registration-link a
+    {
+        text-decoration: underline;
+        color:rgb(39, 39, 90);
+        font-size:1.3em;
     }
 
 
@@ -437,7 +473,7 @@
     .travel-panel h1
     {
         color:white;
-        font-family: 'lato', 'sans-serif';
+        font-family: 'lato', sans-serif;
         position: absolute;
         left:1em;
         top:1em;
@@ -451,7 +487,7 @@
         width:35%;
         color:white;
         text-align:justify;
-        font-family: 'lato', 'sans-serif';
+        font-family: 'lato', sans-serif;
 
     }
 
@@ -525,7 +561,7 @@
 
     .text-group label
     {
-        font-family: 'lato', 'sans-serif';
+        font-family: 'lato', sans-serif;
         color: rgb(78, 78, 78);
         font-weight: bold;
     }
@@ -554,7 +590,7 @@
     {
       color:white;
       font-weight:bold;
-      font-family: 'lato', 'sans-serif';
+      font-family: 'lato', sans-serif;
       text-shadow: 2px 2px 2px black;
       font-size:20px;
       border: solid 1px rgb(39, 39, 90);
@@ -595,7 +631,7 @@
     #company-content h1
     {
         color:rgb(78, 78, 78);
-        font-family: 'lato', 'sans-serif';
+        font-family: 'lato', sans-serif;
         text-align:left;
         margin:auto;
         margin-bottom: 1.5em;
@@ -618,7 +654,7 @@
       text-align:left;
       width:39%;
       vertical-align: top;
-      font-family: 'lato', 'sans-serif';
+      font-family: 'lato', sans-serif;
       font-size: 1.5em;
       margin-right: 1em;
     }
@@ -635,7 +671,7 @@
 
     #planet-layout h1
     {
-      font-family: 'lato', 'sans-serif';
+      font-family: 'lato', sans-serif;
       color: rgb(78, 78, 78);
       text-align:left;
       font-size:2.6em;
@@ -651,7 +687,7 @@
 
     #planet-layout p
     {
-        font-family: 'lato', 'sans-serif';
+        font-family: 'lato', sans-serif;
         color:rgb(78, 78, 78);
         ;
     }
@@ -660,7 +696,7 @@
     {
         border: 2px solid rgb(78, 78, 78);
         color:rgb(78, 78, 78);
-        font-family: 'lato', 'sans-serif';
+        font-family: 'lato', sans-serif;
     }
 
     #planet-layout th, #planet-layout td
