@@ -4,15 +4,15 @@
 
     //se non c'è la sessione registrata
     if (isAuth() && isAdmin()) {
-        $title = "Benvenuto nell'area riservata sovrano indiscusso n° ".$_SESSION['user']['id']." del mondo";
+        $title = "Area riservata";
 
         $table_users = get_table('users');
-        $table_travels = get_table('travels');
+        $table_travels = get_travels_date();
     }
     else {
         $title = "Area riservata - ACCESS DENIED";
     }
-    
+
     $PageTitle="Pannello Admin";
 
     function customPageHeader() { ?>

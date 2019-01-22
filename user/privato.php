@@ -4,23 +4,23 @@
 
     //se non c'è la sessione registrata
     if (isAuth()) {
-        
+
         if(isAdmin()) {
             header("location:".$host_path."administration/admin.php");
             die;
         }
-        $title = "Benvenuto nell'area riservata utente rispettabile n° ".$_SESSION['user']['id'];
+        $title = "Benvenuto nell'area riservata";
     }
     else {
-        $title = "Area riservata, ACCESS DANIED 'TUUUPIDOOOO";
+        $title = "Area riservata";
     }
-    
-    $PageTitle="Company";
+
+    $PageTitle="Pagina utente - ".$_SESSION['user']['username'];
 
     function customPageHeader() { ?>
 
         <!-- aggiungere tag specifici per questa pagina -->
-        
+
         <!--Pannello di gestione-->
         <link href="<?= $host_path."user/test.css" ?>" rel="stylesheet" type="text/css" />
 
@@ -35,9 +35,9 @@
 </div>
 
 <div id="body-page" class="">
-    
+
     <h1><?= $title; ?></h1>
-    
+
     <?php if (isAuth()) { ?>
         <p>
             <h3>I tuoi dati sono:</h3><br/>

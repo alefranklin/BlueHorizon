@@ -97,4 +97,14 @@
 
         return $ris;
     }
+
+    function get_travels_date() {
+
+        $db = $GLOBALS['db'];
+
+        $query = "SELECT t.* , rt.date FROM travels t, rocket_travel rt WHERE t.id = rt.id_travel";
+        $ris = $db->query($query) or die (mysqli_error());
+
+        return $ris;
+    }
 ?>
