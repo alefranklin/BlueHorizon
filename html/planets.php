@@ -20,9 +20,9 @@
 
 <div id="body-page">
   <div id="planet-layout">
-    <a href="travels.php/" id="breadcrumb"><span>← Return to Travels</span></a>  
+    <a href="../travels.php/" id="breadcrumb">← Return to Travels</a>  
     <h1> Planet Name </h1>
-    <img src="planetph.jpg" alt="pianeta" />
+    <img src="../../img/planetph.jpg" alt="pianeta"/>
     <table id="flight-infos">
       <tr>
         <th> Date </th> 
