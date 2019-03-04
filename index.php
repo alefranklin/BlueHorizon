@@ -21,11 +21,11 @@
 <div id="body-page" class="" role="main">
     <div id="presentation">
         <h1 class="space-font">Welcome space wanderer!</h1>
-        <div class="mySlides"><img src="./img/Slideshow_1.jpg" alt="Sshow1">Join our space travel community!</div>
-        <div class="mySlides"><img src="./img/Slideshow_2.jpg" alt="Sshow2">See our space-ships!</div>
-        <div class="mySlides"><img src="./img/Slideshow_3.jpg" alt="Sshow3">Learn more about us!</div>
-        <div class="mySlides"><img src="./img/Slideshow_4.jpg" alt="Sshow4">Book the flight of your dreams among our plentiful travel options</div>
-        <div class="mySlides"><img src="./img/Slideshow_5.jpg" alt="Sshow5">Take a look at some neat facts about the planets you're going to orbit around!</div>
+        <figure class="mySlides"><img src="img/Slideshow_1.jpg" alt="Sshow1"><figcaption>Join our space travel community!</figcaption></figure>
+        <figure class="mySlides"><img src="img/Slideshow_2.jpg" alt="Sshow2"><figcaption>See our space-ships!</figcaption></figure>
+        <figure class="mySlides"><img src="img/Slideshow_3.jpg" alt="Sshow3"><figcaption>Learn more about us!</figcaption></figure>
+        <figure class="mySlides"><img src="img/Slideshow_4.jpg" alt="Sshow4"><figcaption>Book the flight of your dreams among our plentiful travel options</figcaption></figure>
+        <figure class="mySlides"><img src="img/Slideshow_5.jpg" alt="Sshow5"><figcaption>Take a look at some neat facts about the planets you're going to orbit around!</figcaption></figure>
     </div>
 </div>
 

@@ -5,6 +5,7 @@
         width:80%;*/
         margin:0;
         background-color: #ffffff;
+        height:100%;
        /* background-image: linear-gradient( white 75%, rgb(132, 132, 134))*/
     }
 
@@ -29,7 +30,7 @@
         width: 100%;
         text-align: left;
         /*overflow: hidden;*/
-        height: 180px;
+        height: 70px;
         opacity: 1;
         z-index: 1;
         background-image: linear-gradient(to top left,rgb(71, 200, 243), rgb(39, 39, 90));
@@ -49,17 +50,16 @@
     #body-page
     {
         position: relative;
-        top: 3em;
-        width:80%;
-        margin:auto;
-        padding-bottom:3em;
+        top:0;
+        width:100%;
+        height:100%;
     }
 
     #title{
         position: absolute;
-        bottom:0.5em;
-        left:10%;
-        font-size: 4.5em;
+        bottom:0.2em;
+        left:5%;
+        font-size: 3em;
         letter-spacing: 5px;
         text-align:left;
         margin:auto;
@@ -73,13 +73,15 @@
 
     #presentation h1
     {
-        color:rgb(78, 78, 78);
+        color:white;
         font-size:2.6em;
         margin:auto;
         margin-bottom:1.5em;
+        position:relative;
+        z-index:-1;
     }
 
-    #presentation p{
+    /*#presentation p{
         font-size: 1.5em;
         width:100%;
         margin: 0px;
@@ -87,7 +89,7 @@
         padding-left:1em;
         border-left: 2px solid rgb(81, 106, 190);
         color: rgb(78, 78, 78);
-    }
+    }*/
     .space-font{
         
         /*text-align: center;*/
@@ -97,6 +99,12 @@
         /*background: -webkit-linear-gradient(white, #5f6d7a);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;*/
+    }
+
+    #rockets
+    {
+        width:90%;
+        margin:auto;
     }
 
     #rockets dt
@@ -160,10 +168,9 @@
     }
 
     .topnav {
-        float: right;
-        height: inherit;
-        position: relative;
-        right: 7%;
+        position: absolute;
+        right: 5%;
+        bottom:0.2em;
     }
 
     .topnav a 
@@ -281,8 +288,8 @@
         margin-left:0.5em;
         padding-left:0.5em;
     }
-    .topnav a:visited{
-    }
+    /*.topnav a:visited{
+    }*/
 
     .topnav ul li:not(:last-child) a:hover:before{
         /*background: -webkit-linear-gradient(orange, lightgray);
@@ -322,8 +329,8 @@
         visibility: hidden;
         -webkit-transform: scaleX(0);
         transform: scaleX(0);
-        -webkit-transition: all 0.3s ease-in-out 0s;
-        transition: all 0.3s ease-in-out 0s;
+        -webkit-transition: all 0.2s ease-in-out 0s;
+        transition: all 0.2s ease-in-out 0s;
       }
 
     #scroll-back-btn{
@@ -378,7 +385,6 @@
         color:white;
         text-shadow: 2px 2px 2px black;
         border-radius: 3px;
-        vertical-align: middle;
     }
 
     .registration-link{
@@ -447,6 +453,12 @@
           width: 80%;
         }
 
+
+        #travel-content
+        {
+            width:90%;
+            margin:auto;
+        }
 
     #travel-list{
         margin:auto;
@@ -648,6 +660,8 @@
     #company-content
     {
         position:relative;
+        width:90%;
+        margin:auto;
     }
 
     #company-content h1
@@ -748,5 +762,46 @@
         color:#333;
         font-style:italic;
         font-size:1.2em;
+    }
+    
+    #presentation
+    {
+        width:100%;
+        height:100%;
+        margin:0;
+    }
+
+    .mySlides img
+    {
+        
+        position: absolute;
+        top:0;
+        width:100%;
+        height:100%;
+    }
+
+    .mySlides 
+    {
+        background-size: cover;
+        margin:0;
+        width:100%;
+        height:100%;
+        position:absolute;
+        top:0;
+        z-index:-2;
+        height:30em;
+    }
+
+    .mySlides figcaption
+    {
+        font-size:1.2em;
+        color: white;
+        font-family: 'lato', sans-serif;
+        background-color: rgba(0,0,0,0.5);
+        border: 3px inset white;
+        position:absolute;
+        right:1em;
+        bottom:1em;
+        z-index:1;
     }
 }
