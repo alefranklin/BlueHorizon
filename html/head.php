@@ -18,6 +18,8 @@
 
         <link rel="stylesheet" type="text/css" href="<?= $host_path."style/style-small.css" ?>">
 
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
         <link rel="stylesheet" type="text/css" href="<?= $host_path."style/style-big.css" ?>">
 
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type='text/css'>

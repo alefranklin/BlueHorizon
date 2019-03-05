@@ -19,13 +19,42 @@
 
 <!-- menu -->
 <div id="body-page" class="" role="main">
+    
     <div id="presentation">
+
+        <figure class="mySlides w3-animate-opacity">
         <h1 class="space-font">Welcome space wanderer!</h1>
-        <figure class="mySlides"><img src="img/Slideshow_1.jpg" alt="Sshow1"><figcaption>Join our space travel community!</figcaption></figure>
-        <figure class="mySlides"><img src="img/Slideshow_2.jpg" alt="Sshow2"><figcaption>See our space-ships!</figcaption></figure>
-        <figure class="mySlides"><img src="img/Slideshow_3.jpg" alt="Sshow3"><figcaption>Learn more about us!</figcaption></figure>
-        <figure class="mySlides"><img src="img/Slideshow_4.jpg" alt="Sshow4"><figcaption>Book the flight of your dreams among our plentiful travel options</figcaption></figure>
-        <figure class="mySlides"><img src="img/Slideshow_5.jpg" alt="Sshow5"><figcaption>Take a look at some neat facts about the planets you're going to orbit around!</figcaption></figure>
+        <img src="img/Slideshow_1.jpg" alt="Sshow1">
+        <figcaption>
+          <a href="javascript:void(0);" onclick="toggleUser(0)">
+          ↪ Join our space travel community! 
+          </a>
+        </figcaption>
+        </figure>
+
+        <figure class="mySlides w3-animate-opacity">
+        <h1 class="space-font">Welcome space wanderer!</h1>
+        <img src="img/Slideshow_2.jpg" alt="Sshow2">
+        <figcaption><a href="html/rockets.php">↪ See our space-ships!</a></figcaption>
+        </figure>
+
+        <figure class="mySlides w3-animate-opacity">
+        <h1 class="space-font">Welcome space wanderer!</h1>
+        <img src="img/Slideshow_3.jpg" alt="Sshow3">
+        <figcaption><a href="html/company.php">↪ Learn more about us!</a></figcaption>
+        </figure>
+
+        <figure class="mySlides w3-animate-opacity">
+        <h1 class="space-font">Welcome space wanderer!</h1>
+        <img src="img/Slideshow_4.jpg" alt="Sshow4">
+        <figcaption><a href="html/travels.php">↪ Book the flight of your dreams among our plentiful travel options</a></figcaption>
+        </figure>
+
+        <figure class="mySlides w3-animate-opacity">
+        <h1 class="space-font">Welcome space wanderer!</h1>
+        <img src="img/Slideshow_5.jpg" alt="Sshow5">
+        <figcaption><a href="html/travels.php">↪ Take a look at some neat facts about the planets you're going to orbit around!</a></figcaption>
+        </figure>
     </div>
 </div>
 
@@ -37,12 +66,12 @@ function carousel() {
   var i;
   var x = document.getElementsByClassName("mySlides");
   for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
+    x[i].style.display="none";  
   }
   myIndex++;
   if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 4000); // Change image every 2 seconds
+  x[myIndex-1].style.display="block";  
+  setTimeout(carousel, 6000); // Change image every 2 seconds
 }
 </script>
 
