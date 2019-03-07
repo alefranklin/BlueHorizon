@@ -29,7 +29,7 @@
         width: 100%;
         text-align: left;
         /*overflow: hidden;*/
-        height: 10vh;
+        height: 62.5px;
         opacity: 1;
         z-index: 1;
         background-image: linear-gradient(to top left,rgb(71, 200, 243), rgb(39, 39, 90));
