@@ -21,7 +21,7 @@
 <div id="body-page" class="">
 
     <div id="rockets">
-        <h1> Our spacecrafts:</h1>
+        <h1> Our spacecrafts</h1>
         <dl>
             <dt> Name 1 </dt>
             <dd>

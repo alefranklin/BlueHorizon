@@ -19,7 +19,7 @@
 </div>
 <div id="body-page">
   <div id="company-content">
-    <h1>Our crew:</h1>
+    <h1>Our crew</h1>
 
     <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
         ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
