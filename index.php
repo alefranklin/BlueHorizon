@@ -25,11 +25,7 @@
         <figure class="mySlides w3-animate-opacity">
         <h1 class="space-font">Welcome space wanderer!</h1>
         <img src="img/Slideshow_1.jpg" alt="Sshow1">
-        <figcaption>
-          <a href="javascript:void(0);" onclick="toggleUser(0)">
-          ↪ Join our space travel community! 
-          </a>
-        </figcaption>
+        <figcaption><a href="javascript:void(0);" onclick="toggleUser(0)">↪ Join our space travel community!</a></figcaption>
         </figure>
 
         <figure class="mySlides w3-animate-opacity">
@@ -53,7 +49,7 @@
         <figure class="mySlides w3-animate-opacity">
         <h1 class="space-font">Welcome space wanderer!</h1>
         <img src="img/Slideshow_5.jpg" alt="Sshow5">
-        <figcaption><a href="html/travels.php">↪ Take a look at some neat facts about the planets you're going to orbit around!</a></figcaption>
+        <figcaption><a href="html/infoplanet.php">↪ Take a look at some neat facts about the planets you're going to orbit around!</a></figcaption>
         </figure>
     </div>
 </div>
