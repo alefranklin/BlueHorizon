@@ -482,14 +482,54 @@
         
     }
 
-    #mars-banner{
-        background-image: url(../img/marte.jpg);
+    #mercury-banner
+    {
+        background-image: url(../img/mercury_bg.jpg);
+    }
 
+    #venus-banner
+    {
+        background-image: url(../img/venus_bg.jpg);
     }
 
     #earth-banner{
         background-image: url(../img/bg-travel-earth.jpg);
 
+    }
+
+    #moon-banner
+    {
+        background-image: url(../img/moon_bg.jpg);
+    }
+
+    #mars-banner{
+        background-image: url(../img/marte.jpg);
+
+    }
+
+    #jupiter-banner
+    {
+        background-image: url(../img/jupiter_bg.png);
+    }
+
+    #io-banner
+    {
+        background-image: url(../img/io_bg.jpg);
+    }
+
+    #europa-banner
+    {
+        background-image: url(../img/europa_bg.jpg);
+    }
+
+    #saturn-banner
+    {
+        background-image: url(../img/saturn_bg.jpg);
+    }
+
+    #neptune-banner
+    {
+        background-image: url(../img/neptune_bg.jpg);
     }
 
     #pluto-banner{
@@ -509,7 +549,7 @@
         display: inline-block;
         width: 100%;
         height: 20em;
-        border-radius: 5px;
+        border-radius: 10px;
         background-color: bisque;
         overflow: hidden;
         background-position: center;
@@ -890,10 +930,50 @@
     {
         display:block;
         position:fixed;
-        top:50%;
-        left:50%;
+        width:60%;
+        height:60%;
+        top:20%;
+        left:20%;
         background-color:white;
-        border: 5px solid purple;
-    }
+        border-radius:10px;
+        box-shadow: 0px 0px 10px black;
+   }
 
+   #info-text h1
+   {
+       width:100%;
+       background-image: linear-gradient(to top, rgb(60, 48, 170), rgb(11, 11, 82));
+       color:white;
+       text-shadow: 2px 2px 2px black;
+       border-top-left-radius:10px;
+       border-top-right-radius:10px;
+       padding-left:5%;
+       border-bottom:3px solid orange;
+   }
+
+   #info-text a 
+   {
+       position:absolute;
+       right:20px;
+       top:6px;
+       color:white;
+       text-decoration:none;
+       font-weight: bold;
+       font-size:2em;
+   }
+
+   #info-text a:hover
+   {
+       text-shadow:0px 0px 5px white;
+   }
+
+   #info-text p 
+   {
+       padding-left:5%;
+   }
+
+   .info-tile a
+   {
+        text-decoration:none;
+   }
 }
