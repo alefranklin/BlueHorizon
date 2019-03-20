@@ -87,6 +87,13 @@
         </div>
       </a>
       <br>
+      <a href="planets.php?planet=Urano" title="See more infos about our Uranus trip">
+        <div class="travel-panel" id="uranus-banner">
+            <h1 class="space-font"> URANUS </h1>
+            <p> Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. </p>
+        </div>
+      </a>
+      <br>
       <a href="planets.php?planet=Nettuno" title="See more infos about our Neptune trip">
         <div class="travel-panel" id="neptune-banner">
             <h1 class="space-font"> NEPTUNE </h1>

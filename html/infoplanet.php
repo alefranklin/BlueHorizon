@@ -67,6 +67,11 @@
             </a>
         </div>
         <div class="info-tile">
+            <a href="#info-text"><img src="../img/uranus-info.png" alt="urano" />
+            <h1>Uranus</h1>
+            </a>
+        </div>
+        <div class="info-tile">
             <a href="#info-text"><img src="../img/nettuno-info.png" alt="nettuno" />
             <h1>Neptune</h1>
             </a>

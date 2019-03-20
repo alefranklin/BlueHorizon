@@ -36,6 +36,21 @@
         background-image: linear-gradient(to top, rgb(60, 48, 170), rgb(11, 11, 82));
     }
 
+
+    #title h1, #title img
+    {
+        display:inline-block;
+    }
+
+    #title img
+    {
+        height:40px;
+        width:40px;
+        -webkit-filter: drop-shadow(2px 2px 2px black);
+        filter: drop-shadow(2px 2px 2px black);
+        margin-left:0.5em;
+    }
+
     /*#logo {
         float: left;
         position: relative;
@@ -54,35 +69,35 @@
         width:100%;
     }
 
-    #title{
-        position: absolute;
-        bottom:0.05em;
-        left:5%;
-        font-size: 3em;
+    #title
+    {
+        position:relative;
+        bottom:5px;
+        height:inherit;
+        width:40%;
+        margin-left:5vw;
+        font-size:3vw;
         font-weight: bold;
         letter-spacing: 5px;
         text-align:left;
-        margin:auto;
         width:80%;
         font-family: 'lato', sans-serif;
-        /*margin-top:2em;
-        margin-bottom:2em;*/
         color:white;
         text-shadow: 2px 2px 2px black;
     }
 
-    .mySlides h1
+    #presentation h1
     {
         background-color:black;
         box-shadow: 0px 10px 20px black;
         color:white;
         font-size:2.6em;
         margin:auto;
+        height:10vh;
         min-height:62.5px;
-        margin-bottom:1.5em;
         position:relative;
         padding-left:5%;
-        z-index:1;
+        z-index:2;
     }
 
     /*#presentation p{
@@ -533,6 +548,11 @@
         background-image: url(../img/saturn_bg.jpg);
     }
 
+    #uranus-banner
+    {
+        background-image: url(../img/uranus_bg.jpg);
+    }
+
     #neptune-banner
     {
         background-image: url(../img/neptune_bg.jpg);
@@ -839,6 +859,7 @@
         width:100%;
         height:90vh;
         margin:0;
+        overflow:hidden;
     }
 
     .mySlides img
@@ -857,19 +878,51 @@
         position:relative;
         top:0;
         z-index:-2;
-        height:100%;
+        height:80vh;
     }
 
-    #presentation button
+    #left
     {
-        background-color:white;
-        color:rgb(60, 48, 170);
-        border-radius:10px;
-        margin-left: 5%;
-        margin-right: 5%;
+        background-image:linear-gradient(to right,rgba(0,0,0,1), rgba(0,0,0,0));
+        color:white;
+        height:100%;
+        width:8%;
+        font-size:200%;
+        -webkit-transition: font-size 0.4s linear;
+        transition: font-size 0.4s linear;
     }
 
-    .mySlides figcaption
+    #right
+    {
+        background-image:linear-gradient(to left,rgba(0,0,0,1), rgba(0,0,0,0));
+        color:white;
+        height:78%;
+        width:8%;
+        font-size:200%;
+        -webkit-transition: font-size 0.4s linear;
+        transition: font-size 0.4s linear;
+    }
+
+    button:focus
+    {
+        outline:none;
+    }
+
+    #left:hover
+    {
+        font-size:300%;
+        text-shadow:0px 0px 10px rgb(73, 73, 190);
+        color:white;
+    }
+
+    #right:hover
+    {
+        font-size:300%;
+        text-shadow:0px 0px 10px rgb(73, 73, 190);
+        color:white;
+    }
+
+    figcaption
     {
         font-size:1.2em;
         color: white;
@@ -883,7 +936,7 @@
         padding: 0.5em 0.5em 1.5em 0.5em;
         right:0;
         bottom:0;
-        z-index:1;
+        z-index:8;
     }
 
     #info-content
