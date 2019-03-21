@@ -1,0 +1,10 @@
+TO DO LIST (we can do it!):
+
+1. Completare sezione rockets popolando il db con i dati riportati nel documento rtf "Ships" e applicare il db alla pagina
+(considerare cambio nome della sezione rockets con "ships").
+
+2. Scrittura della pagina planets.php dotandola di tabella prezzi, possibilità di acquisto biglietto e link a sezione
+informativa sul pianeta presente in "infoplanet".
+
+3. Scrittura del div di informazione che compare schioacciando su un pianeta nella sezione INFOS. Le informazioni sono già 
+presenti nel db.

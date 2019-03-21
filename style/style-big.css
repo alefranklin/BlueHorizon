@@ -508,19 +508,34 @@
         background-image: url(../img/mercury_bg.jpg);
     }
 
+    #mercury-banner p
+    {
+        width:20%;
+    }
+
     #venus-banner
     {
         background-image: url(../img/venus_bg.jpg);
     }
 
     #earth-banner{
-        background-image: url(../img/bg-travel-earth.jpg);
+        background-image: url(../img/earth_bg.jpg);
 
+    }
+
+    #earth-banner p
+    {
+        width:30%;
     }
 
     #moon-banner
     {
         background-image: url(../img/moon_bg.jpg);
+    }
+
+    #moon-banner p 
+    {
+        width:20%;
     }
 
     #mars-banner{
@@ -533,9 +548,19 @@
         background-image: url(../img/jupiter_bg.png);
     }
 
+    #jupiter-banner p
+    {
+        width:20%;
+    }
+
     #io-banner
     {
         background-image: url(../img/io_bg.jpg);
+    }
+
+    #io-banner p 
+    {
+        width:25%
     }
 
     #europa-banner
@@ -543,9 +568,19 @@
         background-image: url(../img/europa_bg.jpg);
     }
 
+    #europa-banner p 
+    {
+        width:25%;
+    }
+
     #saturn-banner
     {
         background-image: url(../img/saturn_bg.jpg);
+    }
+
+    #saturn-banner p 
+    {
+        width:20%;
     }
 
     #uranus-banner
@@ -553,14 +588,30 @@
         background-image: url(../img/uranus_bg.jpg);
     }
 
+    #uranus-banner p 
+    {
+        width:20%;
+    }
+
     #neptune-banner
     {
         background-image: url(../img/neptune_bg.jpg);
     }
 
-    #pluto-banner{
+    #neptune-banner p 
+    {
+        width:25%
+    }
+
+    #pluto-banner
+    {
         background-image: url(../img/plutone.jpeg);
 
+    }
+
+    #pluto-banner p 
+    {
+        width:50%;
     }
 
     #travels-title
