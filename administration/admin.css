@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+    color: black;
+
+    background-color: white;
+    background: url("../img/admin-bg.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead, tbody, tr, td, th { display: block; }
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+thead th {
+    height: 30px;
+
+    /*text-align: left;*/
+}
+
+tbody {
+    height: 400px;
+    overflow-y: auto;
+}
+
+thead {
+    /* fallback */
+    background-color: #000;
+    color: white;
+    font-family: 'Lato'
+    font-weight: 700;
+}
+
+
+tbody td, thead th {
+    width: 50px;
+    float: left;
+}
+
+
+.higlight:hover {
+  background-color: #e2e2e2;
+
+  outline: none;
+  border-color: #87caff;
+  box-shadow: 0 0 10px #ed9e9e;
+}
+
+.responsive {
+  width: 50%;
+  overflow-x:auto;
+}

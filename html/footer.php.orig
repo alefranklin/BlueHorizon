@@ -8,15 +8,21 @@
       </div>
   </div>
 
-  <div id="skip-footer" class="skip">
-    <a href="#menu"> Skip to Menu </a>
-  </div>
+<<<<<<< HEAD
+<div id="skip-footer" class="skip">
+  <a href="#menu"> Skip to Menu </a>
+</div>
 
+<div role="contentinfo" class="hide">
+  <p>Put copyright, etc. here.</p>
+</div>
+=======
   <div role="contentinfo" class="hide">
     <p>Put copyright, etc. here.</p>
   </div>
 
   <script src="<?= $host_path."js/script.js" ?>"></script>
+>>>>>>> feature/administration
 
 </body>
 </html>

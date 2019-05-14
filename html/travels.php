@@ -1,6 +1,7 @@
 <?php
     session_start();
     include_once("../utils/utility.php");
+
     $PageTitle="Travels";
 
     function customPageHeader() { ?>
