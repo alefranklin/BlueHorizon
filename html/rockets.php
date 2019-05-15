@@ -34,7 +34,7 @@
 
             <dt>Name 2</dt>
             <dd>
-                <img class="space-ship" src="../img/ship2.png" alt="spacecrafts-2"/>
+                <img class="space-ship" src="../img/ship2.jpg" alt="spacecrafts-2"/>
                 <p>
                 description description description description description description
                 description description description description description description

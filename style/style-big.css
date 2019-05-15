@@ -110,9 +110,9 @@
         color: rgb(78, 78, 78);
     }*/
     .space-font{
-        
+
         /*text-align: center;*/
-        font-family: 'lato', sans-serif;        
+        font-family: 'lato', sans-serif;
         margin-top:0;
         /*font-weight: bold;*/
         /*background: -webkit-linear-gradient(white, #5f6d7a);
@@ -198,7 +198,7 @@
         display: inline-block;
     }
 
-    .topnav a 
+    .topnav a
     {
         text-decoration: none;
         color:white;
@@ -241,7 +241,7 @@
         max-height: 20px;
         text-align: center;
     }
-    
+
     #user-div{
         text-align:center;
         position: fixed;
@@ -303,15 +303,15 @@
     }
 
     .topnav ul
-    { 
+    {
         list-style-type:none;
         margin-top:1em;
         margin-bottom:1em;
         padding:0;
-        
+
     }
 
-    .topnav li 
+    .topnav li
     {
         display:inline-block;
         height:1.5em;
@@ -438,7 +438,7 @@
 
 
         #snack-div {
-          visibility: hidden; 
+          visibility: hidden;
           min-width: 250px;
           margin-left: -125px;
           background-color: #333;
@@ -500,7 +500,7 @@
         margin:auto;
         margin-right:0;
         margin-left:0;
-        
+
     }
 
     #mercury-banner
@@ -533,7 +533,7 @@
         background-image: url(../img/moon_bg.jpg);
     }
 
-    #moon-banner p 
+    #moon-banner p
     {
         width:20%;
     }
@@ -558,7 +558,7 @@
         background-image: url(../img/io_bg.jpg);
     }
 
-    #io-banner p 
+    #io-banner p
     {
         width:25%
     }
@@ -568,7 +568,7 @@
         background-image: url(../img/europa_bg.jpg);
     }
 
-    #europa-banner p 
+    #europa-banner p
     {
         width:25%;
     }
@@ -578,7 +578,7 @@
         background-image: url(../img/saturn_bg.jpg);
     }
 
-    #saturn-banner p 
+    #saturn-banner p
     {
         width:20%;
     }
@@ -588,7 +588,7 @@
         background-image: url(../img/uranus_bg.jpg);
     }
 
-    #uranus-banner p 
+    #uranus-banner p
     {
         width:20%;
     }
@@ -598,7 +598,7 @@
         background-image: url(../img/neptune_bg.jpg);
     }
 
-    #neptune-banner p 
+    #neptune-banner p
     {
         width:25%
     }
@@ -609,7 +609,7 @@
 
     }
 
-    #pluto-banner p 
+    #pluto-banner p
     {
         width:50%;
     }
@@ -751,7 +751,7 @@
     {
         border:3px solid rgb(78, 78, 78);
     }
-    
+
     .input-submit
     {
       color:white;
@@ -876,7 +876,7 @@
     #planet-layout table
     {
         border-collapse: collapse;
-        
+
     }
 
     #planet-layout img
@@ -904,7 +904,7 @@
         font-style:italic;
         font-size:1.2em;
     }
-    
+
     #presentation
     {
         width:100%;
@@ -921,7 +921,7 @@
         height:inherit;
     }
 
-    .mySlides 
+    .mySlides
     {
         background-size: cover;
         margin:0;
@@ -997,7 +997,7 @@
         width:90%;
         margin:auto;
     }
-    
+
     #info-content h1
     {
         color:rgb(78, 78, 78);
@@ -1063,7 +1063,7 @@
        border-bottom:3px solid orange;
    }
 
-   #info-text a 
+   #info-text a
    {
        position:absolute;
        right:20px;
@@ -1079,7 +1079,7 @@
        text-shadow:0px 0px 5px white;
    }
 
-   #info-text p 
+   #info-text p
    {
        padding-left:5%;
    }
