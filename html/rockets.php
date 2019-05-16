@@ -21,7 +21,7 @@
 <div id="body-page" class="">
 
     <div id="rockets">
-        <h1> Our spacecrafts:</h1>
+        <h1> Our spacecrafts</h1>
         <dl>
             <dt> Name 1 </dt>
             <dd>
@@ -34,7 +34,7 @@
 
             <dt>Name 2</dt>
             <dd>
-                <img class="space-ship" src="../img/ship2.png" alt="spacecrafts-2"/>
+                <img class="space-ship" src="../img/ship2.jpg" alt="spacecrafts-2"/>
                 <p>
                 description description description description description description
                 description description description description description description

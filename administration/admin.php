@@ -7,7 +7,7 @@
         $title = "Area riservata";
 
         $table_users = get_table('users');
-        $table_travels = get_travels_date();
+        //$table_travels = get_travels_date();
     }
     else {
         $title = "Area riservata - ACCESS DENIED";

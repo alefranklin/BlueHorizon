@@ -19,14 +19,15 @@
 </div>
 <div id="body-page">
   <div id="company-content">
-    <h1>Our crew:</h1>
+    <h1>Our crew</h1>
 
-    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
+    <p>Blue Horizon is an interplanetary flight company born back in 2103.
+    Founders Matteo Pagotto, Manuel Pagotto, Alessandro Franchin and Stefano Baggio were classmates in University of Padua. 
+    They always have been passionate about space travelling and one day Matteo started to think about it in a more concrete way.
+    His idea was to create a new concept of travelling, a new way to enjoy space voyages.
+    His proposal didn't sound good to his colleagues to begin with, but after a few years of work Matteo finally drew the attention of Stefano, Manuel and Alessandro.
+    When they started to work together the project started to grow way faster than before and finally in 2103 Blue Horizon became a real thing.
+    From 2103 we made huge steps forward and now we are a solid choice for those who want to explore the galaxy!
     </p>
     <img src="../img/Imageph.jpg" alt="company" />
   </div>

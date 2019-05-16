@@ -3,14 +3,13 @@
 
     include_once("config.php");
 
+    // flag di debug mode (1 or 0)
+    $DEBUG = 1;
+    displayErrors($DEBUG);
     /***************************************** connessione al database ****************************************************/
 
     // ip locale, login, password e nome database
     $db = new mysqli($host,$db_user,$db_psw, $db_name) or die ('Non riesco a connettermi: errore '.mysqli_error());
-
-    // rendo globale db per poterlo usare nelle funzioni
-    $GLOBALS['db'] = $db;
-
 
     /***************************************** funzioni utili *************************************************************/
 
@@ -25,7 +24,7 @@
 
     function check_email($email) {
 
-        $db = $GLOBALS['db'];
+        global $db;
 
         $ris = $db->query("SELECT * FROM users WHERE email = '$email'") or die (mysqli_error());
         if($ris->fetch_assoc() == NULL) return 0;
@@ -34,7 +33,7 @@
 
     function exist($username, $passwd) {
 
-        $db = $GLOBALS['db'];
+        global $db;
 
         // sha256 della password in questo modo corrisponde con quella del database
         $hash_passwd = myhash($passwd);
@@ -49,7 +48,7 @@
 
     function get_user($username, $passwd) {
 
-        $db = $GLOBALS['db'];
+        global $db;
 
         if($user = exist($username, $passwd)) {
 
@@ -80,6 +79,24 @@
         } else return 0;
     }
 
+    function smartRedir($msg) {
+        global $host_path;
+
+        if (isset($_SERVER['HTTP_REFERER'])){
+
+            // elimino eventuali variabili get precedenti
+            $prev_page = current(explode('?', $_SERVER['HTTP_REFERER']));
+            header("location:$prev_page"."?snackmsg=$msg");
+
+        } else {
+            header("location:$host_path"."?snackmsg=$msg"); // homepage
+        }
+    }
+
+    function displayErrors($DEBUG) {
+        ini_set('display_errors', $DEBUG);
+    }
+
     /***************************************** funzioni admin *************************************************************/
 
     function isAdmin() {
@@ -90,19 +107,9 @@
 
     function get_table($table) {
 
-        $db = $GLOBALS['db'];
+        global $db;
 
-        $query = "SELECT * FROM ".$table;
-        $ris = $db->query($query) or die (mysqli_error());
-
-        return $ris;
-    }
-
-    function get_travels_date() {
-
-        $db = $GLOBALS['db'];
-
-        $query = "SELECT t.* , rt.date FROM travels t, rocket_travel rt WHERE t.id = rt.id_travel";
+        $query = "SELECT * FROM $table";
         $ris = $db->query($query) or die (mysqli_error());
 
         return $ris;

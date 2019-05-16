@@ -1,4 +1,7 @@
 -- travels
+
+  -- list
+
   -- add
   INSERT INTO travels (description, departure, arrival) VALUES ($travel_desc, $departure_planet, $arrival_planet);
 
@@ -10,6 +13,9 @@
 
 
 -- planets
+
+  -- list
+
   -- add
   INSERT INTO planets (name, info, mass, temperature) VALUES ($name_planet, $planet_info, $mass, $temperature);
 
@@ -21,6 +27,9 @@
 
 
 -- users
+
+  -- list
+
   -- add user // registration
   INSERT INTO users (name, lastname, sex, email, password, username, isAdmin) VALUES ($first_name, $lastname, $sex, $email, $password, $username, $isAdmin);
 
@@ -36,6 +45,9 @@
 
 
 -- rocekts
+
+  -- list
+
   -- add
     INSERT INTO rocekts (model, weight, height, nationality) VALUES ($r_model, $r_weight, $r_height, $r_nationality);
 
@@ -46,7 +58,10 @@
   DELETE FROM rockets WHERE id = $rocket_id;
 
 
--- cabin  
+-- cabin
+
+  -- list
+
   -- add
   INSERT INTO cabin (seats, class) VALUES ($seats, $class);
 
@@ -57,6 +72,9 @@
   DELETE FROM cabin WHERE id = $cabin_id;
 
 -- rocket_cabin
+
+  -- list
+
   -- add
   INSERT INTO rocket_cabin (id_rocket, id_cabin, number_of_cabin, price, free) VALUES ($rocket_id, $cabin_id, $cabinNumber, $cabin_price, $free);
 
@@ -67,6 +85,9 @@
   DELETE FROM rocket_cabin WHERE id = $rc_id;
 
 -- rocket_travel
+
+  -- list
+
   -- add
   INSERT INTO rocket_travel (id_travel, id_rocket, date) VALUES ($travel_id, $rocket_id, $launch_date);
 
@@ -78,6 +99,9 @@
   DELETE FROM rocket_travel WHERE (id = $rc_id) OR (id_travel = $travel_id) OR (id_rocket = $rocket_id) OR (date = $launch_date)
 
 -- images
+
+  -- list
+
   -- add
   INSERT INTO images (path, name) VALUES ($img_path, $img_name);
 
@@ -88,6 +112,9 @@
   DELETE FROM images WHERE id = $img_id;
 
   -- img_planet
+
+    -- list
+
     -- add
     INSERT INTO img_planet (id_planet, id_img) VALUES ($planet_id, $img_id);
 
@@ -98,6 +125,9 @@
     NONE
 
   -- img_travel
+
+    -- list
+
     -- add
     INSERT INTO img_travel (id_travel, id_img) VALUES ($travel_id, $img_id);
 
@@ -108,6 +138,9 @@
     NONE
 
 -- orders
+
+  -- list
+
   -- add
   INSERT INTO orders (id_user, id_travel, id_rc, number_of_seat) VALUES ($user_id, $travel_id, $rc_id, $number_of_seat);
 
