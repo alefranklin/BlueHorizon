@@ -4,19 +4,15 @@
   // ottengo la sezione del sito da gestire
   $table = $db->real_escape_string($_GET['table']);
 
-  $query = "select * from $table";
+  $result = get_table_json($table)
 
-  $result = $db->query($query) or die (mysqli_error());
-
-  if (!$result) {
+  if ($result) {
+    echo $result;
+  }
+  else {
     $msg = 6;
     smartRedir($msg);
     die();
-  }
-  else {
-    // creao la lista json da ritornare
-    $arr = $result->fetch_all(MYSQLI_ASSOC);
-    echo json_encode($arr);
   }
 
 ?>

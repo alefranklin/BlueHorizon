@@ -112,4 +112,24 @@
 
         return $ris;
     }
+
+    /**
+     * ritorna i dati della tabella in formato json
+     * in caso di errore ritorna 0
+     */
+    function get_table_json($table) {
+
+      $query = "select * from $table";
+
+      $result = $db->query($query) or die (mysqli_error());
+
+      if (!$result) {
+        return 0;
+      }
+      else {
+        // creao la lista json da ritornare
+        $arr = $result->fetch_all(MYSQLI_ASSOC);
+        return json_encode($arr);
+      }
+    }
 ?>
