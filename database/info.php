@@ -4,7 +4,7 @@
   // ottengo la sezione del sito da gestire
   $table = $db->real_escape_string($_GET['table']);
 
-  $query = "select * from $table order by id";
+  $query = "select * from $table";
 
   $result = $db->query($query) or die (mysqli_error());
 
