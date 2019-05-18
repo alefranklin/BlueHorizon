@@ -127,7 +127,7 @@
         return 0;
       }
       else {
-        // creao la lista json da ritornare
+        // creo la lista json da ritornare
         $arr = $result->fetch_all(MYSQLI_ASSOC);
         return json_encode($arr);
       }
