@@ -4,7 +4,7 @@
   // ottengo la sezione del sito da gestire
   $table = $db->real_escape_string($_GET['table']);
 
-  $result = get_table_json($table)
+  $result = get_table_json($table);
 
   if ($result) {
     echo $result;

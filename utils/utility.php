@@ -119,6 +119,8 @@
      */
     function get_table_json($table) {
 
+      global $db;
+
       $query = "select * from $table";
 
       $result = $db->query($query) or die (mysqli_error());
