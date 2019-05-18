@@ -20,20 +20,7 @@
 
         <!-- aggiungere tag specifici per questa pagina -->
         <!--Pannello di gestione-->
-        <link href="test.css" rel="stylesheet" type="text/css" />
-
-        <style type="text/css">
-            table {
-                border-collapse: collapse;
-            }
-            tr {
-                font-weight:bold;
-                background-color: lightgrey;
-            }
-            table, th, td {
-                border: 1px solid black;
-            }
-        </style>
+        <link href="css/admin.css" rel="stylesheet" type="text/css" />
 
 <?php } ?>
 
@@ -50,25 +37,34 @@
 
     <?php if (isAuth()) { ?>
 
-        <p>
-            <h3>I tuoi dati sono:</h3><br/>
+        <section>
+            <h1>I tuoi dati sono:</h1>
 
             <?php foreach($_SESSION['user'] as $key => $value): ?>
             <?= $key . ' : ' . $value ?><br/>
             <?php endforeach; ?>
-        </p>
+        </section>
 
-        <p>
-            <h3>Lista utenti:</h3><br/>
-
-            <table>
+        <section>
+            <h1>Lista utenti:</h1>
+            <div class="tbl-header">
+              <table cellpadding="0" cellspacing="0" border="0">
+                <thead>
                 <tr>
                     <th>Username</th>
                     <th>Name</th>
                     <th>Lastname</th>
                     <th>Sex</th>
                     <th>Email</th>
+                    <th></th>
+                    <th></th>
                 </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="tbl-content">
+            <table cellpadding="0" cellspacing="0" border="0">
+              <tbody>
                 <?php while($user = $table_users->fetch_assoc()) { ?>
                 <tr>
                     <td><?= $user['username'] ?></td>
@@ -80,20 +76,33 @@
                     <td><a href="delete.php?id=<?= $user['id'] ?>&table=users">Delete</a></td>
                 </tr>
                 <?php } ?>
+              </tbody>
             </table>
+          </div>
             <a href="<?= $host_path."user/registration.php" ?>">Aggiungi</a>
-        </p>
+        </section>
 
-        <p>
-            <h3>Lista viaggi:</h3><br/>
-
-            <table>
+        <section>
+          <!--for demo wrap-->
+          <h1>Lista viaggi:</h1>
+          <div class="tbl-header">
+            <table cellpadding="0" cellspacing="0" border="0">
+              <thead>
                 <tr>
-                    <th>Partenza</th>
-                    <th>Arrivo</th>
-                    <th>Data</th>
-                    <th>Descrizione</th>
+                  <th>Partenza</th>
+                  <th>Arrivo</th>
+                  <th>Data</th>
+                  <th>Descrizione</th>
+                  <th></th>
+                  <th></th>
                 </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="tbl-content">
+            <table cellpadding="0" cellspacing="0" border="0">
+              <tbody>
+
                 <?php while($travel = $table_travels->fetch_assoc()) { ?>
                 <tr>
                     <td><?= $travel['departure'] ?></td>
@@ -104,15 +113,21 @@
                     <td><a href="delete-travel.php?id=<?= $travel['id'] ?>&table=travels">Delete</a></td>
                 </tr>
                 <?php } ?>
-            </table>
-            <a href="manage.php?&section=add-travel">Aggiungi</a>
-        </p>
 
-        <p>
+              </tbody>
+            </table>
+          </div>
+          <a href="manage.php?&section=add-travel">Aggiungi</a>
+        </section>
+
+        <section>
             Per effettuare il logout clicca <a href="<?= $host_path."user/logout.php" ?>"><font color='blue'>qui</font></a>
-        </p>
+        </section>
     <?php } ?>
 </div>
 
 <!-- footer -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="js/table.js"></script>
+
 <?php include($local_path."html/footer.php"); ?>

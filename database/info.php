@@ -1,10 +1,14 @@
 <?php
   require "../utils/utility.php"; // includo il file di connessione al database
 
-  // ottengo la sezione del sito da gestire
-  $table = $db->real_escape_string($_GET['table']);
-
-  $result = get_table_json($table);
+  if(isset($_GET['table'])) {
+    // ottengo la sezione del sito da gestire
+    $table = $db->real_escape_string($_GET['table']);
+    $result = get_table_json($table);
+  }
+  else {
+    $result = 0;
+  }
 
   if ($result) {
     echo $result;

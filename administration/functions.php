@@ -1,7 +1,7 @@
 <?php
     session_start();
     include "forms.php";
-    include "controls.php"
+    include "controls.php";
 
 /****************************************************** funzioni ***************************************************************/
 

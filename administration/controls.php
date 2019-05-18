@@ -5,11 +5,11 @@
       switch ($section) {
 
           case "add-user":
-              adminUserControls($section, &$errore);
+              adminUserControls($section, $errore);
               break;
 
           case "add-travel":
-              travelControls($section, &$error);
+              travelControls($section, $error);
               break;
 
           case "add-rockets":
