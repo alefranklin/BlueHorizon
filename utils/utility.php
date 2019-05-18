@@ -15,7 +15,7 @@
 
     function check_username($username) {
 
-        $db = $GLOBALS['db'];
+        global $db;
 
         $ris = $db->query("SELECT * FROM users WHERE username = '$username'") or die (mysqli_error());
         if($ris->fetch_assoc() == NULL) return 0;
@@ -96,8 +96,6 @@
     function displayErrors($DEBUG) {
         ini_set('display_errors', $DEBUG);
     }
-
-    /***************************************** funzioni admin *************************************************************/
 
     function isAdmin() {
         if(isset($_SESSION['user'])) {

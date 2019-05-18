@@ -3,15 +3,16 @@
     include("../utils/utility.php"); // includo il file di connessione al database
 
     //se non c'è la sessione registrata
-    if (isAuth() && isAdmin()) {
-        $title = "Area riservata";
+    if (!isAdmin()) {
+        $msg = 4;
+        smartRedir($msg);
+        die();
+    }
 
-        $table_users = get_table('users');
-        //$table_travels = get_travels_date();
-    }
-    else {
-        $title = "Area riservata - ACCESS DENIED";
-    }
+    $title = "Benvenuto nell'area riservata (pannello del dio admin)";
+
+    $table_users = get_table('users');
+    $table_travels = get_table('travels');
 
     $PageTitle="Pannello Admin";
 
@@ -75,8 +76,8 @@
                     <td><?= $user['lastname'] ?></td>
                     <td><?= $user['sex'] ?></td>
                     <td><?= $user['email'] ?></td>
-                    <td><a href="edit-user.php?id='<?= $user['id'] ?>">Edit</a></td>
-                    <td><a href="delete-user.php?id=<?= $user['id'] ?>">Delete</a></td>
+                    <td><a href="manage.php?id=<?= $user['id'] ?>&section=edit-user">Edit</a></td>
+                    <td><a href="delete.php?id=<?= $user['id'] ?>&table=users">Delete</a></td>
                 </tr>
                 <?php } ?>
             </table>
@@ -99,12 +100,12 @@
                     <td><?= $travel['arrival'] ?></td>
                     <td><?= date("Y-m-d", strtotime($travel['date'])) ?></td>
                     <td><?= $travel['description'] ?></td>
-                    <td><a href="edit-travel.php?id='<?= $travel['id'] ?>">Edit</a></td>
-                    <td><a href="delete-travel.php?id=<?= $travel['id'] ?>">Delete</a></td>
+                    <td><a href="manage.php?id='<?= $travel['id'] ?>&section=edit-travel">Edit</a></td>
+                    <td><a href="delete-travel.php?id=<?= $travel['id'] ?>&table=travels">Delete</a></td>
                 </tr>
                 <?php } ?>
             </table>
-            <a href="add-travel.php">Aggiungi</a>
+            <a href="manage.php?&section=add-travel">Aggiungi</a>
         </p>
 
         <p>

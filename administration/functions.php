@@ -3,17 +3,21 @@
     include "forms.php";
     include "controls.php"
 
+/****************************************************** funzioni ***************************************************************/
+
 /****************************************************** variabili **************************************************************/
-    function pushVar($section) {
+    function pushVar($section, $id=NULL) {
 
         $vars = array();
         switch ($section) {
             case "add-user":
+            case "edit-user":
                 $vars = array('username', 'usernameErr', 'name', 'nameErr', 'lastname', 'lastnameErr',
                               'email', 'emailErr', 'gender', 'genderErr', 'password', 'passwordErr', 'repeat_password');
                 break;
 
             case "add-travel":
+            case "edit-travel":
                 $vars = array('departure', 'departureErr', 'arrival', 'arrivalErr', 'date', 'dateErr', 'description', 'descriptionErr');
                 break;
 
