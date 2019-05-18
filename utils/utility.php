@@ -9,7 +9,7 @@
     /***************************************** connessione al database ****************************************************/
 
     // ip locale, login, password e nome database
-    $db = new mysqli($host,$db_user,$db_psw, $db_name) or die ('Non riesco a connettermi: errore '.mysqli_error());
+    $db = new mysqli($host,$db_user,$db_psw, $db_name) or die ('Non riesco a connettermi: errore '.mysqli_error($db));
 
     /***************************************** funzioni utili *************************************************************/
 
@@ -17,7 +17,7 @@
 
         global $db;
 
-        $ris = $db->query("SELECT * FROM users WHERE username = '$username'") or die (mysqli_error());
+        $ris = $db->query("SELECT * FROM users WHERE username = '$username'") or die (mysqli_error($db));
         if($ris->fetch_assoc() == NULL) return 0;
         else return 1;
     }
@@ -26,7 +26,7 @@
 
         global $db;
 
-        $ris = $db->query("SELECT * FROM users WHERE email = '$email'") or die (mysqli_error());
+        $ris = $db->query("SELECT * FROM users WHERE email = '$email'") or die (mysqli_error($db));
         if($ris->fetch_assoc() == NULL) return 0;
         else return 1;
     }
@@ -39,7 +39,7 @@
         $hash_passwd = myhash($passwd);
 
         $query = "SELECT * FROM users WHERE username = '$username' AND password = '$hash_passwd' ";
-        $ris = $db->query($query) or die (mysqli_error());
+        $ris = $db->query($query) or die (mysqli_error($db));
         $data=$ris->fetch_assoc();
 
         if($data == NULL) return 0;
@@ -108,7 +108,7 @@
         global $db;
 
         $query = "SELECT * FROM $table";
-        $ris = $db->query($query) or die (mysqli_error());
+        $ris = $db->query($query) or die (mysqli_error($db));
 
         return $ris;
     }
@@ -123,7 +123,7 @@
 
       $query = "select * from $table";
 
-      $result = $db->query($query) or die (mysqli_error());
+      $result = $db->query($query) or die(mysqli_error($db));
 
       if (!$result) {
         return 0;

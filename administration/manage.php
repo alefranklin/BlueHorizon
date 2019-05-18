@@ -41,7 +41,7 @@
             $query = "INSERT INTO travels (departure, arrival, date, description)
             VALUES ('$departure','$arrival','$date','$description')";
 
-            $ris_reg = $db->query($query) or die(mysqli_error()); // se la query fallisce
+            $ris_reg = $db->query($query) or die(mysqli_error($db)); // se la query fallisce
 
 echo "sono qua ";
 
