@@ -1,10 +1,21 @@
 <?php
     session_start();
-    include "forms.php";
     include "controls.php";
 
 /****************************************************** funzioni ***************************************************************/
 
+/**
+ * solo per debug
+ */
+ function display_session() {
+   ?>
+   <pre>
+  <?php
+   print_r($_SESSION);
+  ?>
+   </pre>
+  <?php
+ }
 /****************************************************** variabili **************************************************************/
     function pushVar($section, $id=NULL) {
 
@@ -36,3 +47,4 @@
         $_SESSION['var'][$section] = array();
         unset($_SESSION['var'][$section]);
     }
+?>

@@ -2,6 +2,7 @@
     session_start();
     include "../utils/utility.php"; // includo il file di connessione al database
     include 'functions.php';
+    include "forms.php";
 
     if (!isAdmin()) {
         $msg = 4;
@@ -14,11 +15,8 @@
     function customPageHeader() { ?>
 
         <!-- aggiungere tag specifici per questa pagina -->
-        <style type="text/css">
-            body {
-                color: white;
-            }
-        </style>
+        <link href="css/admin.css" rel="stylesheet" type="text/css" />
+
 <?php }
 
     // ottengo la sezione del sito da gestire
@@ -27,10 +25,14 @@
     // definisco le variabili richieste per la specifica sezione e le inizializzo vuote
     pushVar($section);
 
+    display_session(); //// DEBUG: 
+
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // aggiorno le variabili di sezione
         pushVar($section);
+
+        display_session(); //// DEBUG:
 
         //se non si sono verificati errori procedo con la registrazione dei dati
         if(Controls($section)) { /*

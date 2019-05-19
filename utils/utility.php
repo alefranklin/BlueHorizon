@@ -103,6 +103,13 @@
         } else return 0;
     }
 
+    function get_query($sql) {
+      global $db;
+      $ris = $db->query($sql) or die (mysqli_error($db));
+
+      return $ris;
+    }
+
     function get_table($table) {
 
         global $db;
@@ -132,6 +139,26 @@
         // creo la lista json da ritornare
         $arr = $result->fetch_all(MYSQLI_ASSOC);
         return json_encode($arr);
+      }
+    }
+
+    /**
+     * ritorna i dati della tabella in formato array associativo
+     * in caso di errore ritorna 0
+     */
+    function get_table_assoc($table) {
+
+      global $db;
+
+      $query = "select * from $table";
+
+      $result = $db->query($query) or die(mysqli_error($db));
+
+      if (!$result) {
+        return 0;
+      }
+      else {
+        return $result->fetch_all(MYSQLI_ASSOC);
       }
     }
 ?>

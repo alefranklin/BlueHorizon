@@ -12,7 +12,9 @@
     $title = "Benvenuto nell'area riservata (pannello del dio admin)";
 
     $table_users = get_table('users');
-    $table_travels = get_table('travels');
+
+    $sql  = 'SELECT id, description, departure, arrival, id_rocket, date  FROM `travels`, rocket_travel as rt WHERE `id` = rt.id_travel';
+    $table_travels = get_query($sql);
 
     $PageTitle="Pannello Admin";
 
@@ -79,7 +81,8 @@
               </tbody>
             </table>
           </div>
-            <a href="<?= $host_path."user/registration.php" ?>">Aggiungi</a>
+            <a href="<?= $host_path."user/registration.php" ?>">
+              <button class="blue-pill">Aggiungi</button></a>
         </section>
 
         <section>
@@ -91,6 +94,7 @@
                 <tr>
                   <th>Partenza</th>
                   <th>Arrivo</th>
+                  <th>Rocket</th>
                   <th>Data</th>
                   <th>Descrizione</th>
                   <th></th>
@@ -107,21 +111,24 @@
                 <tr>
                     <td><?= $travel['departure'] ?></td>
                     <td><?= $travel['arrival'] ?></td>
+                    <td><?= $travel['id_rocket'] ?></td>
                     <td><?= date("Y-m-d", strtotime($travel['date'])) ?></td>
                     <td><?= $travel['description'] ?></td>
                     <td><a href="manage.php?id='<?= $travel['id'] ?>&section=edit-travel">Edit</a></td>
-                    <td><a href="delete-travel.php?id=<?= $travel['id'] ?>&table=travels">Delete</a></td>
+                    <td><a href="delete.php?id=<?= $travel['id'] ?>&table=travels">Delete</a></td>
                 </tr>
                 <?php } ?>
 
               </tbody>
             </table>
           </div>
-          <a href="manage.php?&section=add-travel">Aggiungi</a>
+          <a href="manage.php?section=add-travel">
+            <button class="blue-pill">Aggiungi</button></a>
         </section>
 
         <section>
-            Per effettuare il logout clicca <a href="<?= $host_path."user/logout.php" ?>"><font color='blue'>qui</font></a>
+            <a href="<?= $host_path."user/logout.php" ?>">
+              <button class="blue-pill">Logout</button></a>
         </section>
     <?php } ?>
 </div>
