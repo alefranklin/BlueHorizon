@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include("../utils/utility.php"); // includo il file di connessione al database
+    include_once "../utils/utility.php"; // includo il file di connessione al database
 
     //se non c'è la sessione registrata
     if (!isAdmin()) {
@@ -9,7 +9,7 @@
         die();
     }
 
-    $title = "Benvenuto nell'area riservata (pannello del dio admin)";
+    $title = "Pannello del dio admin";
 
     $table_users = get_table('users');
 
@@ -114,7 +114,7 @@
                     <td><?= $travel['id_rocket'] ?></td>
                     <td><?= date("Y-m-d", strtotime($travel['date'])) ?></td>
                     <td><?= $travel['description'] ?></td>
-                    <td><a href="manage.php?id='<?= $travel['id'] ?>&section=edit-travel">Edit</a></td>
+                    <td><a href="manage.php?id=<?= $travel['id'] ?>&section=edit-travel">Edit</a></td>
                     <td><a href="delete.php?id=<?= $travel['id'] ?>&table=travels">Delete</a></td>
                 </tr>
                 <?php } ?>

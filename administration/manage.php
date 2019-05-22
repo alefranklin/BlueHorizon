@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include "../utils/utility.php"; // includo il file di connessione al database
+    include_once "../utils/utility.php"; // includo il file di connessione al database
     include 'functions.php';
     include "forms.php";
 
@@ -19,23 +19,32 @@
 
 <?php }
 
-    // ottengo la sezione del sito da gestire
-    $section = $db->real_escape_string($_GET['section']);
+    if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
-    // definisco le variabili richieste per la specifica sezione e le inizializzo vuote
-    pushVar($section);
+      // ottengo la sezione del sito da gestire
+      // e l'id dell'elemento che sto modificando se sto modificando
+      $section = $db->real_escape_string($_GET['section']);
+      $id = (isset($_GET['id'])) ? $db->real_escape_string($_GET['id']) : null;
 
-    display_session(); //// DEBUG: 
+      print_r($_SERVER["REQUEST_METHOD"]); //// DEBUG:
+
+      // definisco le variabili richieste per la specifica sezione e le inizializzo vuote
+      $vars = pushVar($section, $id);
+
+      print_r($vars);
+
+    }
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-        // aggiorno le variabili di sezione
-        pushVar($section);
+        $section = $db->real_escape_string($_POST['section']);
+        $id = $db->real_escape_string($_POST['id']);
 
-        display_session(); //// DEBUG:
+        // aggiorno le variabili di sezione
+        $vars = pushVar($section, $id);
 
         //se non si sono verificati errori procedo con la registrazione dei dati
-        if(Controls($section)) { /*
+        if(Controls($section, $vars)) { /*
 
 
 
@@ -61,6 +70,7 @@ echo "sono qua ";
             $msg = 5;
             smartRedit($msg); */
         }
+        print_r($vars);
     }
 ?>
 
@@ -70,7 +80,7 @@ echo "sono qua ";
 
 <?php //print_r($_SESSION["var"][$section]); ?>
 
-<?php form($section); ?>
+<?php form($section, $vars); ?>
 
 <!-- rimando alla pagina di amministrazione -->
 Ritorn alla <a href="<?= $host_path."administration/admin.php" ?>" id="back">Pagina di Amministrazione</a>

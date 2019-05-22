@@ -110,6 +110,19 @@
       return $ris;
     }
 
+    function get_query_assoc($sql) {
+
+      global $db;
+      $result = $db->query($sql) or die(mysqli_error($db));
+
+      if (!$result) {
+        return 0;
+      }
+      else {
+        return $result->fetch_all(MYSQLI_ASSOC);
+      }
+    }
+
     function get_table($table) {
 
         global $db;

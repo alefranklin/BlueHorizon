@@ -1,18 +1,21 @@
 <?php
-  function Controls($section) {
+  function Controls($section, &$vars) {
       $error = false;
 
       switch ($section) {
 
           case "add-user":
-              adminUserControls($section, $errore);
+          case "edit-user":
+              adminUserControls($vars, $errore);
               break;
 
           case "add-travel":
-              travelControls($section, $error);
+          case "edit-travel":
+              travelControls($vars, $error);
               break;
 
           case "add-rockets":
+          case "edit-rockets":
               break;
       }
 
@@ -40,117 +43,115 @@
    * del form per l'aggiunta e la modifica degli utenti da parte dell'admin,
    * siano corretti
    */
-  function adminUserControls($section, &$error) {
-
-    $section = $_SESSION['var'][$section];
+  function adminUserControls(&$vars, &$error) {
 
     if (empty($_POST["username"])) {
-        $section['usernameErr'] = "Username is required";
+        $vars['usernameErr'] = "Username is required";
         $error = true;
     } else {
-        $section['username'] = test_input($_POST["username"]);
+        $vars['username'] = test_input($_POST["username"]);
         // guardo se contiene solo lettere o numeri
         if (!preg_match("/^[a-zA-Z0-9]*$/",$username)) {
-            $section['usernameErr'] = "sono ammessi solo lettere e numeri";
+            $vars['usernameErr'] = "sono ammessi solo lettere e numeri";
             $error = true;
         }
 
-        if(check_username($section['username'])) {
-            $section['usernameErr'] = "username gia utilizzata";
+        if(check_username($vars['username'])) {
+            $vars['usernameErr'] = "username gia utilizzata";
             $error = true;
         }
     }
 
     if (empty($_POST["name"])) {
-        $section['nameErr'] = "Name is required";
+        $vars['nameErr'] = "Name is required";
         $error = true;
     } else {
-        $section['name'] = test_input($_POST["name"]);
+        $vars['name'] = test_input($_POST["name"]);
         // check if name only contains letters and whitespace
-        if (!preg_match("/^[a-zA-Z]*$/", $section['name'])) {
-            $section['nameErr'] = "Only letters are allowed";
+        if (!preg_match("/^[a-zA-Z]*$/", $vars['name'])) {
+            $vars['nameErr'] = "Only letters are allowed";
             $error = true;
         }
     }
 
     if (empty($_POST["lastname"])) {
-        $section['lastnameErr'] = "Lastname is required";
+        $vars['lastnameErr'] = "Lastname is required";
         $error = true;
     } else {
-        $section['lastname'] = test_input($_POST["lastname"]);
+        $vars['lastname'] = test_input($_POST["lastname"]);
         // check if name only contains letters and whitespace
-        if (!preg_match("/^[a-zA-Z]*$/", $section['lastname'])) {
-            $section['lastnameErr'] = "Only letters are allowed";
+        if (!preg_match("/^[a-zA-Z]*$/", $vars['lastname'])) {
+            $vars['lastnameErr'] = "Only letters are allowed";
             $error = true;
         }
     }
 
     if (empty($_POST["password"])) {
-        $section['passwordErr'] = "password is required";
+        $vars['passwordErr'] = "password is required";
         $error = true;
     } else {
-        $section['password'] = test_input($_POST["password"]);
+        $vars['password'] = test_input($_POST["password"]);
 
         // regole password
-        $uppercase = preg_match('@[A-Z]@', $section['password']);
-        $lowercase = preg_match('@[a-z]@', $section['password']);
-        $number    = preg_match('@[0-9]@', $section['password']);
+        $uppercase = preg_match('@[A-Z]@', $vars['password']);
+        $lowercase = preg_match('@[a-z]@', $vars['password']);
+        $number    = preg_match('@[0-9]@', $vars['password']);
 
         if(!$uppercase) {
-            $section['passwordErr'] = "Must contain at least one uppercase character<br/>";
+            $vars['passwordErr'] = "Must contain at least one uppercase character<br/>";
             $error = true;
         }
 
         if(!$lowercase) {
-            $section['passwordErr'] = $section['passwordErr']."Must contain at least one lowercase character<br/>";
+            $vars['passwordErr'] = $vars['passwordErr']."Must contain at least one lowercase character<br/>";
             $error = true;
         }
 
         if(!$number) {
-            $section['passwordErr'] = $section['passwordErr']."Must contain at least 1 number<br/>";
+            $vars['passwordErr'] = $vars['passwordErr']."Must contain at least 1 number<br/>";
             $error = true;
         }
 
         if(strlen($password) < 8) {
-            $section['passwordErr'] = $section['passwordErr']."Must be a minimum of 8 characters";
+            $vars['passwordErr'] = $vars['passwordErr']."Must be a minimum of 8 characters";
             $error = true;
         }
     }
 
     if (empty($_POST["repeat_password"])) {
-        $section['passwordErr'] = "reinserisci la password";
+        $vars['passwordErr'] = "reinserisci la password";
         $error = true;
     } else {
-        $section['repeat_password'] = test_input($_POST["repeat_password"]);
+        $vars['repeat_password'] = test_input($_POST["repeat_password"]);
 
-        if($section['password'] != $section['repeat_password']) {
-            $section['passwordErr'] = "le passsword non corrispondono";
+        if($vars['password'] != $vars['repeat_password']) {
+            $vars['passwordErr'] = "le passsword non corrispondono";
             $error = true;
         }
     }
 
     if (empty($_POST["email"])) {
-        $section['emailErr'] = "Email is required";
+        $vars['emailErr'] = "Email is required";
         $error = true;
     } else {
-        $section['email'] = test_input($_POST["email"]);
+        $vars['email'] = test_input($_POST["email"]);
         // check if e-mail address is well-formed
-        if (!filter_var($section['email'], FILTER_VALIDATE_EMAIL)) {
-            $section['emailErr'] = "Invalid email format";
+        if (!filter_var($vars['email'], FILTER_VALIDATE_EMAIL)) {
+            $vars['emailErr'] = "Invalid email format";
             $error = true;
         }
 
-        if(check_email($section['email'])) {
-            $section['emailErr'] = "email gia utilizzata";
+        if(check_email($vars['email'])) {
+            $vars['emailErr'] = "email gia utilizzata";
             $error = true;
         }
     }
 
     if (empty($_POST["gender"])) {
-        $section['genderErr'] = "Gender is required";
+        $vars['genderErr'] = "Gender is required";
         $error = true;
     } else {
-        $section['gender'] = test_input($_POST["gender"]);
+        $vars['gender'] = test_input($_POST["gender"]);
     }
 
   }
@@ -160,60 +161,60 @@
    * del form per l'aggiunta e la modifica dei viaggi,
    * siano corretti
    */
-  function travelControls($section, &$error) {
+  function travelControls(&$vars, &$error) {
     // partenza
     if (empty($_POST["departure"])) {
-        $section['departureErr'] = "La partenza è necessaria";
+        $vars['departureErr'] = "La partenza è necessaria";
         $error = true;
     } else {
-        $section['departure'] = test_input($_POST["departure"]);
+        $vars['departure'] = test_input($_POST["departure"]);
         // guardo se contiene solo lettere o numeri
-        if (!preg_match("/^[a-zA-Z]*$/", $section['departure'])) {
-            $section['departureErr'] = "sono ammesse solo lettere";
+        if (!preg_match("/^[a-zA-Z]*$/", $vars['departure'])) {
+            $vars['departureErr'] = "sono ammesse solo lettere";
             $error = true;
         }
     }
 
     // destinazione
     if (empty($_POST["arrival"])) {
-        $section['arrivalErr'] = "La destinazione è necessaria";
+        $vars['arrivalErr'] = "La destinazione è necessaria";
         $error = true;
     } else {
-        $section['arrival'] = test_input($_POST["arrival"]);
+        $vars['arrival'] = test_input($_POST["arrival"]);
         // check if name only contains letters and whitespace
-        if (!preg_match("/^[a-zA-Z]*$/", $section['arrival'])) {
-            $section['arrivalErr'] = "Only letters are allowed";
+        if (!preg_match("/^[a-zA-Z]*$/", $vars['arrival'])) {
+            $vars['arrivalErr'] = "Only letters are allowed";
             $error = true;
         }
     }
 
     // date di partenza
     if (empty($_POST["date"])) {
-        $section['dateErr'] = "La data di partenza è necessaria";
+        $vars['dateErr'] = "La data di partenza è necessaria";
         $error = true;
     } else {
-        $section['date'] = test_input($_POST["date"]);
+        $vars['date'] = test_input($_POST["date"]);
         // check if name only contains letters and whitespace
-        if (validateDate($section['date'])) {
-            $section['dateErr'] = "La data non è valida";
+        if (validateDate($vars['date'])) {
+            $vars['dateErr'] = "La data non è valida";
             $error = true;
         }
     }
 
     // descrizione
     if (empty($_POST["description"])) {
-        $section['descriptionErr'] = "La descrizione è necessaria";
+        $vars['descriptionErr'] = "La descrizione è necessaria";
         $error = true;
     } else {
-        $section['description'] = test_input($_POST["description"]);
+        $vars['description'] = test_input($_POST["description"]);
 
-        if(strlen($section['description']) < 100) {
-            $section['descriptionErr'] = $section['descriptionErr']."Must be a minimum of 100 characters";
+        if(strlen($vars['description']) < 100) {
+            $vars['descriptionErr'] = $vars['descriptionErr']."Must be a minimum of 100 characters";
             $error = true;
         }
 
-        if(strlen($section['description']) > 65000) {
-            $section['descriptionErr'] = $section['descriptionErr']."Must be a maximum of 65000 characters";
+        if(strlen($vars['description']) > 65000) {
+            $vars['descriptionErr'] = $vars['descriptionErr']."Must be a maximum of 65000 characters";
             $error = true;
         }
     }

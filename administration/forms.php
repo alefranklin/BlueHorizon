@@ -1,10 +1,11 @@
 <?php
+  include_once "../utils/utility.php"; // includo il file di connessione al database
 
 /****************************************************** form *****************************************************************/
-  $title = NULL;
-  $button = NULL;
+  $title = null;
+  $button = null;
 
-  function form($section) {
+  function form($section, $vars) {
 
     global $title;
     global $button;
@@ -32,52 +33,53 @@
   <section>
     <h2><?= $title ?></h2>
     <p><span class="error">* required field</span></p>
-    <form name="form_manage_data" method="post" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]."?section=$section") ?>">
+    <form name="form_manage_data" method="post" action="manage.php">
 
-      <?php $function($section); ?>
+      <input type="hidden" name="id" value="<?= (isset($vars['id'])) ? $vars['id'] : null ?>">
+      <input type="hidden" name="section" value="<?= $vars['section'] ?>">
+
+      <?php $function($vars); ?>
 
     </form>
   </section>
 <?php
   }
 
-  function travelform($section) {
+  function travelform($vars) {
 
     global $title;
     global $button;
 
-    $section = $_SESSION['var'][$section];
-
 ?>
       <div class="group">
-          <input type="text" name="departure" value="<?= $section['departure'] ?>" required>
+          <input type="text" name="departure" value="<?= $vars['departure'] ?>" required>
           <span class="highlight"></span>
           <span class="bar"></span>
-          <span class="error">* <?= $section['departureErr'] ?></span>
+          <span class="error">* <?= $vars['departureErr'] ?></span>
           <label>Departure</label>
       </div>
 
       <div class="group">
-          <input type="text" name="arrival" value="<?= $section['arrival'] ?>" required>
+          <input type="text" name="arrival" value="<?= $vars['arrival'] ?>" required>
           <span class="highlight"></span>
           <span class="bar"></span>
-          <span class="error">* <?= $section['arrivalErr'] ?></span>
+          <span class="error">* <?= $vars['arrivalErr'] ?></span>
           <label>Arrival</label>
       </div>
 
       <div class="group">
-          <textarea rows="10" cols="80" name="description" required><?= $section['description'] ?></textarea>
+          <textarea rows="10" cols="80" name="description" required><?= $vars['description'] ?></textarea>
           <span class="highlight"></span>
           <span class="bar"></span>
-          <span class="error">* <?= $section['descriptionErr'] ?></span>
+          <span class="error">* <?= $vars['descriptionErr'] ?></span>
           <label>Description</label>
       </div>
 
       <div class="group">
-          <input type="date" name="date" value="<?= $section['date'] ?>" required>
+          <input type="date" name="date" value="<?= $vars['date'] ?>" required>
           <span class="highlight"></span>
           <span class="bar"></span>
-          <span class="error">* <?= $section['dateErr'] ?></span>
+          <span class="error">* <?= $vars['dateErr'] ?></span>
           <label>Date</label>
       </div>
 
