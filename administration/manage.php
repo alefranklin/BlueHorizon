@@ -44,7 +44,7 @@
         $vars = pushVar($section, $id);
 
         //se non si sono verificati errori procedo con la registrazione dei dati
-        if(Controls($section, $vars)) { /*
+        if(!Controls($section, $vars)) { /*
 
 
 

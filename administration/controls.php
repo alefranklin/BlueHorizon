@@ -19,7 +19,7 @@
               break;
       }
 
-      return !$error;
+      return $error;
   }
 
   function test_input($data) {
