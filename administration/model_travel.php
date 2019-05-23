@@ -92,6 +92,11 @@
       <?php
     }
 
+    /***
+     * funzione che si occupa di controllare se gli input,
+     * del form per l'aggiunta e la modifica dei viaggi,
+     * siano corretti
+     */
     public function controls() {
       $error = false;
 

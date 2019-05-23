@@ -1,8 +1,6 @@
 <?php
     session_start();
     include_once "../utils/utility.php"; // includo il file di connessione al database
-    include 'functions.php';
-    include "forms.php";
     include_once "model_travel.php";
 
     if (!isAdmin()) {
@@ -74,7 +72,8 @@
 </section>
 
 <!-- rimando alla pagina di amministrazione -->
-Ritorn alla <a href="<?= $host_path."administration/admin.php" ?>" id="back">Pagina di Amministrazione</a>
+<a href="<?= $host_path."administration/admin.php" ?>">
+  <button class="blue-pill">Indietro</button></a>
 
 <!-- footer -->
 <?php include($local_path."html/footer.php"); ?>

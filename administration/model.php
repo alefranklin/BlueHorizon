@@ -1,6 +1,5 @@
 <?php
   include_once "../utils/utility.php"; // includo il file di connessione al database
-  include_once 'functions.php';
 
   interface Template {
     public function __construct($section, $action, $id);
