@@ -4,19 +4,20 @@
     include_once "../utils/utility.php"; // includo il file di connessione al database
 
 /****************************************************** funzioni ***************************************************************/
+  function test_input($data) {
+      $data = trim($data);
+      $data = stripslashes($data);
+      $data = htmlspecialchars($data);
+      return $data;
+  }
 
-/**
- * solo per debug
- */
- function display_session() {
-   ?>
-   <pre>
-  <?php
-   print_r($_SESSION);
-  ?>
-   </pre>
-  <?php
- }
+  function validateDate($date, $format = 'Y-m-d')
+  {
+      $d = DateTime::createFromFormat($format, $date);
+      // The Y ( 4 digits year ) returns TRUE for any integer with any number of digits so changing the comparison from == to === fixes the issue.
+      return $d && $d->format($format) === $date;
+  }
+  
 /****************************************************** variabili **************************************************************/
     function pushVar($section, $id=null) {
 
@@ -69,28 +70,12 @@
         }
 
         $vars['section'] = $section;
-
-        /*
-        $vars = array();
-        foreach($name as $v) {
-            if(isset($id)) {
-              if($_SERVER["REQUEST_METHOD"] == "GET") {
-                $_SESSION['var'][$section][$id][$v] = get_query_assoc($sql);
-              }
-              else {
-                $_SESSION['var'][$section][$id][$v] = ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST[$v])) ? $_POST[$v] : "";
-              }
-            }
-            else {
-              // carico le variabili nella sessione, se esisteno prendo il valore altrimenti metto vuoto
-              $_SESSION['var'][$section][$v] = ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST[$v])) ? $_POST[$v] : "";
-            }
-        } */
         return $vars;
     }
 
+    /*
     function destroyVar($section) {
         $_SESSION['var'][$section] = array();
         unset($_SESSION['var'][$section]);
-    }
+    }*/
 ?>

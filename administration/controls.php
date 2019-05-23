@@ -1,4 +1,6 @@
 <?php
+  include_once "functions.php";
+  
   function Controls($section, &$vars) {
       $error = false;
 
@@ -20,20 +22,6 @@
       }
 
       return $error;
-  }
-
-  function test_input($data) {
-      $data = trim($data);
-      $data = stripslashes($data);
-      $data = htmlspecialchars($data);
-      return $data;
-  }
-
-  function validateDate($date, $format = 'Y-m-d')
-  {
-      $d = DateTime::createFromFormat($format, $date);
-      // The Y ( 4 digits year ) returns TRUE for any integer with any number of digits so changing the comparison from == to === fixes the issue.
-      return $d && $d->format($format) === $date;
   }
 
 /****************************************************** controlli **************************************************************/

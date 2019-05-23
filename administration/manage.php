@@ -3,6 +3,7 @@
     include_once "../utils/utility.php"; // includo il file di connessione al database
     include 'functions.php';
     include "forms.php";
+    include_once "model_travel.php";
 
     if (!isAdmin()) {
         $msg = 4;
@@ -18,59 +19,41 @@
         <link href="css/admin.css" rel="stylesheet" type="text/css" />
 
 <?php }
+    $request = $_SERVER["REQUEST_METHOD"];
 
-    if ($_SERVER["REQUEST_METHOD"] == "GET") {
-
-      // ottengo la sezione del sito da gestire
-      // e l'id dell'elemento che sto modificando se sto modificando
+    // ottengo la sezione del sito da gestire
+    // e l'id dell'elemento che sto modificando se sto modificando
+    if ( $request == "GET") {
       $section = $db->real_escape_string($_GET['section']);
+      $action = $db->real_escape_string($_GET['action']);
       $id = (isset($_GET['id'])) ? $db->real_escape_string($_GET['id']) : null;
-
-      print_r($_SERVER["REQUEST_METHOD"]); //// DEBUG:
-
-      // definisco le variabili richieste per la specifica sezione e le inizializzo vuote
-      $vars = pushVar($section, $id);
-
-      print_r($vars);
-
+    }
+    if ($request == "POST") {
+      $section = $db->real_escape_string($_POST['section']);
+      $action = $db->real_escape_string($_POST['action']);
+      $id = $db->real_escape_string($_POST['id']);
     }
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    switch ($section) {
+      case 'user':
+        #$model = new User($section, $action, $id);
+        break;
 
-        $section = $db->real_escape_string($_POST['section']);
-        $id = $db->real_escape_string($_POST['id']);
+      case 'travel':
+        $model = new Travel($section, $action, $id);
+        break;
 
-        // aggiorno le variabili di sezione
-        $vars = pushVar($section, $id);
+      default:
+        // code...
+        break;
+    }
+
+    if ($request == "POST") {
 
         //se non si sono verificati errori procedo con la registrazione dei dati
-        if(!Controls($section, $vars)) { /*
-
-
-
-            // scrivo sul DB
-            $query = "INSERT INTO travels (departure, arrival, date, description)
-            VALUES ('$departure','$arrival','$date','$description')";
-
-            $ris_reg = $db->query($query) or die(mysqli_error($db)); // se la query fallisce
-
-echo "sono qua ";
-
-            //se la registrazione è andata a buon fine
-            if(isset($ris_reg)) {
-
-                //TODO genera un messaggio sandwich
-
-            }
-
-            // rimando alla pagina di amministrazione
-            header("location:".$host_path."administration/admin.php");
-
-            deleteVar($section);
-            $msg = 5;
-            smartRedit($msg); */
+        if($model->controls()) {
+          $model->apply();
         }
-        print_r($vars);
     }
 ?>
 
@@ -80,7 +63,15 @@ echo "sono qua ";
 
 <?php //print_r($_SESSION["var"][$section]); ?>
 
-<?php form($section, $vars); ?>
+<section>
+  <h2><?= $model->title ?></h2>
+  <p><span class="error">* required field</span></p>
+  <form name="form_manage_data" method="post" action="manage.php">
+
+    <?php $model->form(); ?>
+
+  </form>
+</section>
 
 <!-- rimando alla pagina di amministrazione -->
 Ritorn alla <a href="<?= $host_path."administration/admin.php" ?>" id="back">Pagina di Amministrazione</a>

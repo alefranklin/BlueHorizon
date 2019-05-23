@@ -74,14 +74,14 @@
                     <td><?= $user['lastname'] ?></td>
                     <td><?= $user['sex'] ?></td>
                     <td><?= $user['email'] ?></td>
-                    <td><a href="manage.php?id=<?= $user['id'] ?>&section=edit-user">Edit</a></td>
-                    <td><a href="delete.php?id=<?= $user['id'] ?>&table=users">Delete</a></td>
+                    <td><a href="manage.php?id=<?= $user['id'] ?>&action=edit&section=user">Edit</a></td>
+                    <td><a href="manage.php?id=<?= $user['id'] ?>&action=delete&section=user">Delete</a></td>
                 </tr>
                 <?php } ?>
               </tbody>
             </table>
           </div>
-            <a href="<?= $host_path."user/registration.php" ?>">
+            <a href="<?= $host_path."manage.php?action=add&section=user" ?>">
               <button class="blue-pill">Aggiungi</button></a>
         </section>
 
@@ -114,15 +114,15 @@
                     <td><?= $travel['id_rocket'] ?></td>
                     <td><?= date("Y-m-d", strtotime($travel['date'])) ?></td>
                     <td><?= $travel['description'] ?></td>
-                    <td><a href="manage.php?id=<?= $travel['id'] ?>&section=edit-travel">Edit</a></td>
-                    <td><a href="delete.php?id=<?= $travel['id'] ?>&table=travels">Delete</a></td>
+                    <td><a href="manage.php?id=<?= $travel['id'] ?>&action=edit&section=travel">Edit</a></td>
+                    <td><a href="manage.php?id=<?= $travel['id'] ?>&action=delete&section=travel">Delete</a></td>
                 </tr>
                 <?php } ?>
 
               </tbody>
             </table>
           </div>
-          <a href="manage.php?section=add-travel">
+          <a href="manage.php?action=add&section=travel">
             <button class="blue-pill">Aggiungi</button></a>
         </section>
 

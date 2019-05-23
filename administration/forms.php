@@ -37,6 +37,7 @@
 
       <input type="hidden" name="id" value="<?= (isset($vars['id'])) ? $vars['id'] : null ?>">
       <input type="hidden" name="section" value="<?= $vars['section'] ?>">
+      <input type="hidden" name="action" value="<?= $vars['action'] ?>">
 
       <?php $function($vars); ?>
 
