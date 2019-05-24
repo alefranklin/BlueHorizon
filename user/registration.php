@@ -21,9 +21,9 @@
 
             //se la registrazione è andata a buon fine
             if(isset($ris_reg)) {
-                print_r($model->json());
-                get_user($_POST["username"],$_POST["password"]);
-                #smartRedir(6);
+                $vars = $model->get_vars();
+                get_user($vars["username"],$vars["password"]);
+                smartRedir(6);
             }
         }
     }

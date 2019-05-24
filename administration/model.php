@@ -20,6 +20,7 @@
     public function form();
     public function controls();
     public function json();
+    public function get_vars();
   }
 
   abstract class Model implements Template {
@@ -125,6 +126,10 @@
 
     public function json() {
       return json_encode($this->vars);
+    }
+
+    public function get_vars() {
+      return $this->vars;
     }
 
     /* blocco di funzioni da ridefinire nelle classi figlie */
