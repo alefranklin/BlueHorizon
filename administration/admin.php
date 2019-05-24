@@ -58,6 +58,7 @@
                     <th>Lastname</th>
                     <th>Sex</th>
                     <th>Email</th>
+                    <th>Admin</th>
                     <th></th>
                     <th></th>
                 </tr>
@@ -74,6 +75,7 @@
                     <td><?= $user['lastname'] ?></td>
                     <td><?= $user['sex'] ?></td>
                     <td><?= $user['email'] ?></td>
+                    <td><?= $user['isAdmin'] ?></td>
                     <td><a href="manage.php?id=<?= $user['id'] ?>&action=edit&section=user">Edit</a></td>
                     <td><a href="manage.php?id=<?= $user['id'] ?>&action=delete&section=user">Delete</a></td>
                 </tr>
@@ -81,7 +83,7 @@
               </tbody>
             </table>
           </div>
-            <a href="<?= $host_path."manage.php?action=add&section=user" ?>">
+            <a href="manage.php?action=add&section=user">
               <button class="blue-pill">Aggiungi</button></a>
         </section>
 

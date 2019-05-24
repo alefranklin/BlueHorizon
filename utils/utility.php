@@ -38,7 +38,7 @@
         // sha256 della password in questo modo corrisponde con quella del database
         $hash_passwd = myhash($passwd);
 
-        $query = "SELECT * FROM users WHERE username = '$username' AND password = '$hash_passwd' ";
+        $query = "SELECT * FROM users WHERE username = '$username' AND pwhash = '$hash_passwd' ";
         $ris = $db->query($query) or die (mysqli_error($db));
         $data=$ris->fetch_assoc();
 
@@ -187,5 +187,12 @@
       else {
         return $result->fetch_all(MYSQLI_ASSOC);
       }
+    }
+
+    function ErrorHandle($str=null) {
+      if ($DEBUG == 1 && isset($str)) {
+        print_r($str);
+      }
+      header("location:$host_path"."/html/errore.php"); // homepage
     }
 ?>

@@ -11,7 +11,7 @@
             $this->title = "Modifica il Viaggio";
             $this->msg_form_button = "Modifica";
             break;
-          case 'edit':
+          case 'add':
             $this->title = "Aggiungi un Viaggio";
             $this->msg_form_button = "Aggiungi";
             break;
@@ -33,7 +33,7 @@
 
     }
 
-    protected function get_table() {
+    protected function get_tupla() {
       return "SELECT id, description, departure, arrival, id_rocket, date
               FROM `travels`, rocket_travel as rt
               WHERE `id` = rt.id_travel and `id` = $this->id";
@@ -53,6 +53,8 @@
     protected function delete() {
       return "DELETE FROM travels WHERE id = $this->id";
     }
+
+    protected function default() {}
 
     public function _form() {
       ?>
@@ -101,12 +103,11 @@
       $error = false;
 
       // partenza
-      if (empty($_POST["departure"])) {
+      if (empty($this->vars['departure'])) {
           $this->vars['departureErr'] = "La partenza è necessaria";
           $error = true;
       } else {
-          $this->vars['departure'] = test_input($_POST["departure"]);
-          // guardo se contiene solo lettere o numeri
+          // guardo se contiene solo lettere
           if (!preg_match("/^[a-zA-Z]*$/", $this->vars['departure'])) {
               $this->vars['departureErr'] = "sono ammesse solo lettere";
               $error = true;
@@ -114,12 +115,11 @@
       }
 
       // destinazione
-      if (empty($_POST["arrival"])) {
+      if (empty($this->vars['arrival'])) {
           $this->vars['arrivalErr'] = "La destinazione è necessaria";
           $error = true;
       } else {
-          $this->vars['arrival'] = test_input($_POST["arrival"]);
-          // check if name only contains letters and whitespace
+          // controlla se contiene lettere
           if (!preg_match("/^[a-zA-Z]*$/", $this->vars['arrival'])) {
               $this->vars['arrivalErr'] = "Only letters are allowed";
               $error = true;
@@ -127,12 +127,10 @@
       }
 
       // date di partenza
-      if (empty($_POST["date"])) {
+      if (empty($this->vars['date'])) {
           $this->vars['dateErr'] = "La data di partenza è necessaria";
           $error = true;
       } else {
-          $this->vars['date'] = test_input($_POST["date"]);
-          // check if name only contains letters and whitespace
           if (validateDate($this->vars['date'])) {
               $this->vars['dateErr'] = "La data non è valida";
               $error = true;
@@ -140,12 +138,10 @@
       }
 
       // descrizione
-      if (empty($_POST["description"])) {
+      if (empty($this->vars['description'])) {
           $this->vars['descriptionErr'] = "La descrizione è necessaria";
           $error = true;
       } else {
-          $this->vars['description'] = test_input($_POST["description"]);
-
           if(strlen($this->vars['description']) < 100) {
               $this->vars['descriptionErr'] = $this->vars['descriptionErr']."Must be a minimum of 100 characters";
               $error = true;

@@ -2,6 +2,7 @@
     session_start();
     include_once "../utils/utility.php"; // includo il file di connessione al database
     include_once "model_travel.php";
+    include_once "model_user.php";
 
     if (!isAdmin()) {
         $msg = 4;
@@ -34,7 +35,7 @@
 
     switch ($section) {
       case 'user':
-        #$model = new User($section, $action, $id);
+        $model = new User($section, $action, $id);
         break;
 
       case 'travel':
@@ -59,9 +60,8 @@
 <!-- head -->
 <?php include($local_path."html/head.php"); ?>
 
-<?php //print_r($_SESSION["var"][$section]); ?>
-
 <section>
+
   <h2><?= $model->title ?></h2>
   <p><span class="error">* required field</span></p>
   <form name="form_manage_data" method="post" action="manage.php">
