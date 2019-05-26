@@ -47,8 +47,6 @@
                                 'repeat_password',
                                 'isAdmin');
         $this->loadvar();
-
-        print_r($this->vars); //// DEBUG:
     }
 
     protected function get_tupla() {
@@ -92,7 +90,7 @@
     public function _form() {
       ?>
         <div class="group">
-          <input type="text" name="username" value="<?= $this->vars['username'] ?>" required>
+          <input type="text" name="username" value="<?= $this->vars['username'] ?>" <?= (isset($edit)) ? "" : 'required'?>>
           <span class="highlight"></span>
           <span class="bar"></span>
           <span class="error">* <?= $this->vars['usernameErr'] ?></span>
@@ -100,7 +98,7 @@
         </div>
 
         <div class="group">
-          <input type="text" name="name" value="<?= $this->vars['name'] ?>" required>
+          <input type="text" name="name" value="<?= $this->vars['name'] ?>" <?= (isset($edit)) ? "" : 'required'?>>
           <span class="highlight"></span>
           <span class="bar"></span>
           <span class="error">* <?= $this->vars['nameErr'] ?></span>
@@ -108,7 +106,7 @@
         </div>
 
         <div class="group">
-          <input type="text" name="lastname" value="<?= $this->vars['lastname'] ?>" required>
+          <input type="text" name="lastname" value="<?= $this->vars['lastname'] ?>" <?= (isset($edit)) ? "" : 'required'?>>
           <span class="highlight"></span>
           <span class="bar"></span>
           <span class="error">* <?= $this->vars['lastnameErr'] ?></span>
@@ -116,19 +114,19 @@
         </div>
 
         <div class="group">
-          <input type="text" name="email" value="<?= $this->vars['email'] ?>" required>
+          <input type="text" name="email" value="<?= $this->vars['email'] ?>" <?= (isset($edit)) ? "" : 'required'?>>
           <span class="highlight"></span>
           <span class="bar"></span>
           <span class="error">* <?= $this->vars['emailErr'] ?></span>
           <label>Email</label>
         </div>
 
-        <?php if($this->action == 'edit') { ?>
+        <?php if($this->action == 'edit') { $edit = 1; ?>
           <label> lascia il campo password vuoto se non vuoi modificarlo </label>
         <?php } ?>
 
         <div class="group">
-          <input type="password" name="password" value="<?= $this->vars['password'] ?>" required>
+          <input type="password" name="password" value="<?= $this->vars['password'] ?>" <?= (isset($edit)) ? "" : 'required'?>>
           <span class="highlight"></span>
           <span class="bar"></span>
           <span class="error">* <?= $this->vars['passwordErr'] ?></span>
@@ -136,17 +134,20 @@
         </div>
 
         <div class="group">
-          <input type="password" name="repeat_password" value="" required>
+          <input type="password" name="repeat_password" value="" <?= (isset($edit)) ? "" : 'required'?>>
           <span class="highlight"></span>
           <span class="bar"></span>
           <label>Ripeti Password</label>
         </div>
 
         <div class="group">
+
+          <?php if(isset($this->vars['sex'])) { $this->vars['gender'] = $this->vars['sex']; } ?>
+
           Gender:
-          <input type="radio" name="gender" <?= ($this->vars['sex']=="F") ? "checked" : "" ?> value="F">Female
-          <input type="radio" name="gender" <?= ($this->vars['sex']=="M") ? "checked" : "" ?> value="M">Male
-          <input type="radio" name="gender" <?= ($this->vars['sex']=="N.D.") ? "checked" : "" ?> value="N.D.">Other
+          <input type="radio" name="gender" <?= ($this->vars['gender']=="F") ? "checked" : "" ?> value="F">Female
+          <input type="radio" name="gender" <?= ($this->vars['gender']=="M") ? "checked" : "" ?> value="M">Male
+          <input type="radio" name="gender" <?= ($this->vars['gender']=="N.D.") ? "checked" : "" ?> value="N.D.">Other
           <span class="error">* <?= $this->vars['genderErr'] ?></span>
         </div>
 
@@ -163,48 +164,6 @@
       <?php
     }
 
-    private function pwControls(&$error) {
-      if (empty($this->vars['password'])) {
-          $this->vars['passwordErr'] = "password is required";
-          $error = true;
-      } else {
-          // regole password
-          $uppercase = preg_match('@[A-Z]@', $this->vars['password']);
-          $lowercase = preg_match('@[a-z]@', $this->vars['password']);
-          $number    = preg_match('@[0-9]@', $this->vars['password']);
-
-          if(!$uppercase) {
-              $this->vars['passwordErr'] = "Must contain at least one uppercase character<br/>";
-              $error = true;
-          }
-
-          if(!$lowercase) {
-              $this->vars['passwordErr'] = $this->vars['passwordErr']."Must contain at least one lowercase character<br/>";
-              $error = true;
-          }
-
-          if(!$number) {
-              $this->vars['passwordErr'] = $this->vars['passwordErr']."Must contain at least 1 number<br/>";
-              $error = true;
-          }
-
-          if(strlen($this->vars['password']) < 8) {
-              $this->vars['passwordErr'] = $this->vars['passwordErr']."Must be a minimum of 8 characters";
-              $error = true;
-          }
-      }
-
-      if (empty($this->vars['repeat_password'])) {
-          $this->vars['passwordErr'] = "reinserisci la password";
-          $error = true;
-      } else {
-          if($this->vars['password'] != $this->vars['repeat_password']) {
-              $this->vars['passwordErr'] = "le passsword non corrispondono";
-              $error = true;
-          }
-      }
-    }
-
     /*
      * funzione che si occupa di controllare se gli input,
      * del form per l'aggiunta e la modifica degli utenti da parte dell'admin,
@@ -213,75 +172,123 @@
     public function controls() {
       $error = false;
 
-      if (empty($this->vars['username'])) {
-          $this->vars['usernameErr'] = "Username is required";
-          $error = true;
-      } else {
-          // guardo se contiene solo lettere o numeri
-          if (!preg_match("/^[a-zA-Z0-9]*$/",$this->vars['username'])) {
-              $this->vars['usernameErr'] = "sono ammessi solo lettere e numeri";
-              $error = true;
-          }
+      if($this->modified('username')) {
+        if (empty($this->vars['username'])) {
+            $this->vars['usernameErr'] = "Username is required";
+            $error = true;
+        } else {
+            // guardo se contiene solo lettere o numeri
+            if (!preg_match("/^[a-zA-Z0-9]*$/",$this->vars['username'])) {
+                $this->vars['usernameErr'] = "sono ammessi solo lettere e numeri";
+                $error = true;
+            }
 
-          if(check_username($this->vars['username'])) {
-              $this->vars['usernameErr'] = "username gia utilizzata";
-              $error = true;
-          }
+            if(check_username($this->vars['username'])) {
+                $this->vars['usernameErr'] = "username gia utilizzata";
+                $error = true;
+            }
+        }
       }
 
-      if (empty($this->vars['name'])) {
-          $this->vars['nameErr'] = "Name is required";
-          $error = true;
-      } else {
-          // check if name only contains letters and whitespace
-          if (!preg_match("/^[a-zA-Z]*$/", $this->vars['name'])) {
-              $this->vars['nameErr'] = "Only letters are allowed";
-              $error = true;
-          }
+      if($this->modified('name')) {
+        if (empty($this->vars['name'])) {
+            $this->vars['nameErr'] = "Name is required";
+            $error = true;
+        } else {
+            // check if name only contains letters and whitespace
+            if (!preg_match("/^[a-zA-Z]*$/", $this->vars['name'])) {
+                $this->vars['nameErr'] = "Only letters are allowed";
+                $error = true;
+            }
+        }
       }
 
-      if (empty($this->vars['lastname'])) {
-          $this->vars['lastnameErr'] = "Lastname is required";
-          $error = true;
-      } else {
-          // check if name only contains letters and whitespace
-          if (!preg_match("/^[a-zA-Z]*$/", $this->vars['lastname'])) {
-              $this->vars['lastnameErr'] = "Only letters are allowed";
-              $error = true;
-          }
+      if($this->modified('lastname')) {
+        if (empty($this->vars['lastname'])) {
+            $this->vars['lastnameErr'] = "Lastname is required";
+            $error = true;
+        } else {
+            // check if name only contains letters and whitespace
+            if (!preg_match("/^[a-zA-Z]*$/", $this->vars['lastname'])) {
+                $this->vars['lastnameErr'] = "Only letters are allowed";
+                $error = true;
+            }
+        }
       }
 
-      /* se sto modificando un utente controllo la password solo nel caso
-         decida di modificare anche quella.
-         se non sono nell'azione edit controllo sempre la password */
-      if($this->action == 'edit' && !empty($this->vars['password'])) {
-        $this->pwControls($error);
+      //  controllando l'hash della password con la passord in chiaro
+      //  c'è la remota possibilita che queste siano identiche
+      //  risultando non modificata
+      //  ma si risolve ponendo una lunghezza massima della password inferiore a quella dell'hash
+      if($this->modified('pwhash', 'password')) {
+        if (empty($this->vars['password'])) {
+            $this->vars['passwordErr'] = "password is required";
+            $error = true;
+        } else {
+            // regole password
+            $uppercase = preg_match('@[A-Z]@', $this->vars['password']);
+            $lowercase = preg_match('@[a-z]@', $this->vars['password']);
+            $number    = preg_match('@[0-9]@', $this->vars['password']);
+
+            if(!$uppercase) {
+                $this->vars['passwordErr'] = "Must contain at least one uppercase character<br/>";
+                $error = true;
+            }
+
+            if(!$lowercase) {
+                $this->vars['passwordErr'] = $this->vars['passwordErr']."Must contain at least one lowercase character<br/>";
+                $error = true;
+            }
+
+            if(!$number) {
+                $this->vars['passwordErr'] = $this->vars['passwordErr']."Must contain at least 1 number<br/>";
+                $error = true;
+            }
+
+            if(strlen($this->vars['password']) < 8 || strlen($this->vars['password']) > 20) {
+                $this->vars['passwordErr'] = $this->vars['passwordErr']."Must be a minimum of 8 characters";
+                $error = true;
+            }
+        }
+
+        if (empty($this->vars['repeat_password'])) {
+            $this->vars['passwordErr'] = "reinserisci la password";
+            $error = true;
+        } else {
+            if($this->vars['password'] != $this->vars['repeat_password']) {
+                $this->vars['passwordErr'] = "le passsword non corrispondono";
+                $error = true;
+            }
+        }
       }
-      else {
-        $this->pwControls($error);
+
+      if($this->modified('email')) {
+        if (empty($this->vars['email'])) {
+            $this->vars['emailErr'] = "Email is required";
+            $error = true;
+        } else {
+            // check if e-mail address is well-formed
+            if (!filter_var($this->vars['email'], FILTER_VALIDATE_EMAIL)) {
+                $this->vars['emailErr'] = "Invalid email format";
+                $error = true;
+            }
+
+            if(check_email($this->vars['email'])) {
+                $this->vars['emailErr'] = "email gia utilizzata";
+                $error = true;
+            }
+        }
       }
 
 
-      if (empty($this->vars['email'])) {
-          $this->vars['emailErr'] = "Email is required";
-          $error = true;
-      } else {
-          // check if e-mail address is well-formed
-          if (!filter_var($this->vars['email'], FILTER_VALIDATE_EMAIL)) {
-              $this->vars['emailErr'] = "Invalid email format";
-              $error = true;
-          }
-
-          if(check_email($this->vars['email'])) {
-              $this->vars['emailErr'] = "email gia utilizzata";
-              $error = true;
-          }
+      // caso in cui il nome dei campi non coincida
+      if($this->modified('sex','gender')) {
+        if (empty($this->vars['gender'])) {
+            $this->vars['genderErr'] = "Gender is required";
+            $error = true;
+        }
       }
 
-      if (empty($this->vars['gender'])) {
-          $this->vars['genderErr'] = "Gender is required";
-          $error = true;
-      }
 
       return !$error;
     }

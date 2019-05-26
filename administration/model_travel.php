@@ -59,7 +59,7 @@
     public function _form() {
       ?>
             <div class="group">
-                <input type="text" name="departure" value="<?= $this->vars['departure'] ?>" required>
+                <input type="text" name="departure" value="<?= $this->vars['departure'] ?>" <?= (isset($edit)) ? "" : 'required'?>>
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <span class="error">* <?= $this->vars['departureErr'] ?></span>
@@ -67,7 +67,7 @@
             </div>
 
             <div class="group">
-                <input type="text" name="arrival" value="<?= $this->vars['arrival'] ?>" required>
+                <input type="text" name="arrival" value="<?= $this->vars['arrival'] ?>" <?= (isset($edit)) ? "" : 'required'?>>
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <span class="error">* <?= $this->vars['arrivalErr'] ?></span>
@@ -75,7 +75,7 @@
             </div>
 
             <div class="group">
-                <textarea rows="10" cols="80" name="description" required><?= $this->vars['description'] ?></textarea>
+                <textarea rows="10" cols="80" name="description" <?= (isset($edit)) ? "" : 'required'?>><?= $this->vars['description'] ?></textarea>
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <span class="error">* <?= $this->vars['descriptionErr'] ?></span>
@@ -83,7 +83,7 @@
             </div>
 
             <div class="group">
-                <input type="date" name="date" value="<?= $this->vars['date'] ?>" required>
+                <input type="date" name="date" value="<?= $this->vars['date'] ?>" <?= (isset($edit)) ? "" : 'required'?>>
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <span class="error">* <?= $this->vars['dateErr'] ?></span>
