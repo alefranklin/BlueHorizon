@@ -103,54 +103,65 @@
       $error = false;
 
       // partenza
-      if (empty($this->vars['departure'])) {
-          $this->vars['departureErr'] = "La partenza è necessaria";
-          $error = true;
-      } else {
-          // guardo se contiene solo lettere
-          if (!preg_match("/^[a-zA-Z]*$/", $this->vars['departure'])) {
-              $this->vars['departureErr'] = "sono ammesse solo lettere";
-              $error = true;
-          }
+      if($this->modified('departure')) {
+        if (empty($this->vars['departure'])) {
+            $this->vars['departureErr'] = "La partenza è necessaria";
+            $error = true;
+        } else {
+            // guardo se contiene solo lettere
+            if (!preg_match("/^[a-zA-Z]*$/", $this->vars['departure'])) {
+                $this->vars['departureErr'] = "sono ammesse solo lettere";
+                $error = true;
+            }
+        }
       }
+
 
       // destinazione
-      if (empty($this->vars['arrival'])) {
-          $this->vars['arrivalErr'] = "La destinazione è necessaria";
-          $error = true;
-      } else {
-          // controlla se contiene lettere
-          if (!preg_match("/^[a-zA-Z]*$/", $this->vars['arrival'])) {
-              $this->vars['arrivalErr'] = "Only letters are allowed";
-              $error = true;
-          }
+      if($this->modified('Arrival')) {
+        if (empty($this->vars['arrival'])) {
+            $this->vars['arrivalErr'] = "La destinazione è necessaria";
+            $error = true;
+        } else {
+            // controlla se contiene lettere
+            if (!preg_match("/^[a-zA-Z]*$/", $this->vars['arrival'])) {
+                $this->vars['arrivalErr'] = "Only letters are allowed";
+                $error = true;
+            }
+        }
       }
+
 
       // date di partenza
-      if (empty($this->vars['date'])) {
-          $this->vars['dateErr'] = "La data di partenza è necessaria";
-          $error = true;
-      } else {
-          if (validateDate($this->vars['date'])) {
-              $this->vars['dateErr'] = "La data non è valida";
-              $error = true;
-          }
+      if($this->modified('date')) {
+        if (empty($this->vars['date'])) {
+            $this->vars['dateErr'] = "La data di partenza è necessaria";
+            $error = true;
+        } else {
+            if (validateDate($this->vars['date'])) {
+                $this->vars['dateErr'] = "La data non è valida";
+                $error = true;
+            }
+        }
       }
 
-      // descrizione
-      if (empty($this->vars['description'])) {
-          $this->vars['descriptionErr'] = "La descrizione è necessaria";
-          $error = true;
-      } else {
-          if(strlen($this->vars['description']) < 100) {
-              $this->vars['descriptionErr'] = $this->vars['descriptionErr']."Must be a minimum of 100 characters";
-              $error = true;
-          }
 
-          if(strlen($this->vars['description']) > 65000) {
-              $this->vars['descriptionErr'] = $this->vars['descriptionErr']."Must be a maximum of 65000 characters";
-              $error = true;
-          }
+      // descrizione
+      if($this->modified('description')) {
+        if (empty($this->vars['description'])) {
+            $this->vars['descriptionErr'] = "La descrizione è necessaria";
+            $error = true;
+        } else {
+            if(strlen($this->vars['description']) < 100) {
+                $this->vars['descriptionErr'] = $this->vars['descriptionErr']."Must be a minimum of 100 characters";
+                $error = true;
+            }
+
+            if(strlen($this->vars['description']) > 65000) {
+                $this->vars['descriptionErr'] = $this->vars['descriptionErr']."Must be a maximum of 65000 characters";
+                $error = true;
+            }
+        }
       }
 
       return !$error;
