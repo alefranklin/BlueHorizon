@@ -140,7 +140,7 @@
       <br>
       <a href="planets.php?planet=Plutone" title="See more infos about our Pluton trip">
         <div class="travel-panel" id="pluto-banner">
-            <h1 class="space-font"> PLUTON </h1>
+            <h1 class="space-font"> PLUTO </h1>
             <p>Così lontano e piccolo da generare dubbi sulla sua consistenza di pianeta, eppure dotato di atmosfera. 
             Molto sottile e tossica per gli esseri umani, è pur sempre un’atmosfera. Ma quello che è più singolare è la sua consistenza. 
             Quando il pianeta infatti è in perielio (distanza minima dal Sole) 
@@ -151,7 +151,7 @@
     </div>
   </div>
 </div>
-<i onclick="topFunction()" id="scroll-back-btn" class="fas fa-arrow-circle-up"> </i>
+
 
 <!-- footer -->
 <?php include($local_path."html/footer.php"); ?>

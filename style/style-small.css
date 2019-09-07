@@ -1,49 +1,79 @@
-@media handheld,screen and (max-width: 594px) {
+@media handheld, screen and (max-width: 594px) {
     
     body {
-        max-width: 1024px;
+        max-width:100%;
         text-align: center;
         margin: auto;
-        background-color: darkslategrey;
+    }
+
+    #user-div{
+        text-align:center;
+        height: 19em;
+        width: 100%;
+        height: 100%;
+        /*border: 3px solid lightgreen;*/
+    }
+
+    #user-div h1
+    {
+        color:white;
+    }
+
+    #left , #right
+    {
+        display:none;
     }
 
     #header{
-        background-image: url(../img/bg-space.jpg);
         margin: auto;
         text-align: left;
         overflow: hidden;
     }
 
-    #logo {
-        float: left;
-        min-height: 20px;
-        min-width: 50px;
-        width: 30%;
-        height: auto;
+    #title
+    {
+        background-image: linear-gradient(to top, rgb(60, 48, 170), rgb(11, 11, 82));
+        height:auto;
+    }
+
+    #title img {
+        /*position: absolute;
+        bottom:3%;
+        right:3%;*/
+        margin-left:1em;
+        width: 15%;
         overflow: hidden;
     }
 
-    h1{
+    #title p{
         font-size: 3em;
+        color:white;
         letter-spacing: 10px;
     }
+
+    #title p, #title img
+    {
+        display: inline-block;
+    }
+
     h2{
         font-size: 2em;
         letter-spacing: 3px;
         margin-top: 0px;
     }
-    .space-font{
-        color: #FFF;
+
+   .space-font{
         text-align: center;
         font-family: 'lato',sans-serif;
         font-weight: 300;
-        background: -webkit-linear-gradient(white, #38495a);
+        /*background: -webkit-linear-gradient(white, #38495a);
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        -webkit-text-fill-color: transparent;*/
     }
     
-    .topnav {
-        float: right;
+    #menu {
+        max-width: 100%;
+        height:auto;
         list-style-type: none;
         margin: 0;
         padding: 0;
@@ -51,32 +81,28 @@
         background-color: #333;
     }
 
-    .active{
-        background-color: gray;
+    .topnav li{
+        margin:auto;
+        display: inline-block;
+    }
+
+    .hide {
+        display:none;
     }
 
     .topnav a{
         float: left;
         display: block;
-        color: #f2f2f2;
+        color: white;
         text-align: center;
-        padding: 14px 16px;
+        padding: 14px 12px;
         text-decoration: none;
         font-size: 17px;
     }
-    .topnav a:link{
-        color: white;
-    }
-    .topnav a:visited{
-        color: #a9a9a9;
-    }
-    .topnav a:hover{
-        background-color: dimgray;
-    }
     
-    .topnav a:not(:first-child) {
+   /* .topnav a:not(:first-child) {
         display: none;
-    }
+    }*/
     .topnav a.icon {
         float: right;
         display: block;
@@ -95,4 +121,288 @@
         display: block;
         text-align: left;
     }
+
+    ul
+    {
+        outline: none;
+        margin:0;
+        padding:0;
+        
+    }
+    .topnav .fa-bars
+    {
+        display:none;
+    }
+    #skip-main
+    {
+        display: none;
+    }
+
+    #login
+    {
+        margin-bottom:1em;
+    }
+
+    .registration-link{
+        color:white;
+    }
+
+    .registration-link a
+    {
+        text-decoration: underline;
+        font-size: 1em;
+        margin:auto;
+        margin-top:1em;
+        text-align:center;
+        background-color: darkorange;
+        border-radius: 5px;
+        color:white;
+        width:25%;
+        float:none;
+    }
+
+    .user-icon-container
+    {
+        display:none;
+    }
+
+    .active{
+        font-weight: bold;
+        border-bottom: 3px solid darkorange;
+    }
+
+    .mySlides
+    {
+        height:auto;
+        margin:0;
+        /*position: relative;*/
+    }
+
+    .mySlides img
+    {
+        width:100%;
+        height:100%;
+    }
+
+    .mySlides figcaption
+    {
+        width:100%;
+        background-color: black;
+        color: white;
+        border-top: 5px solid white; 
+    }
+
+    #skip-footer
+    {
+        padding-top: 3em;
+        padding-bottom:1.5em;
+    }
+
+    #body-page, #scroll-back-btn, #skip-footer
+    {
+        display:block;
+    }
+
+    #scroll-back-btn
+    {
+        padding-top:3em;
+    }
+
+    #company-content
+    {
+        padding:0 1em 0 1em;
+    }
+
+    #rockets
+    {
+        padding:0 1em 0 1em;
+    }
+
+    #rockets dd img
+    {
+        width:100%;
+    }
+
+    #rockets dt, #rockets dd
+    {
+        border:5px solid #333;
+        border-radius: 5px;
+    }
+
+    #rockets dt
+    {
+        font-size: 2em;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    #rockets dd
+    {
+        margin:auto;
+        border-top:none;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        margin-bottom:2em;
+    }
+
+    #mercury-banner
+    {
+        background-image: url(../img/mercury_bg.jpg);
+    }
+
+    #venus-banner
+    {
+        background-image: url(../img/venus_bg.jpg);
+    }
+
+    #earth-banner
+    {
+        background-image: url(../img/earth_bg.jpg);
+    }
+
+    #moon-banner
+    {
+        background-image: url(../img/moon_mobile_bg.jpg);
+    }
+
+    #mars-banner
+    {
+        background-image: url(../img/marte.jpg);
+    }
+
+    #jupiter-banner
+    {
+        background-image: url(../img/jupiter_bg.png);
+    }
+
+    #io-banner
+    {
+        background-image: url(../img/io_bg.jpg);
+    }
+
+    #europa-banner
+    {
+        background-image: url(../img/europa_bg.jpg);
+    }
+
+    #saturn-banner
+    {
+        background-image: url(../img/saturn_bg.jpg);
+    }
+
+    #uranus-banner
+    {
+        background-image: url(../img/uranus_bg.jpg);
+    }
+
+    #neptune-banner
+    {
+        background-image: url(../img/neptune_bg.jpg);
+    }
+
+    #pluto-banner
+    {
+        background-image: url(../img/pluto_mobile_bg.jpg);
+    }
+
+    .travel-panel
+    {
+        display: block;
+        width: 90%;
+        margin:auto;
+        height: 30em;
+        border-radius: 10px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-bottom:2em;
+        position: relative;
+    }
+
+    .travel-panel h1
+    {
+        width:30%;
+        margin:auto;
+        text-decoration: none;
+    }
+
+    .travel-panel p
+    {
+        background-color: #333;
+        position: absolute;
+        bottom:0;
+        margin:0;
+        padding: 1em 1em 1em 1em;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    #travel-list
+    {
+        color:white;
+    }
+
+    .info-tile img
+    {
+        width:100%;
+    }
+
+    #info-content h1
+    {
+        margin-bottom: 1em;
+    }
+
+    .info-tile
+    {
+        display:inline-block;
+        width:25%;
+        margin: 0 1em 0 1em;
+    }
+
+    #info-text
+    {
+        display:none;
+    }
+
+    #info-text:target
+    {
+        display:block;
+        position:fixed;
+        width:60%;
+        height:60%;
+        top:20%;
+        left:20%;
+        background-color:white;
+        border-radius:10px;
+        box-shadow: 0px 0px 10px black;
+   }
+
+   #info-text h1
+   {
+       margin-top:0;
+       width:100%;
+       background-image: linear-gradient(to top, rgb(60, 48, 170), rgb(11, 11, 82));
+       color:white;
+       text-shadow: 2px 2px 2px black;
+       border-top-left-radius:10px;
+       border-top-right-radius:10px;
+       border-bottom:3px solid orange;
+   }
+
+   #info-text a
+   {
+       position: absolute;
+       top:5%;
+       right:5%;
+       color:white;
+       text-shadow: 2px 2px 2px black;
+       text-decoration:none;
+       font-weight: bold;
+       font-size:1.5em;
+   }
+
+   #info-text p
+   {
+       padding-left:5%;
+   }
 }
