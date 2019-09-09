@@ -71,7 +71,6 @@
           <?php if(isset($_GET['adults']) || isset($_GET['kids'])){
               $total = $_GET['adults']+$_GET['kids'];
           }?>
-
   </form>
 
 
