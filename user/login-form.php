@@ -17,6 +17,6 @@ ini_set('display_errors', 1);
         </form>
     </div>
     <span class="registration-link">
-        Non hai un account? <a href="<?= $registration ?>"> <br>Registrati qui!</a>
+        Non hai un account?  <a href="<?= $registration ?>"> Registrati qui!</a>
     </span>
 </div>

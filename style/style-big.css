@@ -1,4 +1,4 @@
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 595px){
     body {
         /*padding-top:60px;*/
         /*margin: auto;
@@ -36,19 +36,24 @@
         background-image: linear-gradient(to top, rgb(60, 48, 170), rgb(11, 11, 82));
     }
 
-
-    #title h1, #title img
+    #title
     {
+        height:inherit;
+        margin:0;
+    }
+
+    #title p, #title img
+    {
+        margin:0;
         display:inline-block;
     }
 
     #title img
     {
-        height:40px;
-        width:40px;
+        height:30px;
+        width:28px;
         -webkit-filter: drop-shadow(2px 2px 2px black);
         filter: drop-shadow(2px 2px 2px black);
-        margin-left:0.5em;
     }
 
     /*#logo {
@@ -69,18 +74,23 @@
         width:100%;
     }
 
+    #title, .topnav
+    {
+        display:inline-block;
+    }
+
     #title
     {
-        position:relative;
+       /* position:relative;
         bottom:5px;
         height:inherit;
-        width:40%;
-        margin-left:5vw;
-        font-size:3vw;
+        width:40%;*/
+        margin-left:5%;
+        font-size:2em;
         font-weight: bold;
         letter-spacing: 5px;
         text-align:left;
-        width:80%;
+        width:40%;
         font-family: 'lato', sans-serif;
         color:white;
         text-shadow: 2px 2px 2px black;
@@ -193,9 +203,9 @@
 
     .topnav {
         position: absolute;
-        right: 5%;
-        bottom:0.3em;
-        display: inline-block;
+        right:5%;
+        max-width:40%;
+        height:inherit;
     }
 
     .topnav a
@@ -304,16 +314,21 @@
 
     .topnav ul
     {
+        position: relative;
+        top:0;
+        left:0;
+        width:100%;
+        height:inherit;
+        vertical-align: middle;
         list-style-type:none;
-        margin-top:1em;
-        margin-bottom:1em;
         padding:0;
-
+        padding-top:0.5em;
+        margin:0;
     }
 
     .topnav li
     {
-        display:inline-block;
+        display:inline;
         height:1.5em;
         vertical-align: middle;
         margin-left:0.5em;
@@ -600,7 +615,7 @@
 
     #neptune-banner p
     {
-        width:25%
+        width:25%;
     }
 
     #pluto-banner
@@ -1178,3 +1193,11 @@
    }
 
 }
+/*@media only screen and (min-width:595px and max-width:620px)
+{
+   #title p, #title img
+   {
+        display:block;
+   }
+}*/
+
