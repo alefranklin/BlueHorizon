@@ -34,9 +34,9 @@
     }
 
     protected function get_tupla() {
-      return "SELECT id, description, departure, arrival, id_rocket, date
-              FROM `travels`, rocket_travel as rt
-              WHERE `id` = rt.id_travel and `id` = $this->id";
+      return "SELECT id, id_planet, id_rocket, departure_date, duration
+              FROM `travels`
+              WHERE `id` = $this->id";
     }
 
     protected function add() {

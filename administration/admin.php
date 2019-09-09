@@ -75,7 +75,7 @@
                     <td><?= $user['lastname'] ?></td>
                     <td><?= $user['sex'] ?></td>
                     <td><?= $user['email'] ?></td>
-                    <td><?= $user['is_admin'] ?></td>
+                    <td><?= $user['isAdmin'] ?></td>
                     <td><a href="manage.php?id=<?= $user['id'] ?>&action=edit&section=user">Edit</a></td>
                     <td><a href="manage.php?id=<?= $user['id'] ?>&action=delete&section=user">Delete</a></td>
                 </tr>

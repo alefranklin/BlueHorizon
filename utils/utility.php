@@ -99,7 +99,7 @@
 
     function isAdmin() {
         if(isset($_SESSION['user'])) {
-            return $_SESSION['user']['is_admin'];
+            return $_SESSION['user']['isAdmin'];
         } else return 0;
     }
 

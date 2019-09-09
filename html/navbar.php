@@ -49,7 +49,12 @@ Horizon
       <!-- icona user o, se loggato, username -->
       <li>  <?php if (isAuth()) { ?>
           <a class="user-icon-container space-font" href="<?= $host_path."user/privato.php" ?>">
-            UTENTE
+            <?php if(isAdmin()){
+              echo "ADMIN";
+            } else {
+              echo $username;
+            }
+          ?>
           </a>
       <?php } else { ?>
           <a href="javascript:void(0); "class="user-icon-container space-font" onclick="toggleUser(0)">
