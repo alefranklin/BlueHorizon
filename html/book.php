@@ -67,6 +67,10 @@
             <input type="number" min=0 max=4 id="kids_counter" />
             <a href="javascript:void(0); " onclick="get_people()">Aggiungi persone</a>
           <?php }?>
+
+          <?php if(isset($_GET['adults']) || isset($_GET['kids'])){
+              $total = $_GET['adults']+$_GET['kids'];
+
   </form>
 
 

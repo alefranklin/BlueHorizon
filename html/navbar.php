@@ -31,11 +31,15 @@ Blue
 <p>
 Horizon
 </p>
-<img src="http://localhost/BlueHorizon/img/logo1.png" alt="logo"/>
+<img id="logo" src="http://localhost/BlueHorizon/img/logo1.png" alt="logo"/>
 </div>
 <!--<img id="logo" role="banner" src="?= $host_path."img/logo-placeholder.png" ?>" alt="Logo BlueHorizon"> -->
+<div id="menuShowMobile" onclick="toggleMenu()">
+  <a><i class="fa fa-bars"></i></a>
+</div>
 <nav id="menu" class="topnav">
     <ul>
+      <li><href</li>
       <li><a class="<?= setActive($self,$home) ?>" href="<?= $host_path."index.php" ?>" > HOME </a></li>
       <li><a class="<?= setActive($self,$company) ?>" href="<?= $host_path."html/company.php" ?>" > COMPANY </a></li>
       <li><a class="<?= setActive($self,$rockets) ?>" href="<?= $host_path."html/rockets.php" ?>" > ROCKETS </a></li>

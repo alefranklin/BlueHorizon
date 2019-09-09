@@ -1,5 +1,5 @@
 @media handheld, screen and (max-width: 594px) {
-    
+
     body {
         max-width:100%;
         text-align: center;
@@ -34,15 +34,13 @@
     {
         background-image: linear-gradient(to top, rgb(60, 48, 170), rgb(11, 11, 82));
         height:auto;
+        line-height: 0;
     }
 
-    #title img {
-        /*position: absolute;
-        bottom:3%;
-        right:3%;*/
-        margin-left:1em;
-        width: 15%;
-        overflow: hidden;
+    #logo {
+        visibility: hidden;
+        height: 0px;
+        width: 0px;
     }
 
     #title p{
@@ -70,10 +68,38 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;*/
     }
-    
+
+    #menuShowMobile {
+      max-width: 100%;
+      height:auto;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: auto;
+      background-color: #333;
+      text-align: center;
+    }
+
+    #menuShowMobile a{
+      color: white;
+      font-weight: bold;
+    }
+
+    .showMenu{
+      -webkit-animation: showMenu 1s;
+      animation: showMenu 1s;
+      animation-fill-mode: forwards;
+    }
+
+    .hideMenu{
+      -webkit-animation: hideMenu 1s;
+      animation: hideMenu 1s;
+      animation-fill-mode: forwards;
+    }
+
     #menu {
         max-width: 100%;
-        height:auto;
+        height:0;
         list-style-type: none;
         margin: 0;
         padding: 0;
@@ -99,7 +125,7 @@
         text-decoration: none;
         font-size: 17px;
     }
-    
+
    /* .topnav a:not(:first-child) {
         display: none;
     }*/
@@ -127,7 +153,7 @@
         outline: none;
         margin:0;
         padding:0;
-        
+
     }
     .topnav .fa-bars
     {
@@ -189,7 +215,7 @@
         width:100%;
         background-color: black;
         color: white;
-        border-top: 5px solid white; 
+        border-top: 5px solid white;
     }
 
     #skip-footer

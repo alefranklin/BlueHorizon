@@ -48,24 +48,13 @@
         display:inline-block;
     }
 
-    #title img
+    #logo
     {
         height:30px;
         width:28px;
         -webkit-filter: drop-shadow(2px 2px 2px black);
         filter: drop-shadow(2px 2px 2px black);
     }
-
-    /*#logo {
-        float: left;
-        position: relative;
-        left: 7%;
-        min-height: 20px;
-        min-width: 50px;
-        width: auto;
-        height: inherit;
-        overflow: hidden;
-    }*/
 
     #body-page
     {
@@ -94,6 +83,12 @@
         font-family: 'lato', sans-serif;
         color:white;
         text-shadow: 2px 2px 2px black;
+    }
+
+    #menuShowMobile{
+      display: none;
+      height: 0;
+      width: 0;
     }
 
     #presentation h1
@@ -1104,7 +1099,7 @@
         text-decoration:none;
    }
 
-   
+
    button.blue-pill {
      background-color: #a5b8da;
      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #a5b8da), color-stop(100%, #7089b3));
@@ -1200,4 +1195,3 @@
         display:block;
    }
 }*/
-

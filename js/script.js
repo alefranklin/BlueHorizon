@@ -1,9 +1,9 @@
-function toggleHamburger() {
+function toggleMenu() {
     var menu = document.getElementById("menu");
-    if (menu.className === "topnav") {
-        menu.className += " responsive";
+    if (menu.className === "topnav" || menu.className === "topnav hideMenu") {
+        menu.className = "topnav showMenu";
     } else {
-        menu.className = "topnav";
+        menu.className = "topnav hideMenu";
     }
 }
 
