@@ -39,7 +39,6 @@ Horizon
 </div>
 <nav id="menu" class="topnav">
     <ul>
-      <li><href</li>
       <li><a class="<?= setActive($self,$home) ?>" href="<?= $host_path."index.php" ?>" > HOME </a></li>
       <li><a class="<?= setActive($self,$company) ?>" href="<?= $host_path."html/company.php" ?>" > COMPANY </a></li>
       <li><a class="<?= setActive($self,$rockets) ?>" href="<?= $host_path."html/rockets.php" ?>" > ROCKETS </a></li>
@@ -50,13 +49,11 @@ Horizon
       <!-- icona user o, se loggato, username -->
       <li>  <?php if (isAuth()) { ?>
           <a class="user-icon-container space-font" href="<?= $host_path."user/privato.php" ?>">
-              <i class="user-icon fas fa-user"></i>
-              <span class="hide">Pagina Utente</span><span class="navbar-username"><?= strtoupper($username) ?></span>
+            UTENTE
           </a>
       <?php } else { ?>
           <a href="javascript:void(0); "class="user-icon-container space-font" onclick="toggleUser(0)">
-              <i class="user-icon fas fa-user" aria-label="LOGIN"></i>
-              <span class="hide">LOGIN</span>
+              LOGIN
           </a>
       </li>
     </ul>
@@ -64,9 +61,5 @@ Horizon
           <?php include($local_path."user/login-form.php"); ?>
       <?php } ?>
 
-      <!-- icona hamburger -->
-      <a href="javascript:void(0);" class="icon" onclick="toggleHamburger()">
-          <i class="fa fa-bars"></i>
-      </a>
 </nav>
 </div>

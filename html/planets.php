@@ -25,37 +25,12 @@
   <div id="planet-layout">
     <a href="travels.php" id="breadcrumb">← Return to Travels</a>
     <?php
-      $getplanet="SELECT name FROM images WHERE name='$destination'";
+      $getplanet="SELECT t.departure_date from travels t, planets p where p.name='$destination' and t.id_planet = p.id;";
       $planet_result=mysqli_query($db, $getplanet);
-      $planet_name=$planet_result->fetch_assoc();
-      echo("<h1>".$planet_name['name']."</h1>")
+      while($dates = $planet_result->fetch_assoc()){
+        echo("<h1>".$dates['departure_date']."</h1>");
+      }
     ?>
 
-    <img src="../img/planetph.jpg" alt="pianeta"/>
-    <table id="flight-infos">
-      <tr>
-        <th> Date </th>
-        <th> Adult </th>
-        <th> Child </th>
-        <th> Group </th>
-        <th> First-class </th>
-        <th> Choose </th>
-      </tr>
-      <tr>
-        <td> DDDD </td>
-        <td> $$$$ </td>
-        <td> $$$$ </td>
-        <td> $$$$ </td>
-        <td> $$$$ </td>
-        <td> $$$$ </td>
-      </tr>
-    </table>
-    <p> description description description description description description description
-    description description description description description description description
-    description description description description description description description
-    description description description description description description description
-    description description description description description description description
-    description description description description description description description
-    </p>
   </div>
 </div>

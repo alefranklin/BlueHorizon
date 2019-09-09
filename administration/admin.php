@@ -13,7 +13,7 @@
 
     $table_users = get_table('users');
 
-    $travels_sql  = 'SELECT p.name as planet, r.name as rocket, t.departure_date as date, t.duration FROM planets p, rockets r, travels t WHERE t.id_rocket = r.id AND t.id_planet = p.id';
+    $travels_sql  = 'SELECT t.id as id, p.name as planet, r.name as rocket, t.departure_date as date, t.duration FROM planets p, rockets r, travels t WHERE t.id_rocket = r.id AND t.id_planet = p.id';
     $table_travels = get_query($travels_sql);
 
     $PageTitle="Pannello Admin";
