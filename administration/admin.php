@@ -13,8 +13,8 @@
 
     $table_users = get_table('users');
 
-    $sql  = 'SELECT id, description, departure, arrival, id_rocket, date  FROM `travels`, rocket_travel as rt WHERE `id` = rt.id_travel';
-    $table_travels = get_query($sql);
+    $travels_sql  = 'SELECT p.name as planet, r.name as rocket, t.departure_date as date, t.duration FROM planets p, rockets r, travels t WHERE t.id_rocket = r.id AND t.id_planet = p.id';
+    $table_travels = get_query($travels_sql);
 
     $PageTitle="Pannello Admin";
 
@@ -75,7 +75,7 @@
                     <td><?= $user['lastname'] ?></td>
                     <td><?= $user['sex'] ?></td>
                     <td><?= $user['email'] ?></td>
-                    <td><?= $user['isAdmin'] ?></td>
+                    <td><?= $user['is_admin'] ?></td>
                     <td><a href="manage.php?id=<?= $user['id'] ?>&action=edit&section=user">Edit</a></td>
                     <td><a href="manage.php?id=<?= $user['id'] ?>&action=delete&section=user">Delete</a></td>
                 </tr>
@@ -94,11 +94,10 @@
             <table cellpadding="0" cellspacing="0" border="0">
               <thead>
                 <tr>
-                  <th>Partenza</th>
-                  <th>Arrivo</th>
+                  <th>Destination</th>
                   <th>Rocket</th>
-                  <th>Data</th>
-                  <th>Descrizione</th>
+                  <th>Date</th>
+                  <th>Duration</th>
                   <th></th>
                   <th></th>
                 </tr>
@@ -111,11 +110,10 @@
 
                 <?php while($travel = $table_travels->fetch_assoc()) { ?>
                 <tr>
-                    <td><?= $travel['departure'] ?></td>
-                    <td><?= $travel['arrival'] ?></td>
-                    <td><?= $travel['id_rocket'] ?></td>
+                    <td><?= $travel['planet'] ?></td>
+                    <td><?= $travel['rocket'] ?></td>
                     <td><?= date("Y-m-d", strtotime($travel['date'])) ?></td>
-                    <td><?= $travel['description'] ?></td>
+                    <td><?= $travel['duration'] ?></td>
                     <td><a href="manage.php?id=<?= $travel['id'] ?>&action=edit&section=travel">Edit</a></td>
                     <td><a href="manage.php?id=<?= $travel['id'] ?>&action=delete&section=travel">Delete</a></td>
                 </tr>

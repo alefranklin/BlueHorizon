@@ -1,0 +1,25 @@
+
+------------- priceCalc ---- Calcola prezzo totale viaggio
+
+DELIMITER //
+CREATE FUNCTION priceCalc (adults int, kids int ,cabin int ,duration int)
+RETURNS INTEGER
+BEGIN
+DECLARE day_adult INT;
+DECLARE day_kid INT;
+DECLARE total INT;
+SELECT adult_price INTO day_adult FROM cabins WHERE id = cabin;
+SELECT kid_price INTO day_kid FROM cabins WHERE id = cabin;
+SET total = ((day_adult*adults)+(day_kid*kids))*duration;
+RETURN total;
+END//
+
+
+
+
+------------- aggiunge totale cabine disponibili quando viene creato un viaggio
+
+DELIMITER //
+CREATE TRIGGER after_travel_insert AFTER INSERT ON travel
+BEGIN
+  EXECUTE IMMEDIATE 'CREATE VIEW temp_list_cabin' AS SELECT DISTINCT id_cabin,number from rocket_cabin where id_rocket = new.id_rocket';  

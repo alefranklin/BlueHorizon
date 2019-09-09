@@ -47,7 +47,7 @@
 
     </form>
 
-    Ritorn alla <a href="<?= $host_path ?>" id="back">Home</a>
+    Ritorna alla <a href="<?= $host_path ?>" id="back">Home</a>
   </section>
 </div>
 

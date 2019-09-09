@@ -56,8 +56,8 @@
     protected function add() {
       $passwd_hash = myhash($this->vars['password']);
 
-      return "INSERT INTO users (username, name,lastname,sex,email,pwhash,isAdmin)
-              VALUES ('{$this->vars['username']}','{$this->vars['name']}',
+      return "INSERT INTO users (id, username, name,lastname,sex,email,pwhash,isAdmin)
+              VALUES ('NULL','{$this->vars['username']}','{$this->vars['name']}',
                       '{$this->vars['lastname']}','{$this->vars['gender']}',
                       '{$this->vars['email']}','$passwd_hash',
                       '{$this->vars['isadmin']}')";
@@ -80,11 +80,11 @@
     protected function default() {
       // azione 'reg'
       $passwd_hash = myhash($this->vars['password']);
-      /* la query creera un utente normale */
-      return "INSERT INTO users (username, name,lastname,sex,email,pwhash)
-              VALUES ('{$this->vars['username']}','{$this->vars['name']}',
+      /* la query crea un utente normale */
+      return "INSERT INTO users (id,username,name,lastname,sex,email,pwhash,is_admin)
+              VALUES (NULL,'{$this->vars['username']}','{$this->vars['name']}',
                       '{$this->vars['lastname']}','{$this->vars['gender']}',
-                      '{$this->vars['email']}','$passwd_hash')";
+                      '{$this->vars['email']}','$passwd_hash',0)";
     }
 
     public function _form() {

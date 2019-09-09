@@ -12,5 +12,5 @@
 	$host = "localhost";
 	$db_user = "root"; //<--- cambiate con il vostro utente del database
 	$db_psw = "";  //<--- mette la vostra password del database
-	$db_name = "blueh_db";
+	$db_name = "new_blueh_db";
 ?>

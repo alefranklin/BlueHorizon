@@ -16,7 +16,6 @@
     <p>Put copyright, etc. here.</p>
   </div>
 
-  <script src="<?= $host_path."js/script.js" ?>"></script>
 
 </body>
 </html>

@@ -10,12 +10,13 @@
             die;
         }
         $title = "Benvenuto nell'area riservata";
+        $PageTitle="Pagina utente - ".$_SESSION['user']['username'];
     }
     else {
-        $title = "Area riservata";
+        $title = "Area riservata agli utenti";
     }
 
-    $PageTitle="Pagina utente - ".$_SESSION['user']['username'];
+
 
     function customPageHeader() { ?>
 
@@ -45,19 +46,68 @@
             <?php foreach($_SESSION['user'] as $key => $value): ?>
             <?= $key . ' : ' . $value ?><br/>
             <?php endforeach; ?>
-            autorizzato : <?= $_SESSION['autorizzato']; ?><br/>
         </p>
 
-        <p>
-            Per effettuare il logout clicca <a href="<?= $host_path."user/logout.php" ?>"><font color='blue'>qui</font></a>
-        </p>
-        <p>
-            Torna alla <a href="<?= $host_path ?>"><font color='blue'>Home</font></a>
-        </p>
+        <?php $orders_query = "SELECT o.id, p.name as planet, r.name as rocket, c.class, o.adults_number, o.kids_number
+                               FROM orders o, planets p, rockets r, travels t, cabins c
+                               WHERE id_user = 1
+                               AND p.id = t.id_planet
+                               AND r.id = t.id_rocket
+                               AND t.id = o.id_travel
+                               AND o.id_cabin = c.id";
+
+              $orders_list = get_query($orders_query); ?>
+
+
+        <section>
+            <h1>Lista viaggi:</h1>
+            <div class="tbl-header">
+              <table cellpadding="0" cellspacing="0" border="0">
+                <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Destination</th>
+                    <th>Rocket</th>
+                    <th>Cabin Class</th>
+                    <th>Number of adults</th>
+                    <th>Number of kids</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="tbl-content">
+            <table cellpadding="0" cellspacing="0" border="0">
+              <tbody>
+                <?php while($order = $orders_list->fetch_assoc()) { ?>
+                <tr>
+                    <td><?= $order['id'] ?></td>
+                    <td><?= $order['planet'] ?></td>
+                    <td><?= $order['rocket'] ?></td>
+                    <td><?= $order['class'] ?></td>
+                    <td><?= $order['adults_number'] ?></td>
+                    <td><?= $order['kids_number'] ?></td>
+                    <td><a href="manage.php?id=<?= $order['id'] ?>&action=edit&section=order">Edit</a></td>
+                    <td><a href="manage.php?id=<?= $order['id'] ?>&action=delete&section=order">Delete</a></td>
+                </tr>
+                <?php } ?>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+
+        <!--FINE PAGINA-->
+        <section>
+            <a href="<?= $host_path."user/logout.php" ?>">
+              <button class="blue-pill">Logout</button></a>
+        </section>
     <?php } else { ?>
-        <p>
-            Torna alla <a href="<?= $host_path ?>"><font color='blue'>Home</font></a>
-        </p>
+      <section>
+          <a href="<?= $host_path?>">
+            <button class="blue-pill">Home</button></a>
+      </section>
     <?php } ?>
 
 </div>

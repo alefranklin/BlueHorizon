@@ -14,6 +14,8 @@
 
         <meta charset="UTF-8">
 
+				<script src="<?= $host_path."js/script.js" ?>"></script>
+
         <link rel="stylesheet" type="text/css" href="<?= $host_path."style/animations.css" ?>">
 
         <link rel="stylesheet" type="text/css" href="<?= $host_path."style/style-small.css" ?>">

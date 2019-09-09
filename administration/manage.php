@@ -42,6 +42,10 @@
         $model = new Travel($section, $action, $id);
         break;
 
+      case 'order':
+        $model = new Order($section,$action, $id);
+        break;
+
       default:
         // code...
         break;

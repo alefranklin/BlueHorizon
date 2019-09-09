@@ -116,7 +116,6 @@
 
         default:
           $query = $this->default();
-          die();
           break;
       }
 

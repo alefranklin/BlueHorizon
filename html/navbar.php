@@ -12,6 +12,7 @@
     $rockets = "rockets.php";
     $travels = "travels.php";
     $info    = "infoplanet.php";
+    $book    = "book.php";
 
 
 ini_set('display_errors', 1);
@@ -32,6 +33,7 @@ ini_set('display_errors', 1);
       <li><a class="<?= setActive($self,$rockets) ?>" href="<?= $host_path."html/rockets.php" ?>" > ROCKETS </a></li>
       <li><a class="<?= setActive($self,$travels) ?>" href="<?= $host_path."html/travels.php" ?>" > TRAVELS </a></li>
       <li><a class="<?= setActive($self,$info) ?>" href="<?= $host_path."html/infoplanet.php" ?>" > INFOS </a></li>
+      <li><a class="<?= setActive($self,$book) ?>" href="<?= $host_path."html/book.php" ?>" > BOOK </a></li>
 
       <!-- icona user o, se loggato, username -->
       <li>  <?php if (isAuth()) { ?>
