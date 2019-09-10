@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Creato il: Set 04, 2019 alle 18:45
--- Versione del server: 10.1.40-MariaDB
--- Versione PHP: 7.3.5
+-- Host: 127.0.0.1
+-- Creato il: Set 10, 2019 alle 16:18
+-- Versione del server: 10.1.37-MariaDB
+-- Versione PHP: 7.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -215,14 +215,14 @@ CREATE TABLE `users` (
   `sex` set('M','F','N.D.','') NOT NULL,
   `email` varchar(32) NOT NULL,
   `pwhash` char(64) NOT NULL,
-  `is_admin` tinyint(1) NOT NULL DEFAULT '0'
+  `isAdmin` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dump dei dati per la tabella `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `name`, `lastname`, `sex`, `email`, `pwhash`, `is_admin`) VALUES
+INSERT INTO `users` (`id`, `username`, `name`, `lastname`, `sex`, `email`, `pwhash`, `isAdmin`) VALUES
 (1, 'admin', 'admin', 'admin', 'N.D.', 'admin@bluehorizon.com', '879f17afda4a4620870ddd4cb9d665255b46054e4a4297f577d193da17cb7520', 1),
 (2, 'hesken', 'alessandro', 'franchin', 'M', 'alessandro.franchin@hotmail.it', 'c7b84d942155cb80e99aa9659a23c753b12cc13a95b5211bccd6c8ad2ad0f4dd', 0);
 
