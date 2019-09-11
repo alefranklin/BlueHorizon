@@ -70,7 +70,7 @@
     function setActive($self, $actual){
         $self = explode('/',$self);
         $self = end($self);
-        return ($self == $actual) ? "active space-font" : "space-font";
+        return ($self == $actual) ? "space-font active" : "space-font";
     }
 
     function isAuth() {
@@ -79,19 +79,23 @@
         } else return 0;
     }
 
-    function smartRedir($msg) {
+    function smartRedir($msg,$link = ""){
         global $host_path;
 
-        if (isset($_SERVER['HTTP_REFERER'])){
-
-            // elimino eventuali variabili get precedenti
-            $prev_page = current(explode('?', $_SERVER['HTTP_REFERER']));
-            header("location:$prev_page"."?snackmsg=$msg");
-
+        if($link != ""){
+          header("location:$link"."?snackmsg=$msg");
         } else {
-            header("location:$host_path"."?snackmsg=$msg"); // homepage
+          if (isset($_SERVER['HTTP_REFERER'])){
+              // elimino eventuali variabili get precedenti
+              $prev_page = current(explode('?', $_SERVER['HTTP_REFERER']));
+              header("location:$prev_page"."?snackmsg=$msg");
+
+          } else {
+              header("location:$host_path"."?snackmsg=$msg"); // homepage
+          }
         }
     }
+
 
     function displayErrors($DEBUG) {
         ini_set('display_errors', $DEBUG);

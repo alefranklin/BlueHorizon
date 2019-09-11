@@ -118,9 +118,9 @@
           $query = $this->default();
           break;
       }
-
+      global $host_path;
       $result = $db->query($query) or die(mysqli_error($db));
-      smartRedir(5);
+      smartRedir(5,$host_path."user/privato.php/");
       die();
 
     }

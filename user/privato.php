@@ -6,7 +6,9 @@
     if (isAuth()) {
 
         if(isAdmin()) {
-            header("location:".$host_path."administration/admin.php");
+            $snackstring = "";
+            if(isset($_GET['snackmsg']))  $snackstring = "?snackmsg=".$_GET['snackmsg'];
+            header("location:".$host_path."administration/admin.php".$snackstring);
             die;
         }
         $title = "Benvenuto nell'area riservata";

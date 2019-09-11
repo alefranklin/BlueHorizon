@@ -73,8 +73,6 @@ function snackMessage(msg){
       snackImg.className = message_type;
       snackClass = message_type + " show"
       snackDiv.className = snackClass;
-      console.log(snackClass);
-      console.log(message_content);
       setTimeout(function(){ snackDiv.className = snackDiv.className.replace(snackClass, ""); }, 3000);
     }
   }

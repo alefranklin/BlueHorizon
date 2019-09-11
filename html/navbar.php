@@ -1,18 +1,20 @@
 <?php
-    include_once($local_path."utils/utility.php");
+include_once($local_path . "utils/utility.php");
 
-    if (isAuth()) {
-        $username = $_SESSION['user']['username'];
-    }
+if (isAuth()) {
+    $username = $_SESSION['user']['username'];
+}
 
-    $self = $_SERVER['PHP_SELF'];
-    // link delle pagine
-    $home = "index.php";
-    $company = "company.php";
-    $rockets = "rockets.php";
-    $travels = "travels.php";
-    $info    = "infoplanet.php";
-    $book    = "book.php";
+$self    = $_SERVER['PHP_SELF'];
+// link delle pagine
+$home    = "index.php";
+$company = "company.php";
+$rockets = "rockets.php";
+$travels = "travels.php";
+$info    = "infoplanet.php";
+$book    = "book.php";
+$admin   = "admin.php";
+$user    = "privato.php";
 
 
 ini_set('display_errors', 1);
@@ -39,32 +41,41 @@ Horizon
 </div>
 <nav id="menu" class="topnav">
     <ul>
-      <li><a class="<?= setActive($self,$home) ?>" href="<?= $host_path."index.php" ?>" > HOME </a></li>
-      <li><a class="<?= setActive($self,$company) ?>" href="<?= $host_path."html/company.php" ?>" > COMPANY </a></li>
-      <li><a class="<?= setActive($self,$rockets) ?>" href="<?= $host_path."html/rockets.php" ?>" > ROCKETS </a></li>
-      <li><a class="<?= setActive($self,$travels) ?>" href="<?= $host_path."html/travels.php" ?>" > TRAVELS </a></li>
-      <li><a class="<?= setActive($self,$info) ?>" href="<?= $host_path."html/infoplanet.php" ?>" > INFOS </a></li>
-      <li><a class="<?= setActive($self,$book) ?>" href="<?= $host_path."html/book.php" ?>" > BOOK </a></li>
+      <li><a class="<?= setActive($self, $home) ?>" href="<?= $host_path . "index.php" ?>" > HOME </a></li>
+      <li><a class="<?= setActive($self, $company) ?>" href="<?= $host_path . "html/company.php" ?>" > COMPANY </a></li>
+      <li><a class="<?= setActive($self, $rockets) ?>" href="<?= $host_path . "html/rockets.php" ?>" > ROCKETS </a></li>
+      <li><a class="<?= setActive($self, $travels) ?>" href="<?= $host_path . "html/travels.php" ?>" > TRAVELS </a></li>
+      <li><a class="<?= setActive($self, $info) ?>" href="<?= $host_path . "html/infoplanet.php" ?>" > INFOS </a></li>
+      <li><a class="<?= setActive($self, $book) ?>" href="<?= $host_path . "html/book.php" ?>" > BOOK </a></li>
 
       <!-- icona user o, se loggato, username -->
-      <li>  <?php if (isAuth()) { ?>
-          <a class="user-icon-container space-font" href="<?= $host_path."user/privato.php" ?>">
-            <?php if(isAdmin()){
-              echo "ADMIN";
-            } else {
-              echo $username;
-            }
-          ?>
-          </a>
-      <?php } else { ?>
-          <a href="javascript:void(0); "class="user-icon-container space-font" onclick="toggleUser(0)">
+      <li>  <?php
+if (isAuth()) {
+    if (isAdmin()) {
+?>
+                      <a class="<?= setActive($self, $admin) ?>" href="<?= $host_path . "user/privato.php" ?>"> ADMIN </a>
+                    <?php
+    } else {
+?>
+                        <a class="<?= setActive($self, $user) ?>" href="<?= $host_path . "user/privato.php" ?>"> <?php
+        echo strtoupper($username);
+?> </a>
+      <?php
+    }
+} else {
+?>
+          <a href="javascript:void(0); "class="space-font" onclick="toggleUser(0)">
               LOGIN
           </a>
       </li>
     </ul>
           <!-- login form -->
-          <?php include($local_path."user/login-form.php"); ?>
-      <?php } ?>
+          <?php
+    include($local_path . "user/login-form.php");
+?>
+      <?php
+}
+?>
 
 </nav>
 </div>

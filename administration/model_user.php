@@ -64,13 +64,24 @@
     }
 
     protected function edit() {
-      if(empty($this->vars['password'])) {
-        // la password non è stata modificata
+      $passwd_change_query = "";
+      if(!empty($this->vars['password'])) {
+        // la password è stata modificata
+        $passwd_hash = myhash($this->vars['password']);
+        $passwd_change_query = ", pwhash = '".$passwd_hash."' ";
       }
+      if(empty($this->vars['isAdmin']))  $admin = 0;
+      else                               $admin = 1;
+      return "UPDATE users ".
+              "SET username = '".$this->vars['username']."', ".
+                  "name = '".$this->vars['name']."', ".
+                  "lastname = '".$this->vars['lastname']."', ".
+                  "sex = '".$this->vars['gender']."', ".
+                  "email = '".$this->vars['email']."', ".
+                  "isAdmin = ".$admin." ".$passwd_change_query.
+                  "WHERE id = ".$this->id;
 
       // altrimenti la password è stata modificata
-      $passwd_hash = myhash($this->vars['password']);
-      return "";
     }
 
     protected function delete() {
@@ -81,7 +92,7 @@
       // azione 'reg'
       $passwd_hash = myhash($this->vars['password']);
       /* la query crea un utente normale */
-      return "INSERT INTO users (id,username,name,lastname,sex,email,pwhash,is_admin)
+      return "INSERT INTO users (id,username,name,lastname,sex,email,pwhash,isAdmin)
               VALUES (NULL,'{$this->vars['username']}','{$this->vars['name']}',
                       '{$this->vars['lastname']}','{$this->vars['gender']}',
                       '{$this->vars['email']}','$passwd_hash',0)";
