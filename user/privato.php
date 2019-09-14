@@ -52,8 +52,8 @@
 
         <?php $orders_query = "SELECT o.id, p.name as planet, r.name as rocket, c.class, o.adults_number, o.kids_number
                                FROM orders o, planets p, rockets r, travels t, cabins c
-                               WHERE id_user = 1
-                               AND p.id = t.id_planet
+                               WHERE o.id_user = ".$_SESSION['user']['id'].
+                               " AND p.id = t.id_planet
                                AND r.id = t.id_rocket
                                AND t.id = o.id_travel
                                AND o.id_cabin = c.id";
