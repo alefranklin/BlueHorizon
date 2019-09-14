@@ -51,15 +51,44 @@
       if($passengers_error == true){
         echo "errore passeggeri";
       }?>
-    <form method="post" action="planets.php">
-      <input type="hidden" name="planet" value="<?php echo $_POST['planet'];?>"/>
-      <input type="hidden" name="date" value="<?php echo $_POST['date']?>"/>
-      <label for="adults">Number of adults: </label>
-      <input type="number" max="6" min="1" value="1" name="adults"/><br><br>
-      <label for="childen">Number of children: </label>
-      <input type="number" max="5" min="0" value="0" name="children"/>
-      <input type="submit"/>
-    </form>
+    <div id="book-date-form-div">
+      <form method="post" action="planets.php">
+        <input type="hidden" name="planet" value="<?php echo $_POST['planet'];?>"/>
+        <input type="hidden" name="date" value="<?php echo $_POST['date']?>"/>
+        <div id="passegers-div">
+          <label for="adults">Number of adults: </label>
+          <input type="number" max="6" min="1" value="1" name="adults"/><br><br>
+          <label for="children">Number of children: </label>
+          <input type="number" max="5" min="0" value="0" name="children"/>
+        </div>
+        <div id="cabin-div">
+          <select name="cabin_type">
+            <option value="1">Standard</option>
+            <option value="2">Deluxe</option>
+            <option value="3">Space Club</option>
+          </select>
+        </div>
+        <input type="submit"/>
+      </form>
+    </div>
+<?php }
+
+    if(isset($_POST['cabin_type']) && $passengers_error == false){
+
+      $total_passengers = $_POST['adults'] + $_POST['children'];
+?>
+    
+  <?php
+
+      $query = "SELECT t.duration as duration FROM travels t, planets p WHERE p.name = '".$_POST['planet']."' and t.departure_date = '2019-09-21' AND t.id_planet = p.id";
+      $duration_result=mysqli_query($db, $query);
+      $duration = $duration_result->fetch_assoc();
+      $query = "SELECT priceCalc(".$_POST['adults'].",".$_POST['children'].",".$_POST['cabin_type'].",".$duration['duration'].") as price";
+      $priceCalc_result = mysqli_query($db, $query);
+      $price = $priceCalc_result->fetch_assoc();
+      echo $price['price'];
+      ?>
+
 <?php }?>
   </div>
 </div>
