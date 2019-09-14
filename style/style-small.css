@@ -35,6 +35,11 @@
         background-image: linear-gradient(to top, rgb(60, 48, 170), rgb(11, 11, 82));
         height:auto;
         line-height: 0;
+        font-weight: bold;
+        font-family: 'lato', sans-serif;
+        color:white;
+        text-shadow: 2px 2px 2px black;
+        text-align: center;
     }
 
     #logo {
@@ -166,6 +171,14 @@
     {
         display:none;
     }
+
+    .skip{
+        position: fixed;
+        height: 20px;
+        top: -20px;
+        width: 100%;
+    }
+
     #skip-main
     {
         display: none;
@@ -227,11 +240,12 @@
 
     #skip-footer
     {
+        display: none;
         padding-top: 3em;
         padding-bottom:1.5em;
     }
 
-    #body-page, #scroll-back-btn, #skip-footer
+    #body-page, #scroll-back-btn
     {
         display:block;
     }
