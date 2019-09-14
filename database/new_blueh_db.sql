@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Set 10, 2019 alle 16:18
+-- Creato il: Set 14, 2019 alle 17:05
 -- Versione del server: 10.1.37-MariaDB
 -- Versione PHP: 7.2.12
 
@@ -113,7 +113,8 @@ CREATE TABLE `planets` (
 
 INSERT INTO `planets` (`id`, `name`) VALUES
 (2, 'Giove'),
-(1, 'Marte');
+(1, 'Marte'),
+(3, 'Mercurio');
 
 -- --------------------------------------------------------
 
@@ -180,7 +181,9 @@ INSERT INTO `travels` (`id`, `id_rocket`, `id_planet`, `departure_date`, `durati
 (3, 1, 2, '2019-06-05', 7),
 (4, 1, 1, '2019-06-07', 7),
 (5, 1, 2, '2019-07-24', 7),
-(6, 1, 1, '2019-08-01', 4);
+(6, 1, 1, '2019-08-01', 4),
+(7, 1, 3, '2019-09-21', 7),
+(8, 1, 3, '2019-09-30', 7);
 
 -- --------------------------------------------------------
 
@@ -223,8 +226,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `name`, `lastname`, `sex`, `email`, `pwhash`, `isAdmin`) VALUES
-(1, 'admin', 'admin', 'admin', 'N.D.', 'admin@bluehorizon.com', '879f17afda4a4620870ddd4cb9d665255b46054e4a4297f577d193da17cb7520', 1),
-(2, 'hesken', 'alessandro', 'franchin', 'M', 'alessandro.franchin@hotmail.it', 'c7b84d942155cb80e99aa9659a23c753b12cc13a95b5211bccd6c8ad2ad0f4dd', 0);
+(1, 'admin', 'admin', 'admin', 'N.D.', 'admin@bluehorizon.com', 'F9A81477552594C79F2ABC3FC099DAA896A6E3A3590A55FFA392B6000412E80B', 1),
+(2, 'alefranklin', 'alessandro', 'franchin', 'M', 'alessandro.franchin@hotmail.it', 'a2288eba763cccbde7b593f8063be77d99c77f6eb76996d84451c047a14a51ef', 0),
+(3, 'user', 'user', 'user', 'N.D.', 'user@bluehorizon.com', 'A5DD24B2F08A686FD386C22C3FF8EE281EF2FBFF1FDE7008668CDA3DECFA4669', 0);
 
 --
 -- Indici per le tabelle scaricate
@@ -307,7 +311,7 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT per la tabella `planets`
 --
 ALTER TABLE `planets`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT per la tabella `rockets`
@@ -319,13 +323,13 @@ ALTER TABLE `rockets`
 -- AUTO_INCREMENT per la tabella `travels`
 --
 ALTER TABLE `travels`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT per la tabella `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Limiti per le tabelle scaricate
