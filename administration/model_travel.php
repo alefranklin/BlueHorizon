@@ -10,10 +10,15 @@
           case 'edit':
             $this->title = "Modifica il Viaggio";
             $this->msg_form_button = "Modifica";
+
             break;
           case 'add':
             $this->title = "Aggiungi un Viaggio";
             $this->msg_form_button = "Aggiungi";
+            break;
+          case 'delete':
+            $this->title = "Elimina il Viaggio";
+            $this->msg_form_button = "Elimina";
             break;
           default:
             break;
@@ -45,7 +50,10 @@
     }
 
     protected function edit() {
-      return ""; /*UPDATE travels
+      return "UPDATE travels
+              SET id_planet = {$planet['id']}, departure_date = {$this->vars['departure_date']}
+              WHERE id = $this->id";
+              /*UPDATE travels
                    SET description = $travel_desc, departure = $departure_planet, arrival = $arrival_planet
                    WHERE id = $this->id"*/
     }
@@ -57,7 +65,9 @@
     protected function default() {}
 
     public function _form() {
+      global $db;
       ?>
+            <!--
             <div class="group">
                 <input type="text" name="departure" value="<?= $this->vars['departure'] ?>" <?= (isset($edit)) ? "" : 'required'?>>
                 <span class="highlight"></span>
@@ -65,15 +75,51 @@
                 <span class="error">* <?= $this->vars['departureErr'] ?></span>
                 <label>Departure</label>
             </div>
+          -->
+            <?php
+
+            //TODO: per elimina viaggio mostrare solo dati attuali -> chiedere conferma prima di eliminare il viaggio
+
+            //mostra dati attuali del viaggio da modificare/eliminare
+            /*if(isset($edit)){
+
+              echo "Travel ID: ".$this->vars['id'];
+              echo "<br>";
+              echo "Destination: ".$this->vars['id_planet'];
+              echo "<br>";
+            }*/
+
+
+            ?>
 
             <div class="group">
-                <input type="text" name="arrival" value="<?= $this->vars['arrival'] ?>" <?= (isset($edit)) ? "" : 'required'?>>
+              <!--  <input type="text" name="arrival" value="<?= $this->vars['arrival'] ?>" <?= (isset($edit)) ? "" : 'required'?>>  -->
+                <select name="arrival" <?= (isset($edit)) ? "" : 'required'?>>
+
+
+                  <?php
+
+                    $getArrival="SELECT name, id from  planets;";
+                    $arrival_result=mysqli_query($db, $getArrival);
+
+                    while($planet = $arrival_result->fetch_assoc()){
+
+                      echo "<option value='".$planet['id']."'>".$planet['name']."</option>";
+                      /*
+                      ?>
+                      <option value='<?php $planet['id'] ?>'> <?php $planet['name'] ?> </option>
+                      <?php*/
+                    }
+                  ?>
+                </select>
+
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <span class="error">* <?= $this->vars['arrivalErr'] ?></span>
                 <label>Arrival</label>
             </div>
 
+            <!--
             <div class="group">
                 <textarea rows="10" cols="80" name="description" <?= (isset($edit)) ? "" : 'required'?>><?= $this->vars['description'] ?></textarea>
                 <span class="highlight"></span>
@@ -81,15 +127,16 @@
                 <span class="error">* <?= $this->vars['descriptionErr'] ?></span>
                 <label>Description</label>
             </div>
+            -->
 
             <div class="group">
-                <input type="date" name="date" value="<?= $this->vars['date'] ?>" <?= (isset($edit)) ? "" : 'required'?>>
+                <input type="date" name="date" value="<?= $this->vars['departure_date'] ?>" <?= (isset($edit)) ? "" : 'required'?>>
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <span class="error">* <?= $this->vars['dateErr'] ?></span>
                 <label>Date</label>
             </div>
-
+            <br>
             <button class="blue-pill"><?= $this->msg_form_button ?></button>
       <?php
     }
@@ -101,7 +148,7 @@
      */
     public function controls() {
       $error = false;
-
+      /*
       // partenza
       if($this->modified('departure')) {
         if (empty($this->vars['departure'])) {
@@ -115,7 +162,7 @@
             }
         }
       }
-
+      */
 
       // destinazione
       if($this->modified('Arrival')) {
