@@ -326,7 +326,7 @@
     /*.topnav a:visited{
     }*/
 
-    .topnav ul li:not(:last-child) a:hover:before{
+    .topnav ul li a:hover:before{
         /*background: -webkit-linear-gradient(orange, lightgray);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;*/
@@ -353,7 +353,7 @@
         padding-bottom:0.3em;
     }
 
-    .topnav ul li:not(:last-child) a:before{
+    .topnav ul li a:before{
         content: "";
         position: absolute;
         width: 100%;
