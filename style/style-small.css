@@ -65,6 +65,8 @@
         margin-top: 0px;
     }
 
+    .
+
    .space-font{
         text-align: center;
         font-family: 'lato',sans-serif;
@@ -115,6 +117,11 @@
     .topnav li{
         margin:auto;
         display: inline-block;
+    }
+
+    .topnav-login{
+      visibility: hidden;
+      display: none;
     }
 
     .hide {
