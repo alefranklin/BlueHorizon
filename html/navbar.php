@@ -60,14 +60,16 @@ if (isAuth()) {
     }
 } else {
 ?>
-          <a href="javascript:void(0); "class="space-font" onclick="toggleUser(0)">
+          <a href="javascript:void(0); "class="space-font topnav-login" onclick="toggleUser(0)">
               LOGIN
           </a>
       </li>
     </ul>
           <!-- login form -->
           <?php
+          if(!isAuth()){
     include($local_path . "user/login-form.php");
+  }
 ?>
       <?php
 }
