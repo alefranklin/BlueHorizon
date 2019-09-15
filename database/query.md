@@ -3,10 +3,10 @@
   -- list
 
   -- add
-  INSERT INTO travels (description, departure, arrival) VALUES ($travel_desc, $departure_planet, $arrival_planet);
+  INSERT INTO travels (id, id_rocket, id_planet, departure_date, duration) VALUES ($id_travel,$id_rocket,$id_planet,$departure_date,$duration_time);
 
   -- update
-  UPDATE travels SET description = $travel_desc, departure = $departure_planet, arrival = $arrival_planet WHERE id = $id_travel;
+  UPDATE travels SET id_rocket = $id_rocket, id_planet = $id_planet, departure_date = $departure_date, duration = $duration_time WHERE id = $id_travel;
 
   -- delete
   DELETE FROM travels WHERE id = $travel_id;
@@ -17,7 +17,7 @@
   -- list
 
   -- add
-  INSERT INTO planets (name, info, mass, temperature) VALUES ($name_planet, $planet_info, $mass, $temperature);
+  INSERT INTO planets (id, name, info, mass, temperature) VALUES ($planet_id, $name_planet, $planet_info, $mass, $temperature);
 
   -- update
   UPDATE planets SET name = $name_planet, info = $planet_info, mass = $mass, temperature = $temperature WHERE id = $planet_id;
@@ -31,14 +31,14 @@
   -- list
 
   -- add user // registration
-  INSERT INTO users (name, lastname, sex, email, password, username, isAdmin) VALUES ($first_name, $lastname, $sex, $email, $password, $username, $isAdmin);
+  INSERT INTO users (id, username, name, lastname, sex, email, pwhash, isAdmin) VALUES ($user_id, $username, $name, $lastname, $sex, $email, $pwhash, $isAdmin);
 
   -- update
     -- password
-    UPDATE users SET password = $password WHERE id = $user_id;
+    UPDATE users SET pwhash = $pwhash WHERE id = $user_id;
 
     -- email
-    UPDATE users SET email = $email;
+    UPDATE users SET email = $email WHERE id = $user_id;
 
   -- delete
   DELETE FROM users WHERE id = $user_id;
@@ -49,10 +49,10 @@
   -- list
 
   -- add
-    INSERT INTO rocekts (model, weight, height, nationality) VALUES ($r_model, $r_weight, $r_height, $r_nationality);
+    INSERT INTO rocekts (id, name, weight, height, nationality, length) VALUES ($rocket_id, $r_name, $r_weight, $r_height, $r_nationality, $r_length);
 
   -- update
-  UPDATE rockets SET model = $r_model, weight = $r_weight, height = $r_height, nationality = $r_nationality WHERE id = $rocket_id;
+  UPDATE rockets SET name = $r_name, weight = $r_weight, height = $r_height, nationality = $r_nationality, length = $r_length WHERE id = $rocket_id;
 
   -- delete
   DELETE FROM rockets WHERE id = $rocket_id;
@@ -63,27 +63,28 @@
   -- list
 
   -- add
-  INSERT INTO cabin (seats, class) VALUES ($seats, $class);
+  INSERT INTO cabins (id, class, adult_price, kid_price) VALUES ($cabin_id, $class, $a_price, $k_price);
 
   -- update
-  UPDATE cabin SET seats = $seats, class = $class;
+  UPDATE cabins SET class = $class, adult_price = $a_price, kid_price = $k_price WHERE id = $cabin_id;
 
   -- delete
-  DELETE FROM cabin WHERE id = $cabin_id;
+  DELETE FROM cabins WHERE id = $cabin_id;
 
 -- rocket_cabin
 
   -- list
 
   -- add
-  INSERT INTO rocket_cabin (id_rocket, id_cabin, number_of_cabin, price, free) VALUES ($rocket_id, $cabin_id, $cabinNumber, $cabin_price, $free);
+  INSERT INTO rocket_cabin (id_cabin, id_rocket, number) VALUES ($cabin_id, $rocket_id, $cabinNumber);
 
   -- update
-  UPDATE rocket_cabin SET id_rocket = $rocket_id, id_cabin = $cabin_id, number_of_cabin = $cabinNumber, price = $cabin_price, free = $free);
+  UPDATE rocket_cabin SET number = $cabinNumber WHERE id_cabin = $cabin_id, id_rocket = $rocket_id;
 
   -- delete
-  DELETE FROM rocket_cabin WHERE id = $rc_id;
+  DELETE FROM rocket_cabin WHERE id_cabin = $cabin_id, id_rocket = $rocket_id;
 
+//////////////////////****************************
 -- rocket_travel
 
   -- list
@@ -136,16 +137,16 @@
 
     -- delete
     NONE
-
+**************************************////////////////////////////////////
 -- orders
 
   -- list
 
   -- add
-  INSERT INTO orders (id_user, id_travel, id_rc, number_of_seat) VALUES ($user_id, $travel_id, $rc_id, $number_of_seat);
+  INSERT INTO orders (id, id_user, id_travel, id_cabin, adults_number, kids_number) VALUES ($order_id, $user_id, $travel_id, $cabin_id, $adults_number, $kids_number);
 
   -- update
-  UPDATE orders SET id_user = $user_id, id_travel = $travel_id, id_rc = $rc_id, number_of_seat = $number_of_seat;
+  UPDATE orders SET id_user = $user_id, id_travel = $travel_id, id_cabin = $cabin_id, adults_number = $adults_number, kids_number = $kids_number WHERE id = $order_id;
 
   -- delete
   DELETE FROM orders WHERE id = $order_id;
