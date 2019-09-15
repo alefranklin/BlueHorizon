@@ -2,6 +2,8 @@
   include_once "model.php";
 
   class Travel extends Model {
+    public $rocket;
+    public $planet;
 
     public function __construct($section, $action, $id=null) {
         parent::__construct($section, $action, $id);
@@ -24,14 +26,11 @@
             break;
         }
 
-        $this->var_name = array('departure',
-                                'departureErr',
-                                'arrival',
+        $this->var_name = array('arrival',
                                 'arrivalErr',
-                                'date',
-                                'dateErr',
-                                'description',
-                                'descriptionErr',
+                                'departure_date',
+                                'departure_dateErr',
+                                'duration',
                                 'rocket',
                                 'rocketErr');
         $this->loadvar();
@@ -39,6 +38,7 @@
     }
 
     protected function get_tupla() {
+
       return "SELECT id, id_planet, id_rocket, departure_date, duration
               FROM `travels`
               WHERE `id` = $this->id";
@@ -50,9 +50,11 @@
     }
 
     protected function edit() {
-      return "UPDATE travels
-              SET id_planet = {$planet['id']}, departure_date = {$this->vars['departure_date']}
-              WHERE id = $this->id";
+
+
+      return "UPDATE `travels`
+              SET `id_planet` = {$this->vars['arrival']}, `id_rocket` = {$this->vars['rocket']}, `duration` = {$this->vars['duration']}, departure_date = {$this->vars['departure_date']}
+              WHERE `id` = $this->id";
               /*UPDATE travels
                    SET description = $travel_desc, departure = $departure_planet, arrival = $arrival_planet
                    WHERE id = $this->id"*/
@@ -94,7 +96,7 @@
             <div align="center">
               <div class="group">
 
-                <h1> ID Viaggio: <?php echo $this->vars["id"] ?> </h1>
+                <h1> ID Viaggio: <?php echo $this->id ?> </h1>
                 <!--  <input type="text" name="arrival" value="<?= $this->vars['arrival'] ?>" <?= (isset($edit)) ? "" : 'required'?>>  -->
                   <select name="arrival" <?= (isset($edit)) ? "" : 'required'?>>
 
@@ -159,10 +161,10 @@
               </div>
 
               <div class="group">
-                  <input type="date" name="date" value="<?= $this->vars['departure_date'] ?>" <?= (isset($edit)) ? "" : 'required'?>>
+                  <input type="date" name="departure_date" value="<?= $this->vars['departure_date'] ?>" <?= (isset($edit)) ? "" : 'required'?>>
                   <span class="highlight"></span>
                   <span class="bar"></span>
-                  <span class="error">* <?= $this->vars['dateErr'] ?></span>
+                  <span class="error">* <?= $this->vars['departure_dateErr'] ?></span>
                   <label>Date</label>
               </div>
 
@@ -170,7 +172,7 @@
                 <input type="number" min="1" name="duration" value="<?= $this->vars['duration'] ?>" <?= (isset($edit)) ? "" : 'required'?>>
                 <span class="highlight"></span>
                 <span class="bar"></span>
-                <span class="error">* <?= $this->vars['dateErr'] ?></span>
+                <span class="error">* <?= $this->vars['departure_dateErr'] ?></span>
                 <label>Duration</label>
               </div>
 
@@ -219,13 +221,13 @@
 
 
       // date di partenza
-      if($this->modified('date')) {
-        if (empty($this->vars['date'])) {
+      if($this->modified('departure_date')) {
+        if (empty($this->vars['departure_dateErr'])) {
             $this->vars['dateErr'] = "La data di partenza è necessaria";
             $error = true;
         } else {
-            if (validateDate($this->vars['date'])) {
-                $this->vars['dateErr'] = "La data non è valida";
+            if (validateDate($this->vars['departure_dateErr'])) {
+                $this->vars['departure_dateErr'] = "La data non è valida";
                 $error = true;
             }
         }
