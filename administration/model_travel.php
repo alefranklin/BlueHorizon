@@ -91,53 +91,92 @@
 
 
             ?>
+            <div align="center">
+              <div class="group">
 
-            <div class="group">
-              <!--  <input type="text" name="arrival" value="<?= $this->vars['arrival'] ?>" <?= (isset($edit)) ? "" : 'required'?>>  -->
-                <select name="arrival" <?= (isset($edit)) ? "" : 'required'?>>
+                <h1> ID Viaggio: <?php echo $this->vars["id"] ?> </h1>
+                <!--  <input type="text" name="arrival" value="<?= $this->vars['arrival'] ?>" <?= (isset($edit)) ? "" : 'required'?>>  -->
+                  <select name="arrival" <?= (isset($edit)) ? "" : 'required'?>>
 
 
-                  <?php
+                    <?php
 
-                    $getArrival="SELECT name, id from  planets;";
-                    $arrival_result=mysqli_query($db, $getArrival);
+                      $getArrival="SELECT name, id from  planets;";
+                      $arrival_result=mysqli_query($db, $getArrival);
 
-                    while($planet = $arrival_result->fetch_assoc()){
+                      while($planet = $arrival_result->fetch_assoc()){
 
-                      echo "<option value='".$planet['id']."'>".$planet['name']."</option>";
-                      /*
-                      ?>
-                      <option value='<?php $planet['id'] ?>'> <?php $planet['name'] ?> </option>
-                      <?php*/
-                    }
-                  ?>
-                </select>
+                        echo "<option value='".$planet['id']."'>".$planet['name']."</option>";
+                        /*
+                        ?>
+                        <option value='<?php $planet['id'] ?>'> <?php $planet['name'] ?> </option>
+                        <?php*/
+                      }
+                    ?>
+                  </select>
 
-                <span class="highlight"></span>
-                <span class="bar"></span>
-                <span class="error">* <?= $this->vars['arrivalErr'] ?></span>
-                <label>Arrival</label>
-            </div>
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <span class="error">* <?= $this->vars['arrivalErr'] ?></span>
+                  <label>Arrival</label>
+              </div>
 
-            <!--
-            <div class="group">
-                <textarea rows="10" cols="80" name="description" <?= (isset($edit)) ? "" : 'required'?>><?= $this->vars['description'] ?></textarea>
-                <span class="highlight"></span>
-                <span class="bar"></span>
-                <span class="error">* <?= $this->vars['descriptionErr'] ?></span>
-                <label>Description</label>
-            </div>
-            -->
+              <!--
+              <div class="group">
+                  <textarea rows="10" cols="80" name="description" <?= (isset($edit)) ? "" : 'required'?>><?= $this->vars['description'] ?></textarea>
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <span class="error">* <?= $this->vars['descriptionErr'] ?></span>
+                  <label>Description</label>
+              </div>
+              -->
 
-            <div class="group">
-                <input type="date" name="date" value="<?= $this->vars['departure_date'] ?>" <?= (isset($edit)) ? "" : 'required'?>>
+              <div class="group">
+                <!--  <input type="text" name="arrival" value="<?= $this->vars['arrival'] ?>" <?= (isset($edit)) ? "" : 'required'?>>  -->
+                  <select name="rocket" <?= (isset($edit)) ? "" : 'required'?>>
+
+
+                    <?php
+
+                      $getRocket="SELECT name, id from  rockets;";
+                      $rocket_result=mysqli_query($db, $getRocket);
+
+                      while($rocket = $rocket_result->fetch_assoc()){
+
+                        echo "<option value='".$rocket['id']."'>".$rocket['name']."</option>";
+                        /*
+                        ?>
+                        <option value='<?php $planet['id'] ?>'> <?php $planet['name'] ?> </option>
+                        <?php*/
+                      }
+                    ?>
+                  </select>
+
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <span class="error">* <?= $this->vars['arrivalErr'] ?></span>
+                  <label>Rocket</label>
+              </div>
+
+              <div class="group">
+                  <input type="date" name="date" value="<?= $this->vars['departure_date'] ?>" <?= (isset($edit)) ? "" : 'required'?>>
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <span class="error">* <?= $this->vars['dateErr'] ?></span>
+                  <label>Date</label>
+              </div>
+
+              <div class="group">
+                <input type="number" min="1" name="duration" value="<?= $this->vars['duration'] ?>" <?= (isset($edit)) ? "" : 'required'?>>
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <span class="error">* <?= $this->vars['dateErr'] ?></span>
-                <label>Date</label>
+                <label>Duration</label>
+              </div>
+
+              <br>
+              <button class="blue-pill"><?= $this->msg_form_button ?></button>
             </div>
-            <br>
-            <button class="blue-pill"><?= $this->msg_form_button ?></button>
       <?php
     }
 
