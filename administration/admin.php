@@ -83,6 +83,7 @@
               </tbody>
             </table>
           </div>
+          <br>
             <a href="manage.php?action=add&section=user">
               <button class="blue-pill">Aggiungi</button></a>
         </section>
@@ -124,6 +125,7 @@
               </tbody>
             </table>
           </div>
+          <br>
           <a href="manage.php?action=add&section=travel">
             <button class="blue-pill">Aggiungi</button></a>
         </section>

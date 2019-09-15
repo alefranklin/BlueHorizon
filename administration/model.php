@@ -119,6 +119,7 @@
           break;
       }
       global $host_path;
+      #$result = get_query($query);
       $result = $db->query($query) or die(mysqli_error($db));
       smartRedir(5,$host_path."user/privato.php/");
       die();
@@ -174,6 +175,7 @@
       <?php
 
       $this->_form();
+
     }
 
     public function json() {
@@ -187,6 +189,7 @@
     /* blocco di funzioni da ridefinire nelle classi figlie */
 
     abstract public function _form();
+
 
     abstract public function controls();
 

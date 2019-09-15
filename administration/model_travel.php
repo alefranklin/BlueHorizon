@@ -45,19 +45,19 @@
     }
 
     protected function add() {
-      return ""; /*"INSERT INTO travels (description, departure, arrival)
-                    VALUES ($travel_desc, $departure_planet, $arrival_planet)"; */
+      $date = (string)$this->vars['departure_date'];
+
+      return "INSERT INTO `travels` (`id`, `id_rocket`, `id_planet`, `departure_date`, `duration`)
+              VALUES (NULL, {$this->vars['rocket']}, {$this->vars['arrival']}, '$date', {$this->vars['duration']});";
+              
     }
 
     protected function edit() {
-
+      $date = (string)$this->vars['departure_date'];
 
       return "UPDATE `travels`
-              SET `id_planet` = {$this->vars['arrival']}, `id_rocket` = {$this->vars['rocket']}, `duration` = {$this->vars['duration']}, departure_date = {$this->vars['departure_date']}
+              SET `id_rocket` = {$this->vars['rocket']}, `id_planet` = {$this->vars['arrival']}, `departure_date` = '$date', `duration` = {$this->vars['duration']}
               WHERE `id` = $this->id";
-              /*UPDATE travels
-                   SET description = $travel_desc, departure = $departure_planet, arrival = $arrival_planet
-                   WHERE id = $this->id"*/
     }
 
     protected function delete() {
@@ -68,51 +68,22 @@
 
     public function _form() {
       global $db;
-      ?>
-            <!--
-            <div class="group">
-                <input type="text" name="departure" value="<?= $this->vars['departure'] ?>" <?= (isset($edit)) ? "" : 'required'?>>
-                <span class="highlight"></span>
-                <span class="bar"></span>
-                <span class="error">* <?= $this->vars['departureErr'] ?></span>
-                <label>Departure</label>
-            </div>
-          -->
-            <?php
-
-            //TODO: per elimina viaggio mostrare solo dati attuali -> chiedere conferma prima di eliminare il viaggio
-
-            //mostra dati attuali del viaggio da modificare/eliminare
-            /*if(isset($edit)){
-
-              echo "Travel ID: ".$this->vars['id'];
-              echo "<br>";
-              echo "Destination: ".$this->vars['id_planet'];
-              echo "<br>";
-            }*/
-
-
             ?>
             <div align="center">
               <div class="group">
 
-                <h1> ID Viaggio: <?php echo $this->id ?> </h1>
-                <!--  <input type="text" name="arrival" value="<?= $this->vars['arrival'] ?>" <?= (isset($edit)) ? "" : 'required'?>>  -->
+                <h3> ID Viaggio: <?php echo $this->id; ?> </h3>
+
                   <select name="arrival" <?= (isset($edit)) ? "" : 'required'?>>
-
-
                     <?php
 
-                      $getArrival="SELECT name, id from  planets;";
+                      $getArrival="SELECT name, id from  planets";
                       $arrival_result=mysqli_query($db, $getArrival);
 
                       while($planet = $arrival_result->fetch_assoc()){
 
                         echo "<option value='".$planet['id']."'>".$planet['name']."</option>";
-                        /*
-                        ?>
-                        <option value='<?php $planet['id'] ?>'> <?php $planet['name'] ?> </option>
-                        <?php*/
+
                       }
                     ?>
                   </select>
@@ -123,33 +94,17 @@
                   <label>Arrival</label>
               </div>
 
-              <!--
               <div class="group">
-                  <textarea rows="10" cols="80" name="description" <?= (isset($edit)) ? "" : 'required'?>><?= $this->vars['description'] ?></textarea>
-                  <span class="highlight"></span>
-                  <span class="bar"></span>
-                  <span class="error">* <?= $this->vars['descriptionErr'] ?></span>
-                  <label>Description</label>
-              </div>
-              -->
-
-              <div class="group">
-                <!--  <input type="text" name="arrival" value="<?= $this->vars['arrival'] ?>" <?= (isset($edit)) ? "" : 'required'?>>  -->
                   <select name="rocket" <?= (isset($edit)) ? "" : 'required'?>>
-
 
                     <?php
 
-                      $getRocket="SELECT name, id from  rockets;";
+                      $getRocket="SELECT name, id from  rockets";
                       $rocket_result=mysqli_query($db, $getRocket);
 
                       while($rocket = $rocket_result->fetch_assoc()){
 
                         echo "<option value='".$rocket['id']."'>".$rocket['name']."</option>";
-                        /*
-                        ?>
-                        <option value='<?php $planet['id'] ?>'> <?php $planet['name'] ?> </option>
-                        <?php*/
                       }
                     ?>
                   </select>
@@ -164,8 +119,8 @@
                   <input type="date" name="departure_date" value="<?= $this->vars['departure_date'] ?>" <?= (isset($edit)) ? "" : 'required'?>>
                   <span class="highlight"></span>
                   <span class="bar"></span>
-                  <span class="error">* <?= $this->vars['departure_dateErr'] ?></span>
-                  <label>Date</label>
+                  <!--<span class="error"> <?= $this->vars['departure_dateErr'] ?></span> -->
+                  <label>* Date</label>
               </div>
 
               <div class="group">
@@ -181,6 +136,7 @@
             </div>
       <?php
     }
+
 
     /***
      * funzione che si occupa di controllare se gli input,
@@ -206,6 +162,7 @@
       */
 
       // destinazione
+      /*
       if($this->modified('Arrival')) {
         if (empty($this->vars['arrival'])) {
             $this->vars['arrivalErr'] = "La destinazione è necessaria";
@@ -218,8 +175,8 @@
             }
         }
       }
-
-
+      */
+      /*
       // date di partenza
       if($this->modified('departure_date')) {
         if (empty($this->vars['departure_dateErr'])) {
@@ -232,8 +189,8 @@
             }
         }
       }
-
-
+*/
+      /*
       // descrizione
       if($this->modified('description')) {
         if (empty($this->vars['description'])) {
@@ -251,7 +208,7 @@
             }
         }
       }
-
+      */
       return !$error;
     }
   }
