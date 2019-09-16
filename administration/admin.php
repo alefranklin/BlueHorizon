@@ -40,7 +40,7 @@
     <?php if (isAuth()) { ?>
 
         <section>
-            <h1>I tuoi dati sono:</h1>
+            <h1><?php tr("I tuoi dati sono") ?>:</h1>
 
             <?php foreach($_SESSION['user'] as $key => $value): ?>
             <?= $key . ' : ' . $value ?><br/>
@@ -48,16 +48,16 @@
         </section>
 
         <section>
-            <h1>Lista utenti:</h1>
+            <h1><?php tr("Lista utenti") ?>:</h1>
             <div class="tbl-header">
               <table cellpadding="0" cellspacing="0" border="0">
                 <thead>
                 <tr>
-                    <th>Username</th>
-                    <th>Name</th>
-                    <th>Lastname</th>
-                    <th>Sex</th>
-                    <th>Email</th>
+                    <th><?php tr("Username") ?></th>
+                    <th><?php tr("Name") ?></th>
+                    <th><?php tr("Lastname") ?></th>
+                    <th><?php tr("Sex") ?></th>
+                    <th><?php tr("Email") ?></th>
                     <th>Admin</th>
                     <th></th>
                     <th></th>
@@ -85,7 +85,7 @@
           </div>
           <br>
             <a href="manage.php?action=add&section=user">
-              <button class="blue-pill">Aggiungi</button></a>
+              <button class="blue-pill"><?php tr("Aggiungi") ?></button></a>
         </section>
 
         <section>
@@ -96,10 +96,10 @@
               <thead>
                 <tr>
                   <th>ID</th>
-                  <th>Destination</th>
-                  <th>Rocket</th>
-                  <th>Date</th>
-                  <th>Duration</th>
+                  <th><?php tr("Destination") ?></th>
+                  <th><?php tr("Rocket") ?></th>
+                  <th><?php tr("Date") ?></th>
+                  <th><?php tr("Duration") ?>(GG)</th>
                   <th></th>
                   <th></th>
                 </tr>
@@ -127,7 +127,7 @@
           </div>
           <br>
           <a href="manage.php?action=add&section=travel">
-            <button class="blue-pill">Aggiungi</button></a>
+            <button class="blue-pill"><?php tr("Aggiungi") ?></button></a>
         </section>
 
         <section>
