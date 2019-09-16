@@ -127,11 +127,10 @@ if (!isset($_POST['pagato'])) {
 
   <?php
     }
-
+    if(isset($_POST['passengers'])){
     if (isset($_POST['name_guest1']) || $_POST['passengers'] == 1) {
         echo "RESOCONTO<br>";
         echo "Numero totale passeggeri:  " . $_POST['passengers'] . "<br>";
-        $guests[$_POST['passengers']];
         $guests[0]['name']     = $_SESSION['user']['name'];
         $guests[0]['lastname'] = $_SESSION['user']['lastname'];
         if ($_POST['passengers'] > 1) {
@@ -199,6 +198,7 @@ if (!isset($_POST['pagato'])) {
       </form>
 <?php
     }
+  }
 } else {
     echo "PAGATO CON I SOLDI RUBATI<br>";
     $query = "INSERT INTO orders (id,id_user,id_travel,id_cabin,passengers_number) VALUES ";
