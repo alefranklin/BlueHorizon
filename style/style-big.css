@@ -124,8 +124,8 @@
         width:90%;
         margin:auto;
     }
-/*
-    #rockets dt
+
+    .ship-panel
     {
         width:100%;
         font-size:1.5em;
@@ -141,7 +141,12 @@
         border-bottom-right-radius:0;
     }
 
-    #rockets dd
+    .ship-panel img {
+      height: inherit;
+      width: auto;
+    }
+/*
+    .ship-panel
     {
         width:100%;
         border: 3px solid rgb(78, 78, 78);
@@ -212,7 +217,7 @@
         position: relative;
     }
 
-    
+
     .rocket-panel h2
     {
         color:white;

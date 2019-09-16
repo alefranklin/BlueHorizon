@@ -1,3 +1,4 @@
+
 function toggleMenu() {
     var menu = document.getElementById("menu");
     if (menu.className === "topnav" || menu.className === "topnav hideMenu") {

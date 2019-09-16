@@ -22,7 +22,7 @@
 <div id="body-page" class="">
     <div id="rockets">
     <h1><?php tr("Our spacecrafts") ?></h1>
-    <a href="ship.php?ship=Millenium Balcon" title="<?php tr("See more infos about Millenium Balcon") ?>">
+    <a href="ship.php?ship=Millennium Balcon" title="<?php tr("See more infos about Millenium Balcon") ?>">
         <div class="rocket-panel" id="millennium-banner">
             <h2 class="space-font"> <?php tr("MILLENNIUM BALCON") ?> </h1>
         </div>
