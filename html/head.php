@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang=<?= $_SESSION['lang'] ?>>
 	<head>
         <!-- aggiungo tag generici -->
 		<title><?= isset($PageTitle) ? $PageTitle : "Blue Horizon" ?></title>
@@ -8,7 +8,7 @@
 
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
-        <meta name="description" content="Vendita razzi">
+        <meta name="description" content=<?php tr("Vendita razzi") ?>>
 
         <meta name="keywords" content="space, rocket, sell">
 

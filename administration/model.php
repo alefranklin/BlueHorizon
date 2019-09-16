@@ -133,8 +133,6 @@
 
         i criteri per determinare il valore di riturno sono:
 
-        se non sono:
-
         'edit'  modifica  ritorno
         no      no        true
         no      si        true

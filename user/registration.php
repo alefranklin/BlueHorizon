@@ -2,7 +2,7 @@
     session_start();
     include_once "../administration/model_user.php";
 
-    $PageTitle="Pagina registrazione";
+    $PageTitle=tr("Pagina registrazione");
 
     function customPageHeader() { ?>
         <!-- aggiungere tag specifici per questa pagina -->
@@ -40,14 +40,14 @@
 <div id="body-page">
   <section>
     <h2><?= $model->title ?></h2>
-    <p><span class="error">* required field</span></p>
+    <p><span class="error"><?php tr("* required field") ?></span></p>
     <form name="form_registration" method="post" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>">
 
       <?php $model->form(); ?>
 
     </form>
 
-    Ritorna alla <a href="<?= $host_path ?>" id="back">Home</a>
+    <?php tr("Ritorna alla") ?> <a href="<?= $host_path ?>" id="back">Home</a>
   </section>
 </div>
 

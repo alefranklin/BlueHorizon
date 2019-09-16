@@ -1,28 +1,24 @@
 <?php
+  session_start();
+  include_once("../utils/utility.php");
 
-    if(isset($_POST["submit-login"])){
-        verifica();
-    }
-    if(isset($_POST["logout"])){
-        logout();
-    }
-    function logout(){
-        session_start();
-        $_SESSION = array();
-        session_destroy(); //distruggo tutte le sessioni
+  if(isset($_POST["submit-login"])){
+      verifica();
+  }
 
-        //creo una varibiale con un messaggio
-        $msg = "log-out effettuato con successo.";
+  if(isset($_POST["logout"])){
+      logout();
+  }
 
-        //la codifico via urlencode informazioni-logout-effettuato-con-successo
-        $msg = urlencode($msg); // invio il messaggio via get
+  function logout(){
+      $_SESSION = array();
+      session_destroy(); //distruggo tutte le sessioni
 
-        //ritorno a index.php usando GET posso recuperare e stampare a schermo il messaggio di avvenuto logout
-        header("location: ../index.php?msg=$msg");
-        exit();
-    }
+      smartRedir(2);
+      exit();
+  }
 
-    function verifica(){
+  function verifica() {
 
-    }
+  }
 ?>

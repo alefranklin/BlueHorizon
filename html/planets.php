@@ -1,10 +1,11 @@
 <?php
     session_start();
     include_once("../utils/utility.php");
-    $PageTitle="Destination";
+    set_lang();
+    $PageTitle=tr("Destination");
     if (isset($_GET['planet']))
     {
-      $destination= $_GET['planet'];
+      $destination= tr($_GET['planet']);
     };
     function customPageHeader() { ?>
 
@@ -23,7 +24,7 @@
 
 <div id="body-page">
   <div id="planet-layout">
-    <a href="travels.php" id="breadcrumb">← Return to Travels</a>
+    <a href="travels.php" id="breadcrumb"><?php tr("← Return to Travels") ?></a>
     <?php
       $passengers_error = false;
       if(isset($_POST['adults']) && isset($_POST['children'])){
@@ -56,16 +57,16 @@
         <input type="hidden" name="planet" value="<?php echo $_POST['planet'];?>"/>
         <input type="hidden" name="date" value="<?php echo $_POST['date']?>"/>
         <div id="passegers-div">
-          <label for="adults">Number of adults: </label>
+          <label for="adults"><?php tr("Number of adults: ") ?></label>
           <input type="number" max="6" min="1" value="1" name="adults"/><br><br>
-          <label for="children">Number of children: </label>
+          <label for="children"><?php tr("Number of children: ") ?></label>
           <input type="number" max="5" min="0" value="0" name="children"/>
         </div>
         <div id="cabin-div">
           <select name="cabin_type">
-            <option value="1">Standard</option>
-            <option value="2">Deluxe</option>
-            <option value="3">Space Club</option>
+            <option value="1"><?php tr("Standard") ?></option>
+            <option value="2"><?php tr("Deluxe") ?></option>
+            <option value="3"><?php tr("Space Club") ?></option>
           </select>
         </div>
         <input type="submit"/>
@@ -77,7 +78,7 @@
 
       $total_passengers = $_POST['adults'] + $_POST['children'];
 ?>
-    
+
   <?php
 
       $query = "SELECT t.duration as duration FROM travels t, planets p WHERE p.name = '".$_POST['planet']."' and t.departure_date = '2019-09-21' AND t.id_planet = p.id";

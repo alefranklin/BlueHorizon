@@ -24,4 +24,8 @@
         <type>bad</type>
         <content>Errore</content>
     </message>
+    <message id="7">
+        <type>good</type>
+        <content>lingua cambiata</content>
+    </message>
 </messages>

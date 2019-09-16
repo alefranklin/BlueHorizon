@@ -15,12 +15,9 @@ $book    = "book.php";
 $admin   = "admin.php";
 $user    = "privato.php";
 
-
-ini_set('display_errors', 1);
-
 ?>
 <div id="skip-main" class="skip">
-    <a href="#body-page">Skip to main content</a>
+    <a href="#body-page"><?php tr("Skip to main content") ?></a>
 </div>
 
 <div id="header_nav">
@@ -40,16 +37,16 @@ Horizon
 </div>
 <nav id="menu" class="topnav">
     <ul>
-      <li><a class="<?= setActive($self, $home) ?>" href="<?= $host_path . "index.php" ?>" > HOME </a></li>
-      <li><a class="<?= setActive($self, $company) ?>" href="<?= $host_path . "html/company.php" ?>" > COMPANY </a></li>
-      <li><a class="<?= setActive($self, $rockets) ?>" href="<?= $host_path . "html/rockets.php" ?>" > ROCKETS </a></li>
-      <li><a class="<?= setActive($self, $travels) ?>" href="<?= $host_path . "html/travels.php" ?>" > TRAVELS </a></li>
+      <li><a class="<?= setActive($self, $home) ?>" href="<?= $host_path . "index.php" ?>" > <?php tr("HOME") ?> </a></li>
+      <li><a class="<?= setActive($self, $company) ?>" href="<?= $host_path . "html/company.php" ?>" > <?php tr("COMPANY") ?> </a></li>
+      <li><a class="<?= setActive($self, $rockets) ?>" href="<?= $host_path . "html/rockets.php" ?>" > <?php tr("ROCKETS") ?> </a></li>
+      <li><a class="<?= setActive($self, $travels) ?>" href="<?= $host_path . "html/travels.php" ?>" > <?php tr("TRAVELS") ?> </a></li>
       <!-- icona user o, se loggato, username -->
       <li>  <?php
 if (isAuth()) {
     if (isAdmin()) {
 ?>
-                      <a class="<?= setActive($self, $admin) ?>" href="<?= $host_path . "user/privato.php" ?>"> ADMIN </a>
+                      <a class="<?= setActive($self, $admin) ?>" href="<?= $host_path . "user/privato.php" ?>"> <?php tr("ADMIN") ?> </a>
                     <?php
     } else {
 ?>

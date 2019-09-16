@@ -9,11 +9,11 @@
   </div>
 
   <div id="skip-footer" class="skip">
-    <a href="#menu"> Skip to Menu </a>
+    <a href="#menu"> <?php tr("Skip to Menu") ?> </a>
   </div>
 
   <div role="contentinfo" class="hide">
-    <p>Put copyright, etc. here.</p>
+    <p> <?php tr("Put copyright, etc. here.") ?></p>
   </div>
 
 

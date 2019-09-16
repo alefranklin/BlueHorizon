@@ -1,11 +1,11 @@
 <?php
-ini_set('display_errors', 1);
-    $verifica = $host_path."user/verifica.php";
-    $registration = $host_path."user/registration.php";
+  displayErrors();
+  $verifica = $host_path."user/verifica.php";
+  $registration = $host_path."user/registration.php";
 ?>
 
 <div id="user-div" class="initial">
-    <h1>Accedi</h1>
+    <h1><?php tr("Accedi") ?></h1>
     <div>
         <form id="login" action="<?= $verifica ?>" method="post">
             <label for="username" class="hide">Username o email</label>
@@ -17,6 +17,6 @@ ini_set('display_errors', 1);
         </form>
     </div>
     <span class="registration-link">
-        Non hai un account?  <a href="<?= $registration ?>"> Registrati qui!</a>
+        <?php tr("Non hai un account?") ?> <a href="<?= $registration ?>"><?php tr("Registrati qui!") ?></a>
     </span>
 </div>
