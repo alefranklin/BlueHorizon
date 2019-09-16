@@ -2,26 +2,33 @@
 <messages>
     <message id="1">
         <type>good</type>
-        <content>Accesso effettuato</content>
+        <content-it>Accesso effettuato</content-it>
+        <content-en>Logged in</content-en>
     </message>
     <message id="2">
         <type>good</type>
-        <content>Log-out effettuato</content>
+        <content-it>Log-out effettuato</content-it>
+        <content-en>Logged out</content-en>
     </message>
     <message id="3">
         <type>bad</type>
-        <content>Username o password non validi</content>
+        <content-it>Username o password non validi</content-it>
+        <content-en>Username or password invalid</content-en>
     </message>
     <message id="4">
         <type>bad</type>
-        <content>Accesso negato</content>
+        <content-it>Accesso negato</content-it>
+        <content-en>Access denied</content-en>
     </message>
     <message id="5">
         <type>good</type>
         <content>Modifiche effettuate</content>
+        <content-it>Modifiche effettuate</content-it>
+        <content-en>Changes applied</content-en>
     </message>
     <message id="6">
         <type>bad</type>
-        <content>Errore</content>
+        <content-it>Errore</content-it>
+        <content-en>Error</content-en>
     </message>
 </messages>
