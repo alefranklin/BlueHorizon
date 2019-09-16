@@ -2,7 +2,7 @@
 <html lang=<?= $_SESSION['lang'] ?>>
 	<head>
         <!-- aggiungo tag generici -->
-		<title><?= isset($PageTitle) ? $PageTitle : "Blue Horizon" ?></title>
+		<title><?= isset($PageTitle) ? tr($PageTitle) : "Blue Horizon" ?></title>
 
 		<!-- <base href="<?= $base_url ?>"> -->
 
