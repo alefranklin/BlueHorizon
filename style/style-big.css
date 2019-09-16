@@ -178,7 +178,8 @@
         font-family: 'lato', sans-serif;
         text-align:left;
         font-size:2.6em;
-        margin:0;
+        margin-top:2em;
+        margin-bottom:2em;
     }
 
     #millennium-banner
@@ -216,6 +217,10 @@
     {
         color:white;
         padding-left:0.5em;
+    }
+
+    .rocket-panel:hover{
+        box-shadow: -3px -3px darkorange, 3px -3px darkorange, -3px 3px darkorange, 3px 3px darkorange, 0 0 50px black;
     }
 
     .ship-page
