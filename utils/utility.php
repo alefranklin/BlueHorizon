@@ -4,7 +4,7 @@
     include_once("config.php");
 
     // flag di debug mode (1 or 0)
-    $DEBUG = 0;
+    $DEBUG = 1;
     displayErrors($DEBUG);
     /***************************************** connessione al database ****************************************************/
 
