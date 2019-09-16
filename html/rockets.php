@@ -2,7 +2,7 @@
     session_start();
     include_once("../utils/utility.php");
     set_lang();
-    $PageTitle=tr("Rockets");
+    $PageTitle="Rockets";
 
     function customPageHeader() { ?>
 
@@ -20,9 +20,9 @@
 </div>
 
 <div id="body-page" class="">
-
+    <h1><?php tr("Our spacecrafts") ?></h1>
     <div id="rockets">
-        <h1><?php tr("Our spacecrafts") ?></h1>
+
         <dl>
             <dt><?php tr("Name 1") ?></dt>
             <dd>
