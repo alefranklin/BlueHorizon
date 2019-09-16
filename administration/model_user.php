@@ -55,12 +55,13 @@
 
     protected function add() {
       $passwd_hash = myhash($this->vars['password']);
-
-      return "INSERT INTO users (id, username, name,lastname,sex,email,pwhash,isAdmin)
-              VALUES ('NULL','{$this->vars['username']}','{$this->vars['name']}',
+      if(empty($this->vars['isAdmin']))  $admin = 0;
+      else                               $admin = 1;
+      return "INSERT INTO users (id, username, name, lastname, sex, email, pwhash, isAdmin)
+              VALUES (NULL,'{$this->vars['username']}','{$this->vars['name']}',
                       '{$this->vars['lastname']}','{$this->vars['gender']}',
                       '{$this->vars['email']}','$passwd_hash',
-                      '{$this->vars['isadmin']}')";
+                      '$admin')";
     }
 
     protected function edit() {
@@ -85,7 +86,7 @@
     }
 
     protected function delete() {
-      return "";
+      return "DELETE FROM users WHERE id = $this->id";
     }
 
     protected function default() {

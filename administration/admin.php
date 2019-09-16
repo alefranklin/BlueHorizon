@@ -83,6 +83,7 @@
               </tbody>
             </table>
           </div>
+          <br>
             <a href="manage.php?action=add&section=user">
               <button class="blue-pill">Aggiungi</button></a>
         </section>
@@ -94,6 +95,7 @@
             <table cellpadding="0" cellspacing="0" border="0">
               <thead>
                 <tr>
+                  <th>ID</th>
                   <th>Destination</th>
                   <th>Rocket</th>
                   <th>Date</th>
@@ -110,6 +112,7 @@
 
                 <?php while($travel = $table_travels->fetch_assoc()) { ?>
                 <tr>
+                    <td><?= $travel['id'] ?></td>
                     <td><?= $travel['planet'] ?></td>
                     <td><?= $travel['rocket'] ?></td>
                     <td><?= date("Y-m-d", strtotime($travel['date'])) ?></td>
@@ -122,6 +125,7 @@
               </tbody>
             </table>
           </div>
+          <br>
           <a href="manage.php?action=add&section=travel">
             <button class="blue-pill">Aggiungi</button></a>
         </section>
