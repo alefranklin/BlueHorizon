@@ -1,5 +1,4 @@
 <?php
-  displayErrors();
   $verifica = $host_path."user/verifica.php";
   $registration = $host_path."user/registration.php";
 ?>

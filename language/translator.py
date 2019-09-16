@@ -20,9 +20,9 @@ en = json.loads(raw)
 
 #creo il file
 ftxt = open("mancanti.txt", "r+")
-found_it = False
-found_en = False
 for k in chiavi:
+    found_it = False
+    found_en = False
 
     if k in it:
         found_it = True
@@ -44,35 +44,6 @@ for k in chiavi:
 
     ftxt.write("\n\n\n\n\n\n")
 
-
-"""
-
-key = ""
-while (1):
-    print("\n\n\n\n\n\n\n\n\n\n")
-    print("premi x per uscire")
-    print("premi . se la chiave e gia nella lingua della traduzione")
-    key = raw_input('inserisci la chiave: ')
-    print(key)
-    if(key == "x"):
-        break
-    value_it = raw_input("traduzione italiana: ")
-    valeu_en = raw_input("traduzione inglese: ")
-
-    if(value_it == "."):
-        it[key] = key
-    else:
-        it[key] = value_it
-
-    if(valeu_en == "."):
-        en[key] = key
-    else:
-        en[key] = valeu_en
-
-
-print(it)
-print(en)
-
-it_json = json.dumps(it)
-en_json = json.dump(en)
-"""
+f_it.close()
+f_en.close()
+ftxt.close()

@@ -2,7 +2,7 @@
     session_start();
     include_once("../utils/utility.php");
     set_lang();
-    $PageTitle=tr("Rockets");
+    $PageTitle="Rockets";
 
     function customPageHeader() { ?>
 

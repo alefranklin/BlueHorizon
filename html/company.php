@@ -3,7 +3,7 @@
     include_once("../utils/utility.php");
     set_lang();
     #displayErrors();
-    $PageTitle=tr("Company");
+    $PageTitle="Company";
 
     function customPageHeader() { ?>
 
