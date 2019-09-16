@@ -820,6 +820,7 @@
         top:5em;
         width:90%;
         margin:auto;
+        padding-bottom: 1em;
     }
 
     #company-content h1
@@ -1175,6 +1176,7 @@
      margin-top: 0px;
      border: 1px solid #1fb6ee;
    }
+
    th{
      padding: 20px 15px;
      text-align: left;
@@ -1183,6 +1185,7 @@
      color: #6cd6fe;
      text-transform: uppercase;
    }
+
    td{
      padding: 15px;
      text-align: left;
@@ -1192,6 +1195,12 @@
      color: #6cd6fe;
      background-color: rgba(0,0,0,.7);
      border-bottom: solid 1px #1fb6ee;
+   }
+   
+   #user-private
+   {
+     width:90%;
+     margin:auto;
    }
 
    /* for custom scrollbar for webkit browser*/
