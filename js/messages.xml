@@ -33,17 +33,7 @@
     </message>
     <message id="7">
         <type>good</type>
-<<<<<<< HEAD
-        <content-it>lingua cambiata</content-it>
-        <content-en>lenguage changed</content-en>
-=======
         <content-it>Lingua cambiata</content-it>
         <content-en>Language changed</content-en>
->>>>>>> 071b81b55b442dae155c50c4b4670d93c9f9c711
-    </message>
-    <message id="8">
-        <type>good</type>
-        <content-it>Viaggio prenotato</content-it>
-        <content-en>Travel booked</content-en>
     </message>
 </messages>
