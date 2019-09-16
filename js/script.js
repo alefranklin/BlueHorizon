@@ -46,6 +46,7 @@ function snackMessage(msg){
   var snackDiv = document.getElementById("snack-div")
   var snackMsg = document.getElementById("snack-msg");
   var snackImg = document.getElementById("snack-img");
+  var lang = document.getElementsByTagName("html")[0].getAttribute("lang");
   var message;
   var message_type;
   var message_content;
@@ -61,7 +62,10 @@ function snackMessage(msg){
     var xmlDoc = xml.responseXML;
     message = xmlDoc.getElementsByTagName('message')[msg-1];
     if(message){
-      message_content = message.childNodes[3].textContent;
+      console.log(lang);
+      if(lang == "it")  message_content = message.childNodes[3].textContent;
+      else              message_content = message.childNodes[5].textContent;
+      console.log(message_content);
       message_type = message.childNodes[1].textContent;
       snackImg.className = message_type;
       snackMsg.innerHTML = message_content;

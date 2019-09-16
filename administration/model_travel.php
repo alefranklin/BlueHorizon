@@ -2,6 +2,8 @@
   include_once "model.php";
 
   class Travel extends Model {
+    public $rocket;
+    public $planet;
 
     public function __construct($section, $action, $id=null) {
         parent::__construct($section, $action, $id);
@@ -24,14 +26,11 @@
             break;
         }
 
-        $this->var_name = array('departure',
-                                'departureErr',
-                                'arrival',
+        $this->var_name = array('arrival',
                                 'arrivalErr',
-                                'date',
-                                'dateErr',
-                                'description',
-                                'descriptionErr',
+                                'departure_date',
+                                'departure_dateErr',
+                                'duration',
                                 'rocket',
                                 'rocketErr');
         $this->loadvar();
@@ -39,23 +38,26 @@
     }
 
     protected function get_tupla() {
+
       return "SELECT id, id_planet, id_rocket, departure_date, duration
               FROM `travels`
               WHERE `id` = $this->id";
     }
 
     protected function add() {
-      return ""; /*"INSERT INTO travels (description, departure, arrival)
-                    VALUES ($travel_desc, $departure_planet, $arrival_planet)"; */
+      $date = (string)$this->vars['departure_date'];
+
+      return "INSERT INTO `travels` (`id`, `id_rocket`, `id_planet`, `departure_date`, `duration`)
+              VALUES (NULL, {$this->vars['rocket']}, {$this->vars['arrival']}, '$date', {$this->vars['duration']});";
+              
     }
 
     protected function edit() {
-      return "UPDATE travels
-              SET id_planet = {$planet['id']}, departure_date = {$this->vars['departure_date']}
-              WHERE id = $this->id";
-              /*UPDATE travels
-                   SET description = $travel_desc, departure = $departure_planet, arrival = $arrival_planet
-                   WHERE id = $this->id"*/
+      $date = (string)$this->vars['departure_date'];
+
+      return "UPDATE `travels`
+              SET `id_rocket` = {$this->vars['rocket']}, `id_planet` = {$this->vars['arrival']}, `departure_date` = '$date', `duration` = {$this->vars['duration']}
+              WHERE `id` = $this->id";
     }
 
     protected function delete() {
@@ -66,80 +68,75 @@
 
     public function _form() {
       global $db;
-      ?>
-            <!--
-            <div class="group">
-                <input type="text" name="departure" value="<?= $this->vars['departure'] ?>" <?= (isset($edit)) ? "" : 'required'?>>
-                <span class="highlight"></span>
-                <span class="bar"></span>
-                <span class="error">* <?= $this->vars['departureErr'] ?></span>
-                <label>Departure</label>
-            </div>
-          -->
-            <?php
-
-            //TODO: per elimina viaggio mostrare solo dati attuali -> chiedere conferma prima di eliminare il viaggio
-
-            //mostra dati attuali del viaggio da modificare/eliminare
-            /*if(isset($edit)){
-
-              echo "Travel ID: ".$this->vars['id'];
-              echo "<br>";
-              echo "Destination: ".$this->vars['id_planet'];
-              echo "<br>";
-            }*/
-
-
             ?>
+            <div align="center">
+              <div class="group">
 
-            <div class="group">
-              <!--  <input type="text" name="arrival" value="<?= $this->vars['arrival'] ?>" <?= (isset($edit)) ? "" : 'required'?>>  -->
-                <select name="arrival" <?= (isset($edit)) ? "" : 'required'?>>
+                <h3> ID Viaggio: <?php echo $this->id; ?> </h3>
 
+                  <select name="arrival" <?= (isset($edit)) ? "" : 'required'?>>
+                    <?php
 
-                  <?php
+                      $getArrival="SELECT name, id from  planets";
+                      $arrival_result=mysqli_query($db, $getArrival);
 
-                    $getArrival="SELECT name, id from  planets;";
-                    $arrival_result=mysqli_query($db, $getArrival);
+                      while($planet = $arrival_result->fetch_assoc()){
 
-                    while($planet = $arrival_result->fetch_assoc()){
+                        echo "<option value='".$planet['id']."'>".$planet['name']."</option>";
 
-                      echo "<option value='".$planet['id']."'>".$planet['name']."</option>";
-                      /*
-                      ?>
-                      <option value='<?php $planet['id'] ?>'> <?php $planet['name'] ?> </option>
-                      <?php*/
-                    }
-                  ?>
-                </select>
+                      }
+                    ?>
+                  </select>
 
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <span class="error">* <?= $this->vars['arrivalErr'] ?></span>
+                  <label>Arrival</label>
+              </div>
+
+              <div class="group">
+                  <select name="rocket" <?= (isset($edit)) ? "" : 'required'?>>
+
+                    <?php
+
+                      $getRocket="SELECT name, id from  rockets";
+                      $rocket_result=mysqli_query($db, $getRocket);
+
+                      while($rocket = $rocket_result->fetch_assoc()){
+
+                        echo "<option value='".$rocket['id']."'>".$rocket['name']."</option>";
+                      }
+                    ?>
+                  </select>
+
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <span class="error">* <?= $this->vars['arrivalErr'] ?></span>
+                  <label>Rocket</label>
+              </div>
+
+              <div class="group">
+                  <input type="date" name="departure_date" value="<?= $this->vars['departure_date'] ?>" <?= (isset($edit)) ? "" : 'required'?>>
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <!--<span class="error"> <?= $this->vars['departure_dateErr'] ?></span> -->
+                  <label>* Date</label>
+              </div>
+
+              <div class="group">
+                <input type="number" min="1" name="duration" value="<?= $this->vars['duration'] ?>" <?= (isset($edit)) ? "" : 'required'?>>
                 <span class="highlight"></span>
                 <span class="bar"></span>
-                <span class="error">* <?= $this->vars['arrivalErr'] ?></span>
-                <label>Arrival</label>
-            </div>
+                <span class="error">* <?= $this->vars['departure_dateErr'] ?></span>
+                <label>Duration</label>
+              </div>
 
-            <!--
-            <div class="group">
-                <textarea rows="10" cols="80" name="description" <?= (isset($edit)) ? "" : 'required'?>><?= $this->vars['description'] ?></textarea>
-                <span class="highlight"></span>
-                <span class="bar"></span>
-                <span class="error">* <?= $this->vars['descriptionErr'] ?></span>
-                <label>Description</label>
+              <br>
+              <button class="blue-pill"><?= $this->msg_form_button ?></button>
             </div>
-            -->
-
-            <div class="group">
-                <input type="date" name="date" value="<?= $this->vars['departure_date'] ?>" <?= (isset($edit)) ? "" : 'required'?>>
-                <span class="highlight"></span>
-                <span class="bar"></span>
-                <span class="error">* <?= $this->vars['dateErr'] ?></span>
-                <label>Date</label>
-            </div>
-            <br>
-            <button class="blue-pill"><?= $this->msg_form_button ?></button>
       <?php
     }
+
 
     /***
      * funzione che si occupa di controllare se gli input,
@@ -165,6 +162,7 @@
       */
 
       // destinazione
+      /*
       if($this->modified('Arrival')) {
         if (empty($this->vars['arrival'])) {
             $this->vars['arrivalErr'] = "La destinazione è necessaria";
@@ -177,22 +175,22 @@
             }
         }
       }
-
-
+      */
+      /*
       // date di partenza
-      if($this->modified('date')) {
-        if (empty($this->vars['date'])) {
+      if($this->modified('departure_date')) {
+        if (empty($this->vars['departure_dateErr'])) {
             $this->vars['dateErr'] = "La data di partenza è necessaria";
             $error = true;
         } else {
-            if (validateDate($this->vars['date'])) {
-                $this->vars['dateErr'] = "La data non è valida";
+            if (validateDate($this->vars['departure_dateErr'])) {
+                $this->vars['departure_dateErr'] = "La data non è valida";
                 $error = true;
             }
         }
       }
-
-
+*/
+      /*
       // descrizione
       if($this->modified('description')) {
         if (empty($this->vars['description'])) {
@@ -210,7 +208,7 @@
             }
         }
       }
-
+      */
       return !$error;
     }
   }

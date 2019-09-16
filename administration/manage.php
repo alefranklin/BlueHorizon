@@ -51,6 +51,11 @@
         break;
     }
 
+    //elimina tupla selezionata
+    if($_GET['action'] == 'delete'){
+      $model->apply();
+    }
+
     if ($request == "POST") {
 
         //se non si sono verificati errori procedo con la registrazione dei dati
