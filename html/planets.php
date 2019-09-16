@@ -44,7 +44,7 @@ if (!isset($_POST['pagato'])) {
 ?>
 
 
-    <h2>Prenota subito</h2>
+    <h2><?php tr("Prenota subito!");?></h2>
     <div id="book-date-form-div">
     <?php  $getplanet = "SELECT t.departure_date,t.id from travels t, planets p where p.name='$destination' and t.id_planet = p.id AND departure_date > CURRENT_DATE";
       $planet_result = mysqli_query($db, $getplanet);
@@ -59,6 +59,7 @@ if (!isset($_POST['pagato'])) {
       <?php
 
 ?>
+    <label for="date"><?php tr("Date disponibili: ");?></label>
       <select name="date">
     <?php
         do{
@@ -66,7 +67,7 @@ if (!isset($_POST['pagato'])) {
         }while ($dates = $planet_result->fetch_assoc());
 ?>
     </select>
-    <input type="submit"/>
+    <input type="submit" value="<?php tr("Invia");?>"/>
   </form>
 <?php } ?>
   </div>
@@ -79,9 +80,11 @@ if (!isset($_POST['pagato'])) {
     $query_result = get_query($query);
     $planet= $query_result->fetch_assoc();
 
-    echo tr("Nome").": ".$planet['name'];
+    echo tr("Nome").": ";
+    tr($planet['name']);
     echo "<br>";
-    echo tr("Informazioni").": ".$planet['info'];
+    echo tr("Informazioni").": ";
+    tr($planet['info']);
     echo "<br>";
     echo "<br>";
     echo tr("Massa").": ".$planet['mass']." 10^23Kg";
@@ -113,6 +116,7 @@ if (!isset($_POST['pagato'])) {
           <input type="number" max="6" min="1" value="1" name="passengers"/><br><br>
         </div>
         <div id="cabin-div">
+        <label for="cabin_type"><?php tr("Tipo di cabina: ");?></label>
           <select name="cabin_type">
             <option value="1"><?php
             tr("Standard");
@@ -125,7 +129,7 @@ if (!isset($_POST['pagato'])) {
 ?></option>
           </select>
         </div>
-        <input type="submit"/>
+        <input type="submit" value="<?php tr("Invia");?>"/>
       </form>
     </div>
 
@@ -175,14 +179,16 @@ if (!isset($_POST['pagato'])) {
             echo "</div>";
         }
 ?>
-  <input type="submit"/>
+  <input type="submit" value="<?php tr("Invia");?>"/>
 </form>
 
   <?php
     }
     if (isset($_POST['passengers'])) {
         if (isset($_POST['name_guest1']) || $_POST['passengers'] == 1) {
-            echo "<h1>RESOCONTO</h1><br>";
+            echo "<h1>";
+            tr("Resoconto");
+            echo "</h1><br>";
             echo "<div id=\"checkout-div\">";
             echo "Numero totale passeggeri:  " . $_POST['passengers'] . "<br>";
             $guests[0]['name'] = $_SESSION['user']['name'];
@@ -195,17 +201,23 @@ if (!isset($_POST['pagato'])) {
             }
             for ($i = 0;$i < $_POST['passengers'];$i = $i + 1) {
                 if ($i == 0) {
-                    echo "Nome passeggero prenotante: " . $guests[$i]['name'] . "<br>";
-                    echo "Cognome passeggero prenotante: " . $guests[$i]['lastname'] . "<br>";
+                    tr("Nome passeggero prenotante");
+                    echo ": ".$guests[$i]['name'] . "<br>";
+                    tr("Cognome passeggero prenotante");
+                    echo ": ".$guests[$i]['lastname'] . "<br>";
                     echo "<br>";
                 } else {
-                    echo "Nome ospite $i: " . $guests[$i]['name'] . "<br>";
-                    echo "Cognome ospite $i: " . $guests[$i]['lastname'] . "<br>";
+                    tr("Nome ospite");
+                    echo " $i: ".$guests[$i]['name'] . "<br>";
+                    tr("Cognome ospite");
+                    echo " $i: ".$guests[$i]['lastname'] . "<br>";
                     echo "<br>";
                 }
             }
-            echo "Destinazione: " . $_POST['planet'] . "<br>";
-            echo "Data di partenza: " . $_POST['date'] . "<br>";
+            tr("Destinazione");
+            echo ": ".$_POST['planet'] . "<br>";
+            echo "Data di partenza";
+            echo ": ".$_POST['date'] . "<br>";
             $query = "SELECT class FROM cabins where id = " . $_POST['cabin_type'];
             $cabin_result = mysqli_query($db, $query);
             $cabin = $cabin_result->fetch_assoc();
@@ -240,7 +252,7 @@ if (!isset($_POST['pagato'])) {
             echo $_POST['passengers'];
 ?>"/>
         <div id="payment-alert"><?php tr("Attenzione! Una volta confermata questa prenotazione non sará annullabile o rimborsabile");?></div>
-        <input type="submit" name="pagato" value="Conferma e paga"/>
+        <input type="submit" name="pagato" value="<?php tr("Conferma e paga");?>"/>
         <?php for ($i = 1;$i < $_POST['passengers'];$i = $i + 1) {
                 echo "<input type =\"hidden\" name=\"data_guest$i\" value=\"" . $guests[$i]['name'] . "*" . $guests[$i]['lastname'] . "\"/>";
             } ?>
