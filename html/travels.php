@@ -25,10 +25,10 @@
 
     <div id="travel-list">
 
-      <a href="planets.php?planet=Mercurio" title="See more infos about our Mercury trip">
+      <a href="planets.php?planet=Mercurio" title="See more infos about our Mercury trip" aria-describedby="mercury">
         <div class="travel-panel" id="mercury-banner">
-            <h1 class="space-font"> <?php tr("MERCURY") ?> </h1>
-            <p>
+            <h1 class="space-font" id="mercury"> <?php tr("MERCURY") ?> </h1>
+            <p aria-hidden="true">
               <?php tr("Mercurio non è in generale il pianeta più caldo del Sistema Solare, ma quello con la maggiore escursione termica, a causa della quasi totale assenza di atmosfera. La faccia esposta al Sole può manifestare fino a 527 gradi centigradi, ma quella buia ne registra anche -83.") ?>
             </p>
         </div>
