@@ -2,10 +2,10 @@
     session_start();
     include_once("../utils/utility.php");
     set_lang();
-    $PageTitle=tr("Destination");
+    $PageTitle="Destination";
     if (isset($_GET['planet']))
     {
-      $destination= tr($_GET['planet']);
+      $destination= $_GET['planet'];
     };
     function customPageHeader() { ?>
 
