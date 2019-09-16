@@ -190,6 +190,13 @@
         margin-top:5em;
     }
 
+    #login-needed-div{
+      border: solid 2px black;
+      width: 25%;
+      border-radius: 10px;
+      padding: 5px;
+    }
+
 /*
     .space-ship
     {
@@ -1144,7 +1151,10 @@
        -webkit-box-shadow: inset 0 0 8px 2px #7e8da6, 0 1px 0 0 #eeeeee;
    box-shadow: inset 0 0 8px 2px #7e8da6, 0 1px 0 0 #eeeeee; }
 
-
+   #payment-alert{
+     color:red;
+     font-weight: bold;
+   }
 
    table{
      width:100%;
