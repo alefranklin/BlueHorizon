@@ -125,7 +125,7 @@
         margin:auto;
     }
 
-    .ship-panel
+    #ship-panel
     {
         width:100%;
         font-size:1.5em;
@@ -139,34 +139,9 @@
         border-radius: 0.3em;
         border-bottom-left-radius:0;
         border-bottom-right-radius:0;
-        height: 20%;
+        height: auto;
     }
 
-    .ship-panel img {
-      height: 100%;
-      width: auto;
-    }
-/*
-    .ship-panel
-    {
-        width:100%;
-        border: 3px solid rgb(78, 78, 78);
-        border-top:none;
-        border-radius:0.3em;
-        border-top-left-radius: 0;
-        border-top-right-radius:0;
-        padding: 2em;
-        display:inline-block;
-        margin:0;
-        margin-bottom:2em;
-        position: relative;
-    }
-
-    #rockets dl
-    {
-        margin-top: 5em;
-        width:100%;
-    }
 
     #rockets p
     {

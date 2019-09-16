@@ -20,8 +20,9 @@
 </div>
 
 <div id="body-page" class="space-ship">
+  <a href="rockets.php">← <?php tr("Return to rockets section") ?></a>
   <h1 id="rockets"> <?php tr("Ship information") ?> </h1>
-  <div class="ship-panel">
+  <div id="ship-panel">
     <?php
     global $db;
     $name_ship = (string)$_GET['ship'];
@@ -43,8 +44,7 @@
     echo "<br>";
 
     ?>
-    <img src="<?= $host_path."img/".$ship['name'].".jpg";?>">
   </div>
 
-  <a href="rockets.php">← <?php tr("Return to rockets section") ?></a>
+
 </div>
