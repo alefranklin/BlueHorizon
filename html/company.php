@@ -32,7 +32,7 @@
     <h2> <?php tr("Contatti") ?> </h2>
     <ul >
       <li><a href="mailto:stefano.baggio@studenti.unipd.it"> Email <?php tr("of") ?> Stefano Baggio </a></li>
-      <li><a href="mailto:alessandro.franchin@studenti.unipd.it"> Email <?php tr("of") ?> Alessandro Franchin </a></li>
+      <li><a href="mailto:alessandro.franchin.2@studenti.unipd.it"> Email <?php tr("of") ?> Alessandro Franchin </a></li>
       <li><a href="mailto:manuel.pagotto@studenti.unipd.it"> Email <?php tr("of") ?> Manuel Pagotto </a></li>
       <li><a href="mailto:matteo.pagotto@studenti.unipd.it"> Email <?php tr("of") ?> Matteo Pagotto </a></li>
     </ul>
