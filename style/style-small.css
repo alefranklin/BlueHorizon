@@ -78,18 +78,21 @@
 
     #menuShowMobile {
       max-width: 100%;
-      height:auto;
+      height:2em;
       list-style-type: none;
       margin: 0;
       padding: 0;
       overflow: auto;
       background-color: #333;
       text-align: center;
+      position: relative;
     }
 
-    #menuShowMobile a{
+    .fa-bars{
       color: white;
       font-weight: bold;
+      position: absolute;
+      bottom:25%;
     }
 
     .showMenu{
@@ -265,7 +268,7 @@
         padding:0 1em 0 1em;
     }
 
-    #rockets dd img
+    /*#rockets dd img
     {
         width:100%;
     }
@@ -290,6 +293,41 @@
         border-top-left-radius: 0;
         border-top-right-radius: 0;
         margin-bottom:2em;
+    }
+*/
+
+.rocket-panel
+{
+    display: block;
+    width: 90%;
+    margin:auto;
+    height: 30em;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom:2em;
+    position: relative;
+}
+
+.rocket-panel h2
+{
+    color:white;
+}
+
+#millennium-banner
+    {
+        background-image: url(../img/millennium-balcon-bg.jpg);
+    }
+
+#starbooster-banner
+    {
+        background-image: url(../img/starbooster-bg.jpg);
+    }
+
+#arcasia-banner
+    {
+        background-image: url(../img/arcasia-bg.jpg);
     }
 
     #mercury-banner
