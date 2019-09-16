@@ -38,6 +38,9 @@ tr("← Return to Travels");
     <?php
 if (!isset($_POST['pagato'])) {
     if (!isset($_POST['date'])) {
+      if(!isset($_GET['planet'])){
+        header("location:".$host_path."html/travels.php");
+      }
 ?>
     <form method="post" action="planets.php">
       <input type="hidden" name="planet" value="<?php
@@ -93,7 +96,13 @@ if (!isset($_POST['pagato'])) {
         }
     }
     if (!isAuth() && isset($_POST['date'])) { ?>
-    <?php echo "<br>"; tr("Devi essere registrato per poter prenotare un viaggio") ?> <a href="<?=$registration ?>"><?php tr("Registrati qui!") ?></a>
+      <div id="login-needed-div">
+    <?php
+          tr("Devi essere loggato per poter prenotare un viaggio");
+          echo "<br>";
+          tr("Effettua il login in alto a destra oppure ");
+     ?> <a href="<?=$registration ?>"><?php tr("Registrati qui!") ?></a>
+   </div>
 <?php
     }
     if (isset($_POST['cabin_type']) && $_POST['passengers'] > 1 && !isset($_POST['name_guest1'])) {
@@ -190,7 +199,7 @@ if (!isset($_POST['pagato'])) {
         <input type="hidden" name="passengers_number" value="<?php
             echo $_POST['passengers'];
 ?>"/>
-        <div id="payment-alert">Attenzione! Una volta confermata questa prenotazione non sará annullabile o rimborsabile</div>
+        <div id="payment-alert"><?php tr("Attenzione! Una volta confermata questa prenotazione non sará annullabile o rimborsabile");?></div>
         <input type="submit" name="pagato" value="Conferma e paga"/>
         <?php for ($i = 1;$i < $_POST['passengers'];$i = $i + 1) {
                 echo "<input type =\"hidden\" name=\"data_guest$i\" value=\"" . $guests[$i]['name'] . "*" . $guests[$i]['lastname'] . "\"/>";

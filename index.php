@@ -24,7 +24,7 @@
     <?php tr("Questo è un sito di prenotazione di viaggi interplanetari!") ?>
     <br>
     <?php tr("Se vuoi viaggiare, scegli un pianeta di destinazione e prenota ") ?><a href="<?= $host_path . "html/travels.php" ?>" > <?php tr("Qui") ?> </a>  <?php tr("!") ?>
-    
+
   </div>
 <!-- footer -->
 <?php include($local_path."html/footer.php"); ?>
