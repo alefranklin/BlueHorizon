@@ -119,6 +119,15 @@
         margin-top:0;
     }
 
+    .space-font-small{
+        font-family: 'lato', sans-serif;
+        margin-top:0;
+        font-size: 12px;
+    }
+
+    .separator{
+      color:#FFFFFF;
+    }
     #rockets
     {
         width:90%;
@@ -235,13 +244,6 @@
         top:-2px;
     }
 
-    .topnav a.user-icon-container{
-        margin: 18px 0px 14px 0px;
-        padding: 0px 15px;
-        width: auto;
-        font-size: 21px;
-        text-align: center;
-    }
 
     .topnav ul li:not(:first-of-type){
         border-left: 1px solid lightgray;

@@ -36,16 +36,15 @@
     <a><i class="fa fa-bars"></i></a>
   </div>
 
-  <!-- it -->
-  <a class="space-font" href="<?= $host_path."language/language.php?lang=it" ?>">
-    <?php echo strtoupper("it"); ?> </a>
-  <!-- en -->
-  <a class="space-font" href="<?= $host_path."language/language.php?lang=en" ?>">
-    <?php echo strtoupper("en"); ?> </a>
-
 
   <nav id="menu" class="topnav" name="menu">
       <ul>
+        <li><!-- it -->
+        <a class="space-font-small" href="<?= $host_path."language/language.php?lang=it" ?>">
+          <?php echo "IT"; ?> </a>
+        <!-- en --><span class="separator"> |</span>
+        <a class="space-font-small" href="<?= $host_path."language/language.php?lang=en" ?>">
+          <?php echo "EN"; ?> </a></li>
         <li><a class="<?= setActive($self, $home) ?>" href="<?= $host_path . "index.php" ?>" > <?php tr("HOME") ?> </a></li>
         <li><a class="<?= setActive($self, $company) ?>" href="<?= $host_path . "html/company.php" ?>" > <?php tr("COMPANY") ?> </a></li>
         <li><a class="<?= setActive($self, $travels) ?>" href="<?= $host_path . "html/travels.php" ?>" > <?php tr("TRAVELS") ?> </a></li>
@@ -65,7 +64,7 @@
   } ?>
 
       <!-- logout -->
-      <a class="" href="<?= $host_path."user/logout.php?" ?>"><?php tr("LOGOUT") ?> </a>
+      <li><a class="space-font" href="<?= $host_path."user/logout.php?" ?>"><?php tr("LOGOUT") ?> </a></li>
   <?php
   } else {
   ?>

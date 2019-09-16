@@ -43,15 +43,6 @@
             </div>
       </a>
       <br>
-      <a href="planets.php?planet=Terra" title="See more infos about our Earth trip">
-        <div class="travel-panel" id="earth-banner">
-            <h1 class="space-font"> <?php tr("EARTH") ?> </h1>
-            <p>
-              <?php tr("Una ricerca dell'università del Maryland ipotizza che il nostro pianeta, in passato, apparisse viola e non azzurro. Hanno studiato che nelle ere passate i microbi avrebbero potuto processare la luce solare attraverso molecole diverse dalla clorofilla. Queste molecole colorano i microbi di viola e di conseguenza anche la nostra atmosfera sarebbe apparsa di quel colore.") ?>
-            </p>
-            </div>
-      </a>
-      <br>
       <a href="planets.php?planet=Luna" title="See more infos about our Moon trip">
         <div class="travel-panel" id="moon-banner">
             <h1 class="space-font"> <?php tr("MOON") ?></h1>
