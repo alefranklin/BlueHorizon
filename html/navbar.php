@@ -39,8 +39,8 @@ Horizon
     <ul>
       <li><a class="<?= setActive($self, $home) ?>" href="<?= $host_path . "index.php" ?>" > <?php tr("HOME") ?> </a></li>
       <li><a class="<?= setActive($self, $company) ?>" href="<?= $host_path . "html/company.php" ?>" > <?php tr("COMPANY") ?> </a></li>
-      <li><a class="<?= setActive($self, $rockets) ?>" href="<?= $host_path . "html/rockets.php" ?>" > <?php tr("ROCKETS") ?> </a></li>
       <li><a class="<?= setActive($self, $travels) ?>" href="<?= $host_path . "html/travels.php" ?>" > <?php tr("TRAVELS") ?> </a></li>
+      <li><a class="<?= setActive($self, $rockets) ?>" href="<?= $host_path . "html/rockets.php" ?>" > <?php tr("ROCKETS") ?> </a></li>
       <!-- login o, se loggato, username -->
       <li>  <?php
 if (isAuth()) {
