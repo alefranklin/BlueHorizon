@@ -122,7 +122,7 @@
       #$result = get_query($query);
       $result = $db->query($query) or die(mysqli_error($db));
       smartRedir(5,$host_path."user/privato.php/");
-      die();
+      #die();
 
     }
 

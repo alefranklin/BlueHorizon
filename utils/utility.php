@@ -31,12 +31,16 @@
         else return 1;
     }
 
-    function exist($username, $passwd) {
+    function exist($username, $passwd, $hash=0) {
 
         global $db;
 
         // sha256 della password in questo modo corrisponde con quella del database
-        $hash_passwd = myhash($passwd);
+        if ($hash == 0) {
+          $hash_passwd = myhash($passwd);
+        } else {
+          $hash_passwd = $passwd;
+        }
 
         $query = "SELECT * FROM users WHERE username = '$username' AND pwhash = '$hash_passwd' ";
         $ris = $db->query($query) or die (mysqli_error($db));
@@ -46,21 +50,16 @@
         else return $data;
     }
 
-    function get_user($username, $passwd) {
+    function get_user($username, $passwd, $hash=0) {
 
-        global $db;
-
-        if($user = exist($username, $passwd)) {
+        if($user = exist($username, $passwd, $hash)) {
 
             // salvo i dati dello user in session
             $_SESSION['user'] = $user;
             return 1;
-
         } else {
-            // nessun accesso alle aree riservate del sito
             return 0;
         }
-
     }
 
     function myhash($str) {
