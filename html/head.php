@@ -22,7 +22,7 @@
 
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-        <link rel='stylesheet' href= 'stampa.css'  media='print'  type='text/css' />
+        <link rel="stylesheet" href= "<?= $host_path."style/stampa.css"?>"  media="print"  type="text/css" />
 
         <link rel="stylesheet" type="text/css" href="<?= $host_path."style/style-big.css" ?>">
 
