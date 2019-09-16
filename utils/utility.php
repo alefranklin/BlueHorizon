@@ -78,7 +78,7 @@
         } else return 0;
     }
 
-    function smartRedir($msg,$link = ""){
+    function smartRedir($msg,$link = "", $param=0){
         global $local_path;
 
         if($link != ""){
@@ -86,8 +86,11 @@
         } else {
           if (isset($_SERVER['HTTP_REFERER'])){
               // elimino eventuali variabili get precedenti
-              $prev_page = current(explode('?', $_SERVER['HTTP_REFERER']));
-              header("location:$prev_page"."?snackmsg=$msg");
+              $exp = explode('?', $_SERVER['HTTP_REFERER']);
+              $prev_page = current($exp);
+              $getvar = end($exp);
+              $parameter = ($param) ? "?$getvar&snackmsg=$msg" : "?snackmsg=$msg";
+              header("location:$prev_page"."$parameter");
 
           } else {
               header("location:$local_path"."?snackmsg=$msg"); // homepage
