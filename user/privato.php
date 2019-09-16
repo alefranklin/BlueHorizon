@@ -44,11 +44,25 @@
     <?php if (isAuth()) { ?>
         <p>
             <h3>I tuoi dati sono:</h3><br/>
+            <?php
+            echo tr("Username").": ".$_SESSION['user']['username'];
+            echo "<br>";
+            echo tr("Name").": ".$_SESSION['user']['name'];
+            echo "<br>";
+            echo tr("Lastname").": ".$_SESSION['user']['lastname'];
+            echo "<br>";
+            echo tr("Sex").": ".$_SESSION['user']['sex'];
+            echo "<br>";
+            echo "Email: ".$_SESSION['user']['email'];
+            echo "<br>";
 
-            <?php foreach($_SESSION['user'] as $key => $value): ?>
-            <?= $key . ' : ' . $value ?><br/>
-            <?php endforeach; ?>
+            ?>
         </p>
+
+        <section>
+            <a href="<?= $host_path."administration/manage.php" ?>">
+              <button class="blue-pill"><?php tr("Modifica Info") ?></button></a>
+        </section>
 
         <?php $orders_query = "SELECT o.id, p.name as planet, r.name as rocket, c.class, o.adults_number, o.kids_number
                                FROM orders o, planets p, rockets r, travels t, cabins c
@@ -62,7 +76,7 @@
 
 
         <section>
-            <h1>Lista viaggi:</h1>
+            <h1><?php tr("Lista viaggi:") ?></h1>
             <div class="tbl-header">
               <table cellpadding="0" cellspacing="0" border="0">
                 <thead>
@@ -99,7 +113,7 @@
           </div>
         </section>
 
-
+        <br>
         <!--FINE PAGINA-->
         <section>
             <a href="<?= $host_path."user/logout.php" ?>">
