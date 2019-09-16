@@ -13,6 +13,8 @@ function customPageHeader() {
 
 <?php
 }
+
+$book = $local_path."html/book.php";
 ?>
 
 
@@ -168,7 +170,7 @@ if (!isset($_POST['pagato'])) {
             $price = $priceCalc_result->fetch_assoc();
             echo "Prezzo totale: " . $price['price'] . "<br>";
 ?>
-      <form method="post">
+      <form method="post" action="<?= $book;?>">
         <input type="hidden" name="id_user" value="<?php
             echo $_SESSION['user']['id'];
 ?>"/>
@@ -188,6 +190,7 @@ if (!isset($_POST['pagato'])) {
         <input type="hidden" name="passengers_number" value="<?php
             echo $_POST['passengers'];
 ?>"/>
+        <div id="payment-alert">Attenzione! Una volta confermata questa prenotazione non sará annullabile o rimborsabile</div>
         <input type="submit" name="pagato" value="Conferma e paga"/>
         <?php for ($i = 1;$i < $_POST['passengers'];$i = $i + 1) {
                 echo "<input type =\"hidden\" name=\"data_guest$i\" value=\"" . $guests[$i]['name'] . "*" . $guests[$i]['lastname'] . "\"/>";
@@ -195,24 +198,6 @@ if (!isset($_POST['pagato'])) {
       </form>
 <?php
         }
-    }
-} else {
-    echo "PAGATO CON I SOLDI RUBATI<br>";
-    $query = "INSERT INTO orders (id,id_user,id_travel,id_cabin,passengers_number) VALUES ";
-    $query = $query . "(NULL,'" . $_POST['id_user'] . "','" . $_POST['id_travel'] . "','" . $_POST['id_cabin'] . "','" . $_POST['passengers_number'] . "')";
-    mysqli_query($db, $query);
-    $query = "SELECT id FROM orders WHERE id_travel = " . $_POST['id_travel'] . " AND id_user = " . $_POST['id_user'] . " ORDER BY id DESC";
-    $id_result = mysqli_query($db, $query);
-    $id_order = $id_result->fetch_assoc();
-    for ($i = 1;$i < $_POST['passengers_number'];$i = $i + 1) {
-        $guest = explode('*', $_POST['data_guest' . $i]);
-        $query_guest = "INSERT INTO guests (id,name,lastname) VALUES (NULL,'$guest[0]','$guest[1]')";
-        mysqli_query($db, $query_guest);
-        $query = "SELECT id FROM guests WHERE name='" . $guest[0] . "' and lastname='" . $guest[1] . "'";
-        $id_guest_result = mysqli_query($db, $query);
-        $id_guest = $id_guest_result->fetch_assoc();
-        $query_guest_order = "INSERT INTO guest_order (id_guest,id_order) VALUES (" . $id_guest['id'] . "," . $id_order['id'] . ")";
-        mysqli_query($db, $query_guest_order);
     }
 }
 ?>

@@ -22,19 +22,19 @@
 <div id="body-page" class="">
     <div id="rockets">
     <h1><?php tr("Our spacecrafts") ?></h1>
-    <a href="ship.php?ship=Millennium-Balcon" title="See more infos about Millennium-Balcon">
+    <a href="ship.php?ship=Millenium Balcon" title="<?php tr("See more infos about Millenium Balcon") ?>">
         <div class="rocket-panel" id="millennium-banner">
             <h2 class="space-font"> <?php tr("MILLENNIUM BALCON") ?> </h1>
         </div>
       </a>
       <br>
-      <a href="ship.php?ship=StarBooster" title="See more infos about StarBooster">
+      <a href="ship.php?ship=Star Booster" title="<?php tr("See more infos about Star Booster") ?>">
         <div class="rocket-panel" id="starbooster-banner">
             <h2 class="space-font"> <?php tr("STARBOOSTER") ?> </h1>
             </div>
       </a>
       <br>
-      <a href="ship.php?ship=arcasia" title="See more infos about Arcasia">
+      <a href="ship.php?ship=Arcasia" title="<?php tr("See more infos about Arcasia") ?>">
         <div class="rocket-panel" id="arcasia-banner">
             <h2 class="space-font"> <?php tr("ARCASIA") ?> </h1>
             </div>
