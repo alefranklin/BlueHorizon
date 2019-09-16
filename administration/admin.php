@@ -90,7 +90,7 @@
 
         <section>
           <!--for demo wrap-->
-          <h1>Lista viaggi:</h1>
+          <h1><?php tr("Lista viaggi") ?>:</h1>
           <div class="tbl-header">
             <table cellpadding="0" cellspacing="0" border="0">
               <thead>
