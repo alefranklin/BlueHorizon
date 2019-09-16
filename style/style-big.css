@@ -119,6 +119,15 @@
         margin-top:0;
     }
 
+    .space-font-small{
+        font-family: 'lato', sans-serif;
+        margin-top:0;
+        font-size: 12px;
+    }
+
+    .separator{
+      color:#FFFFFF;
+    }
     #rockets
     {
         width:90%;
@@ -126,7 +135,7 @@
         margin:auto;
     }
 
-    #ship-panel
+    #ship-panel, #planet-info
     {
         width:50%;
         margin: 1% 25%;
@@ -143,6 +152,10 @@
         height: auto;
     }
 
+    #planet-info{
+      width: 100%;
+      margin: 1% 0%;
+    }
 
     #millennium-banner
     {
@@ -231,13 +244,6 @@
         top:-2px;
     }
 
-    .topnav a.user-icon-container{
-        margin: 18px 0px 14px 0px;
-        padding: 0px 15px;
-        width: auto;
-        font-size: 21px;
-        text-align: center;
-    }
 
     .topnav ul li:not(:first-of-type){
         border-left: 1px solid lightgray;
@@ -1205,6 +1211,30 @@
    }
    ::-webkit-scrollbar-thumb {
        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+   }
+
+   #book-date-form-div{
+     border: 2px black solid;
+   }
+
+   #passengers-cabin-book-div{
+     border: 2px black solid;
+   }
+
+   #passengers-div{
+     border: 2px black solid;
+   }
+
+   #cabin-div{
+     border: 2px black solid;
+   }
+
+   .guests-div{
+     border:2px black solid;
+   }
+
+   #checkout-div{
+     border: 2px black solid;
    }
 
 }

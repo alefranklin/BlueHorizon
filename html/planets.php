@@ -42,27 +42,63 @@ if (!isset($_POST['pagato'])) {
         header("location:".$host_path."html/travels.php");
       }
 ?>
+
+
+    <h2>Prenota subito</h2>
+    <div id="book-date-form-div">
+    <?php  $getplanet = "SELECT t.departure_date,t.id from travels t, planets p where p.name='$destination' and t.id_planet = p.id AND departure_date > CURRENT_DATE";
+      $planet_result = mysqli_query($db, $getplanet);
+      $dates = $planet_result->fetch_assoc();
+      if(!$dates){
+        tr("Nessuna data disponibile per questa destinazione");
+      } else {
+?>
     <form method="post" action="planets.php">
       <input type="hidden" name="planet" value="<?php
-        echo $destination;
-?>"/>
+        echo $destination;?>"/>
+      <?php
+
+?>
       <select name="date">
     <?php
-        $getplanet = "SELECT t.departure_date,t.id from travels t, planets p where p.name='$destination' and t.id_planet = p.id AND departure_date > CURRENT_DATE";
-        $planet_result = mysqli_query($db, $getplanet);
-        while ($dates = $planet_result->fetch_assoc()) {
+        do{
             echo ("<option value='" . $dates['departure_date'] . "'>" . $dates['departure_date'] . "</option>");
-        }
+        }while ($dates = $planet_result->fetch_assoc());
 ?>
     </select>
     <input type="submit"/>
   </form>
+<?php } ?>
+  </div>
+  <div id="planet-info">
+    <?php
+    global $db;
+    $name_planet = (string)$_GET['planet'];
+    $query = "SELECT * FROM planets WHERE name = '$name_planet'";
+
+    $query_result = get_query($query);
+    $planet= $query_result->fetch_assoc();
+
+    echo tr("Nome").": ".$planet['name'];
+    echo "<br>";
+    echo tr("Informazioni").": ".$planet['info'];
+    echo "<br>";
+    echo "<br>";
+    echo tr("Massa").": ".$planet['mass']." 10^23Kg";
+    echo "<br>";
+    echo "<br>";
+    echo tr("Temperatura").": ".$planet['temperature']."C";
+    echo "<br>";
+    echo "<br>";
+
+    ?>
+  </div>
 <?php
     }
     if (isAuth() && isset($_POST['date'])) {
         if ((isset($_POST['date']) && (!isset($_POST['passengers'])))) {
 ?>
-    <div id="book-date-form-div">
+    <div id="passengers-cabin-book-div">
       <form method="post" action="planets.php">
         <input type="hidden" name="planet" value="<?php
             echo $_POST['planet'];
@@ -92,6 +128,7 @@ if (!isset($_POST['pagato'])) {
         <input type="submit"/>
       </form>
     </div>
+
 <?php
         }
     }
@@ -124,6 +161,7 @@ if (!isset($_POST['pagato'])) {
 
   <?php
         for ($i = 1;$i < $_POST['passengers'];$i = $i + 1) {
+            echo "<div class=\"guests-div\">";
             echo "<label for=\"name_guest$i\">";
             tr("Nome ospite numero");
             echo " $i </label>";
@@ -134,6 +172,7 @@ if (!isset($_POST['pagato'])) {
             echo " $i </label>";
             tr("(Solo lettere maiuscole o minuscole)");
             echo "<input type=\"text\" pattern =\"([a-z]*[A-Z]*)*\" name=\"lastname_guest$i\" required/><br>";
+            echo "</div>";
         }
 ?>
   <input type="submit"/>
@@ -143,7 +182,8 @@ if (!isset($_POST['pagato'])) {
     }
     if (isset($_POST['passengers'])) {
         if (isset($_POST['name_guest1']) || $_POST['passengers'] == 1) {
-            echo "RESOCONTO<br>";
+            echo "<h1>RESOCONTO</h1><br>";
+            echo "<div id=\"checkout-div\">";
             echo "Numero totale passeggeri:  " . $_POST['passengers'] . "<br>";
             $guests[0]['name'] = $_SESSION['user']['name'];
             $guests[0]['lastname'] = $_SESSION['user']['lastname'];
@@ -206,6 +246,7 @@ if (!isset($_POST['pagato'])) {
             } ?>
       </form>
 <?php
+      echo "</div>";
         }
     }
 }
