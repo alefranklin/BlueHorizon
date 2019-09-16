@@ -5,7 +5,7 @@
     $PageTitle=tr("Destination");
     if (isset($_GET['planet']))
     {
-      $destination= tr($_GET['planet']);
+      $destination= $_GET['planet'];
     };
     function customPageHeader() { ?>
 
