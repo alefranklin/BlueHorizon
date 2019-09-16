@@ -34,13 +34,13 @@
             </div>
       </a>
       <br>
-      <a href="ship.php?planet=Terra" title="See more infos about Arcasia">
+      <a href="ship.php?ship=arcasia" title="See more infos about Arcasia">
         <div class="rocket-panel" id="arcasia-banner">
             <h2 class="space-font"> <?php tr("ARCASIA") ?> </h1>
             </div>
       </a>
       <br>
-    </div>  
+    </div>
 </div>
 
 <!--
