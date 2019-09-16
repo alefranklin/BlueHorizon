@@ -14,8 +14,6 @@
         }
         $title = "Benvenuto nella tua area riservata ".$_SESSION['user']['username'];
         $PageTitle="Pagina utente - ".$_SESSION['user']['username'];
-
-        print_r($_SESSION);
     }
     else {
         $title = "Area riservata agli utenti";
@@ -24,17 +22,18 @@
     $request = $_SERVER["REQUEST_METHOD"];
     $model = new User('user', 'edit', $_SESSION["user"]["id"]);
 
-    if ($request == "POST" and !isset($_POST["init"])) {
+    if ($request == "POST") {
         //se non si sono verificati errori procedo con la modifica dei dati
         if($model->controls()) {
-            $model->apply();
+          $model->apply();
 
-            $vars = $model->get_vars();
-            $username = $vars["username"];
-            $oldpass = $_SESSION["user"]["pwhash"];
-            $passwd = (empty($vars["password"])) ? $oldpass : myhash($vars["password"]);
-            $_SESSION["user"]["diocan"] = get_user($username,$passwd, 1);
-            #smartRedir(6);
+          $vars = $model->get_vars();
+          $username = $vars["username"];
+          $oldpass = $_SESSION["user"]["pwhash"];
+          $passwd = (empty($vars["password"])) ? $oldpass : myhash($vars["password"]);
+          get_user($username,$passwd, 1);
+
+          smartRedir(5);
         }
     }
 
@@ -59,7 +58,7 @@
 <div id="body-page" class="">
 
     <?php
-      if ($request == "POST") { ?>
+      if ($request == "POST" or ($request == "GET" and isset($_GET["edit"])) ) { ?>
 
         <!-- se la pagina viene chiamata tramite post allora sono in modalita modifica -->
         <section>
@@ -97,9 +96,8 @@
             </p>
 
             <section>
-              <form name="init" method="post" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>">
-                <button name="init" value="init" class="blue-pill"><?php tr("Modifica Info") ?></button></a>
-              </form>
+              <a href="<?= $host_path."user/privato.php?edit=1" ?>">
+                <button class="blue-pill"><?php tr("Modifica Info") ?></button></a>
             </section>
 
             <?php $orders_query = "SELECT o.id, p.name as planet, r.name as rocket, c.class, o.adults_number, o.kids_number

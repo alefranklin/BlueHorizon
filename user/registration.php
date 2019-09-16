@@ -23,7 +23,9 @@
             if(isset($ris_reg)) {
                 $vars = $model->get_vars();
                 get_user($vars["username"],$vars["password"]);
-                smartRedir(6);
+                smartRedir(5);
+            } else {
+              smartRedir(6);
             }
         }
     }

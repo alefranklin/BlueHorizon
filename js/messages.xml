@@ -33,6 +33,7 @@
     </message>
     <message id="7">
         <type>good</type>
-        <content>lingua cambiata</content>
+        <content-it>lingua cambiata</content-it>
+        <content-en>lenguage changed</content-en>
     </message>
 </messages>

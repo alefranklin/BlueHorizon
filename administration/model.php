@@ -121,9 +121,6 @@
       global $host_path;
       #$result = get_query($query);
       $result = $db->query($query) or die(mysqli_error($db));
-      smartRedir(5,$host_path."user/privato.php/");
-      #die();
-
     }
 
     /*  permette di capire se la variabile è stata modificata e se c'è bisogno di effettuare il controllo
