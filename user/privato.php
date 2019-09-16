@@ -56,7 +56,7 @@
 </div>
 
 <div id="body-page" class="">
-
+  <div id="user-private">
     <?php
       if ($request == "POST" or ($request == "GET" and isset($_GET["edit"])) ) { ?>
 
@@ -77,6 +77,7 @@
 
         <h1><?= $title; ?></h1>
 
+        <div id="user-data">
         <?php if (isAuth()) { ?>
             <p>
                 <h3><?php tr("I tuoi dati") ?>:</h3><br/>
@@ -94,7 +95,7 @@
 
                 ?>
             </p>
-
+        </div>
             <section>
               <a href="<?= $host_path."user/privato.php?edit=1" ?>">
                 <button class="blue-pill"><?php tr("Modifica Info") ?></button></a>
@@ -121,7 +122,7 @@
                         <th><?php tr("Destination") ?></th>
                         <th><?php tr("Rocket") ?></th>
                         <th><?php tr("Cabin class") ?></th>
-                        <th><?php tr("Number of passengers") ?></th>
+                        <th><?php tr("Passengers") ?></th>
 
                     </tr>
                   </thead>
@@ -159,6 +160,7 @@
 
       <?php }
     ?>
+  </div>  
 </div>
 
 <!-- footer -->
