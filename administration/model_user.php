@@ -16,16 +16,16 @@
 
         switch ($this->action) {
           case 'edit':
-            $this->title = "Modifica l'utente";
-            $this->msg_form_button = "Modifica";
+            $this->title = tr("Modifica l'utente");
+            $this->msg_form_button = tr("Modifica");
             break;
           case 'add':
-            $this->title = "Aggiungi un Utente";
-            $this->msg_form_button = "Aggiungi";
+            $this->title = tr("Aggiungi utente");
+            $this->msg_form_button = tr("Aggiungi");
             break;
           case 'reg':
-            $this->title = "Benvenuto, qui puoi registrarti!";
-            $this->msg_form_button = "Registrati";
+            $this->title = tr("Benvenuto, qui puoi registrarti!");
+            $this->msg_form_button = tr("Registrati");
             break;
           default:
             break;

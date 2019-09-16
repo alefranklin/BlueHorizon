@@ -29,7 +29,7 @@ Blue
 <p>
 Horizon
 </p>
-<img id="logo" src="http://localhost/BlueHorizon/img/logo1.png" alt="logo"/>
+<img id="logo" src="http://localhost/BlueHorizon/img/logo1.png" alt=<?php tr("BlueHorizon's logo") ?>/>
 </div>
 <!--<img id="logo" role="banner" src="?= $host_path."img/logo-placeholder.png" ?>" alt="Logo BlueHorizon"> -->
 <div id="menuShowMobile" onclick="toggleMenu()">
