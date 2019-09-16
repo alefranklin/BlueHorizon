@@ -139,10 +139,11 @@
         border-radius: 0.3em;
         border-bottom-left-radius:0;
         border-bottom-right-radius:0;
+        height: 20%;
     }
 
     .ship-panel img {
-      height: inherit;
+      height: 100%;
       width: auto;
     }
 /*

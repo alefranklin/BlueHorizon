@@ -100,7 +100,7 @@
                 <button class="blue-pill"><?php tr("Modifica Info") ?></button></a>
             </section>
 
-            <?php $orders_query = "SELECT o.id, p.name as planet, r.name as rocket, c.class, o.adults_number, o.kids_number
+            <?php $orders_query = "SELECT o.id, p.name as planet, r.name as rocket, c.class, o.passengers_number
                                    FROM orders o, planets p, rockets r, travels t, cabins c
                                    WHERE o.id_user = ".$_SESSION['user']['id'].
                                    " AND p.id = t.id_planet
@@ -121,10 +121,8 @@
                         <th>Destination</th>
                         <th>Rocket</th>
                         <th>Cabin Class</th>
-                        <th>Number of adults</th>
-                        <th>Number of kids</th>
-                        <th></th>
-                        <th></th>
+                        <th>Number of passengers</th>
+
                     </tr>
                   </thead>
                 </table>
@@ -138,10 +136,7 @@
                         <td><?= $order['planet'] ?></td>
                         <td><?= $order['rocket'] ?></td>
                         <td><?= $order['class'] ?></td>
-                        <td><?= $order['adults_number'] ?></td>
-                        <td><?= $order['kids_number'] ?></td>
-                        <td><a href="manage.php?id=<?= $order['id'] ?>&action=edit&section=order">Edit</a></td>
-                        <td><a href="manage.php?id=<?= $order['id'] ?>&action=delete&section=order">Delete</a></td>
+                        <td><?= $order['passengers_number'] ?></td>
                     </tr>
                     <?php } ?>
                   </tbody>
