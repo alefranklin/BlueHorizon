@@ -30,6 +30,30 @@
         overflow: hidden;
     }
 
+    #rockets
+    {
+        width:90%;
+        text-align: center;
+        margin:auto;
+    }
+
+    #ship-panel
+    {
+        width:50%;
+        margin: 1% 25%;
+        font-size:1.5em;
+        padding-bottom: 0.5em;
+        padding-top: 0.5em;
+        padding-left:0.5em;
+        text-align: center;
+        font-family: 'lato', sans-serif;
+        font-weight: bold;
+        color:rgb(78, 78, 78);
+        border: 3px solid rgb(78, 78, 78);
+        border-radius: 0.3em;
+        height: auto;
+    }
+    
     #title
     {
         background-image: linear-gradient(to top, rgb(60, 48, 170), rgb(11, 11, 82));
