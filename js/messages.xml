@@ -36,4 +36,9 @@
         <content-it>Lingua cambiata</content-it>
         <content-en>Language changed</content-en>
     </message>
+    <message id="8">
+        <type>good</type>
+        <content-it>Viaggio prenotato</content-it>
+        <content-en>Travel booked</content-en>
+    </message>
 </messages>
