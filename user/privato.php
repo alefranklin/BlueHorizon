@@ -79,7 +79,7 @@
 
         <?php if (isAuth()) { ?>
             <p>
-                <h3>I tuoi dati sono:</h3><br/>
+                <h3><?php tr("I tuoi dati") ?>:</h3><br/>
                 <?php
                 echo tr("Username").": ".$_SESSION['user']['username'];
                 echo "<br>";
@@ -118,10 +118,10 @@
                     <thead>
                     <tr>
                         <th>Order ID</th>
-                        <th>Destination</th>
-                        <th>Rocket</th>
-                        <th>Cabin Class</th>
-                        <th>Number of passengers</th>
+                        <th><?php tr("Destination") ?></th>
+                        <th><?php tr("Rocket") ?></th>
+                        <th><?php tr("Cabin class") ?></th>
+                        <th><?php tr("Number of passengers") ?></th>
 
                     </tr>
                   </thead>
