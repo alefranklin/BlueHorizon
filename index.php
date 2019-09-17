@@ -26,12 +26,7 @@
     <?php tr("Se vuoi viaggiare, scegli un pianeta di destinazione e prenota ") ?><a href="<?= $host_path . "html/travels.php" ?>" > <?php tr("Qui") ?> </a>  <?php tr("!") ?>
   </div>
 
-  <div id="images">
-
-    <figure>
-    <img src="img/Slideshow_1.jpg" alt="<?php tr("Astronauta sdraiato")?>" />
-    <figcaption><a href="javascript:void(0);" onclick="toggleUser(0)">Unisciti alla nostra comunità di viaggiatori! ↗</a></figcaption>
-    </figure>
+  <div id="images"> 
 
     <figure>
     <img src="img/Slideshow_2.jpg" alt="<?php tr("Millennium Balcon")?>" />
