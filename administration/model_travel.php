@@ -49,7 +49,7 @@
 
       return "INSERT INTO `travels` (`id`, `id_rocket`, `id_planet`, `departure_date`, `duration`)
               VALUES (NULL, {$this->vars['rocket']}, {$this->vars['arrival']}, '$date', {$this->vars['duration']});";
-              
+
     }
 
     protected function edit() {

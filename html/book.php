@@ -4,7 +4,6 @@
 
     $privato = $host_path."user/privato.php";
     global $db;
-    //echo "PAGATO CON I SOLDI RUBATI<br>";
     $query = "INSERT INTO orders (id,id_user,id_travel,id_cabin,passengers_number) VALUES ";
     $query = $query . "(NULL,'" . $_POST['id_user'] . "','" . $_POST['id_travel'] . "','" . $_POST['id_cabin'] . "','" . $_POST['passengers_number'] . "')";
     mysqli_query($db, $query) or die ("Invalid query: ".mysqli_error($db));
