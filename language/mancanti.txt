@@ -1,6 +1,6 @@
-CHIAVE=LOGIN
-ITA=
-ENG=
+﻿CHIAVE=LOGIN
+ITA=ACCEDI
+ENG=.
 
 
 
@@ -8,8 +8,8 @@ ENG=
 
 
 CHIAVE=Contatti
-ITA=
-ENG=
+ITA=.
+ENG=Contacts
 
 
 
@@ -17,8 +17,8 @@ ENG=
 
 
 CHIAVE=of
-ITA=
-ENG=
+ITA=di
+ENG=.
 
 
 
@@ -26,8 +26,8 @@ ENG=
 
 
 CHIAVE=See more infos about Millenium Balcon
-ITA=
-ENG=
+ITA=Scopri di più sul Millennium Balcon
+ENG=.
 
 
 
@@ -35,8 +35,8 @@ ENG=
 
 
 CHIAVE=See more infos about Star Booster
-ITA=
-ENG=
+ITA=Scopri di più sullo StarBooster
+ENG=.
 
 
 
@@ -44,8 +44,8 @@ ENG=
 
 
 CHIAVE=See more infos about Arcasia
-ITA=
-ENG=
+ITA=Scopri di più sull'Arcasia
+ENG=.
 
 
 
@@ -53,8 +53,8 @@ ENG=
 
 
 CHIAVE=LOGOUT
-ITA=
-ENG=
+ITA=ESCI
+ENG=.
 
 
 
@@ -62,8 +62,8 @@ ENG=
 
 
 CHIAVE=Pagina utente - user
-ITA=
-ENG=
+ITA=.
+ENG=User page - user
 
 
 
@@ -71,8 +71,8 @@ ENG=
 
 
 CHIAVE=I tuoi dati
-ITA=
-ENG=
+ITA=.
+ENG=Your data
 
 
 
@@ -80,8 +80,8 @@ ENG=
 
 
 CHIAVE=Username
-ITA=
-ENG=
+ITA=.
+ENG=.
 
 
 
@@ -89,8 +89,8 @@ ENG=
 
 
 CHIAVE=Name
-ITA=
-ENG=
+ITA=Nome
+ENG=.
 
 
 
@@ -98,8 +98,8 @@ ENG=
 
 
 CHIAVE=Lastname
-ITA=
-ENG=
+ITA=Cognome
+ENG=.
 
 
 
@@ -107,8 +107,8 @@ ENG=
 
 
 CHIAVE=Sex
-ITA=
-ENG=
+ITA=Sesso
+ENG=.
 
 
 
@@ -116,8 +116,8 @@ ENG=
 
 
 CHIAVE=Modifica Info
-ITA=
-ENG=
+ITA=.
+ENG=Edit Info
 
 
 
@@ -125,8 +125,8 @@ ENG=
 
 
 CHIAVE=Lista viaggi:
-ITA=
-ENG=
+ITA=.
+ENG=Travel list:
 
 
 
@@ -134,8 +134,8 @@ ENG=
 
 
 CHIAVE=Rocket
-ITA=
-ENG=
+ITA=Navette
+ENG=.
 
 
 
@@ -143,8 +143,8 @@ ENG=
 
 
 CHIAVE=Cabin class
-ITA=
-ENG=
+ITA=Classe cabina
+ENG=.
 
 
 
@@ -152,8 +152,8 @@ ENG=
 
 
 CHIAVE=Passengers
-ITA=
-ENG=
+ITA=Passeggeri
+ENG=.
 
 
 
@@ -161,8 +161,8 @@ ENG=
 
 
 CHIAVE=Benvenuto in BlueHorizon!
-ITA=
-ENG=
+ITA=.
+ENG=Welcome in BlueHorizon!
 
 
 
@@ -170,8 +170,8 @@ ENG=
 
 
 CHIAVE=Questo è un sito di prenotazione di viaggi interplanetari!
-ITA=
-ENG=
+ITA=.
+ENG=This is a site about extraterrestrial travels!
 
 
 
@@ -179,8 +179,8 @@ ENG=
 
 
 CHIAVE=Se vuoi viaggiare, scegli un pianeta di destinazione e prenota 
-ITA=
-ENG=
+ITA=.
+ENG=If you want to start your trip, choose a destination planet and book your flight
 
 
 
@@ -188,8 +188,8 @@ ENG=
 
 
 CHIAVE=Qui
-ITA=
-ENG=
+ITA=.
+ENG=Here
 
 
 
@@ -197,8 +197,8 @@ ENG=
 
 
 CHIAVE=!
-ITA=
-ENG=
+ITA=.
+ENG=.
 
 
 
@@ -206,8 +206,8 @@ ENG=
 
 
 CHIAVE=Astronauta sdraiato
-ITA=
-ENG=
+ITA=.
+ENG=Lying down Astroneer 
 
 
 
@@ -215,8 +215,8 @@ ENG=
 
 
 CHIAVE=Millennium Balcon
-ITA=
-ENG=
+ITA=.
+ENG=.
 
 
 
@@ -224,8 +224,8 @@ ENG=
 
 
 CHIAVE=Riunione Aziendale
-ITA=
-ENG=
+ITA=.
+ENG=Company meeting
 
 
 
@@ -233,8 +233,8 @@ ENG=
 
 
 CHIAVE=Plancia di comando
-ITA=
-ENG=
+ITA=.
+ENG=Helm station
 
 
 
