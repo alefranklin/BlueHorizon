@@ -876,45 +876,6 @@
       margin-top:1em;
     }
 
-    #planet-layout img, #planet-layout table
-    {
-      display: inline-block;
-    }
-
-    #planet-layout p
-    {
-        font-family: 'lato', sans-serif;
-        color:rgb(78, 78, 78);
-    }
-
-    #planet-layout table th, #planet-layout table td
-    {
-        border: 2px solid rgb(78, 78, 78);
-        color:rgb(78, 78, 78);
-        font-family: 'lato', sans-serif;
-    }
-
-    #planet-layout th, #planet-layout td
-    {
-        padding:0.5em;
-    }
-
-    #planet-layout table
-    {
-        border-collapse: collapse;
-
-    }
-
-    #planet-layout img
-    {
-        border-right: 2px solid rgba(255,255,255,0.5);
-        width:100%;
-        vertical-align: top;
-        margin-right: 2em;
-        width:18em;
-        height:auto;
-    }
-
     #planet-layout
     {
         position:relative;
@@ -1196,7 +1157,7 @@
      background-color: rgba(0,0,0,.7);
      border-bottom: solid 1px #1fb6ee;
    }
-   
+
    #user-private
    {
      width:90%;
@@ -1216,27 +1177,54 @@
 
    #book-date-form-div{
      border: 2px black solid;
+     margin:2px 30%;
+     text-align: center;
+     border-radius: 10px;
    }
 
    #passengers-cabin-book-div{
-     border: 2px black solid;
+     text-align: center;
+     padding: 5px;
+     border-radius: 10px;
    }
 
    #passengers-div{
      border: 2px black solid;
+     margin: 2px 30%;
+     width: 40%;
+     padding: 5px;
+     text-align: center;
+     border-radius: 10px;
    }
 
    #cabin-div{
      border: 2px black solid;
+     margin: 2px 30%;
+     width: 40%;
+     padding: 5px;
+     text-align: center;
+     border-radius: 10px;
    }
 
    .guests-div{
      border:2px black solid;
+     margin: 2px 32%;
+     padding: 5px;
+     border-radius: 10px;
+   }
+   .guests-div input {
+     float:right;
+     position: relative;
+     bottom: 6px;
    }
 
    #checkout-div{
      border: 2px black solid;
+     margin: 0px 26%;
+     text-align: center;
+     border-radius: 10px;
    }
+
 
 }
 /*@media only screen and (min-width:595px and max-width:620px)

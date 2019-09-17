@@ -17,7 +17,7 @@
 
   ?>
   <div id="skip-main" class="skip">
-      <a href="#body-page"><?php tr("Skip to main content") ?></a>
+      <a href="#body-page" tabindex="0"><?php tr("Skip to main content") ?></a>
   </div>
 
   <div id="header_nav">

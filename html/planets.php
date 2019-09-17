@@ -44,8 +44,9 @@ if (!isset($_POST['pagato'])) {
 ?>
 
 
-    <h2><?php tr("Prenota subito!");?></h2>
+
     <div id="book-date-form-div">
+      <h2><?php tr("Prenota subito!");?></h2>
     <?php  $getplanet = "SELECT t.departure_date,t.id from travels t, planets p where p.name='$destination' and t.id_planet = p.id AND departure_date > CURRENT_DATE";
       $planet_result = mysqli_query($db, $getplanet);
       $dates = $planet_result->fetch_assoc();
@@ -87,10 +88,10 @@ if (!isset($_POST['pagato'])) {
     tr($planet['info']);
     echo "<br>";
     echo "<br>";
-    echo tr("Massa").": ".$planet['mass']." 10^23Kg";
+    echo tr("Massa").": ".$planet['mass']."*10<sup>23</sup>Kg";
     echo "<br>";
     echo "<br>";
-    echo tr("Temperatura").": ".$planet['temperature']."C";
+    echo tr("Temperatura").": ".$planet['temperature']."&degC";
     echo "<br>";
     echo "<br>";
 
@@ -168,12 +169,13 @@ if (!isset($_POST['pagato'])) {
             echo "<div class=\"guests-div\">";
             echo "<label for=\"name_guest$i\">";
             tr("Nome ospite numero");
-            echo " $i </label>";
+            echo " $i <br></label>";
             tr("(Solo lettere maiuscole o minuscole)");
-            echo "<input type=\"text\" pattern =\"([a-z]*[A-Z]*)*\" name=\"name_guest$i\" required/><br>";
+            echo "<input type=\"text\" pattern =\"([a-z]*[A-Z]*)*\" name=\"name_guest$i\" required/><br><br>";
+
             echo "<label for=\"lastname_guest$i\">";
             tr("Cognome ospite numero");
-            echo " $i </label>";
+            echo " $i <br></label>";
             tr("(Solo lettere maiuscole o minuscole)");
             echo "<input type=\"text\" pattern =\"([a-z]*[A-Z]*)*\" name=\"lastname_guest$i\" required/><br>";
             echo "</div>";
@@ -190,7 +192,8 @@ if (!isset($_POST['pagato'])) {
             tr("Resoconto");
             echo "</h1><br>";
             echo "<div id=\"checkout-div\">";
-            echo "Numero totale passeggeri:  " . $_POST['passengers'] . "<br>";
+            tr("Numero totale passeggeri");
+            echo ": ".$_POST['passengers'] . "<br>";
             $guests[0]['name'] = $_SESSION['user']['name'];
             $guests[0]['lastname'] = $_SESSION['user']['lastname'];
             if ($_POST['passengers'] > 1) {
@@ -216,20 +219,23 @@ if (!isset($_POST['pagato'])) {
             }
             tr("Destinazione");
             echo ": ".$_POST['planet'] . "<br>";
-            echo "Data di partenza";
+            tr("Data di partenza");
             echo ": ".$_POST['date'] . "<br>";
             $query = "SELECT class FROM cabins where id = " . $_POST['cabin_type'];
             $cabin_result = mysqli_query($db, $query);
             $cabin = $cabin_result->fetch_assoc();
-            echo "Tipo di cabina: " . $cabin['class'] . "<br>";
-            $query = "SELECT t.duration as duration FROM travels t, planets p WHERE p.name = '" . $_POST['planet'] . "' and t.departure_date = '2019-09-21' AND t.id_planet = p.id";
+            tr("Tipo di cabina");
+            echo ": ". $cabin['class'] . "<br>";
+            $query = "SELECT t.duration as duration FROM travels t, planets p WHERE p.name = '" . $_POST['planet'] . "' and t.departure_date = '".$_POST['date']."' AND t.id_planet = p.id";
             $duration_result = mysqli_query($db, $query);
             $duration = $duration_result->fetch_assoc();
-            echo "Durata viaggio: " . $duration['duration'] . "<br>";
+            tr("Durata viaggio");
+            echo ": ".$duration['duration'].   "<br>";
             $query = "SELECT priceCalc(" . $_POST['passengers'] . "," . $_POST['cabin_type'] . "," . $duration['duration'] . ") as price";
             $priceCalc_result = mysqli_query($db, $query);
             $price = $priceCalc_result->fetch_assoc();
-            echo "Prezzo totale: " . $price['price'] . "<br>";
+            tr("Prezzo totale");
+            echo ": ". $price['price'] . "<br>";
 ?>
       <form method="post" action="<?= $book;?>">
         <input type="hidden" name="id_user" value="<?php
@@ -251,6 +257,7 @@ if (!isset($_POST['pagato'])) {
         <input type="hidden" name="passengers_number" value="<?php
             echo $_POST['passengers'];
 ?>"/>
+<br><br>
         <div id="payment-alert"><?php tr("Attenzione! Una volta confermata questa prenotazione non sará annullabile o rimborsabile");?></div>
         <input type="submit" name="pagato" value="<?php tr("Conferma e paga");?>"/>
         <?php for ($i = 1;$i < $_POST['passengers'];$i = $i + 1) {
@@ -267,3 +274,6 @@ if (!isset($_POST['pagato'])) {
 
   </div>
 </div>
+
+<!-- footer -->
+<?php include($local_path."html/footer.php"); ?>
