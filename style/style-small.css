@@ -78,6 +78,41 @@
         height: auto;
     }
     
+    #error
+    {
+        position:relative;
+        width:100%;
+        height:90vh;
+    }
+
+    #error h1
+    {
+        color:white;
+        position:absolute;
+        bottom:4em;
+        right:5%;
+    }
+
+    #error h2
+    {
+        color:white;
+        position:absolute;
+        bottom:1em;
+        right:5%;
+    }
+
+    #mobile
+    {
+        
+        width:100%;
+        height:100%;
+    }
+
+    #desk
+    {
+        display: none;
+    }
+
     #title
     {
         background-image: linear-gradient(to top, rgb(60, 48, 170), rgb(11, 11, 82));

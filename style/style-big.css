@@ -36,6 +36,38 @@
         background-image: linear-gradient(to top, rgb(60, 48, 170), rgb(11, 11, 82));
     }
 
+    #error img
+    {
+        width:100%;
+        height:90vh;
+    }
+
+    #error
+    {
+        position:relative;
+    }
+
+    #error h1
+    {
+        color:white;
+        position:absolute;
+        top:1em;
+        right:5%;
+    }
+
+    #error h2
+    {
+        color:white;
+        position:absolute;
+        top:4em;
+        right:5%;
+    }
+
+    #mobile
+    {
+        display: none;
+    }
+
     #title
     {
         height:inherit;
