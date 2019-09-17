@@ -87,10 +87,21 @@
           if (isset($_SERVER['HTTP_REFERER'])){
               // elimino eventuali variabili get precedenti
               $exp = explode('?', $_SERVER['HTTP_REFERER']);
-              $prev_page = current($exp);
-              $getvar = end($exp);
-              $parameter = ($param) ? "?$getvar&snackmsg=$msg" : "?snackmsg=$msg";
-              header("location:$prev_page"."$parameter");
+
+              $prev_page = current($exp); //ok
+              $getvar = (count($exp) > 1 and $param) ? end($exp) : "";
+
+              if (count($exp) > 1 and $param) {
+                $splitpar = explode('&', end($exp));
+                if (count($splitpar) > 1 or strpos($splitpar[0], 'snackmsg') !== false) {
+                  array_pop($splitpar);
+                }
+                $filtered = implode("&", $splitpar);
+                $getvar = ($filtered == "") ? "?snackmsg=$msg" : "?$filtered&snackmsg=$msg";
+              } else {
+                $getvar = "?snackmsg=$msg";
+              }
+              header("location:$prev_page"."$getvar");
 
           } else {
               header("location:$local_path"."?snackmsg=$msg"); // homepage
