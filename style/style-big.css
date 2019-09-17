@@ -91,29 +91,47 @@
       width: 0;
     }
 
-    #presentation h1
+    #home-title
     {
-        background-color:black;
-        box-shadow: 0px 10px 20px black;
-        color:white;
-        font-size:2.6em;
-        margin:auto;
-        height:10vh;
-        min-height:62.5px;
         position:relative;
-        padding-left:5%;
         z-index:2;
+        color:white;
+        background-color:black;
+        width:100%;
+        padding:0 5% 0 5%;
+        box-shadow: 0 10px 10px black;
     }
 
-    /*#presentation p{
-        font-size: 1.5em;
+    #home-title h1, #images figure
+    {
+        margin:0;
+    }
+
+    #images figure
+    {
+        position: relative;
+    }
+
+    #images img
+    {
         width:100%;
-        margin: 0px;
-        text-align:left;
-        padding-left:1em;
-        border-left: 2px solid rgb(81, 106, 190);
-        color: rgb(78, 78, 78);
-    }*/
+    }
+
+    #images figcaption
+    {
+        position: absolute;
+        bottom:0;
+        right:0;
+        height:2em;
+        padding:0 1em 0 1em;
+        color:white;
+        font-weight: bold;
+        background-color:black;
+        border-top-left-radius: 10px;
+        border-top:5px solid white;
+        border-left:5px solid white;
+    }
+
     .space-font{
         font-family: 'lato', sans-serif;
         margin-top:0;
@@ -128,6 +146,7 @@
     .separator{
       color:#FFFFFF;
     }
+
     #rockets
     {
         width:90%;
@@ -265,13 +284,13 @@
     #user-div{
         text-align:center;
         position: fixed;
+        z-index:5;
         height: 19em;
         width: 25%;
         top: 12%;
         right: -30%;
         float: right;
         background-color: white;
-        /*border: 3px solid lightgreen;*/
         border-radius: 10px;
         box-shadow: 0 0 10px black;
     }
@@ -891,191 +910,6 @@
         font-style:italic;
         font-size:1.2em;
     }
-
-    #presentation
-    {
-        width:100%;
-        height:90vh;
-        margin:0;
-        overflow:hidden;
-    }
-
-    .mySlides img
-    {
-        position: absolute;
-        top:0;
-        width:100%;
-        height:inherit;
-    }
-
-    .mySlides
-    {
-        background-size: cover;
-        margin:0;
-        width:100%;
-        position:relative;
-        top:0;
-        z-index:-2;
-        height:80vh;
-    }
-
-    #left
-    {
-        background-image:linear-gradient(to right,rgba(0,0,0,1), rgba(0,0,0,0));
-        color:white;
-        height:100%;
-        width:8%;
-        font-size:200%;
-        -webkit-transition: font-size 0.4s linear;
-        transition: font-size 0.4s linear;
-    }
-
-    #right
-    {
-        background-image:linear-gradient(to left,rgba(0,0,0,1), rgba(0,0,0,0));
-        color:white;
-        height:78%;
-        width:8%;
-        font-size:200%;
-        -webkit-transition: font-size 0.4s linear;
-        transition: font-size 0.4s linear;
-    }
-
-    button:focus
-    {
-        outline:none;
-    }
-
-    #left:hover
-    {
-        font-size:300%;
-        text-shadow:0px 0px 10px rgb(73, 73, 190);
-        color:white;
-    }
-
-    #right:hover
-    {
-        font-size:300%;
-        text-shadow:0px 0px 10px rgb(73, 73, 190);
-        color:white;
-    }
-
-    figcaption
-    {
-        font-size:1.2em;
-        color: white;
-        font-family: 'lato', sans-serif;
-        background-color: rgba(0,0,0,0.5);
-        border: 5px outset white;
-        border-right:none;
-        border-bottom:none;
-        border-top-left-radius: 10px;
-        position:absolute;
-        padding: 0.5em 0.5em 1.5em 0.5em;
-        right:0;
-        bottom:0;
-        z-index:8;
-    }
-
-    #info-content
-    {
-        position:relative;
-        top:5em;
-        width:90%;
-        margin:auto;
-    }
-
-    #info-content h1
-    {
-        color:rgb(78, 78, 78);
-        font-family: 'lato', sans-serif;
-        text-align:left;
-        font-size:2.6em;
-        margin-top:0;
-    }
-
-    .info-tile
-    {
-        display:inline-block;
-        margin: 1em;
-        margin-left:3%;
-    }
-
-    .info-tile img
-    {
-        height: 16em;
-        width: 16em;
-        margin-bottom:1em;
-    }
-
-    .info-tile h1
-    {
-        font-size: 20px;
-        border-top: 2px solid lightgrey;
-    }
-
-    .info-tile img:hover
-    {
-        -webkit-filter: drop-shadow(0px 0px 10px black);
-        filter: drop-shadow(0px 0px 10px black);
-    }
-
-    #info-text
-    {
-        display:none;
-    }
-
-    #info-text:target
-    {
-        display:block;
-        position:fixed;
-        width:60%;
-        height:60%;
-        top:20%;
-        left:20%;
-        background-color:white;
-        border-radius:10px;
-        box-shadow: 0px 0px 10px black;
-   }
-
-   #info-text h1
-   {
-       width:100%;
-       background-image: linear-gradient(to top, rgb(60, 48, 170), rgb(11, 11, 82));
-       color:white;
-       text-shadow: 2px 2px 2px black;
-       border-top-left-radius:10px;
-       border-top-right-radius:10px;
-       padding-left:5%;
-       border-bottom:3px solid orange;
-   }
-
-   #info-text a
-   {
-       position:absolute;
-       right:20px;
-       top:6px;
-       color:white;
-       text-decoration:none;
-       font-weight: bold;
-       font-size:2em;
-   }
-
-   #info-text a:hover
-   {
-       text-shadow:0px 0px 5px white;
-   }
-
-   #info-text p
-   {
-       padding-left:5%;
-   }
-
-   .info-tile a
-   {
-        text-decoration:none;
-   }
-
 
    button.blue-pill {
      background-color: #a5b8da;

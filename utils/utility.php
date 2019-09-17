@@ -4,7 +4,7 @@
     include_once("config.php");
 
     // flag di debug mode (1 or 0)
-    $DEBUG = 0;
+    $DEBUG = 1;
     displayErrors($DEBUG);
     /***************************************** connessione al database ****************************************************/
 
@@ -78,7 +78,7 @@
         } else return 0;
     }
 
-    function smartRedir($msg,$link = ""){
+    function smartRedir($msg,$link = "", $param=0){
         global $local_path;
 
         if($link != ""){
@@ -86,8 +86,22 @@
         } else {
           if (isset($_SERVER['HTTP_REFERER'])){
               // elimino eventuali variabili get precedenti
-              $prev_page = current(explode('?', $_SERVER['HTTP_REFERER']));
-              header("location:$prev_page"."?snackmsg=$msg");
+              $exp = explode('?', $_SERVER['HTTP_REFERER']);
+
+              $prev_page = current($exp); //ok
+              $getvar = (count($exp) > 1 and $param) ? end($exp) : "";
+
+              if (count($exp) > 1 and $param) {
+                $splitpar = explode('&', end($exp));
+                if (count($splitpar) > 1 or strpos($splitpar[0], 'snackmsg') !== false) {
+                  array_pop($splitpar);
+                }
+                $filtered = implode("&", $splitpar);
+                $getvar = ($filtered == "") ? "?snackmsg=$msg" : "?$filtered&snackmsg=$msg";
+              } else {
+                $getvar = "?snackmsg=$msg";
+              }
+              header("location:$prev_page"."$getvar");
 
           } else {
               header("location:$local_path"."?snackmsg=$msg"); // homepage
