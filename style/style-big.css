@@ -107,6 +107,15 @@
         margin:0;
     }
 
+    #images{
+      border: 2px solid black;
+      border-radius: 10px;
+      padding: 5px;
+      width: 70%;
+      margin: 5px 15%;
+      margin-top: 15px;
+    }
+
     #images figure
     {
         position: relative;
@@ -114,17 +123,20 @@
 
     #images img
     {
-        width:100%;
+        width:70%;
+        margin: 6px 15%;
+        text-align: center;
     }
 
     #images figcaption
     {
-        position: absolute;
+        position: relative;
         bottom:0;
         right:0;
         height:2em;
         padding:0 1em 0 1em;
         color:white;
+        width: inherit;
         font-weight: bold;
         background-color:black;
         border-top-left-radius: 10px;
