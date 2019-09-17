@@ -45,7 +45,7 @@
 
     <figure>
     <img src="img/Slideshow_4.jpg" alt="<?php tr("Plancia di comando")?>" />
-    <figcaption><a href="html/travel.php">Prenota il volo dei tuoi sogni tra le nostre numerose opzioni di viaggio! ↗</a></figcaption>
+    <figcaption><a href="html/travels.php">Prenota il volo dei tuoi sogni tra le nostre numerose opzioni di viaggio! ↗</a></figcaption>
     </figure>
 
   </div>
