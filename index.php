@@ -25,24 +25,8 @@
     <br>
     <?php tr("Se vuoi viaggiare, scegli un pianeta di destinazione e prenota ") ?><a href="<?= $host_path . "html/travels.php" ?>" > <?php tr("Qui") ?> </a>  <?php tr("!") ?>
   </div>
-
-  <div id="images"> 
-
-    <figure>
-    <img src="img/Slideshow_2.jpg" alt="<?php tr("Millennium Balcon")?>" />
-    <figcaption><a href="html/rockets.php">Dai un'occhiata alle nostre navicelle! ↗</a></figcaption>
-    </figure>
-
-    <figure>
-    <img src="img/Slideshow_3.jpg" alt="<?php tr("Riunione Aziendale")?>" />
-    <figcaption><a href="html/company.php">Leggi qualche curiosità su di noi! ↗</a></figcaption>
-    </figure>
-
-    <figure>
-    <img src="img/Slideshow_4.jpg" alt="<?php tr("Plancia di comando")?>" />
-    <figcaption><a href="html/travels.php">Prenota il volo dei tuoi sogni tra le nostre numerose opzioni di viaggio! ↗</a></figcaption>
-    </figure>
-
-  </div>
+  <img id="home-bg" src="img/HOME_BG_2.jpg" alt="<?php tr("Sfondo")?>" />
+  <img id="home-bg-m" src="img/HOME_BG_M.png" alt="<?php tr("Sfondo Mobile")?>" />
+</div>
 <!-- footer -->
 <?php include($local_path."html/footer.php"); ?>

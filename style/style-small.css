@@ -20,6 +20,7 @@
     }
 
     #header{
+        height:10vh;
         margin: auto;
         text-align: left;
         overflow: hidden;
@@ -27,6 +28,7 @@
 
     #home-title
     {
+        height:10vh;
         position:relative;
         z-index:2;
         color:white;
@@ -36,34 +38,20 @@
         box-shadow: 0 10px 10px black;
     }
 
-    #home-title h1, #images figure
+    #home-title h1
     {
         margin:0;
     }
-
-    #images figure
+   
+    #home-bg
     {
-        position: relative;
+        display:none;
     }
 
-    #images img
+    #home-bg-m
     {
         width:100%;
-    }
-
-    #images figcaption
-    {
-        position: absolute;
-        bottom:0;
-        right:0;
-        height:2em;
-        padding:0 1em 0 1em;
-        color:white;
-        font-weight: bold;
-        background-color:black;
-        border-top-left-radius: 10px;
-        border-top:5px solid white;
-        border-left:5px solid white;
+        height:80vh;
     }
 
     #rockets
