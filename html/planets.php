@@ -32,7 +32,7 @@ include ($local_path . "html/navbar.php");
 
 <div id="body-page">
   <div id="planet-layout">
-    <a href="travels.php" id="breadcrumb"><?php
+    <a href=<?= "travels.php?#".$destination ?> id="breadcrumb"><?php
 tr("← Return to Travels");
 ?></a>
     <?php
