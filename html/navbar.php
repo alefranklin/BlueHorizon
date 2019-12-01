@@ -29,9 +29,9 @@
   <p>
   Horizon
   </p>
-  <img id="logo" src="http://localhost/BlueHorizon/img/logo1.png" alt=<?php tr("BlueHorizon's logo") ?> aria-hidden="true"/>
+  <img id="logo" src="http://localhost/BlueHorizon/img/logo1.png" alt=<?php tr("Blue Horizon's logo") ?> aria-hidden="true"/>
   </div>
-  <!--<img id="logo" role="banner" src="?= $host_path."img/logo-placeholder.png" ?>" alt="Logo BlueHorizon"> -->
+  <!--<img id="logo" role="banner" src="?= $host_path."img/logo-placeholder.png" ?>" alt="Logo Blue Horizon"> -->
   <div id="menuShowMobile" onclick="toggleMenu()">
     <a><i class="fa fa-bars"></i></a>
   </div>
