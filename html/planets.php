@@ -150,18 +150,10 @@ if (!isset($_POST['pagato'])) {
     if (isset($_POST['cabin_type']) && $_POST['passengers'] > 1 && !isset($_POST['name_guest1'])) {
 ?>
   <form method="post">
-    <input type="hidden" name="planet" value="<?php
-        echo $_POST['planet'];
-?>"/>
-    <input type="hidden" name="date" value="<?php
-        echo $_POST['date'];
-?>"/>
-    <input type="hidden" name="passengers" value="<?php
-        echo $_POST['passengers'];
-?>"/>
-    <input type="hidden" name="cabin_type" value="<?php
-        echo $_POST['cabin_type'];
-?>"/>
+    <input type="hidden" name="planet" value="<?= $_POST['planet']; ?>"/>
+    <input type="hidden" name="date" value="<?= $_POST['date']; ?>"/>
+    <input type="hidden" name="passengers" value="<?= $_POST['passengers']; ?>"/>
+    <input type="hidden" name="cabin_type" value="<?= $_POST['cabin_type']; ?>"/>
 
 
   <?php
@@ -247,16 +239,9 @@ if (!isset($_POST['pagato'])) {
             $travel_result = mysqli_query($db, $query);
             $travel = $travel_result->fetch_assoc();
 ?>
-         <input type="hidden" name="id_travel" value="<?php
-            echo $travel['id'];
-?>"/>
-
-        <input type="hidden" name="id_cabin" value="<?php
-            echo $_POST['cabin_type'];
-?>"/>
-        <input type="hidden" name="passengers_number" value="<?php
-            echo $_POST['passengers'];
-?>"/>
+         <input type="hidden" name="id_travel" value="<?= $travel['id']; ?>"/>
+        <input type="hidden" name="id_cabin" value="<?= $_POST['cabin_type']; ?>"/>
+        <input type="hidden" name="passengers_number" value="<?= $_POST['passengers']; ?>"/>
 <br><br>
         <div id="payment-alert"><?php tr("Attenzione! Una volta confermata questa prenotazione non sará annullabile o rimborsabile");?></div>
         <input type="submit" name="pagato" value="<?php tr("Conferma e paga");?>"/>

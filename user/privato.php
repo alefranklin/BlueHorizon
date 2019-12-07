@@ -12,7 +12,7 @@
             header("location:".$host_path."administration/admin.php".$snackstring);
             die;
         }
-        $title = "Benvenuto nella tua area riservata ".$_SESSION['user']['username'];
+        $title = "Benvenuto nella tua area riservata ";
         $PageTitle="Pagina utente - ".$_SESSION['user']['username'];
     }
     else {
@@ -62,7 +62,7 @@
 
         <!-- se la pagina viene chiamata tramite post allora sono in modalita modifica -->
         <section>
-          <h2><?= $model->title ?></h2>
+          <h2><?= tr($model->title) ?></h2>
           <p><span class="error"><?php tr("* required field") ?></span></p>
           <form name="form_user_modification" method="post" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>">
 
@@ -75,7 +75,7 @@
 
       <?php } else { ?>
 
-        <h1><?= $title; ?></h1>
+        <h1><?php tr($title); if(isset($_SESSION['user']['username'])) { print $_SESSION['user']['username'];} ?></h1>
 
         <div id="user-data">
         <?php if (isAuth()) { ?>
@@ -118,7 +118,7 @@
                   <table cellpadding="0" cellspacing="0" border="0">
                     <thead>
                     <tr>
-                        <th>Order ID</th>
+                        <th><?php tr("Order ID") ?></th>
                         <th><?php tr("Destination") ?></th>
                         <th><?php tr("Rocket") ?></th>
                         <th><?php tr("Cabin class") ?></th>
@@ -160,7 +160,7 @@
 
       <?php }
     ?>
-  </div>  
+  </div>
 </div>
 
 <!-- footer -->
