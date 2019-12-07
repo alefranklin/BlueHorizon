@@ -7,28 +7,28 @@
     }
 
     #user-div{
+        color:white;
         text-align:center;
-        height: 19em;
         width: 100%;
-        height: 100%;
+        padding-bottom: 1em;
         /*border: 3px solid lightgreen;*/
     }
 
-    #user-div h1
-    {
-        color:white;
-    }
-
     #header{
-        height:10vh;
+        
         margin: auto;
         text-align: left;
         overflow: hidden;
     }
 
+    #header-nav
+    {
+        height:5em;
+    }
+
     #home-title
     {
-        height:10vh;
+        
         position:relative;
         z-index:2;
         color:white;
@@ -37,6 +37,8 @@
         padding:0 5% 0 5%;
         box-shadow: 0 10px 10px black;
     }
+
+    
 
     #home-title h1
     {
@@ -51,7 +53,7 @@
     #home-bg-m
     {
         width:100%;
-        height:80vh;
+        
     }
 
     #rockets
@@ -82,7 +84,6 @@
     {
         position:relative;
         width:100%;
-        height:90vh;
     }
 
     #error h1
@@ -105,7 +106,7 @@
     {
         
         width:100%;
-        height:100%;
+       /* height:100%;*/
     }
 
     #desk
@@ -116,7 +117,6 @@
     #title
     {
         background-image: linear-gradient(to top, rgb(60, 48, 170), rgb(11, 11, 82));
-        height:auto;
         line-height: 0;
         font-weight: bold;
         font-family: 'lato', sans-serif;
@@ -161,14 +161,13 @@
 
     #menuShowMobile {
       max-width: 100%;
-      height:2em;
-      list-style-type: none;
+      height: 2em;
+      position:relative;
       margin: 0;
       padding: 0;
       overflow: auto;
       background-color: #333;
       text-align: center;
-      position: relative;
     }
 
     .fa-bars{
@@ -178,35 +177,40 @@
       bottom:25%;
     }
 
+
+    #menu{
+        position:absolute;
+        z-index:5;
+        width:100%;
+        margin: 0;
+        padding: 0;
+        background-color: #333;
+    }   
+
     .showMenu{
-      -webkit-animation: showMenu 1s;
-      animation: showMenu 1s;
-      animation-fill-mode: forwards;
+        display:block;
     }
 
     .hideMenu{
-      -webkit-animation: hideMenu 1s;
-      animation: hideMenu 1s;
-      animation-fill-mode: forwards;
+        display:none;
     }
 
-    #menu {
-        max-width: 100%;
-        height:0;
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: auto;
-        background-color: #333;
-    }
-
-    .topnav li{
+    .menuItem{
         margin:auto;
-        display: inline-block;
+        display: inline;
     }
 
-    .topnav-login{
-      visibility: hidden;
+    #lang{
+        position:absolute;
+        bottom:1em;
+    }
+
+    ul, #user-div{
+        display:inline-block;
+        
+    }
+
+    #menu li:last-child{
       display: none;
     }
 
@@ -219,7 +223,8 @@
         display: block;
         color: white;
         text-align: center;
-        padding: 14px 12px;
+        padding-left:4%;
+        padding-right:4%;
         text-decoration: none;
         font-size: 17px;
     }
@@ -246,16 +251,18 @@
         text-align: left;
     }
 
+    .separator{
+        display: none;
+    }
+
     ul
     {
-        outline: none;
-        margin:0;
-        padding:0;
-
-    }
-    .topnav .fa-bars
-    {
-        display:none;
+        text-align:center;
+        width:100%;
+        padding-left:5%;
+        padding-right:5%;
+        height:20%;
+        list-style-type: none;
     }
 
     .skip{
@@ -301,27 +308,6 @@
     .active{
         font-weight: bold;
         border-bottom: 3px solid darkorange;
-    }
-
-    .mySlides
-    {
-        height:auto;
-        margin:0;
-        /*position: relative;*/
-    }
-
-    .mySlides img
-    {
-        width:100%;
-        height:100%;
-    }
-
-    .mySlides figcaption
-    {
-        width:100%;
-        background-color: black;
-        color: white;
-        border-top: 5px solid white;
     }
 
     #skip-footer

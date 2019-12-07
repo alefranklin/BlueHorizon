@@ -33,22 +33,22 @@
   </div>
   <!--<img id="logo" role="banner" src="?= $host_path."img/logo-placeholder.png" ?>" alt="Logo Blue Horizon"> -->
   <div id="menuShowMobile" onclick="toggleMenu()">
-    <a><i class="fa fa-bars"></i></a>
+    <a class="fa fa-bars"><i></i></a>
   </div>
 
 
-  <nav id="menu" class="topnav" name="menu">
+  <nav id="menu" class="topnav hideMenu" name="menu">
       <ul>
-        <li><!-- it -->
+        <li id="lang"><!-- it -->
         <a class="space-font-small" href="<?= $host_path."language/language.php?lang=it" ?>">
           <?php echo "IT"; ?> </a>
         <!-- en --><span class="separator"> |</span>
         <a class="space-font-small" href="<?= $host_path."language/language.php?lang=en" ?>">
           <?php echo "EN"; ?> </a></li>
-        <li><a class="<?= setActive($self, $home) ?>" href="<?= $host_path . "index.php" ?>" > <?php tr("HOME") ?> </a></li>
-        <li><a class="<?= setActive($self, $company) ?>" href="<?= $host_path . "html/company.php" ?>" > <?php tr("COMPANY") ?> </a></li>
-        <li><a class="<?= setActive($self, $travels) ?>" href="<?= $host_path . "html/travels.php" ?>" > <?php tr("TRAVELS") ?> </a></li>
-        <li><a class="<?= setActive($self, $rockets) ?>" href="<?= $host_path . "html/rockets.php" ?>" > <?php tr("ROCKETS") ?> </a></li>
+        <li class="menuItem"><a class="<?= setActive($self, $home) ?>" href="<?= $host_path . "index.php" ?>" > <?php tr("HOME") ?> </a></li>
+        <li class="menuItem"><a class="<?= setActive($self, $company) ?>" href="<?= $host_path . "html/company.php" ?>" > <?php tr("COMPANY") ?> </a></li>
+        <li class="menuItem"><a class="<?= setActive($self, $travels) ?>" href="<?= $host_path . "html/travels.php" ?>" > <?php tr("TRAVELS") ?> </a></li>
+        <li class="menuItem"><a class="<?= setActive($self, $rockets) ?>" href="<?= $host_path . "html/rockets.php" ?>" > <?php tr("ROCKETS") ?> </a></li>
         <!-- login o, se loggato, username -->
         <li>  <?php
   if (isAuth()) {
