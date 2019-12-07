@@ -1,14 +1,5 @@
 import json
 
-#carico i json
-f_it = open("it.json", "r+")
-raw = f_it.read()
-it = json.loads(raw)
-
-f_en = open("en.json", "r+")
-raw = f_en.read()
-en = json.loads(raw)
-
 chiavi = []
 val_it = []
 val_en = []
@@ -26,12 +17,9 @@ for line in open("mancanti.txt"):
         if(el[0] == "ENG"):
             val_en.append(el[-1])
 
-#print(chiavi)
-#print(val_it)
-#print(val_en)
-
-#ok
-
+# ricreo il dizionario aggiornato
+it = {}
+en = {}
 for i in range(len(chiavi)):
 
     key = chiavi[i]
@@ -46,13 +34,13 @@ for i in range(len(chiavi)):
     else:
         en[key] = val_en[i]
 
-#salvo i file
-f_it.seek(0)
-json.dump(it, f_it)
-f_it.truncate()
-f_it.close()
+# salvo le nuove traduzioni
+with open("it.json", "r+") as f_it:
+    f_it.seek(0)
+    json.dump(it, f_it)
+    f_it.truncate()
 
-f_en.seek(0)
-json.dump(en, f_en)
-f_en.truncate()
-f_en.close()
+with open("en.json", "r+") as f_en:
+    f_en.seek(0)
+    json.dump(en, f_en)
+    f_en.truncate()
