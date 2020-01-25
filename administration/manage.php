@@ -54,7 +54,7 @@
     //elimina tupla selezionata
     if($_GET['action'] == 'delete'){
       $model->apply();
-      smartRedir(5,$host_path."user/privato.php/");
+      smartRedir(5,$host_path."user/privato.php");
     }
 
     if ($request == "POST") {
@@ -62,7 +62,7 @@
         //se non si sono verificati errori procedo con la registrazione dei dati
         if($model->controls()) {
           $model->apply();
-          smartRedir(5,$host_path."user/privato.php/");
+          smartRedir(5,$host_path."user/privato.php");
         }
     }
 ?>

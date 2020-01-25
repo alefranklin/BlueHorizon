@@ -29,7 +29,7 @@
   <p>
   Horizon
   </p>
-  <img id="logo" src="http://localhost/BlueHorizon/img/logo1.png" alt=<?php tr("Blue Horizon's logo") ?> aria-hidden="true"/>
+  <img id="logo" src="<?php echo $host_path?>/img/logo1.png" alt="<?php tr("Blue Horizon's logo") ?>" aria-hidden="true"/>
   </div>
   <!--<img id="logo" role="banner" src="?= $host_path."img/logo-placeholder.png" ?>" alt="Logo Blue Horizon"> -->
   <div id="menuShowMobile" onclick="toggleMenu()">
@@ -62,15 +62,14 @@
         <?php echo strtoupper($username); ?> </a>
     <?php
   } ?>
-
+	</li>
       <!-- logout -->
       <li><a class="space-font" href="<?= $host_path."user/logout.php?" ?>"><?php tr("LOGOUT") ?> </a></li>
   <?php
   } else {
   ?>
-      <a href="javascript:void(0); "class="space-font topnav-login" onclick="toggleUser(0)"> <?php tr("LOGIN") ?> </a>
+      <a href="javascript:void(0);" class="space-font topnav-login" onclick="toggleUser(0)"> <?php tr("LOGIN") ?> </a>
         </li>
-      </ul>
             <!-- login form -->
             <?php
             if(!isAuth()){
@@ -80,6 +79,6 @@
         <?php
   }
   ?>
-
+  </ul>
   </nav>
 </div>

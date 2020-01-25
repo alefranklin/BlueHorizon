@@ -222,12 +222,13 @@ if (!isset($_POST['pagato'])) {
             $duration_result = mysqli_query($db, $query);
             $duration = $duration_result->fetch_assoc();
             tr("Durata viaggio");
-            echo ": ".$duration['duration'].   "<br>";
-            $query = "SELECT price FROM cabins WHERE class = '".$cabin['class']."'";
+            echo ": ".$duration['duration'].   " ";
+            $query = "SELECT priceCalc(" . $_POST['passengers'] . "," . $_POST['cabin_type'] . "," . $duration['duration'] . ") as price";
             $priceCalc_result = mysqli_query($db, $query);
             $price = $priceCalc_result->fetch_assoc();
+            echo " " tr("giorni");
             tr("Prezzo totale");
-            echo ": ". $price['price']*$_POST['passengers']*$duration['duration'] . "<br>";
+            echo ": ". $price['price'] . "<br>";
 ?>
       <form method="post" action="<?= $book;?>">
         <input type="hidden" name="id_user" value="<?php

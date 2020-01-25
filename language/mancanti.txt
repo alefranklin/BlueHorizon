@@ -1,13 +1,6 @@
-CHIAVE=See more infos about Millenium Balcon
-ITA=di
-ENG=See more infos about Millenium Balcon
-
-
-
-
-CHIAVE=See more infos about Arcasia
-ITA=Scopri di più sullo StarBooster
-ENG=See more infos about Arcasia
+CHIAVE=La gravità di Giove è così grande, che ha l’effetto di allungare e schiacciare  Io. Tutta l’energia che proviene dal campo gravitazionale di Giove alimenta i vulcani di Io i cui pennacchi possono raggiungere i 500 km sopra la superficie della luna.
+ITA=La gravità di Giove è così grande, che ha l’effetto di allungare e schiacciare  Io. Tutta l’energia che proviene dal campo gravitazionale di Giove alimenta i vulcani di Io i cui pennacchi possono raggiungere i 500 km sopra la superficie della luna.
+ENG=The gravity of Jupiter is so great, that it has the effect of lengthening and crushing Io. All the energy that comes from the gravitational field of Jupiter feeds the volcanoes of Io whose plumes can reach 500 km above the surface of the moon.
 
 
 
@@ -19,275 +12,65 @@ ENG=Put copyright, etc. here.
 
 
 
-CHIAVE=Height
-ITA=
-ENG=
+CHIAVE=Devi essere loggato per poter prenotare un viaggio
+ITA=.
+ENG=You must be logged to book a travel
 
 
 
 
-CHIAVE=Rocket
-ITA=Navetta
-ENG=Rocket
-
-
-
-
-CHIAVE=Benvenuto in Blue Horizon!
-ITA=Welcome to Blue Horizon
-ENG=Benvenuto in Blue Horizon!
-
-
-
-
-CHIAVE=Length
-ITA=
-ENG=
-
-
-
-
-CHIAVE=See our space-ships!
-ITA=Dai un'occhiata alle nostre navicelle!
-ENG=See our space-ships!
-
-
-
-
-CHIAVE=Number of passengers: 
-ITA=
-ENG=
-
-
-
-
-CHIAVE=Ship information
-ITA=
-ENG=
-
-
-
-
-CHIAVE=Effettua il login in alto a destra oppure 
-ITA=
-ENG=
-
-
-
-
-CHIAVE=Name
-ITA=Nome
-ENG=Name
-
-
-
-
-CHIAVE=La Luna non è per nulla alla medesima distanza dalla Terra dal momento della sua formazione: secondo le stime, il satellite si allontana da noi di 3,78 centimetri ogni anno.
-ITA=La Luna non è per nulla alla medesima distanza dalla Terra dal momento della sua formazione: secondo le stime, il satellite si allontana da noi di 3,78 centimetri ogni anno.
-ENG=The Moon is not at all the same distance from the Earth since its formation: according to estimates, the satellite moves away from us by 3.78 centimeters every year.
-
-
-
-
-CHIAVE=Email
-ITA=
-ENG=
-
-
-
-
-CHIAVE=Cabin class
-ITA=Navette
-ENG=Cabin class
+CHIAVE=Astronauta sdraiato
+ITA=Astronauta sdraiato
+ENG=Astronauta sdraiato
 
 
 
 
 CHIAVE=Duration
-ITA=
-ENG=
+ITA=Durata
+ENG=.
 
 
 
 
-CHIAVE=Nome passeggero prenotante
-ITA=
-ENG=
+CHIAVE=Aggiungi
+ITA=.
+ENG=Add
 
 
 
 
-CHIAVE=Nome
-ITA=
-ENG=
+CHIAVE=See more infos about Arcasia
+ITA=Scopri di più sull'Arcasia
+ENG=See more infos about Arcasia
 
 
 
 
-CHIAVE=Non hai un account?
-ITA=Non hai un account?
-ENG=You don't have an account yet?
+CHIAVE=Una ricerca dell'università del Maryland ipotizza che il nostro pianeta, in passato, apparisse viola e non azzurro. Hanno studiato che nelle ere passate i microbi avrebbero potuto processare la luce solare attraverso molecole diverse dalla clorofilla. Queste molecole colorano i microbi di viola e di conseguenza anche la nostra atmosfera sarebbe apparsa di quel colore.
+ITA=Una ricerca dell'università del Maryland ipotizza che il nostro pianeta, in passato, apparisse viola e non azzurro. Hanno studiato che nelle ere passate i microbi avrebbero potuto processare la luce solare attraverso molecole diverse dalla clorofilla. Queste molecole colorano i microbi di viola e di conseguenza anche la nostra atmosfera sarebbe apparsa di quel colore.
+ENG=A research by the University of Maryland hypothesizes that our planet, in the past, appeared purple and not blue. They studied that in past ages microbes could process sunlight through molecules other than chlorophyll. These molecules color the microbes of violet and therefore also our atmosphere would have appeared of that color.
 
 
 
 
 CHIAVE=Standard
-ITA=
-ENG=
+ITA=Standard
+ENG=Standard
 
 
 
 
-CHIAVE=Pagina registrazione
-ITA=Pagina registrazione
-ENG=Registration Page
+CHIAVE=EARTH
+ITA=TERRA
+ENG=EARTH
 
 
 
 
-CHIAVE=Learn more about us!
-ITA=Leggi qualche curiosità su di noi!
-ENG=Learn more about us!
-
-
-
-
-CHIAVE=Si pensa che sotto la superficie di Europa ci sia uno strato di acqua liquida mantenuta tale dal calore generato dalle "maree" causate dall'interazione gravitazionale con Giove. La temperatura sulla superficie di Europa è di circa 110 (-163 °C) all'equatore e di solo 50 K (-223 °C) ai poli, cosicché il ghiaccio superficiale è permanentemente congelato.
-ITA=Si pensa che sotto la superficie di Europa ci sia uno strato di acqua liquida mantenuta tale dal calore generato dalle "maree" causate dall'interazione gravitazionale con Giove. La temperatura sulla superficie di Europa è di circa 110 (-163 °C) all'equatore e di solo 50 K (-223 °C) ai poli, cosicché il ghiaccio superficiale è permanentemente congelato.
-ENG=It is thought that beneath the surface of Europe there is a layer of liquid water maintained by the heat generated by the "tides" caused by the gravitational interaction with Jupiter. The surface temperature of Europa is around 110 (-163 ° C) at the equator and only 50 K (-223 ° C) at the poles, so that surface ice is permanently frozen.
-
-
-
-
-CHIAVE=Cognome ospite
-ITA=
-ENG=
-
-
-
-
-CHIAVE=Blue Horizon's logo
-ITA=Logo Blue Horizon
-ENG=Blue Horizon's logo
-
-
-
-
-CHIAVE=bg-minimal
-ITA=
-ENG=
-
-
-
-
-CHIAVE=Lista utenti
-ITA=
-ENG=
-
-
-
-
-CHIAVE=Nessuna data disponibile per questa destinazione
-ITA=
-ENG=
-
-
-
-
-CHIAVE=MARS
-ITA=MARTE
-ENG=MARS
-
-
-
-
-CHIAVE=Massa
-ITA=
-ENG=
-
-
-
-
-CHIAVE=Cognome ospite numero
-ITA=
-ENG=
-
-
-
-
-CHIAVE=Invia
-ITA=
-ENG=
-
-
-
-
-CHIAVE=Rockets
-ITA=Navicelle
-ENG=Rockets
-
-
-
-
-CHIAVE=Così lontano e piccolo da generare dubbi sulla sua consistenza di pianeta, eppure dotato di atmosfera. Molto sottile e tossica per gli esseri umani, è pur sempre un’atmosfera. Ma quello che è più singolare è la sua consistenza. Quando il pianeta infatti è in perielio (distanza minima dal Sole) l’atmosfera è gassosa, in afelio (distanza massima dal Sole) questa congela e cade sul pianeta come neve.
-ITA=Così lontano e piccolo da generare dubbi sulla sua consistenza di pianeta, eppure dotato di atmosfera. Molto sottile e tossica per gli esseri umani, è pur sempre un’atmosfera. Ma quello che è più singolare è la sua consistenza. Quando il pianeta infatti è in perielio (distanza minima dal Sole) l’atmosfera è gassosa, in afelio (distanza massima dal Sole) questa congela e cade sul pianeta come neve.
-ENG=So far and so small as to generate doubts about its planetary consistency, yet with an atmosphere. Very thin and toxic to humans, it is still an atmosphere. But what is more unique is its consistency. In fact, when the planet is in perihelion (minimum distance from the Sun) the atmosphere is gaseous, in aphelion (maximum distance from the Sun) this freezes and falls on the planet like snow.
-
-
-
-
-CHIAVE=Resoconto
-ITA=
-ENG=
-
-
-
-
-CHIAVE=ARCASIA
-ITA=ARCASIA
-ENG=ARCASIA
-
-
-
-
-CHIAVE=Company
-ITA=Azienda
-ENG=Company
-
-
-
-
-CHIAVE=Attenzione! Una volta confermata questa prenotazione non sará annullabile o rimborsabile
-ITA=
-ENG=
-
-
-
-
-CHIAVE=Conferma e paga
-ITA=
-ENG=
-
-
-
-
-CHIAVE=Nationality
-ITA=
-ENG=
-
-
-
-
-CHIAVE=Take a look at some neat facts about the planets you're going to orbit around!
-ITA=Scopri interessanti segreti sui pianeti attorno ai quali orbiterai!
-ENG=Take a look at some neat facts about the planets you're going to orbit around!
-
-
-
-
-CHIAVE=Pagina utente - user
-ITA=ESCI
-ENG=Pagina utente - user
+CHIAVE=Durata viaggio
+ITA=.
+ENG=Flight duration
 
 
 
@@ -299,30 +82,296 @@ ENG=Destination
 
 
 
-CHIAVE=I tuoi dati sono
+CHIAVE=Our spacecrafts
+ITA=Le nostre Navi Spaziali
+ENG=Our spacecrafts
+
+
+
+
+CHIAVE=Si pensa che sotto la superficie di Europa ci sia uno strato di acqua liquida mantenuta tale dal calore generato dalle "maree" causate dall'interazione gravitazionale con Giove. La temperatura sulla superficie di Europa è di circa 110 (-163 °C) all'equatore e di solo 50 K (-223 °C) ai poli, cosicché il ghiaccio superficiale è permanentemente congelato.
+ITA=Si pensa che sotto la superficie di Europa ci sia uno strato di acqua liquida mantenuta tale dal calore generato dalle "maree" causate dall'interazione gravitazionale con Giove. La temperatura sulla superficie di Europa è di circa 110 (-163 °C) all'equatore e di solo 50 K (-223 °C) ai poli, cosicché il ghiaccio superficiale è permanentemente congelato.
+ENG=It is thought that beneath the surface of Europe there is a layer of liquid water maintained by the heat generated by the "tides" caused by the gravitational interaction with Jupiter. The surface temperature of Europa is around 110 (-163 ° C) at the equator and only 50 K (-223 ° C) at the poles, so that surface ice is permanently frozen.
+
+
+
+
+CHIAVE=La Luna non è per nulla alla medesima distanza dalla Terra dal momento della sua formazione: secondo le stime, il satellite si allontana da noi di 3,78 centimetri ogni anno.
+ITA=La Luna non è per nulla alla medesima distanza dalla Terra dal momento della sua formazione: secondo le stime, il satellite si allontana da noi di 3,78 centimetri ogni anno.
+ENG=The Moon is not at all the same distance from the Earth since its formation: according to estimates, the satellite moves away from us by 3.78 centimeters every year.
+
+
+
+
+CHIAVE=Lista utenti
+ITA=.
+ENG=Users list
+
+
+
+
+CHIAVE=HOME
+ITA=HOME
+ENG=HOME
+
+
+
+
+CHIAVE=Sfondo Mobile
+ITA=.
+ENG=Mobile background
+
+
+
+
+CHIAVE=Qui
+ITA=Qui
+ENG=Here
+
+
+
+
+CHIAVE=Così lontano e piccolo da generare dubbi sulla sua consistenza di pianeta, eppure dotato di atmosfera. Molto sottile e tossica per gli esseri umani, è pur sempre un’atmosfera. Ma quello che è più singolare è la sua consistenza. Quando il pianeta infatti è in perielio (distanza minima dal Sole) l’atmosfera è gassosa, in afelio (distanza massima dal Sole) questa congela e cade sul pianeta come neve.
+ITA=Così lontano e piccolo da generare dubbi sulla sua consistenza di pianeta, eppure dotato di atmosfera. Molto sottile e tossica per gli esseri umani, è pur sempre un’atmosfera. Ma quello che è più singolare è la sua consistenza. Quando il pianeta infatti è in perielio (distanza minima dal Sole) l’atmosfera è gassosa, in afelio (distanza massima dal Sole) questa congela e cade sul pianeta come neve.
+ENG=So far and so small as to generate doubts about its planetary consistency, yet with an atmosphere. Very thin and toxic to humans, it is still an atmosphere. But what is more unique is its consistency. In fact, when the planet is in perihelion (minimum distance from the Sun) the atmosphere is gaseous, in aphelion (maximum distance from the Sun) this freezes and falls on the planet like snow.
+
+
+
+
+CHIAVE=Cognome ospite numero
+ITA=.
+ENG=Surname of the guest number
+
+
+
+
+CHIAVE=Invia
+ITA=.
+ENG=Enter
+
+
+
+
+CHIAVE=Plancia di comando
+ITA=Plancia di comando
+ENG=Company meeting
+
+
+
+
+CHIAVE=LOGIN
+ITA=LOGIN
+ENG=LOGIN
+
+
+
+
+CHIAVE=I tuoi dati
+ITA=I tuoi dati
+ENG=Your info
+
+
+
+
+CHIAVE=Vendita razzi
+ITA=Vendita razzi
+ENG=rockets shop
+
+
+
+
+CHIAVE=Number of passengers: 
+ITA=Numero di passeggeri
+ENG=.
+
+
+
+
+CHIAVE=Si pensa che sotto la superficie di Europa ci sia uno strato di acqua liquida mantenuta tale dal calore generato dalle \"maree\" causate dall'interazione gravitazionale con Giove. La temperatura sulla superficie di Europa è di circa 110 (-163 °C) all'equatore e di solo 50 K (-223 °C) ai poli, cosicché il ghiaccio superficiale è permanentemente congelato.
 ITA=
 ENG=
 
 
 
 
-CHIAVE=Saturno è il pianeta con la densità più bassa del sistema solare: solo 0,69 mg/mL, un valore inferiore anche a quello dell’acqua (circa 2/3). Se si disponesse dunque di un mare abbastanza grande per ospitare l’intero corpo celeste lo vedremmo galleggiare come un enorme iceberg.
-ITA=Saturno è il pianeta con la densità più bassa del sistema solare: solo 0,69 mg/mL, un valore inferiore anche a quello dell’acqua (circa 2/3). Se si disponesse dunque di un mare abbastanza grande per ospitare l’intero corpo celeste lo vedremmo galleggiare come un enorme iceberg.
-ENG=Saturn is the planet with the lowest density of the solar system: only 0.69 mg / mL, a value also lower than that of water (about 2/3). If we had a sea large enough to accommodate the entire celestial body we would see it floating like a huge iceberg.
+CHIAVE=Our Travels
+ITA=I nostri Viaggi
+ENG=Our Travels
 
 
 
 
-CHIAVE=TRAVELS
-ITA=VIAGGI
-ENG=TRAVELS
+CHIAVE=Pianeta enorme e circondato di Lune: ben 63 infatti sono gli attuali satelliti naturali accertati che orbitano attorno al gigante del Sistema Solare. Quattro di questi furono scoperti nel 1610 da Galileo Galilei, ovvero Io, Europa, Callisto e Ganimede, quest’ultimo più grande in volume del pianeta Mercurio, ma dotato di una massa pari alla metà.
+ITA=Pianeta enorme e circondato di Lune: ben 63 infatti sono gli attuali satelliti naturali accertati che orbitano attorno al gigante del Sistema Solare. Quattro di questi furono scoperti nel 1610 da Galileo Galilei, ovvero Io, Europa, Callisto e Ganimede, quest’ultimo più grande in volume del pianeta Mercurio, ma dotato di una massa pari alla metà.
+ENG=Huge and surrounded planet of Lune: as many as 63 are in fact the current established natural satellites that orbit around the giant of the Solar System. Four of these were discovered in 1610 by Galileo Galilei, namely Io, Europa, Callisto and Ganimede, the latter largest in volume on the planet Mercury, but with half the mass.
 
 
 
 
-CHIAVE=Blue Horizon
-ITA=Blue Horizon
-ENG=Blue Horizon
+CHIAVE=Se vuoi viaggiare, scegli un pianeta di destinazione e prenota 
+ITA=Se vuoi viaggiare, scegli un pianeta di destinazione e prenota 
+ENG=This is a site about extraterrestrial travels!
+
+
+
+
+CHIAVE=LOGOUT
+ITA=ESCI
+ENG=LOGOUT
+
+
+
+
+CHIAVE=MOON
+ITA=LUNA
+ENG=MOON
+
+
+
+
+CHIAVE=Prezzo totale
+ITA=.
+ENG=Total price
+
+
+
+
+CHIAVE=Come la Terra, anche Marte manifesta 4 stagioni, a causa del suo asse inclinato rispetto al Sole, con un angolo molto simile a quello della Terra (25 gradi contro 23.5 gradi terrestri). Tuttavia, poiché l’anno di Marte è circa il doppio del nostro, anche le stagioni durano di più. A causa poi della traiettoria spiccatamente ellittica, alcune stagioni durano più di altre (nell’emisfero nord l’estate e la primavera durano di più, così come nel sud l’autunno e l’inverno).
+ITA=Come la Terra, anche Marte manifesta 4 stagioni, a causa del suo asse inclinato rispetto al Sole, con un angolo molto simile a quello della Terra (25 gradi contro 23.5 gradi terrestri). Tuttavia, poiché l’anno di Marte è circa il doppio del nostro, anche le stagioni durano di più. A causa poi della traiettoria spiccatamente ellittica, alcune stagioni durano più di altre (nell’emisfero nord l’estate e la primavera durano di più, così come nel sud l’autunno e l’inverno).
+ENG=Like the Earth, Mars also manifests 4 seasons, due to its inclined axis with respect to the Sun, with an angle very similar to that of the Earth (25 degrees versus 23.5 degrees on land). However, since the year of Mars is about twice the size of ours, even the seasons last longer. Because of the distinctly elliptical trajectory, some seasons last longer than others (in the northern hemisphere, summer and spring last longer, as in the south, autumn and winter).
+
+
+
+
+CHIAVE=COMPANY
+ITA=COMPAGNIA
+ENG=COMPANY
+
+
+
+
+CHIAVE=Accedi
+ITA=Accedi
+ENG=Login
+
+
+
+
+CHIAVE=NEPTUNE
+ITA=NETTUNO
+ENG=NEPTUNE
+
+
+
+
+CHIAVE=!
+ITA=!
+ENG=!
+
+
+
+
+CHIAVE=Data di partenza
+ITA=.
+ENG=Departure date
+
+
+
+
+CHIAVE=Ship information
+ITA=Informazioni sulla Navicella
+ENG=.
+
+
+
+
+CHIAVE=Welcome space wanderer!
+ITA=Benvenuto viandante dello spazio!
+ENG=Welcome space wanderer!
+
+
+
+
+CHIAVE=Take a look at some neat facts about the planets you're going to orbit around!
+ITA=Scopri interessanti segreti sui pianeti attorno ai quali orbiterai!
+ENG=Take a look at some neat facts about the planets you're going to orbit around!
+
+
+
+
+CHIAVE=ARCASIA
+ITA=ARCASIA
+ENG=ARCASIA
+
+
+
+
+CHIAVE=Informazioni
+ITA=.
+ENG=Informations
+
+
+
+
+CHIAVE=First photo of the Blue Horizon's crew
+ITA=Prima foto dei membri di Blue Horizon
+ENG=First photo of the Blue Horizon's crew
+
+
+
+
+CHIAVE=MARS
+ITA=MARTE
+ENG=MARS
+
+
+
+
+CHIAVE=Name
+ITA=Nome
+ENG=Name
+
+
+
+
+CHIAVE=Prenota subito!
+ITA=.
+ENG=Book now!
+
+
+
+
+CHIAVE=Height
+ITA=Altezza
+ENG=.
+
+
+
+
+CHIAVE=Rocket
+ITA=Navetta
+ENG=Rocket
+
+
+
+
+CHIAVE=Lista viaggi
+ITA=.
+ENG=Travels list
+
+
+
+
+CHIAVE=Cognome ospite
+ITA=.
+ENG=Guest's surname
+
+
+
+
+CHIAVE=(Solo lettere maiuscole o minuscole)
+ITA=.
+ENG=(Only uppercase or lowercase letters)
 
 
 
@@ -334,7 +383,434 @@ ENG=Skip to main content
 
 
 
+CHIAVE=Length
+ITA=Lunghezza
+ENG=.
+
+
+
+
+CHIAVE=See more infos about Millenium Balcon
+ITA=Scopri piu' informazioni sul Millennium Balcon
+ENG=See more infos about Millenium Balcon
+
+
+
+
+CHIAVE=Lastname
+ITA=Cognome
+ENG=Lastname
+
+
+
+
+CHIAVE=Saturno è il pianeta con la densità più bassa del sistema solare: solo 0,69 mg/mL, un valore inferiore anche a quello dell’acqua (circa 2/3). Se si disponesse dunque di un mare abbastanza grande per ospitare l’intero corpo celeste lo vedremmo galleggiare come un enorme iceberg.
+ITA=Saturno è il pianeta con la densità più bassa del sistema solare: solo 0,69 mg/mL, un valore inferiore anche a quello dell’acqua (circa 2/3). Se si disponesse dunque di un mare abbastanza grande per ospitare l’intero corpo celeste lo vedremmo galleggiare come un enorme iceberg.
+ENG=Saturn is the planet with the lowest density of the solar system: only 0.69 mg / mL, a value also lower than that of water (about 2/3). If we had a sea large enough to accommodate the entire celestial body we would see it floating like a huge iceberg.
+
+
+
+
+CHIAVE=Blue Horizon's logo
+ITA=Logo Blue Horizon
+ENG=Blue Horizon's logo
+
+
+
+
+CHIAVE=SATURN
+ITA=SATURNO
+ENG=SATURN
+
+
+
+
+CHIAVE=See more infos about Star Booster
+ITA=Scopri di più sul Millennium Balcon
+ENG=See more infos about Star Booster
+
+
+
+
+CHIAVE=ADMIN
+ITA=ADMIN
+ENG=ADMIN
+
+
+
+
+CHIAVE=Nome ospite numero
+ITA=.
+ENG=Name of the guest number
+
+
+
+
+CHIAVE=Conferma e paga
+ITA=.
+ENG=Confirm and checkout
+
+
+
+
+CHIAVE=Weight
+ITA=Peso
+ENG=.
+
+
+
+
+CHIAVE=Pagina registrazione
+ITA=Pagina registrazione
+ENG=Registration Page
+
+
+
+
+CHIAVE=Mercurio non è in generale il pianeta più caldo del Sistema Solare, ma quello con la maggiore escursione termica, a causa della quasi totale assenza di atmosfera. La faccia esposta al Sole può manifestare fino a 527 gradi centigradi, ma quella buia ne registra anche -83.
+ITA=Mercurio non è in generale il pianeta più caldo del Sistema Solare, ma quello con la maggiore escursione termica, a causa della quasi totale assenza di atmosfera. La faccia esposta al Sole può manifestare fino a 527 gradi centigradi, ma quella buia ne registra anche -83.
+ENG=Mercurio is not the hottest planet of the Solar System, but it is the one with the widest temperature range due to the almost complete lack of atmosphere. The sunny side can reach up to 527 Celsius degrees. On the other hand the dark side is around -83 Celsius degrees.
+
+
+
+
+CHIAVE=Registrati qui!
+ITA=Registrati qui!
+ENG=Sign up Now!
+
+
+
+
+CHIAVE=← Return to Travels
+ITA=← Ritorna ai Viaggi
+ENG=← Return to Travels
+
+
+
+
+CHIAVE=VENUS
+ITA=VENERE
+ENG=VENUS
+
+
+
+
+CHIAVE=Un giorno venusiano dura 243 giorni terrestri, mentre un anno è più breve visto che si articola in soli 224,7 giorni terrestri.
+ITA=Un giorno venusiano dura 243 giorni terrestri, mentre un anno è più breve visto che si articola in soli 224,7 giorni terrestri.
+ENG=A Venus day is equal to 243 Earth days, meanwhile a Venus year is shorter because it's only 224,7 earth days long.
+
+
+
+
+CHIAVE=Numero totale passeggeri
+ITA=.
+ENG=Total passengers
+
+
+
+
+CHIAVE=Blue Horizon
+ITA=Blue Horizon
+ENG=Blue Horizon
+
+
+
+
+CHIAVE=Questo è un sito di prenotazione di viaggi interplanetari!
+ITA=Questo è un sito di prenotazione di viaggi interplanetari!
+ENG=This is a site about interplanetary travels!
+
+
+
+
+CHIAVE=A Urano non piace proprio la posizione verticale: il pianeta, che è inclinato di 98 gradi rispetto al suo piano orbitale intorno al Sole, caratteristica unica nel Sistema Solare, è il settimo in ordine di distanza dal Sole, il terzo per diametro e il quarto per massa.
+ITA=A Urano non piace proprio la posizione verticale: il pianeta, che è inclinato di 98 gradi rispetto al suo piano orbitale intorno al Sole, caratteristica unica nel Sistema Solare, è il settimo in ordine di distanza dal Sole, il terzo per diametro e il quarto per massa.
+ENG=Uranus does not really like the vertical position: the planet, which is inclined by 98 degrees with respect to its orbital plane around the Sun, a unique feature in the Solar System, is the seventh in order of distance from the Sun, the third by diameter and the fourth by mass.
+
+
+
+
+CHIAVE=Lista viaggi
+ITA=Lista viaggi
+ENG=Travels list
+
+
+
+
+CHIAVE=TRAVELS
+ITA=VIAGGI
+ENG=TRAVELS
+
+
+
+
+CHIAVE=Email
+ITA=Email
+ENG=Email
+
+
+
+
+CHIAVE=Travels
+ITA=Viaggi
+ENG=Travels
+
+
+
+
+CHIAVE=Sex
+ITA=Sesso
+ENG=Sex
+
+
+
+
+CHIAVE=STARBOOSTER
+ITA=STARBOOSTER
+ENG=STARBOOSTER
+
+
+
+
+CHIAVE=Join our space travel community!
+ITA=Unisciti alla nostra comunità di viaggiatori!
+ENG=Join our space travel community!
+
+
+
+
+CHIAVE=Learn more about us!
+ITA=Leggi qualche curiosità su di noi!
+ENG=Learn more about us!
+
+
+
+
+CHIAVE=EUROPA
+ITA=EUROPA
+ENG=EUROPA
+
+
+
+
+CHIAVE=Attenzione! Una volta confermata questa prenotazione non sará annullabile o rimborsabile
+ITA=.
+ENG=Warning! Once you have confirmed this operation it can no longer be canceled or refounded
+
+
+
+
+CHIAVE=PLUTO
+ITA=PLUTONE
+ENG=PLUTO
+
+
+
+
+CHIAVE=Modifica Info
+ITA=Modifica
+ENG=Update
+
+
+
+
+CHIAVE=* required field
+ITA=* campo obbligatorio
+ENG=* required field
+
+
+
+
+CHIAVE=Contatti
+ITA=.
+ENG=Contacts
+
+
+
+
+CHIAVE=Pagina utente - user
+ITA=Pagina utente
+ENG=Userpage
+
+
+
+
+CHIAVE=Return to rockets section
+ITA=Ritorna alla pagina dei razzi
+ENG=.
+
+
+
+
+CHIAVE=Deluxe
+ITA=Deluxe
+ENG=Deluxe
+
+
+
+
+CHIAVE=BluHorizon's spacecrafts-1
+ITA=Navicelle di Blue Horizon
+ENG=BluHorizon's spacecrafts
+
+
+
+
 CHIAVE=Tipo di cabina: 
+ITA=.
+ENG=Cabin's type:
+
+
+
+
+CHIAVE=Su Nettuno (e su Urano) non c’è acqua (almeno non in quantità significativa) ma piove. E data l’altissima concentrazione di carbonio è probabile che le gocce abbiano la stessa composizione dei diamanti.
+ITA=Su Nettuno (e su Urano) non c’è acqua (almeno non in quantità significativa) ma piove. E data l’altissima concentrazione di carbonio è probabile che le gocce abbiano la stessa composizione dei diamanti.
+ENG=On Neptune (and on Uranus) there is no water (at least not in significant quantities) but it rains. And given the very high concentration of carbon it is likely that the drops have the same composition as the diamonds.
+
+
+
+
+CHIAVE=Massa
+ITA=.
+ENG=Mass
+
+
+
+
+CHIAVE=Benvenuto in Blue Horizon!
+ITA=Welcome to Blue Horizon
+ENG=Benvenuto in Blue Horizon!
+
+
+
+
+CHIAVE=Date
+ITA=Data
+ENG=.
+
+
+
+
+CHIAVE=IO
+ITA=IO
+ENG=IO
+
+
+
+
+CHIAVE=Space Club
+ITA=.
+ENG=.
+
+
+
+
+CHIAVE=Ritorna alla
+ITA=Ritorna alla
+ENG=Back to
+
+
+
+
+CHIAVE=Cabin class
+ITA=Classe cabina
+ENG=Cabin class
+
+
+
+
+CHIAVE=Blue Horizon is an interplanetary flight company born back in 2103. Founders Matteo Pagotto, Manuel Pagotto, Alessandro Franchin and Stefano Baggio were classmates in University of Padua. They always have been passionate about space travelling and one day Matteo started to think about it in a more concrete way. His idea was to create a new concept of travelling, a new way to enjoy space voyages. His proposal didn't sound good to his colleagues to begin with, but after a few years of work Matteo finally drew the attention of Stefano, Manuel and Alessandro. When they started to work together the project started to grow way faster than before and finally in 2103 Blue Horizon became a real thing. From 2103 we made huge steps forward and now we are a solid choice for those who want to explore the galaxy!
+ITA=Blue Horizon è una compagnia di voli interplanetari nata nel lontano 2103. I fondatori Matteo Pagotto, Manuel Pagotto, Alessandro Franchin e Stefano Baggio erano compagni di corso all'università di Padova. Erano sempre stati appassionati di viaggi spaziali, quando un bel giorno Matteo cominciò a pensare di concretizzare la loro passione. La sua idea era creare un nuovo concetto di viaggio, un nuovo modo di godersi le escursioni nello spazio. La sua proposta non riscosse subito successo tra i suoi compagni, ma dopo qualche anno di lavoro, Matteo catturò l'attenzione di Stefano, Manuel e Alessandro. Quando cominciarono a lavorare insieme, il progetto iniziò a crescere molto più in fretta di prima e finalmente nel 2103 nacque la Blue Horizon. Da allora abbiamo fatto passi da gigante e siamo una buona scelta per chi vuole esplorare la galassia!
+ENG=Blue Horizon is an interplanetary flight company born back in 2103. Founders Matteo Pagotto, Manuel Pagotto, Alessandro Franchin and Stefano Baggio were classmates in University of Padua. They always have been passionate about space travelling and one day Matteo started to think about it in a more concrete way. His idea was to create a new concept of travelling, a new way to enjoy space voyages. His proposal didn't sound good to his colleagues to begin with, but after a few years of work Matteo finally drew the attention of Stefano, Manuel and Alessandro. When they started to work together the project started to grow way faster than before and finally in 2103 Blue Horizon became a real thing. From 2103 we made huge steps forward and now we are a solid choice for those who want to explore the galaxy!
+
+
+
+
+CHIAVE=pagina privata
+ITA=.
+ENG=private page
+
+
+
+
+CHIAVE=Resoconto
+ITA=.
+ENG=Report
+
+
+
+
+CHIAVE=JUPITER
+ITA=GIOVE
+ENG=JUPITER
+
+
+
+
+CHIAVE=Sfondo
+ITA=.
+ENG=Background
+
+
+
+
+CHIAVE=Book the flight of your dreams among our plentiful travel options
+ITA=Prenota il volo dei tuoi sogni tra le nostre numerose opzioni di viaggio!
+ENG=Book the flight of your dreams among our plentiful travel options
+
+
+
+
+CHIAVE=Registrati
+ITA=Registrati
+ENG=Sign Up
+
+
+
+
+CHIAVE=See our space-ships!
+ITA=Dai un'occhiata alle nostre navicelle!
+ENG=See our space-ships!
+
+
+
+
+CHIAVE=MILLENNIUM BALCON
+ITA=MILLENNIUM BALCON
+ENG=MILLENNIUM BALCON
+
+
+
+
+CHIAVE=bg-minimal
+ITA=
+ENG=
+
+
+
+
+CHIAVE=Nationality
+ITA=Nazionalita'
+ENG=.
+
+
+
+
+CHIAVE=URANUS
+ITA=URANO
+ENG=URANUS
+
+
+
+
+CHIAVE=Date disponibili: 
+ITA=.
+ENG=Available dates:
+
+
+
+
+CHIAVE=$this->msg_form_button
 ITA=
 ENG=
 
@@ -348,20 +824,6 @@ ENG=MERCURY
 
 
 
-CHIAVE=!
-ITA=!
-ENG=Here
-
-
-
-
-CHIAVE=Temperatura
-ITA=
-ENG=
-
-
-
-
 CHIAVE=Benvenuto, qui puoi registrarti!
 ITA=Benvenuto, qui puoi registrarti!
 ENG=Welcome, you can sign up here!
@@ -369,37 +831,44 @@ ENG=Welcome, you can sign up here!
 
 
 
-CHIAVE=Riunione Aziendale
-ITA=Riunione Aziendale
-ENG=Riunione Aziendale
+CHIAVE=Cognome passeggero prenotante
+ITA=.
+ENG=Your lastname
 
 
 
 
-CHIAVE=Prenota subito!
-ITA=
-ENG=
+CHIAVE=I tuoi dati sono
+ITA=.
+ENG=Your infos are
 
 
 
 
-CHIAVE=Ritorna alla
-ITA=Ritorna alla
-ENG=Back to
+CHIAVE=Nome ospite
+ITA=.
+ENG=Guest's name
 
 
 
 
-CHIAVE=Skip to Menu
-ITA=Torna al menu
-ENG=Skip to Menu
+CHIAVE=Destinazione
+ITA=.
+ENG=Destination
 
 
 
 
-CHIAVE=SATURN
-ITA=SATURNO
-ENG=SATURN
+CHIAVE=Rockets
+ITA=Navicelle
+ENG=Rockets
+
+
+
+
+CHIAVE=Order ID
+ITA=ID ordine
+ENG=.
 
 
 
@@ -411,97 +880,6 @@ ENG=ROCKETS
 
 
 
-CHIAVE=Plancia di comando
-ITA=Plancia di comando
-ENG=Company meeting
-
-
-
-
-CHIAVE=of
-ITA=of
-ENG=Contacts
-
-
-
-
-CHIAVE=Book the flight of your dreams among our plentiful travel options
-ITA=Prenota il volo dei tuoi sogni tra le nostre numerose opzioni di viaggio!
-ENG=Book the flight of your dreams among our plentiful travel options
-
-
-
-
-CHIAVE=Welcome space wanderer!
-ITA=Benvenuto viandante dello spazio!
-ENG=Welcome space wanderer!
-
-
-
-
-CHIAVE=Registrati
-ITA=Registrati
-ENG=Sign Up
-
-
-
-
-CHIAVE=JUPITER
-ITA=GIOVE
-ENG=JUPITER
-
-
-
-
-CHIAVE=Contatti
-ITA=ACCEDI
-ENG=Contatti
-
-
-
-
-CHIAVE=$this->msg_form_button
-ITA=
-ENG=
-
-
-
-
-CHIAVE=Durata viaggio
-ITA=
-ENG=
-
-
-
-
-CHIAVE=Informazioni
-ITA=
-ENG=
-
-
-
-
-CHIAVE=Questo è un sito di prenotazione di viaggi interplanetari!
-ITA=Questo è un sito di prenotazione di viaggi interplanetari!
-ENG=Welcome to Blue Horizon!
-
-
-
-
-CHIAVE=Vendita razzi
-ITA=Vendita razzi
-ENG=rockets shop
-
-
-
-
-CHIAVE=NEPTUNE
-ITA=NETTUNO
-ENG=NEPTUNE
-
-
-
-
 CHIAVE=Username
 ITA=Username
 ENG=Username
@@ -509,170 +887,65 @@ ENG=Username
 
 
 
-CHIAVE=← Return to Travels
-ITA=← Ritorna ai Viaggi
-ENG=← Return to Travels
+CHIAVE=Riunione Aziendale
+ITA=Riunione aziendale
+ENG=Company meeting
 
 
 
 
-CHIAVE=Aggiungi
-ITA=
-ENG=
+CHIAVE=Skip to Menu
+ITA=Vai al menu
+ENG=Skip to Menu
 
 
 
 
-CHIAVE=Nome ospite numero
-ITA=
-ENG=
+CHIAVE=Nessuna data disponibile per questa destinazione
+ITA=.
+ENG=No departures available for this destination
 
 
 
 
 CHIAVE=Tipo di cabina
-ITA=
-ENG=
+ITA=.
+ENG=Cabin type
 
 
 
 
-CHIAVE=IO
-ITA=IO
-ENG=IO
+CHIAVE=Passengers
+ITA=Passeggeri
+ENG=Passengers
 
 
 
 
-CHIAVE=Order ID
-ITA=
-ENG=
+CHIAVE=Millennium Balcon
+ITA=Millennium Balcon
+ENG=Millennium Balcon 
 
 
 
 
-CHIAVE=EARTH
-ITA=TERRA
-ENG=EARTH
+CHIAVE=Effettua il login in alto a destra oppure 
+ITA=.
+ENG=Log in at the top right or
 
 
 
 
-CHIAVE=Devi essere loggato per poter prenotare un viaggio
-ITA=
-ENG=
+CHIAVE=Non hai un account?
+ITA=Non hai un account?
+ENG=You don't have an account yet?
 
 
 
 
-CHIAVE=Accedi
-ITA=Accedi
-ENG=Login
-
-
-
-
-CHIAVE=Our spacecrafts
-ITA=Le nostre Navi Spaziali
-ENG=Our spacecrafts
-
-
-
-
-CHIAVE=URANUS
-ITA=URANO
-ENG=URANUS
-
-
-
-
-CHIAVE=La gravità di Giove è così grande, che ha l’effetto di allungare e schiacciare  Io. Tutta l’energia che proviene dal campo gravitazionale di Giove alimenta i vulcani di Io i cui pennacchi possono raggiungere i 500 km sopra la superficie della luna.
-ITA=La gravità di Giove è così grande, che ha l’effetto di allungare e schiacciare  Io. Tutta l’energia che proviene dal campo gravitazionale di Giove alimenta i vulcani di Io i cui pennacchi possono raggiungere i 500 km sopra la superficie della luna.
-ENG=The gravity of Jupiter is so great, that it has the effect of lengthening and crushing Io. All the energy that comes from the gravitational field of Jupiter feeds the volcanoes of Io whose plumes can reach 500 km above the surface of the moon.
-
-
-
-
-CHIAVE=Sfondo Mobile
-ITA=
-ENG=
-
-
-
-
-CHIAVE=Lastname
-ITA=Cognome
-ENG=Lastname
-
-
-
-
-CHIAVE=MOON
-ITA=LUNA
-ENG=MOON
-
-
-
-
-CHIAVE=Travels
-ITA=Viaggi
-ENG=Travels
-
-
-
-
-CHIAVE=Our Travels
-ITA=I nostri Viaggi
-ENG=Our Travels
-
-
-
-
-CHIAVE=A Urano non piace proprio la posizione verticale: il pianeta, che è inclinato di 98 gradi rispetto al suo piano orbitale intorno al Sole, caratteristica unica nel Sistema Solare, è il settimo in ordine di distanza dal Sole, il terzo per diametro e il quarto per massa.
-ITA=A Urano non piace proprio la posizione verticale: il pianeta, che è inclinato di 98 gradi rispetto al suo piano orbitale intorno al Sole, caratteristica unica nel Sistema Solare, è il settimo in ordine di distanza dal Sole, il terzo per diametro e il quarto per massa.
-ENG=Uranus does not really like the vertical position: the planet, which is inclined by 98 degrees with respect to its orbital plane around the Sun, a unique feature in the Solar System, is the seventh in order of distance from the Sun, the third by diameter and the fourth by mass.
-
-
-
-
-CHIAVE=Mercurio non è in generale il pianeta più caldo del Sistema Solare, ma quello con la maggiore escursione termica, a causa della quasi totale assenza di atmosfera. La faccia esposta al Sole può manifestare fino a 527 gradi centigradi, ma quella buia ne registra anche -83.
-ITA=Mercurio non è in generale il pianeta più caldo del Sistema Solare, ma quello con la maggiore escursione termica, a causa della quasi totale assenza di atmosfera. La faccia esposta al Sole può manifestare fino a 527 gradi centigradi, ma quella buia ne registra anche -83.
-ENG=Mercurio is not the hottest planet of the Solar System, but it is the one with the widest temperature range due to the almost complete lack of atmosphere. The sunny side can reach up to 527 Celsius degrees. On the other hand the dark side is around -83 Celsius degrees.
-
-
-
-
-CHIAVE=I tuoi dati
-ITA=I tuoi dati
-ENG=Your info
-
-
-
-
-CHIAVE=Come la Terra, anche Marte manifesta 4 stagioni, a causa del suo asse inclinato rispetto al Sole, con un angolo molto simile a quello della Terra (25 gradi contro 23.5 gradi terrestri). Tuttavia, poiché l’anno di Marte è circa il doppio del nostro, anche le stagioni durano di più. A causa poi della traiettoria spiccatamente ellittica, alcune stagioni durano più di altre (nell’emisfero nord l’estate e la primavera durano di più, così come nel sud l’autunno e l’inverno).
-ITA=Come la Terra, anche Marte manifesta 4 stagioni, a causa del suo asse inclinato rispetto al Sole, con un angolo molto simile a quello della Terra (25 gradi contro 23.5 gradi terrestri). Tuttavia, poiché l’anno di Marte è circa il doppio del nostro, anche le stagioni durano di più. A causa poi della traiettoria spiccatamente ellittica, alcune stagioni durano più di altre (nell’emisfero nord l’estate e la primavera durano di più, così come nel sud l’autunno e l’inverno).
-ENG=Like the Earth, Mars also manifests 4 seasons, due to its inclined axis with respect to the Sun, with an angle very similar to that of the Earth (25 degrees versus 23.5 degrees on land). However, since the year of Mars is about twice the size of ours, even the seasons last longer. Because of the distinctly elliptical trajectory, some seasons last longer than others (in the northern hemisphere, summer and spring last longer, as in the south, autumn and winter).
-
-
-
-
-CHIAVE=Sfondo
-ITA=
-ENG=
-
-
-
-
-CHIAVE=Registrati qui!
-ITA=Registrati qui!
-ENG=Sign up Now!
-
-
-
-
-CHIAVE=* required field
-ITA=* campo obbligatorio
-ENG=* required field
+CHIAVE=Nome passeggero prenotante
+ITA=.
+ENG=Your name
 
 
 
@@ -684,118 +957,6 @@ ENG=
 
 
 
-CHIAVE=Data di partenza
-ITA=
-ENG=
-
-
-
-
-CHIAVE=LOGIN
-ITA=
-ENG=
-
-
-
-
-CHIAVE=Se vuoi viaggiare, scegli un pianeta di destinazione e prenota 
-ITA=Se vuoi viaggiare, scegli un pianeta di destinazione e prenota 
-ENG=This is a site about extraterrestrial travels!
-
-
-
-
-CHIAVE=Return to rockets section
-ITA=
-ENG=
-
-
-
-
-CHIAVE=Passengers
-ITA=Classe cabina
-ENG=Passengers
-
-
-
-
-CHIAVE=Su Nettuno (e su Urano) non c’è acqua (almeno non in quantità significativa) ma piove. E data l’altissima concentrazione di carbonio è probabile che le gocce abbiano la stessa composizione dei diamanti.
-ITA=Su Nettuno (e su Urano) non c’è acqua (almeno non in quantità significativa) ma piove. E data l’altissima concentrazione di carbonio è probabile che le gocce abbiano la stessa composizione dei diamanti.
-ENG=On Neptune (and on Uranus) there is no water (at least not in significant quantities) but it rains. And given the very high concentration of carbon it is likely that the drops have the same composition as the diamonds.
-
-
-
-
-CHIAVE=COMPANY
-ITA=COMPAGNIA
-ENG=COMPANY
-
-
-
-
-CHIAVE=Date
-ITA=
-ENG=
-
-
-
-
-CHIAVE=Numero totale passeggeri
-ITA=
-ENG=
-
-
-
-
-CHIAVE=Pianeta enorme e circondato di Lune: ben 63 infatti sono gli attuali satelliti naturali accertati che orbitano attorno al gigante del Sistema Solare. Quattro di questi furono scoperti nel 1610 da Galileo Galilei, ovvero Io, Europa, Callisto e Ganimede, quest’ultimo più grande in volume del pianeta Mercurio, ma dotato di una massa pari alla metà.
-ITA=Pianeta enorme e circondato di Lune: ben 63 infatti sono gli attuali satelliti naturali accertati che orbitano attorno al gigante del Sistema Solare. Quattro di questi furono scoperti nel 1610 da Galileo Galilei, ovvero Io, Europa, Callisto e Ganimede, quest’ultimo più grande in volume del pianeta Mercurio, ma dotato di una massa pari alla metà.
-ENG=Huge and surrounded planet of Lune: as many as 63 are in fact the current established natural satellites that orbit around the giant of the Solar System. Four of these were discovered in 1610 by Galileo Galilei, namely Io, Europa, Callisto and Ganimede, the latter largest in volume on the planet Mercury, but with half the mass.
-
-
-
-
-CHIAVE=Cognome passeggero prenotante
-ITA=
-ENG=
-
-
-
-
-CHIAVE=EUROPA
-ITA=EUROPA
-ENG=EUROPA
-
-
-
-
-CHIAVE=HOME
-ITA=HOME
-ENG=HOME
-
-
-
-
-CHIAVE=Astronauta sdraiato
-ITA=Astronauta sdraiato
-ENG=Astronauta sdraiato
-
-
-
-
-CHIAVE=Date disponibili: 
-ITA=
-ENG=
-
-
-
-
-CHIAVE=Una ricerca dell'università del Maryland ipotizza che il nostro pianeta, in passato, apparisse viola e non azzurro. Hanno studiato che nelle ere passate i microbi avrebbero potuto processare la luce solare attraverso molecole diverse dalla clorofilla. Queste molecole colorano i microbi di viola e di conseguenza anche la nostra atmosfera sarebbe apparsa di quel colore.
-ITA=Una ricerca dell'università del Maryland ipotizza che il nostro pianeta, in passato, apparisse viola e non azzurro. Hanno studiato che nelle ere passate i microbi avrebbero potuto processare la luce solare attraverso molecole diverse dalla clorofilla. Queste molecole colorano i microbi di viola e di conseguenza anche la nostra atmosfera sarebbe apparsa di quel colore.
-ENG=A research by the University of Maryland hypothesizes that our planet, in the past, appeared purple and not blue. They studied that in past ages microbes could process sunlight through molecules other than chlorophyll. These molecules color the microbes of violet and therefore also our atmosphere would have appeared of that color.
-
-
-
-
 CHIAVE=Our crew
 ITA=Il nostro Team
 ENG=Our crew
@@ -803,191 +964,30 @@ ENG=Our crew
 
 
 
-CHIAVE=(Solo lettere maiuscole o minuscole)
-ITA=
-ENG=
+CHIAVE=of
+ITA=di
+ENG=.
 
 
 
 
-CHIAVE=Modifica Info
-ITA=Modifica
-ENG=Update
+CHIAVE=Company
+ITA=Azienda
+ENG=Company
 
 
 
 
-CHIAVE=See more infos about Star Booster
-ITA=Scopri di più sul Millennium Balcon
-ENG=See more infos about Star Booster
+CHIAVE=Nome
+ITA=.
+ENG=Name
 
 
 
 
-CHIAVE=Destinazione
-ITA=
-ENG=
-
-
-
-
-CHIAVE=Space Club
-ITA=
-ENG=
-
-
-
-
-CHIAVE=First photo of the Blue Horizon's crew
-ITA=Prima foto dei membri di Blue Horizon
-ENG=First photo of the Blue Horizon's crew
-
-
-
-
-CHIAVE=Lista viaggi
-ITA=
-ENG=
-
-
-
-
-CHIAVE=MILLENNIUM BALCON
-ITA=MILLENNIUM BALCON
-ENG=MILLENNIUM BALCON
-
-
-
-
-CHIAVE=Deluxe
-ITA=
-ENG=
-
-
-
-
-CHIAVE=Blue Horizon is an interplanetary flight company born back in 2103. Founders Matteo Pagotto, Manuel Pagotto, Alessandro Franchin and Stefano Baggio were classmates in University of Padua. They always have been passionate about space travelling and one day Matteo started to think about it in a more concrete way. His idea was to create a new concept of travelling, a new way to enjoy space voyages. His proposal didn't sound good to his colleagues to begin with, but after a few years of work Matteo finally drew the attention of Stefano, Manuel and Alessandro. When they started to work together the project started to grow way faster than before and finally in 2103 Blue Horizon became a real thing. From 2103 we made huge steps forward and now we are a solid choice for those who want to explore the galaxy!
-ITA=Blue Horizon è una compagnia di voli interplanetari nata nel lontano 2103. I fondatori Matteo Pagotto, Manuel Pagotto, Alessandro Franchin e Stefano Baggio erano compagni di corso all'università di Padova. Erano sempre stati appassionati di viaggi spaziali, quando un bel giorno Matteo cominciò a pensare di concretizzare la loro passione. La sua idea era creare un nuovo concetto di viaggio, un nuovo modo di godersi le escursioni nello spazio. La sua proposta non riscosse subito successo tra i suoi compagni, ma dopo qualche anno di lavoro, Matteo catturò l'attenzione di Stefano, Manuel e Alessandro. Quando cominciarono a lavorare insieme, il progetto iniziò a crescere molto più in fretta di prima e finalmente nel 2103 nacque la Blue Horizon. Da allora abbiamo fatto passi da gigante e siamo una buona scelta per chi vuole esplorare la galassia!
-ENG=Blue Horizon is an interplanetary flight company born back in 2103. Founders Matteo Pagotto, Manuel Pagotto, Alessandro Franchin and Stefano Baggio were classmates in University of Padua. They always have been passionate about space travelling and one day Matteo started to think about it in a more concrete way. His idea was to create a new concept of travelling, a new way to enjoy space voyages. His proposal didn't sound good to his colleagues to begin with, but after a few years of work Matteo finally drew the attention of Stefano, Manuel and Alessandro. When they started to work together the project started to grow way faster than before and finally in 2103 Blue Horizon became a real thing. From 2103 we made huge steps forward and now we are a solid choice for those who want to explore the galaxy!
-
-
-
-
-CHIAVE=Weight
-ITA=
-ENG=
-
-
-
-
-CHIAVE=Qui
-ITA=Qui
-ENG=If you want to start your trip, choose a destination planet and book your flight
-
-
-
-
-CHIAVE=Nome ospite
-ITA=
-ENG=
-
-
-
-
-CHIAVE=ADMIN
-ITA=
-ENG=
-
-
-
-
-CHIAVE=Prezzo totale
-ITA=
-ENG=
-
-
-
-
-CHIAVE=LOGOUT
-ITA=ESCI
-ENG=LOGOUT
-
-
-
-
-CHIAVE=Un giorno venusiano dura 243 giorni terrestri, mentre un anno è più breve visto che si articola in soli 224,7 giorni terrestri.
-ITA=Un giorno venusiano dura 243 giorni terrestri, mentre un anno è più breve visto che si articola in soli 224,7 giorni terrestri.
-ENG=A Venus day is equal to 243 Earth days, meanwhile a Venus year is shorter because it's only 224,7 earth days long.
-
-
-
-
-CHIAVE=PLUTO
-ITA=PLUTONE
-ENG=PLUTO
-
-
-
-
-CHIAVE=Lista viaggi:
-ITA=Lista viaggi:
-ENG=Travels list
-
-
-
-
-CHIAVE=STARBOOSTER
-ITA=STARBOOSTER
-ENG=STARBOOSTER
-
-
-
-
-CHIAVE=VENUS
-ITA=VENERE
-ENG=VENUS
-
-
-
-
-CHIAVE=pagina privata
-ITA=
-ENG=
-
-
-
-
-CHIAVE=Millennium Balcon
-ITA=Millennium Balcon
-ENG=Lying down Astroneer 
-
-
-
-
-CHIAVE=Join our space travel community!
-ITA=Unisciti alla nostra comunità di viaggiatori!
-ENG=Join our space travel community!
-
-
-
-
-CHIAVE=Si pensa che sotto la superficie di Europa ci sia uno strato di acqua liquida mantenuta tale dal calore generato dalle \"maree\" causate dall'interazione gravitazionale con Giove. La temperatura sulla superficie di Europa è di circa 110 (-163 °C) all'equatore e di solo 50 K (-223 °C) ai poli, cosicché il ghiaccio superficiale è permanentemente congelato.
-ITA=
-ENG=
-
-
-
-
-CHIAVE=Sex
-ITA=Sesso
-ENG=Sex
-
-
-
-
-CHIAVE=BluHorizon's spacecrafts-1
-ITA=Navicelle di Blue Horizon-1
-ENG=BluHorizon's spacecrafts-1
+CHIAVE=Temperatura
+ITA=.
+ENG=Temperature
 
 
 

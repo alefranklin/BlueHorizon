@@ -52,7 +52,7 @@ function snackMessage(msg){
   var message_type;
   var message_content;
   var request = new XMLHttpRequest();
-  request.open("GET", "http://localhost/BlueHorizon/js/messages.xml");
+  request.open("GET", "http://tecweb.studenti.math.unipd.it/alfranch/js/messages.xml");
   request.send();
   request.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -63,10 +63,8 @@ function snackMessage(msg){
     var xmlDoc = xml.responseXML;
     message = xmlDoc.getElementsByTagName('message')[msg-1];
     if(message){
-      console.log(lang);
       if(lang == "it")  message_content = message.childNodes[3].textContent;
       else              message_content = message.childNodes[5].textContent;
-      console.log(message_content);
       message_type = message.childNodes[1].textContent;
       snackImg.className = message_type;
       snackMsg.innerHTML = message_content;
