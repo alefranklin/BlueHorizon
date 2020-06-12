@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages>
+    <message id="1">
+        <type>good</type>
+        <content-it>Accesso effettuato</content-it>
+        <content-en>Logged in</content-en>
+    </message>
+    <message id="2">
+        <type>good</type>
+        <content-it>Log-out effettuato</content-it>
+        <content-en>Logged out</content-en>
+    </message>
+    <message id="3">
+        <type>bad</type>
+        <content-it>Username o password non validi</content-it>
+        <content-en>Username or password invalid</content-en>
+    </message>
+    <message id="4">
+        <type>bad</type>
+        <content-it>Accesso negato</content-it>
+        <content-en>Access denied</content-en>
+    </message>
+    <message id="5">
+        <type>good</type>
+        <content>Modifiche effettuate</content>
+        <content-it>Modifiche effettuate</content-it>
+        <content-en>Changes applied</content-en>
+    </message>
+    <message id="6">
+        <type>bad</type>
+        <content-it>Errore</content-it>
+        <content-en>Error</content-en>
+    </message>
+    <message id="7">
+        <type>good</type>
+        <content-it>Lingua cambiata</content-it>
+        <content-en>Language changed</content-en>
+    </message>
+    <message id="8">
+        <type>good</type>
+        <content-it>Viaggio prenotato</content-it>
+        <content-en>Travel booked</content-en>
+    </message>
+    <message id="9">
+        <type>bad</type>
+        <content-it>Viaggio gia' prenotato</content-it>
+        <content-en>Travel already booked</content-en>
+    </message>
+</messages>

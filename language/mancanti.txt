@@ -1,0 +1,1270 @@
+CHIAVE=Sfondo
+ITA=Sfondo
+ENG=Background
+
+
+
+
+CHIAVE=Skip to Menu
+ITA=Vai al menu
+ENG=Skip to Menu
+
+
+
+
+CHIAVE=Nessuna data disponibile per questa destinazione
+ITA=Nessuna data disponibile per questa destinazione
+ENG=No departures available for this destination
+
+
+
+
+CHIAVE=Rockets
+ITA=Navicelle
+ENG=Rockets
+
+
+
+
+CHIAVE=La Luna non è per nulla alla medesima distanza dalla Terra dal momento della sua formazione: secondo le stime, il satellite si allontana da noi di 3,78 centimetri ogni anno.
+ITA=La Luna non è per nulla alla medesima distanza dalla Terra dal momento della sua formazione: secondo le stime, il satellite si allontana da noi di 3,78 centimetri ogni anno.
+ENG=The Moon is not at all the same distance from the Earth since its formation: according to estimates, the satellite moves away from us by 3.78 centimeters every year.
+
+
+
+
+CHIAVE=Blue Horizon
+ITA=Blue Horizon
+ENG=Blue Horizon
+
+
+
+
+CHIAVE=Nome passeggero prenotante
+ITA=Nome passeggero prenotante
+ENG=Your name
+
+
+
+
+CHIAVE=Destinazione
+ITA=Destinazione
+ENG=Destination
+
+
+
+
+CHIAVE=(Solo lettere maiuscole o minuscole)
+ITA=(Solo lettere maiuscole o minuscole)
+ENG=(Only uppercase or lowercase letters)
+
+
+
+
+CHIAVE=Blue Horizon's logo
+ITA=Logo Blue Horizon
+ENG=Blue Horizon's logo
+
+
+
+
+CHIAVE=Male
+ITA=Maschio
+ENG=Male
+
+
+
+
+CHIAVE=Resoconto
+ITA=Resoconto
+ENG=Report
+
+
+
+
+CHIAVE=Pianeta enorme e circondato di Lune: ben 63 infatti sono gli attuali satelliti naturali accertati che orbitano attorno al gigante del Sistema Solare. Quattro di questi furono scoperti nel 1610 da Galileo Galilei, ovvero Io, Europa, Callisto e Ganimede, quest’ultimo più grande in volume del pianeta Mercurio, ma dotato di una massa pari alla metà.
+ITA=Pianeta enorme e circondato di Lune: ben 63 infatti sono gli attuali satelliti naturali accertati che orbitano attorno al gigante del Sistema Solare. Quattro di questi furono scoperti nel 1610 da Galileo Galilei, ovvero Io, Europa, Callisto e Ganimede, quest’ultimo più grande in volume del pianeta Mercurio, ma dotato di una massa pari alla metà.
+ENG=Huge and surrounded planet of Lune: as many as 63 are in fact the current established natural satellites that orbit around the giant of the Solar System. Four of these were discovered in 1610 by Galileo Galilei, namely Io, Europa, Callisto and Ganimede, the latter largest in volume on the planet Mercury, but with half the mass.
+
+
+
+
+CHIAVE=Pagina utente - user
+ITA=Pagina utente
+ENG=Userpage
+
+
+
+
+CHIAVE=Ship information
+ITA=Informazioni sulla Navicella
+ENG=Ship information
+
+
+
+
+CHIAVE=LOGOUT
+ITA=ESCI
+ENG=LOGOUT
+
+
+
+
+CHIAVE=Contatti
+ITA=Contatti
+ENG=Contacts
+
+
+
+
+CHIAVE=Blue Horizon is an interplanetary flight company born back in 2103. Founders Matteo Pagotto, Manuel Pagotto, Alessandro Franchin and Stefano Baggio were classmates in University of Padua. They always have been passionate about space travelling and one day Matteo started to think about it in a more concrete way. His idea was to create a new concept of travelling, a new way to enjoy space voyages. His proposal didn't sound good to his colleagues to begin with, but after a few years of work Matteo finally drew the attention of Stefano, Manuel and Alessandro. When they started to work together the project started to grow way faster than before and finally in 2103 Blue Horizon became a real thing. From 2103 we made huge steps forward and now we are a solid choice for those who want to explore the galaxy!
+ITA=Blue Horizon è una compagnia di voli interplanetari nata nel lontano 2103. I fondatori Matteo Pagotto, Manuel Pagotto, Alessandro Franchin e Stefano Baggio erano compagni di corso all'università di Padova. Erano sempre stati appassionati di viaggi spaziali, quando un bel giorno Matteo cominciò a pensare di concretizzare la loro passione. La sua idea era creare un nuovo concetto di viaggio, un nuovo modo di godersi le escursioni nello spazio. La sua proposta non riscosse subito successo tra i suoi compagni, ma dopo qualche anno di lavoro, Matteo catturò l'attenzione di Stefano, Manuel e Alessandro. Quando cominciarono a lavorare insieme, il progetto iniziò a crescere molto più in fretta di prima e finalmente nel 2103 nacque la Blue Horizon. Da allora abbiamo fatto passi da gigante e siamo una buona scelta per chi vuole esplorare la galassia!
+ENG=Blue Horizon is an interplanetary flight company born back in 2103. Founders Matteo Pagotto, Manuel Pagotto, Alessandro Franchin and Stefano Baggio were classmates in University of Padua. They always have been passionate about space travelling and one day Matteo started to think about it in a more concrete way. His idea was to create a new concept of travelling, a new way to enjoy space voyages. His proposal didn't sound good to his colleagues to begin with, but after a few years of work Matteo finally drew the attention of Stefano, Manuel and Alessandro. When they started to work together the project started to grow way faster than before and finally in 2103 Blue Horizon became a real thing. From 2103 we made huge steps forward and now we are a solid choice for those who want to explore the galaxy!
+
+
+
+
+CHIAVE=Devi essere loggato per poter prenotare un viaggio
+ITA=Devi essere loggato per poter prenotare un viaggio
+ENG=You must be logged to book a travel
+
+
+
+
+CHIAVE=Welcome space wanderer!
+ITA=Benvenuto viandante dello spazio!
+ENG=Welcome space wanderer!
+
+
+
+
+CHIAVE=Questo è un sito di prenotazione di viaggi interplanetari!
+ITA=Questo è un sito di prenotazione di viaggi interplanetari!
+ENG=This is a site about interplanetary travels!
+
+
+
+
+CHIAVE=JUPITER
+ITA=GIOVE
+ENG=JUPITER
+
+
+
+
+CHIAVE=Registrati qui!
+ITA=Registrati qui!
+ENG=Sign up Now!
+
+
+
+
+CHIAVE=Saturno
+ITA=Saturno
+ENG=Saturn
+
+
+
+
+CHIAVE=Registrati
+ITA=Registrati
+ENG=Sign Up
+
+
+
+
+CHIAVE=Deluxe
+ITA=Deluxe
+ENG=Deluxe
+
+
+
+
+CHIAVE=Conferma e paga
+ITA=Conferma e paga
+ENG=Confirm and checkout
+
+
+
+
+CHIAVE=Si pensa che sotto la superficie di Europa ci sia uno strato di acqua liquida mantenuta tale dal calore generato dalle "maree" causate dall'interazione gravitazionale con Giove. La temperatura sulla superficie di Europa è di circa 110 (-163 °C) all'equatore e di solo 50 K (-223 °C) ai poli, cosicché il ghiaccio superficiale è permanentemente congelato.
+ITA=Si pensa che sotto la superficie di Europa ci sia uno strato di acqua liquida mantenuta tale dal calore generato dalle "maree" causate dall'interazione gravitazionale con Giove. La temperatura sulla superficie di Europa è di circa 110 (-163 °C) all'equatore e di solo 50 K (-223 °C) ai poli, cosicché il ghiaccio superficiale è permanentemente congelato.
+ENG=It is believed that under the surface of Europa there is a layer of liquid water maintained such by the heat generated by the &quot;tides&quot; caused by the gravitational interaction with Jupiter. The temperature on the surface of Europa is around 110 (-163 &deg; C) at the equator and only 50 K (-223 &deg; C) at the poles, so that the surface ice is permanently frozen.
+
+
+
+
+CHIAVE=Email
+ITA=Email
+ENG=Email
+
+
+
+
+CHIAVE=bg-minimal
+ITA=
+ENG=
+
+
+
+
+CHIAVE=Benvenuto, qui puoi registrarti!
+ITA=Benvenuto, qui puoi registrarti!
+ENG=Welcome, you can sign up here!
+
+
+
+
+CHIAVE=Our spacecrafts
+ITA=Le nostre Navi Spaziali
+ENG=Our spacecrafts
+
+
+
+
+CHIAVE=Other
+ITA=Altro
+ENG=Other
+
+
+
+
+CHIAVE=MERCURY
+ITA=MERCURIO
+ENG=MERCURY
+
+
+
+
+CHIAVE=Order ID
+ITA=ID ordine
+ENG=Order ID
+
+
+
+
+CHIAVE=Cognome ospite numero
+ITA=Cognome ospite numero
+ENG=Surname of the guest number
+
+
+
+
+CHIAVE=Mercurio non è in generale il pianeta più caldo del Sistema Solare, ma quello con la maggiore escursione termica, a causa della quasi totale assenza di atmosfera. La faccia esposta al Sole può manifestare fino a 527 gradi centigradi, ma quella buia ne registra anche -83.
+ITA=Mercurio non è in generale il pianeta più caldo del Sistema Solare, ma quello con la maggiore escursione termica, a causa della quasi totale assenza di atmosfera. La faccia esposta al Sole può manifestare fino a 527 gradi centigradi, ma quella buia ne registra anche -83.
+ENG=Mercurio is not the hottest planet of the Solar System, but it is the one with the widest temperature range due to the almost complete lack of atmosphere. The sunny side can reach up to 527 Celsius degrees. On the other hand the dark side is around -83 Celsius degrees.
+
+
+
+
+CHIAVE=URANUS
+ITA=URANO
+ENG=URANUS
+
+
+
+
+CHIAVE=Prenota subito!
+ITA=Prenota subito!
+ENG=Book now!
+
+
+
+
+CHIAVE=See more infos about Millenium Balcon
+ITA=Scopri piu' informazioni sul Millennium Balcon
+ENG=See more infos about Millenium Balcon
+
+
+
+
+CHIAVE=Venere &egrave; il secondo pianeta del Sistema solare in ordine di distanza dal Sole con un'orbita quasi circolare che lo porta a compiere una rivoluzione in 224,7 giorni terrestri. Prende il nome dalla dea romana dell'amore e della bellezza e il suo simbolo astronomico &egrave; la rappresentazione stilizzata della mano di Venere che sorregge uno specchio. Con una magnitudine massima di -4,6, &egrave; l'oggetto naturale pi&ugrave; luminoso nel cielo notturno dopo la Luna e per questo motivo &egrave; conosciuto fin dall'antichit&agrave;. Venere &egrave; visibile soltanto poco prima dell'alba o poco dopo il tramonto e per questa ragione &egrave; spesso stato chiamato da popoli antichi la "Stella del Mattino" o la "Stella della Sera", fino a quando Pitagora comprese che si trattava dello stesso oggetto[8]. Classificato come un pianeta terrestre, a volte &egrave; definito il "pianeta gemello" della Terra, cui &egrave; molto simile per dimensioni e massa. Tuttavia per altri aspetti &egrave; piuttosto differente dal nostro pianeta. Infatti Venere possiede un'atmosfera costituita principalmente da anidride carbonica, molto pi&ugrave; densa di quella terrestre, con una pressione al livello del suolo pari a 92 atm. La densit&agrave; e la composizione dell'atmosfera creano un impressionante effetto serra che rende Venere il pianeta pi&ugrave; caldo del sistema solare. Venere &egrave; avvolto da uno spesso strato di nubi altamente riflettenti, composte principalmente di acido solforico, che impediscono la visione nello spettro visibile della superficie dallo spazio. Il pianeta non &egrave; dotato di satelliti o anelli e ha un campo magnetico pi&ugrave; debole di quello terrestre.
+ITA=Venere &egrave; il secondo pianeta del Sistema solare in ordine di distanza dal Sole con un'orbita quasi circolare che lo porta a compiere una rivoluzione in 224,7 giorni terrestri. Prende il nome dalla dea romana dell'amore e della bellezza e il suo simbolo astronomico &egrave; la rappresentazione stilizzata della mano di Venere che sorregge uno specchio. Con una magnitudine massima di -4,6, &egrave; l'oggetto naturale pi&ugrave; luminoso nel cielo notturno dopo la Luna e per questo motivo &egrave; conosciuto fin dall'antichit&agrave;. Venere &egrave; visibile soltanto poco prima dell'alba o poco dopo il tramonto e per questa ragione &egrave; spesso stato chiamato da popoli antichi la "Stella del Mattino" o la "Stella della Sera", fino a quando Pitagora comprese che si trattava dello stesso oggetto[8]. Classificato come un pianeta terrestre, a volte &egrave; definito il "pianeta gemello" della Terra, cui &egrave; molto simile per dimensioni e massa. Tuttavia per altri aspetti &egrave; piuttosto differente dal nostro pianeta. Infatti Venere possiede un'atmosfera costituita principalmente da anidride carbonica, molto pi&ugrave; densa di quella terrestre, con una pressione al livello del suolo pari a 92 atm. La densit&agrave; e la composizione dell'atmosfera creano un impressionante effetto serra che rende Venere il pianeta pi&ugrave; caldo del sistema solare. Venere &egrave; avvolto da uno spesso strato di nubi altamente riflettenti, composte principalmente di acido solforico, che impediscono la visione nello spettro visibile della superficie dallo spazio. Il pianeta non &egrave; dotato di satelliti o anelli e ha un campo magnetico pi&ugrave; debole di quello terrestre.
+ENG=Venus is the second planet in the Solar System in order of distance from the Sun with an almost circular orbit that leads it to make a revolution in 224.7 Earth days. It takes its name from the Roman goddess of love and beauty and its astronomical symbol is the stylized representation of the hand of Venus holding up a mirror.  With a maximum magnitude of -4,6, it is l &apos;natural object brighter in the night sky after the Moon and for this reason it has been known since antiquity. Venus is visible only shortly before sunrise or shortly after sunset and for this reason it has often been called by ancient peoples the &quot;Morning Star&quot; or the &quot;Evening Star&quot;, until Pythagoras understood that it was the same object [8].  Classified as a terrestrial planet, it is sometimes called the &quot;twin planet&quot; of the Earth, to which it is very similar in size and mass. However in other respects it is quite different from our planet. In fact, Venus has an atmosphere consisting mainly of carbon dioxide, much denser than Earth&apos;s, with a pressure at ground level of 92 atm. The density and composition of the atmosphere create an impressive greenhouse effect that makes Venus the hottest planet in the solar system. Venus is enveloped by a thick layer of highly reflective clouds, mainly composed of sulfuric acid, which prevent vision in the visible spectrum of the surface from space. The planet has no satellites or rings and has a weaker magnetic field than the Earth&apos;s.
+
+
+
+
+CHIAVE=Saturno è il pianeta con la densità più bassa del sistema solare: solo 0,69 mg/mL, un valore inferiore anche a quello dell’acqua (circa 2/3). Se si disponesse dunque di un mare abbastanza grande per ospitare l’intero corpo celeste lo vedremmo galleggiare come un enorme iceberg.
+ITA=Saturno è il pianeta con la densità più bassa del sistema solare: solo 0,69 mg/mL, un valore inferiore anche a quello dell’acqua (circa 2/3). Se si disponesse dunque di un mare abbastanza grande per ospitare l’intero corpo celeste lo vedremmo galleggiare come un enorme iceberg.
+ENG=Saturn is the planet with the lowest density of the solar system: only 0.69 mg / mL, a value also lower than that of water (about 2/3). If we had a sea large enough to accommodate the entire celestial body we would see it floating like a huge iceberg.
+
+
+
+
+CHIAVE=Our crew
+ITA=Il nostro Team
+ENG=Our crew
+
+
+
+
+CHIAVE=Date
+ITA=Data
+ENG=Date
+
+
+
+
+CHIAVE=Qui
+ITA=Qui
+ENG=Here
+
+
+
+
+CHIAVE=Accedi
+ITA=Accedi
+ENG=Login
+
+
+
+
+CHIAVE=MARS
+ITA=MARTE
+ENG=MARS
+
+
+
+
+CHIAVE=Urano
+ITA=Urano
+ENG=Uranus
+
+
+
+
+CHIAVE=Cabin class
+ITA=Classe cabina
+ENG=Cabin class
+
+
+
+
+CHIAVE=Pagina registrazione
+ITA=Pagina registrazione
+ENG=Registration Page
+
+
+
+
+CHIAVE=Plancia di comando
+ITA=Plancia di comando
+ENG=Company meeting
+
+
+
+
+CHIAVE=Skip to main content
+ITA=Vai al Menu principale
+ENG=Skip to main content
+
+
+
+
+CHIAVE=Put copyright, etc. here.
+ITA=Metti il copyright, etc. qui.
+ENG=Put copyright, etc. here.
+
+
+
+
+CHIAVE=Invia
+ITA=Invia
+ENG=Enter
+
+
+
+
+CHIAVE=IO
+ITA=IO
+ENG=IO
+
+
+
+
+CHIAVE=Effettua il login in alto a destra oppure
+ITA=Effettua il login in alto a destra oppure
+ENG=Log in at the top right or
+
+
+
+
+CHIAVE=Temperatura
+ITA=Temperatura
+ENG=Temperature
+
+
+
+
+CHIAVE=Modifica Info
+ITA=Modifica
+ENG=Update
+
+
+
+
+CHIAVE=Una ricerca dell'università del Maryland ipotizza che il nostro pianeta, in passato, apparisse viola e non azzurro. Hanno studiato che nelle ere passate i microbi avrebbero potuto processare la luce solare attraverso molecole diverse dalla clorofilla. Queste molecole colorano i microbi di viola e di conseguenza anche la nostra atmosfera sarebbe apparsa di quel colore.
+ITA=Una ricerca dell'università del Maryland ipotizza che il nostro pianeta, in passato, apparisse viola e non azzurro. Hanno studiato che nelle ere passate i microbi avrebbero potuto processare la luce solare attraverso molecole diverse dalla clorofilla. Queste molecole colorano i microbi di viola e di conseguenza anche la nostra atmosfera sarebbe apparsa di quel colore.
+ENG=A research by the University of Maryland hypothesizes that our planet, in the past, appeared purple and not blue. They studied that in past ages microbes could process sunlight through molecules other than chlorophyll. These molecules color the microbes of violet and therefore also our atmosphere would have appeared of that color.
+
+
+
+
+CHIAVE=Mercurio
+ITA=Mercurio
+ENG=Mercury
+
+
+
+
+CHIAVE=Number of passengers:
+ITA=
+ENG=
+
+
+
+
+CHIAVE=Benvenuto in Blue Horizon!
+ITA=Benvenuto in Blue Horizon
+ENG=Welcome in Blue Horizon!
+
+
+
+
+CHIAVE=Marte
+ITA=Marte
+ENG=Mars
+
+
+
+
+CHIAVE=Page not found
+ITA=Pagina non trovata
+ENG=Page not found
+
+
+
+
+CHIAVE=Pannello Admin
+ITA=Pannello Admin
+ENG=Admin Panel
+
+
+
+
+CHIAVE=tesla-in-space
+ITA=
+ENG=
+
+
+
+
+CHIAVE=Riunione Aziendale
+ITA=Riunione aziendale
+ENG=Company meeting
+
+
+
+
+CHIAVE=BluHorizon's spacecrafts-1
+ITA=Navicelle di Blue Horizon
+ENG=BluHorizon's spacecrafts
+
+
+
+
+CHIAVE=Date disponibili:
+ITA=
+ENG=
+
+
+
+
+CHIAVE=It seems you got lost in navigation
+ITA=Sembra che tu ti sia perso
+ENG=It seems you got lost in navigation
+
+
+
+
+CHIAVE=Learn more about us!
+ITA=Leggi qualche curiosità su di noi!
+ENG=Learn more about us!
+
+
+
+
+CHIAVE=STARBOOSTER
+ITA=STARBOOSTER
+ENG=STARBOOSTER
+
+
+
+
+CHIAVE=SATURN
+ITA=SATURNO
+ENG=SATURN
+
+
+
+
+CHIAVE=Data di partenza
+ITA=Data di partenza
+ENG=Departure date
+
+
+
+
+CHIAVE=Nome ospite
+ITA=Nome ospite
+ENG=Guest's name
+
+
+
+
+CHIAVE=Weight
+ITA=Peso
+ENG=Weight
+
+
+
+
+CHIAVE=Nome
+ITA=Nome
+ENG=Name
+
+
+
+
+CHIAVE=Vendita razzi
+ITA=Vendita razzi
+ENG=rockets shop
+
+
+
+
+CHIAVE=Number of passengers:
+ITA=Numero passeggeri:
+ENG=Number of passengers:
+
+
+
+
+CHIAVE=Numero totale passeggeri
+ITA=Numero totale passeggeri
+ENG=Total passengers
+
+
+
+
+CHIAVE=Height
+ITA=Altezza
+ENG=Height
+
+
+
+
+CHIAVE=PLUTO
+ITA=PLUTONE
+ENG=PLUTO
+
+
+
+
+CHIAVE=Millennium Balcon
+ITA=Millennium Balcon
+ENG=Millennium Balcon
+
+
+
+
+CHIAVE=Name
+ITA=Nome
+ENG=Name
+
+
+
+
+CHIAVE=Nettuno
+ITA=Nettuno
+ENG=Neptune
+
+
+
+
+CHIAVE=MILLENNIUM BALCON
+ITA=MILLENNIUM BALCON
+ENG=MILLENNIUM BALCON
+
+
+
+
+CHIAVE=Così lontano e piccolo da generare dubbi sulla sua consistenza di pianeta, eppure dotato di atmosfera. Molto sottile e tossica per gli esseri umani, è pur sempre un’atmosfera. Ma quello che è più singolare è la sua consistenza. Quando il pianeta infatti è in perielio (distanza minima dal Sole) l’atmosfera è gassosa, in afelio (distanza massima dal Sole) questa congela e cade sul pianeta come neve.
+ITA=Così lontano e piccolo da generare dubbi sulla sua consistenza di pianeta, eppure dotato di atmosfera. Molto sottile e tossica per gli esseri umani, è pur sempre un’atmosfera. Ma quello che è più singolare è la sua consistenza. Quando il pianeta infatti è in perielio (distanza minima dal Sole) l’atmosfera è gassosa, in afelio (distanza massima dal Sole) questa congela e cade sul pianeta come neve.
+ENG=So far and so small as to generate doubts about its planetary consistency, yet with an atmosphere. Very thin and toxic to humans, it is still an atmosphere. But what is more unique is its consistency. In fact, when the planet is in perihelion (minimum distance from the Sun) the atmosphere is gaseous, in aphelion (maximum distance from the Sun) this freezes and falls on the planet like snow.
+
+
+
+
+CHIAVE=Io
+ITA=Io
+ENG=Io
+
+
+
+
+CHIAVE=Europa
+ITA=Europa
+ENG=Europa
+
+
+
+
+CHIAVE=Company
+ITA=Azienda
+ENG=Company
+
+
+
+
+CHIAVE=Standard
+ITA=Standard
+ENG=Standard
+
+
+
+
+CHIAVE=I tuoi dati
+ITA=I tuoi dati
+ENG=Your info
+
+
+
+
+CHIAVE=Giove
+ITA=Giove
+ENG=Jupiter
+
+
+
+
+CHIAVE=Come la Terra, anche Marte manifesta 4 stagioni, a causa del suo asse inclinato rispetto al Sole, con un angolo molto simile a quello della Terra (25 gradi contro 23.5 gradi terrestri). Tuttavia, poiché l’anno di Marte è circa il doppio del nostro, anche le stagioni durano di più. A causa poi della traiettoria spiccatamente ellittica, alcune stagioni durano più di altre (nell’emisfero nord l’estate e la primavera durano di più, così come nel sud l’autunno e l’inverno).
+ITA=Come la Terra, anche Marte manifesta 4 stagioni, a causa del suo asse inclinato rispetto al Sole, con un angolo molto simile a quello della Terra (25 gradi contro 23.5 gradi terrestri). Tuttavia, poiché l’anno di Marte è circa il doppio del nostro, anche le stagioni durano di più. A causa poi della traiettoria spiccatamente ellittica, alcune stagioni durano più di altre (nell’emisfero nord l’estate e la primavera durano di più, così come nel sud l’autunno e l’inverno).
+ENG=Like the Earth, Mars also manifests 4 seasons, due to its inclined axis with respect to the Sun, with an angle very similar to that of the Earth (25 degrees versus 23.5 degrees on land). However, since the year of Mars is about twice the size of ours, even the seasons last longer. Because of the distinctly elliptical trajectory, some seasons last longer than others (in the northern hemisphere, summer and spring last longer, as in the south, autumn and winter).
+
+
+
+
+CHIAVE=EARTH
+ITA=TERRA
+ENG=EARTH
+
+
+
+
+CHIAVE=Join our space travel community!
+ITA=Unisciti alla nostra comunità di viaggiatori!
+ENG=Join our space travel community!
+
+
+
+
+CHIAVE=Book the flight of your dreams among our plentiful travel options
+ITA=Prenota il volo dei tuoi sogni tra le nostre numerose opzioni di viaggio!
+ENG=Book the flight of your dreams among our plentiful travel options
+
+
+
+
+CHIAVE=Travels
+ITA=Viaggi
+ENG=Travels
+
+
+
+
+CHIAVE=Luna
+ITA=Luna
+ENG=Moon
+
+
+
+
+CHIAVE=La gravità di Giove è così grande, che ha l’effetto di allungare e schiacciare  Io. Tutta l’energia che proviene dal campo gravitazionale di Giove alimenta i vulcani di Io i cui pennacchi possono raggiungere i 500 km sopra la superficie della luna.
+ITA=La gravità di Giove è così grande, che ha l’effetto di allungare e schiacciare  Io. Tutta l’energia che proviene dal campo gravitazionale di Giove alimenta i vulcani di Io i cui pennacchi possono raggiungere i 500 km sopra la superficie della luna.
+ENG=The gravity of Jupiter is so great, that it has the effect of lengthening and crushing Io. All the energy that comes from the gravitational field of Jupiter feeds the volcanoes of Io whose plumes can reach 500 km above the surface of the moon.
+
+
+
+
+CHIAVE=LOGIN
+ITA=LOGIN
+ENG=LOGIN
+
+
+
+
+CHIAVE=Nettuno &egrave; l'ottavo e pi&ugrave; lontano pianeta del Sistema solare partendo dal Sole. Si tratta del quarto pianeta pi&ugrave; grande, considerando il suo diametro, e il terzo se si considera la sua massa. Nettuno ha 17 volte la massa della Terra ed &egrave; leggermente pi&ugrave; massiccio del suo quasi-gemello Urano, la cui massa &egrave; uguale a 15 masse terrestri, ma &egrave; meno denso rispetto a Nettuno. Il nome del pianeta &egrave; dedicato al dio romano del mare; Scoperto la sera del 23 settembre 1846 da Johann Gottfried Galle con il telescopio dell'Osservatorio astronomico di Berlino, e Heinrich Louis d'Arrest, uno studente di astronomia che lo assisteva, Nettuno fu il primo pianeta ad essere stato trovato tramite calcoli matematici pi&ugrave; che attraverso regolari osservazioni: cambiamenti insoliti nell'orbita di Urano indussero gli astronomi a credere che vi fosse, all'esterno, un pianeta sconosciuto che ne perturbava l'orbita. Il pianeta fu scoperto entro appena un grado dal punto previsto. La luna Tritone fu individuata poco dopo, ma nessuno degli altri tredici satelliti naturali di Nettuno fu scoperto prima del XX secolo. Il pianeta &egrave; stato visitato da una sola sonda spaziale, la Voyager 2 che transit&ograve; vicino ad esso il 25 agosto 1989. Nettuno ha una composizione simile a quella di Urano ed entrambi hanno composizioni differenti da quelle dei pi&ugrave; grandi pianeti gassosi Giove e Saturno. Per questo sono talvolta classificati in una categoria separata, i cosiddetti "giganti ghiacciati". L'atmosfera di Nettuno, sebbene simile a quelle sia di Giove che di Saturno essendo composta principalmente da idrogeno ed elio, possiede anche maggiori proporzioni di "ghiacci", come acqua, ammoniaca e metano, assieme a tracce di idrocarburi e forse azoto. In contrasto, l'interno del pianeta &egrave; composto essenzialmente da ghiacci e rocce come il suo simile Urano. Le tracce di metano presenti negli strati pi&ugrave; esterni dell'atmosfera contribuiscono a conferire al pianeta Nettuno il suo caratteristico colore azzurro intenso. Nettuno possiede i venti pi&ugrave; forti di ogni altro pianeta nel Sistema Solare. Sono state misurate raffiche a velocit&agrave; superiori ai 2 100 km/h. All'epoca del sorvolo da parte della Voyager 2, nel 1989, l'emisfero sud del pianeta possedeva una Grande Macchia Scura comparabile con la Grande Macchia Rossa di Giove; la temperatura delle nubi pi&ugrave; alte di Nettuno era di circa -218 &deg;C, una delle pi&ugrave; fredde del Sistema solare, a causa della grande distanza dal Sole. La temperatura al centro del pianeta &egrave; di circa 7000 &deg;C, comparabile con la temperatura superficiale del Sole e simile a quella del nucleo di molti altri pianeti conosciuti. Il pianeta possiede inoltre un debole sistema di anelli, scoperto negli anni sessanta ma confermato solo dalla Voyager 2.
+ITA=Nettuno &egrave; l'ottavo e pi&ugrave; lontano pianeta del Sistema solare partendo dal Sole. Si tratta del quarto pianeta pi&ugrave; grande, considerando il suo diametro, e il terzo se si considera la sua massa. Nettuno ha 17 volte la massa della Terra ed &egrave; leggermente pi&ugrave; massiccio del suo quasi-gemello Urano, la cui massa &egrave; uguale a 15 masse terrestri, ma &egrave; meno denso rispetto a Nettuno. Il nome del pianeta &egrave; dedicato al dio romano del mare; Scoperto la sera del 23 settembre 1846 da Johann Gottfried Galle con il telescopio dell'Osservatorio astronomico di Berlino, e Heinrich Louis d'Arrest, uno studente di astronomia che lo assisteva, Nettuno fu il primo pianeta ad essere stato trovato tramite calcoli matematici pi&ugrave; che attraverso regolari osservazioni: cambiamenti insoliti nell'orbita di Urano indussero gli astronomi a credere che vi fosse, all'esterno, un pianeta sconosciuto che ne perturbava l'orbita. Il pianeta fu scoperto entro appena un grado dal punto previsto. La luna Tritone fu individuata poco dopo, ma nessuno degli altri tredici satelliti naturali di Nettuno fu scoperto prima del XX secolo. Il pianeta &egrave; stato visitato da una sola sonda spaziale, la Voyager 2 che transit&ograve; vicino ad esso il 25 agosto 1989. Nettuno ha una composizione simile a quella di Urano ed entrambi hanno composizioni differenti da quelle dei pi&ugrave; grandi pianeti gassosi Giove e Saturno. Per questo sono talvolta classificati in una categoria separata, i cosiddetti "giganti ghiacciati". L'atmosfera di Nettuno, sebbene simile a quelle sia di Giove che di Saturno essendo composta principalmente da idrogeno ed elio, possiede anche maggiori proporzioni di "ghiacci", come acqua, ammoniaca e metano, assieme a tracce di idrocarburi e forse azoto. In contrasto, l'interno del pianeta &egrave; composto essenzialmente da ghiacci e rocce come il suo simile Urano. Le tracce di metano presenti negli strati pi&ugrave; esterni dell'atmosfera contribuiscono a conferire al pianeta Nettuno il suo caratteristico colore azzurro intenso. Nettuno possiede i venti pi&ugrave; forti di ogni altro pianeta nel Sistema Solare. Sono state misurate raffiche a velocit&agrave; superiori ai 2 100 km/h. All'epoca del sorvolo da parte della Voyager 2, nel 1989, l'emisfero sud del pianeta possedeva una Grande Macchia Scura comparabile con la Grande Macchia Rossa di Giove; la temperatura delle nubi pi&ugrave; alte di Nettuno era di circa -218 &deg;C, una delle pi&ugrave; fredde del Sistema solare, a causa della grande distanza dal Sole. La temperatura al centro del pianeta &egrave; di circa 7000 &deg;C, comparabile con la temperatura superficiale del Sole e simile a quella del nucleo di molti altri pianeti conosciuti. Il pianeta possiede inoltre un debole sistema di anelli, scoperto negli anni sessanta ma confermato solo dalla Voyager 2.
+ENG=Neptune is the eighth and farthest planet in the Solar System starting from the Sun. It is the fourth largest planet, considering its diameter, and the third largest if we consider its mass. Neptune has 17 times the mass of the Earth and is slightly more massive than its quasi-twin Uranus, whose mass is equal to 15 terrestrial masses, but is less dense than Neptune. The name of the planet is dedicated to the Roman god of the sea; Discovered on the evening of September 23, 1846 by Johann Gottfried Galle with the telescope of the Astronomical Observatory of Berlin, and Heinrich Louis d \ &apos;Arrest, an astronomy student who assisted him, Neptune was the first planet to be found by mathematical calculations more than through regular observations: unusual changes in Uranus&apos; orbit led astronomers to believe that there was an unknown planet outside that disturbed its orbit. The planet was discovered within just one degree of its intended location. The moon Triton was spotted shortly thereafter, but none of Neptune&apos;s other thirteen natural satellites were discovered before the 20th century. The planet was visited by a single space probe, Voyager 2 which passed near it on August 25, 1989. Neptune has a composition similar to that of Uranus and both have compositions different from those of the larger gas planets Jupiter and Saturn. For this reason they are sometimes classified in a separate category, the so-called &quot;frozen giants&quot;. The atmosphere of Neptune, although similar to those of both Jupiter and Saturn, being composed mainly of hydrogen and helium, also has greater proportions of &quot;ice&quot;, such as water, ammonia and methane, along with traces of hydrocarbons and perhaps nitrogen. In contrast, the interior of the planet is essentially composed of ice and rocks like its similar Uranus. The traces of methane present in the outermost layers of the atmosphere contribute to giving the planet Neptune its characteristic intense blue color. Neptune has the strongest winds of any other planet in the Solar System. Gusts were measured at speeds above 2 100 km / h. At the time of Voyager 2&apos;s overflight, in 1989, the southern hemisphere of the planet had a large dark spot comparable to the large red spot of Jupiter; the temperature of the highest clouds of Neptune was around -218 &deg; C, one of the coldest in the Solar System, due to the great distance from the Sun. The temperature in the center of the planet is around 7000 &deg; C, comparable with the surface temperature of the Sun and similar to that of the nucleus of many other known planets. The planet also has a weak ring system, discovered in the 1960s but confirmed only by Voyager 2.
+
+
+
+
+CHIAVE=Se vuoi viaggiare, scegli un pianeta di destinazione e prenota
+ITA=Se vuoi viaggiare, scegli un pianeta di destinazione e prenota
+ENG=If you want to travel, choose a destination planet and book
+
+
+
+
+CHIAVE=Date disponibili:
+ITA=Date disponibili:
+ENG=Available dates:
+
+
+
+
+CHIAVE=Our Travels
+ITA=I nostri Viaggi
+ENG=Our Travels
+
+
+
+
+CHIAVE=Take a look at some neat facts about the planets you're going to orbit around!
+ITA=Scopri interessanti segreti sui pianeti attorno ai quali orbiterai!
+ENG=Take a look at some neat facts about the planets you're going to orbit around!
+
+
+
+
+CHIAVE=HOME
+ITA=HOME
+ENG=HOME
+
+
+
+
+CHIAVE=Durata viaggio
+ITA=Durata viaggio
+ENG=Flight duration
+
+
+
+
+CHIAVE=$this->msg_form_button
+ITA=
+ENG=
+
+
+
+
+CHIAVE=Si pensa che sotto la superficie di Europa ci sia uno strato di acqua liquida mantenuta tale dal calore generato dalle \"maree\" causate dall'interazione gravitazionale con Giove. La temperatura sulla superficie di Europa è di circa 110 (-163 °C) all'equatore e di solo 50 K (-223 °C) ai poli, cosicché il ghiaccio superficiale è permanentemente congelato.
+ITA=
+ENG=
+
+
+
+
+CHIAVE=← Return to Travels
+ITA=← Ritorna ai Viaggi
+ENG=← Return to Travels
+
+
+
+
+CHIAVE=A Urano non piace proprio la posizione verticale: il pianeta, che è inclinato di 98 gradi rispetto al suo piano orbitale intorno al Sole, caratteristica unica nel Sistema Solare, è il settimo in ordine di distanza dal Sole, il terzo per diametro e il quarto per massa.
+ITA=A Urano non piace proprio la posizione verticale: il pianeta, che è inclinato di 98 gradi rispetto al suo piano orbitale intorno al Sole, caratteristica unica nel Sistema Solare, è il settimo in ordine di distanza dal Sole, il terzo per diametro e il quarto per massa.
+ENG=Uranus does not really like the vertical position: the planet, which is inclined by 98 degrees with respect to its orbital plane around the Sun, a unique feature in the Solar System, is the seventh in order of distance from the Sun, the third by diameter and the fourth by mass.
+
+
+
+
+CHIAVE=Informazioni
+ITA=Informazioni
+ENG=Informations
+
+
+
+
+CHIAVE=Gender
+ITA=Genere
+ENG=Gender
+
+
+
+
+CHIAVE=EUROPA
+ITA=EUROPA
+ENG=EUROPA
+
+
+
+
+CHIAVE=of
+ITA=di
+ENG=of
+
+
+
+
+CHIAVE=Nationality
+ITA=Nazionalita'
+ENG=Nationality
+
+
+
+
+CHIAVE=Europa &egrave; il quarto satellite naturale del pianeta Giove per dimensioni e il sesto dell'intero sistema solare. &Egrave; stato scoperto da Galileo Galilei il 7 gennaio 1610 assieme ad Io, Ganimede e Callisto, da allora comunemente noti con l'appellativo di satelliti galileiani. Leggermente pi&ugrave; piccolo della Luna, Europa &egrave; composto principalmente da silicati con una crosta costituita da acqua ghiacciata, probabilmente al suo interno &egrave; presente un nucleo di ferro-nichel ed &egrave; circondato esternamente da una tenue atmosfera, composta principalmente da ossigeno. A differenza di Ganimede e Callisto, la sua superficie si presenta striata e poco craterizzata ed &egrave; la pi&ugrave; liscia di quella di qualsiasi oggetto noto del sistema Solare. L'apparente giovinezza e la morbidezza della sua superficie hanno portato ad ipotizzare l'esistenza di un oceano d'acqua presente sotto la crosta, che potrebbe essere dimora per la vita extraterrestre. In questa ipotesi viene proposto che Europa, riscaldato internamente dalle forze mareali causate dalla sua vicinanza a Giove e dalla risonanza orbitale con i vicini Io e Ganimede, rilasci il calore necessario per mantenere un oceano liquido sotto la superficie e stimolando al tempo stesso un'attivit&agrave; geologica simile alla tettonica a placche. L'8 settembre 2014, la NASA rifer&igrave; di aver trovato prove dell'esistenza di un'attivit&agrave; della tettonica a placche su Europa, la prima attivit&agrave; geologica di questo tipo su un mondo diverso dalla Terra. Nel dicembre del 2013 la NASA individu&ograve; sulla crosta di Europa alcuni minerali argillosi, pi&ugrave; precisamente, fillosilicati, che spesso sono associati a materiale organico. La stessa NASA annunci&ograve;, sulla base di osservazioni effettuate con il Telescopio spaziale Hubble, che sono stati rilevati geyser di vapore acqueo simili a quelli di Encelado, il satellite di Saturno. La sonda Galileo, lanciata nel 1989, forn&igrave; la maggior parte delle informazioni note su Europa. Nessun veicolo spaziale &egrave; ancora atterrato sulla superficie, ma le sue caratteristiche hanno suggerito diverse proposte di esplorazione, anche molto ambiziose. La Jupiter Icy Moon Explorer dell'Agenzia spaziale europea &egrave; una missione per Europa (e per le vicine Io e Ganimede), il cui lancio &egrave; previsto per il 2022. La NASA invece sta programmando una missione robotica, che sarebbe lanciata a met&agrave; degli anni 2020.
+ITA=Europa &egrave; il quarto satellite naturale del pianeta Giove per dimensioni e il sesto dell'intero sistema solare. &Egrave; stato scoperto da Galileo Galilei il 7 gennaio 1610 assieme ad Io, Ganimede e Callisto, da allora comunemente noti con l'appellativo di satelliti galileiani. Leggermente pi&ugrave; piccolo della Luna, Europa &egrave; composto principalmente da silicati con una crosta costituita da acqua ghiacciata, probabilmente al suo interno &egrave; presente un nucleo di ferro-nichel ed &egrave; circondato esternamente da una tenue atmosfera, composta principalmente da ossigeno. A differenza di Ganimede e Callisto, la sua superficie si presenta striata e poco craterizzata ed &egrave; la pi&ugrave; liscia di quella di qualsiasi oggetto noto del sistema Solare. L'apparente giovinezza e la morbidezza della sua superficie hanno portato ad ipotizzare l'esistenza di un oceano d'acqua presente sotto la crosta, che potrebbe essere dimora per la vita extraterrestre. In questa ipotesi viene proposto che Europa, riscaldato internamente dalle forze mareali causate dalla sua vicinanza a Giove e dalla risonanza orbitale con i vicini Io e Ganimede, rilasci il calore necessario per mantenere un oceano liquido sotto la superficie e stimolando al tempo stesso un'attivit&agrave; geologica simile alla tettonica a placche. L'8 settembre 2014, la NASA rifer&igrave; di aver trovato prove dell'esistenza di un'attivit&agrave; della tettonica a placche su Europa, la prima attivit&agrave; geologica di questo tipo su un mondo diverso dalla Terra. Nel dicembre del 2013 la NASA individu&ograve; sulla crosta di Europa alcuni minerali argillosi, pi&ugrave; precisamente, fillosilicati, che spesso sono associati a materiale organico. La stessa NASA annunci&ograve;, sulla base di osservazioni effettuate con il Telescopio spaziale Hubble, che sono stati rilevati geyser di vapore acqueo simili a quelli di Encelado, il satellite di Saturno. La sonda Galileo, lanciata nel 1989, forn&igrave; la maggior parte delle informazioni note su Europa. Nessun veicolo spaziale &egrave; ancora atterrato sulla superficie, ma le sue caratteristiche hanno suggerito diverse proposte di esplorazione, anche molto ambiziose. La Jupiter Icy Moon Explorer dell'Agenzia spaziale europea &egrave; una missione per Europa (e per le vicine Io e Ganimede), il cui lancio &egrave; previsto per il 2022. La NASA invece sta programmando una missione robotica, che sarebbe lanciata a met&agrave; degli anni 2020.
+ENG=Europa is the fourth largest natural satellite of the planet Jupiter and the sixth of the entire solar system. It was discovered by Galileo Galilei on 7 January 1610 together with Io, Ganimede and Callisto, since then commonly known with the name of Galilean satellites. Slightly smaller than the Moon, Europa is mainly composed of silicates with a crust consisting of ice water, probably inside there is an iron-nickel core and is surrounded externally by a soft atmosphere, mainly composed of oxygen. Unlike Ganymede and Callisto, its surface is streaked and slightly cratered and is the smoothest of any known object in the Solar system. The apparent youth and the softness of its surface have led to speculate the existence of an ocean of water present under the crust, which could be home for extraterrestrial life. In this hypothesis it is proposed that Europa, internally heated by the tidal forces caused by its proximity to Jupiter and by the orbital resonance with the neighbors Ganymede, releases the heat necessary to maintain a liquid ocean below the surface and at the same time stimulating a \ &apos; geological activity similar to plate tectonics. On September 8, 2014, NASA reported that it had found evidence of the existence of plate tectonics activity on Europe, the first geological activity of this type on a world other than Earth. In December 2013, NASA identified some clay minerals on the crust of Europe, more precisely, phyllosilicates, which are often associated with organic material. NASA itself announced, based on observations made with the Hubble Space Telescope, that water vapor geysers similar to those of Enceladus, Saturn&apos;s satellite, have been detected. The Galileo spacecraft, launched in 1989, provided most of the known information about Europe. No spacecraft has yet landed on the surface, but its characteristics have suggested several exploration proposals, even very ambitious ones. The European Space Agency&apos;s Jupiter Icy Moon Explorer is a mission for Europe (and for neighboring Ganymede and I), which is scheduled to launch in 2022. NASA is planning a robotic mission, which would be launched in the middle of the 2020 years.
+
+
+
+
+CHIAVE=Lastname
+ITA=Cognome
+ENG=Lastname
+
+
+
+
+CHIAVE=ADMIN
+ITA=ADMIN
+ENG=ADMIN
+
+
+
+
+CHIAVE=Attenzione! Una volta confermata questa prenotazione non sará annullabile o rimborsabile
+ITA=Attenzione! Una volta confermata questa prenotazione non sará annullabile o rimborsabile
+ENG=Warning! Once you have confirmed this operation it can no longer be canceled or refounded
+
+
+
+
+CHIAVE=Ripeti
+ITA=Ripeti
+ENG=Repeat
+
+
+
+
+CHIAVE=Lista utenti
+ITA=Lista utenti
+ENG=Users list
+
+
+
+
+CHIAVE=Lascia il campo password vuoto se non vuoi modificarlo
+ITA=Lascia il campo password vuoto se non vuoi modificarlo
+ENG=Leave the password field empty if you don't want to change it
+
+
+
+
+CHIAVE=Massa
+ITA=Massa
+ENG=Mass
+
+
+
+
+CHIAVE=Length
+ITA=Lunghezza
+ENG=Length
+
+
+
+
+CHIAVE=NEPTUNE
+ITA=NETTUNO
+ENG=NEPTUNE
+
+
+
+
+CHIAVE=ARCASIA
+ITA=ARCASIA
+ENG=ARCASIA
+
+
+
+
+CHIAVE=I tuoi dati sono
+ITA=I tuoi dati sono
+ENG=Your infos are
+
+
+
+
+CHIAVE=Tipo di cabina:
+ITA=.
+ENG=Cabin's type:
+
+
+
+
+CHIAVE=Effettua il login in alto a destra oppure
+ITA=
+ENG=
+
+
+
+
+CHIAVE=Destination
+ITA=Destinazione
+ENG=Destination
+
+
+
+
+CHIAVE=Return to rockets section
+ITA=Ritorna alla pagina dei razzi
+ENG=Return to rockets section
+
+
+
+
+CHIAVE=Rocket
+ITA=Navetta
+ENG=Rocket
+
+
+
+
+CHIAVE=La Luna &egrave; un satellite naturale, l'unico della Terra. Il suo nome proprio viene talvolta utilizzato, per antonomasia e con l'iniziale minuscola (&laquo;una luna&raquo;), come sinonimo di satellite anche per i corpi celesti che orbitano attorno ad altri pianeti. Orbita a una distanza media di circa 384 400 km dalla Terra, sufficientemente vicina da essere osservabile a occhio nudo, il che rende possibile distinguerne alcuni rilievi sulla superficie. Essendo in rotazione sincrona rivolge sempre la stessa faccia verso la Terra e il suo lato nascosto &egrave; rimasto sconosciuto fino al periodo delle esplorazioni spaziali. Durante il suo moto orbitale, il diverso aspetto causato dall'orientazione rispetto al Sole genera delle fasi chiaramente visibili e che hanno influenzato il comportamento dell'uomo fin dall'antichit&agrave;. Impersonata dai greci nella dea Selene, fu da tempo remoto considerata influente sui raccolti, le carestie e la fertilit&agrave;. Condiziona la vita sulla Terra di molte specie viventi, regolandone il ciclo riproduttivo e i periodi di caccia; agisce sulle maree e la stabilit&agrave; dell'asse di rotazione terrestre. Si pensa che la Luna si sia formata 4,5 miliardi di anni fa, non molto tempo dopo la nascita della Terra. Esistono diverse teorie riguardo alla sua formazione; la pi&ugrave; accreditata &egrave; che si sia formata dall'aggregazione dei detriti rimasti in orbita dopo la collisione tra la Terra e un oggetto delle dimensioni di Marte chiamato Theia. La faccia visibile della Luna &egrave; caratterizzata dalla presenza di circa 300 000 crateri da impatto (contando quelli con un diametro di almeno 1 km). Il cratere lunare pi&ugrave; grande &egrave; il bacino Polo Sud-Aitken, che ha un diametro di circa 2 500 km, &egrave; profondo 13 km e occupa la parte meridionale della faccia nascosta.
+ITA=La Luna &egrave; un satellite naturale, l'unico della Terra. Il suo nome proprio viene talvolta utilizzato, per antonomasia e con l'iniziale minuscola (&laquo;una luna&raquo;), come sinonimo di satellite anche per i corpi celesti che orbitano attorno ad altri pianeti. Orbita a una distanza media di circa 384 400 km dalla Terra, sufficientemente vicina da essere osservabile a occhio nudo, il che rende possibile distinguerne alcuni rilievi sulla superficie. Essendo in rotazione sincrona rivolge sempre la stessa faccia verso la Terra e il suo lato nascosto &egrave; rimasto sconosciuto fino al periodo delle esplorazioni spaziali. Durante il suo moto orbitale, il diverso aspetto causato dall'orientazione rispetto al Sole genera delle fasi chiaramente visibili e che hanno influenzato il comportamento dell'uomo fin dall'antichit&agrave;. Impersonata dai greci nella dea Selene, fu da tempo remoto considerata influente sui raccolti, le carestie e la fertilit&agrave;. Condiziona la vita sulla Terra di molte specie viventi, regolandone il ciclo riproduttivo e i periodi di caccia; agisce sulle maree e la stabilit&agrave; dell'asse di rotazione terrestre. Si pensa che la Luna si sia formata 4,5 miliardi di anni fa, non molto tempo dopo la nascita della Terra. Esistono diverse teorie riguardo alla sua formazione; la pi&ugrave; accreditata &egrave; che si sia formata dall'aggregazione dei detriti rimasti in orbita dopo la collisione tra la Terra e un oggetto delle dimensioni di Marte chiamato Theia. La faccia visibile della Luna &egrave; caratterizzata dalla presenza di circa 300 000 crateri da impatto (contando quelli con un diametro di almeno 1 km). Il cratere lunare pi&ugrave; grande &egrave; il bacino Polo Sud-Aitken, che ha un diametro di circa 2 500 km, &egrave; profondo 13 km e occupa la parte meridionale della faccia nascosta.
+ENG=The Moon is a natural satellite, the only one on Earth. Its proper name is sometimes used, par excellence and with the initial lowercase (&quot;a moon&quot;), as a synonym of satellite also for the celestial bodies that orbit around other planets. It orbits at an average distance of about 384 400 km from Earth, close enough to be observable with the naked eye, which makes it possible to distinguish some reliefs on the surface. Being in synchronous rotation it always turns the same face towards the Earth and its hidden side remained unknown until the period of space exploration. During its orbital motion, the different aspect caused by the orientation with respect to the Sun generates clearly visible phases which have influenced the behavior of man since ancient times. Impersonated by the Greeks in the goddess Selene, she has long been considered influential on crops, famines and fertility. It conditions the life on Earth of many living species, regulating their reproductive cycle and hunting periods; acts on the tides and the stability of the Earth&apos;s rotation axis. The moon was thought to have formed 4.5 billion years ago, not long after Earth was born. There are several theories regarding its formation; the most accredited is that it was formed by the aggregation of debris left in orbit after the collision between the Earth and an object the size of Mars called Theia. The visible face of the Moon is characterized by the presence of about 300,000 impact craters (counting those with a diameter of at least 1 km). The largest lunar crater is the South Pole-Aitken basin, which has a diameter of around 2 500 km, is 13 km deep and occupies the southern part of the hidden face.
+
+
+
+
+CHIAVE=Plutone &egrave; un pianeta nano orbitante nelle regioni periferiche del sistema solare, con un'orbita eccentrica a cavallo dell'orbita di Nettuno; fu scoperto nel 1930 da Clyde Tombaugh e inizialmente classificato come il nono pianeta. Tuttavia venne riclassificato come pianeta nano il 24 agosto 2006 e battezzato formalmente 134340 Pluto dalla UAI. Plutone &egrave; il pi&ugrave; grande tra i pianeti nani del sistema solare e il secondo pi&ugrave; massiccio, superato in questo caso solo da Eris. Dopo la scoperta, il nuovo corpo celeste venne rinominato Plutone, divinit&agrave; romana dell'oltretomba. Il nome venne suggerito da una bambina di 11 anni, Venetia Burney, figlia di un professore di Oxford. Le prime lettere del nome, PL, anche iniziali dell'astronomo Percival Lowell che per primo ne ipotizz&ograve; l'esistenza. Dal 7 al 13 settembre 2006, quando 136199 Eris ricevette la denominazione ufficiale, &egrave; stato l'asteroide denominato con il pi&ugrave; alto numero ordinale. Prima della sua numerazione, il primato era di 129342 Ependes. In virt&ugrave; dei suoi parametri orbitali, Plutone &egrave; anche considerato un classico esempio di oggetto transnettuniano. Pur avendo la sua orbita il semiasse maggiore pi&ugrave; lungo di quello dell'orbita di Nettuno, esso si avvicina al Sole pi&ugrave; dello stesso Nettuno. Plutone &egrave; stato assunto quale elemento di riferimento della classe dei pianeti nani transnettuniani, denominati ufficialmente plutoidi dall'Unione Astronomica Internazionale. Plutone ha cinque satelliti conosciuti, il pi&ugrave; massiccio e importante dei quali &egrave; certamente Caronte, scoperto nel 1978 e avente un raggio poco pi&ugrave; della met&agrave; di quello di Plutone. Lanciata dalla NASA nel 2006, dopo oltre nove anni di viaggio la New Horizons &egrave; divenuta la prima sonda spaziale ad effettuare un sorvolo ravvicinato di Plutone, avvenuto il 14 luglio 2015 ad una distanza minima di 12.472 km dalla superficie del pianeta nano.
+ITA=Plutone &egrave; un pianeta nano orbitante nelle regioni periferiche del sistema solare, con un'orbita eccentrica a cavallo dell'orbita di Nettuno; fu scoperto nel 1930 da Clyde Tombaugh e inizialmente classificato come il nono pianeta. Tuttavia venne riclassificato come pianeta nano il 24 agosto 2006 e battezzato formalmente 134340 Pluto dalla UAI. Plutone &egrave; il pi&ugrave; grande tra i pianeti nani del sistema solare e il secondo pi&ugrave; massiccio, superato in questo caso solo da Eris. Dopo la scoperta, il nuovo corpo celeste venne rinominato Plutone, divinit&agrave; romana dell'oltretomba. Il nome venne suggerito da una bambina di 11 anni, Venetia Burney, figlia di un professore di Oxford. Le prime lettere del nome, PL, anche iniziali dell'astronomo Percival Lowell che per primo ne ipotizz&ograve; l'esistenza. Dal 7 al 13 settembre 2006, quando 136199 Eris ricevette la denominazione ufficiale, &egrave; stato l'asteroide denominato con il pi&ugrave; alto numero ordinale. Prima della sua numerazione, il primato era di 129342 Ependes. In virt&ugrave; dei suoi parametri orbitali, Plutone &egrave; anche considerato un classico esempio di oggetto transnettuniano. Pur avendo la sua orbita il semiasse maggiore pi&ugrave; lungo di quello dell'orbita di Nettuno, esso si avvicina al Sole pi&ugrave; dello stesso Nettuno. Plutone &egrave; stato assunto quale elemento di riferimento della classe dei pianeti nani transnettuniani, denominati ufficialmente plutoidi dall'Unione Astronomica Internazionale. Plutone ha cinque satelliti conosciuti, il pi&ugrave; massiccio e importante dei quali &egrave; certamente Caronte, scoperto nel 1978 e avente un raggio poco pi&ugrave; della met&agrave; di quello di Plutone. Lanciata dalla NASA nel 2006, dopo oltre nove anni di viaggio la New Horizons &egrave; divenuta la prima sonda spaziale ad effettuare un sorvolo ravvicinato di Plutone, avvenuto il 14 luglio 2015 ad una distanza minima di 12.472 km dalla superficie del pianeta nano.
+ENG=Pluto is a dwarf planet orbiting in the peripheral regions of the solar system, with an eccentric orbit straddling the orbit of Neptune; it was discovered in 1930 by Clyde Tombaugh and initially classified as the ninth planet. However, it was reclassified as a dwarf planet on August 24, 2006 and formally baptized 134340 Pluto by the UAI. Pluto is the largest of the dwarf planets in the solar system and the second largest, surpassed in this case only by Eris. After the discovery, the new celestial body was renamed Pluto, Roman god of the afterlife. The name was suggested by an 11-year-old girl, Venetia Burney, daughter of an Oxford professor. The first letters of the name, PL, also initials of the astronomer Percival Lowell who first hypothesized its existence. From 7 to 13 September 2006, when 136199 Eris received the official denomination, it was the asteroid named with the highest ordinal number. Before its numbering, the primacy was 129342 Ependes. By virtue of its orbital parameters, Pluto is also considered a classic example of a transneptunian object. Although its orbit has the longest semi-major axis longer than that of Neptune&apos;s orbit, it approaches the Sun more than Neptune itself. Pluto was taken as a reference element of the class of transneptunian dwarf planets, officially called plutoids by the International Astronomical Union. Pluto has five known satellites, the most massive and important of which is certainly Charon, discovered in 1978 and having a radius just over half that of Pluto. Launched by NASA in 2006, after more than nine years of travel, New Horizons became the first space probe to perform a close flight of Pluto, which took place on July 14, 2015 at a minimum distance of 12,472 km from the surface of the dwarf planet.
+
+
+
+
+CHIAVE=Giove (dal latino Iovem, accusativo di Iuppiter) &egrave; il quinto pianeta del sistema solare in ordine di distanza dal Sole e il pi&ugrave; grande di tutto il sistema planetario: la sua massa corrisponde a 2 volte e mezzo la somma di quelle di tutti gli altri pianeti messi insieme. &Egrave; classificato, al pari di Saturno, Urano e Nettuno, come gigante gassoso. Giove ha una composizione simile a quella del Sole: infatti &egrave; costituito principalmente da idrogeno ed elio con piccole quantit&agrave; di altri composti, quali ammoniaca, metano ed acqua. Si ritiene che il pianeta possegga una struttura pluristratificata, con un nucleo solido, presumibilmente di natura rocciosa e costituito da carbonio e silicati di ferro, sopra il quale gravano un mantello di idrogeno metallico ed una vasta copertura atmosferica che esercitano su di esso altissime pressioni. L'atmosfera esterna &egrave; caratterizzata da numerose bande e zone di tonalit&agrave; variabili dal color crema al marrone, costellate da formazioni cicloniche ed anticicloniche, tra le quali spicca la Grande Macchia Rossa. La rapida rotazione del pianeta gli conferisce l'aspetto di uno sferoide schiacciato ai poli e genera un intenso campo magnetico che d&agrave; origine ad un'estesa magnetosfera; inoltre, a causa del meccanismo di Kelvin-Helmholtz, Giove (come tutti gli altri giganti gassosi) emette una quantit&agrave; di energia superiore a quella che riceve dal Sole. A causa delle sue dimensioni e della composizione simile a quella solare, Giove &egrave; stato considerato per lungo tempo una "stella fallita": in realt&agrave; solamente se avesse avuto l'opportunit&agrave; di accrescere la propria massa sino a 75-80 volte quella attuale il suo nucleo avrebbe ospitato le condizioni di temperatura e pressione favorevoli all'innesco delle reazioni di fusione dell'idrogeno in elio, il che avrebbe reso il sistema solare un sistema stellare binario. L'intenso campo gravitazionale di Giove influenza il sistema solare nella sua struttura perturbando le orbite degli altri pianeti e lo "ripulisce" da detriti che altrimenti rischierebbero di colpire i pianeti pi&ugrave; interni. Intorno a Giove orbitano numerosi satelliti e un sistema di anelli scarsamente visibili; l'azione combinata dei campi gravitazionali di Giove e del Sole, inoltre, stabilizza le orbite di due gruppi di asteroidi troiani. Il pianeta, conosciuto sin dall'antichit&agrave;, ha rivestito un ruolo preponderante nel credo religioso di numerose culture, tra cui i Babilonesi, i Greci e i Romani, che lo hanno identificato con il sovrano degli dei. Il simbolo astronomico del pianeta &egrave; una rappresentazione stilizzata del fulmine, principale attributo di quella divinit&agrave;.
+ITA=Giove (dal latino Iovem, accusativo di Iuppiter) &egrave; il quinto pianeta del sistema solare in ordine di distanza dal Sole e il pi&ugrave; grande di tutto il sistema planetario: la sua massa corrisponde a 2 volte e mezzo la somma di quelle di tutti gli altri pianeti messi insieme. &Egrave; classificato, al pari di Saturno, Urano e Nettuno, come gigante gassoso. Giove ha una composizione simile a quella del Sole: infatti &egrave; costituito principalmente da idrogeno ed elio con piccole quantit&agrave; di altri composti, quali ammoniaca, metano ed acqua. Si ritiene che il pianeta possegga una struttura pluristratificata, con un nucleo solido, presumibilmente di natura rocciosa e costituito da carbonio e silicati di ferro, sopra il quale gravano un mantello di idrogeno metallico ed una vasta copertura atmosferica che esercitano su di esso altissime pressioni. L'atmosfera esterna &egrave; caratterizzata da numerose bande e zone di tonalit&agrave; variabili dal color crema al marrone, costellate da formazioni cicloniche ed anticicloniche, tra le quali spicca la Grande Macchia Rossa. La rapida rotazione del pianeta gli conferisce l'aspetto di uno sferoide schiacciato ai poli e genera un intenso campo magnetico che d&agrave; origine ad un'estesa magnetosfera; inoltre, a causa del meccanismo di Kelvin-Helmholtz, Giove (come tutti gli altri giganti gassosi) emette una quantit&agrave; di energia superiore a quella che riceve dal Sole. A causa delle sue dimensioni e della composizione simile a quella solare, Giove &egrave; stato considerato per lungo tempo una "stella fallita": in realt&agrave; solamente se avesse avuto l'opportunit&agrave; di accrescere la propria massa sino a 75-80 volte quella attuale il suo nucleo avrebbe ospitato le condizioni di temperatura e pressione favorevoli all'innesco delle reazioni di fusione dell'idrogeno in elio, il che avrebbe reso il sistema solare un sistema stellare binario. L'intenso campo gravitazionale di Giove influenza il sistema solare nella sua struttura perturbando le orbite degli altri pianeti e lo "ripulisce" da detriti che altrimenti rischierebbero di colpire i pianeti pi&ugrave; interni. Intorno a Giove orbitano numerosi satelliti e un sistema di anelli scarsamente visibili; l'azione combinata dei campi gravitazionali di Giove e del Sole, inoltre, stabilizza le orbite di due gruppi di asteroidi troiani. Il pianeta, conosciuto sin dall'antichit&agrave;, ha rivestito un ruolo preponderante nel credo religioso di numerose culture, tra cui i Babilonesi, i Greci e i Romani, che lo hanno identificato con il sovrano degli dei. Il simbolo astronomico del pianeta &egrave; una rappresentazione stilizzata del fulmine, principale attributo di quella divinit&agrave;.
+ENG=Jupiter (from the Latin Iovem, accusative of Iuppiter) is the fifth planet of the solar system in order of distance from the Sun and the largest of the whole planetary system: its mass corresponds to 2 and a half times the sum of all the others planets put together. It is classified, like Saturn, Uranus and Neptune, as a gas giant.  You have a composition similar to that of the Sun: in fact it is mainly made up of hydrogen and helium with small quantities of other compounds, such as ammonia , methane and water. It is believed that the planet has a multi-layered structure, with a solid core, presumably of a rocky nature and consisting of carbon and iron silicates, above which hang a mantle of metallic hydrogen and a vast atmospheric coverage that exert extremely high pressures on it.  The external atmosphere is characterized by numerous bands and zones of varying shades from cream to brown, dotted with cyclonic and anticyclonic formations, among which the Great Red Spot stands out. The rapid rotation of the planet gives it the appearance of a spheroid flattened at the poles and generates an intense magnetic field which gives rise to an extensive magnetosphere; furthermore, due to the Kelvin-Helmholtz mechanism, Jupiter (like all the other gas giants) emits more energy than it receives from the Sun.  Because of its size and composition similar to the solar one, Jupiter has been considered for a long time a \ &quot;failed star \&quot;: in reality only if it had the opportunity to increase its mass up to 75-80 times the current one its core would have hosted the temperature conditions and favorable pressure to trigger the fusion reactions of hydrogen into helium, which would have made the solar system a binary star system.  The intense gravitational field of Jupiter influences the solar system in the its structure disrupting the orbits of the other planets and \ &quot;cleans \&quot; it of debris that would otherwise risk hitting the innermost planets. Numerous satellites orbit and a system of scarcely visible rings orbit around Jupiter; the combined action of the gravitational fields of Jupiter and the Sun also stabilizes the orbits of two groups of Trojan asteroids.  The planet, known since antiquity, has played a major role in the creed religious of many cultures, including the Babylonians, Greeks and Romans, who identified him with the ruler of the gods. The astronomical symbol of the planet is a stylized representation of lightning, the main attribute of that divinity.
+
+
+
+
+CHIAVE=Nome ospite numero
+ITA=Nome ospite numero
+ENG=Name of the guest number
+
+
+
+
+CHIAVE=VENUS
+ITA=VENERE
+ENG=VENUS
+
+
+
+
+CHIAVE=Astronauta sdraiato
+ITA=Astronauta sdraiato
+ENG=Astronauta sdraiato
+
+
+
+
+CHIAVE=Admin privilege
+ITA=Privilegi di amministratore
+ENG=Admin privilege
+
+
+
+
+CHIAVE=Sex
+ITA=Sesso
+ENG=Sex
+
+
+
+
+CHIAVE=Mercurio &egrave; il pianeta pi&ugrave; interno del sistema solare e il pi&ugrave; vicino al Sole. &Egrave; il pi&ugrave; piccolo e la sua orbita &egrave; anche la pi&ugrave; eccentrica, ovvero la meno circolare, degli otto pianeti. Mercurio orbita in senso diretto (in senso antiorario, come tutti gli altri pianeti del Sistema Solare) a una distanza media di 0,3871 UA dal Sole con un periodo siderale di 87,969 giorni terrestri. Mercurio &egrave; anche in risonanza orbitale-rotazionale: completa tre rotazioni intorno al proprio asse ogni due orbite attorno al Sole. L'eccentricit&agrave; orbitale &egrave; abbastanza elevata e vale 0,205, ben 15 volte quella della Terra. Dalla superficie il Sole ha un diametro apparente medio di 1,4&deg;, circa 2,8 volte quello visibile dalla Terra, e arriva a 1,8&deg; durante il passaggio al perielio. Il rapporto fra la radiazione solare al perielio e quella all'afelio &egrave; 2,3. Per la Terra questo rapporto vale 1,07. La superficie di Mercurio sperimenta la maggiore escursione termica tra tutti i pianeti, con temperature che nelle regioni equatoriali vanno da 100 K (-173 &deg;C) della notte a 700 K (427 &deg;C) del d&igrave;; le regioni polari invece sono costantemente inferiori a 180 K (-93 &deg;C). Ci&ograve; &egrave; dovuto all'assenza dell'atmosfera che se presente svolgerebbe un ruolo nella ridistribuzione del calore. La superficie fortemente craterizzata indica che Mercurio &egrave; geologicamente inattivo da miliardi di anni. Conosciuto sin dal tempo dei Sumeri, il suo nome &egrave; tratto dalla mitologia romana. Il pianeta &egrave; stato associato a Mercurio, messaggero degli dei, probabilmente a causa della sua rapidit&agrave; di movimento nel cielo. Il suo simbolo astronomico &egrave; una versione stilizzata del caduceo del dio.
+ITA=Mercurio &egrave; il pianeta pi&ugrave; interno del sistema solare e il pi&ugrave; vicino al Sole. &Egrave; il pi&ugrave; piccolo e la sua orbita &egrave; anche la pi&ugrave; eccentrica, ovvero la meno circolare, degli otto pianeti. Mercurio orbita in senso diretto (in senso antiorario, come tutti gli altri pianeti del Sistema Solare) a una distanza media di 0,3871 UA dal Sole con un periodo siderale di 87,969 giorni terrestri. Mercurio &egrave; anche in risonanza orbitale-rotazionale: completa tre rotazioni intorno al proprio asse ogni due orbite attorno al Sole. L'eccentricit&agrave; orbitale &egrave; abbastanza elevata e vale 0,205, ben 15 volte quella della Terra. Dalla superficie il Sole ha un diametro apparente medio di 1,4&deg;, circa 2,8 volte quello visibile dalla Terra, e arriva a 1,8&deg; durante il passaggio al perielio. Il rapporto fra la radiazione solare al perielio e quella all'afelio &egrave; 2,3. Per la Terra questo rapporto vale 1,07. La superficie di Mercurio sperimenta la maggiore escursione termica tra tutti i pianeti, con temperature che nelle regioni equatoriali vanno da 100 K (-173 &deg;C) della notte a 700 K (427 &deg;C) del d&igrave;; le regioni polari invece sono costantemente inferiori a 180 K (-93 &deg;C). Ci&ograve; &egrave; dovuto all'assenza dell'atmosfera che se presente svolgerebbe un ruolo nella ridistribuzione del calore. La superficie fortemente craterizzata indica che Mercurio &egrave; geologicamente inattivo da miliardi di anni. Conosciuto sin dal tempo dei Sumeri, il suo nome &egrave; tratto dalla mitologia romana. Il pianeta &egrave; stato associato a Mercurio, messaggero degli dei, probabilmente a causa della sua rapidit&agrave; di movimento nel cielo. Il suo simbolo astronomico &egrave; una versione stilizzata del caduceo del dio.
+ENG=Mercury is the innermost planet in the solar system and the closest to the Sun. It is the smallest and its orbit is also the most eccentric, or the least circular, of the eight planets. Mercury orbits in a direct direction (counterclockwise, like all the other planets in the Solar System) at an average distance of 0.3871 UA from the Sun with a sidereal period of 87.969 Earth days. Mercury is also in orbital-rotational resonance: it completes three rotations around its axis every two orbits around the Sun.  The orbital eccentricity is quite high and is worth 0.205, 15 times that of Earth. From the surface the Sun has an average apparent diameter of 1.4 &deg;, about 2.8 times that visible from the Earth, and reaches 1.8 &deg; during the transition to perihelion. The ratio between perihelion and aphelion solar radiation is 2.3. For Earth this ratio is 1.07. The surface of Mercury experiences the greatest thermal excursion among all the planets, with temperatures ranging from 100 K (-173 &deg; C) during the night to 700 K (427 &deg; C) during the day; the polar regions, on the other hand, are constantly below 180 K (-93 &deg; C). This is due to the absence of the atmosphere which if present would play a role in the redistribution of heat. The strongly cratered surface indicates that Mercury has been geologically inactive for billions of years.  Known since the time of the Sumerians, its name is taken from Roman mythology. The planet has been associated with Mercury, messenger of the gods, probably because of its rapid movement in the sky. Its astronomical symbol is a stylized version of the god&apos;s caduceus. Venus is surrounded by a thick layer of highly reflective clouds, composed mainly of sulfuric acid, which prevent vision in the visible spectrum of the surface from space. The planet has no satellites or rings and has a weaker magnetic field than the Earth&apos;s.
+
+
+
+
+CHIAVE=Su Nettuno (e su Urano) non c’è acqua (almeno non in quantità significativa) ma piove. E data l’altissima concentrazione di carbonio è probabile che le gocce abbiano la stessa composizione dei diamanti.
+ITA=Su Nettuno (e su Urano) non c’è acqua (almeno non in quantità significativa) ma piove. E data l’altissima concentrazione di carbonio è probabile che le gocce abbiano la stessa composizione dei diamanti.
+ENG=On Neptune (and on Uranus) there is no water (at least not in significant quantities) but it rains. And given the very high concentration of carbon it is likely that the drops have the same composition as the diamonds.
+
+
+
+
+CHIAVE=See our space-ships!
+ITA=Dai un'occhiata alle nostre navicelle!
+ENG=See our space-ships!
+
+
+
+
+CHIAVE=Tipo di cabina:
+ITA=.
+ENG=Cabin's type:
+
+
+
+
+CHIAVE=Venere
+ITA=Venere
+ENG=Venus
+
+
+
+
+CHIAVE=Aggiungi
+ITA=Aggiungi
+ENG=Add
+
+
+
+
+CHIAVE=Non hai un account?
+ITA=Non hai un account?
+ENG=You don't have an account yet?
+
+
+
+
+CHIAVE=Modifica
+ITA=Modifica
+ENG=Modify
+
+
+
+
+CHIAVE=Prezzo totale
+ITA=Prezzo totale
+ENG=Total price
+
+
+
+
+CHIAVE=Io &egrave; un satellite naturale di Giove, il pi&ugrave; interno dei quattro satelliti medicei, il quarto satellite del sistema solare per dimensione e quello pi&ugrave; denso di tutti. Il suo nome deriva da quello di Io, una delle molte amanti di Zeus secondo la mitologia greca. Con oltre 300 vulcani attivi, Io &egrave; l'oggetto geologicamente pi&ugrave; attivo del sistema solare. L'estrema attivit&agrave; geologica &egrave; il risultato del riscaldamento mareale dovuto all'attrito causato al suo interno da Giove e dagli altri satelliti galileani. Molti vulcani producono pennacchi di zolfo e biossido di zolfo che si elevano fino a 500 km sulla sua superficie. Questa &egrave; costellata di oltre 100 montagne che sono state sollevate dalla compressione della crosta di silicati, con alcuni di questi picchi che arrivano ad essere pi&ugrave; alti dell'Everest. A differenza di molti satelliti del sistema solare esterno, che sono per lo pi&ugrave; composti di ghiaccio d'acqua, Io &egrave; composto principalmente da rocce di silicati che circondano un nucleo di ferro o di solfuro di ferro fusi. La maggior parte della superficie di Io &egrave; composta da ampie piane ricoperte di zolfo e anidride solforosa congelata. Il vulcanismo su Io &egrave; responsabile di molte delle sue caratteristiche. Le colate laviche hanno prodotto grandi cambiamenti superficiali e dipinto la superficie in varie tonalit&agrave; di colore giallo, rosso, bianco, nero, verde, in gran parte dovuti ai diversi allotropi e composti di zolfo. Numerose colate laviche di oltre 500 km di lunghezza, segnano la superficie di Io, e i materiali prodotti dal vulcanismo hanno costituito una sottile atmosfera a chiazze, ed hanno anche creato un toro di plasma attorno a Giove. Io ha svolto un ruolo significativo nello sviluppo dell'astronomia nel XVII e XVIII secolo: scoperto nel 1610 da Galileo Galilei, assieme agli altri satelliti galileiani, il suo studio favor&igrave; l'adozione del modello copernicano del sistema solare, allo sviluppo delle leggi di Keplero sul moto dei pianeti, e serv&igrave; per una prima stima della velocit&agrave; della luce. Dalla Terra, Io &egrave; rimasto solo un punto di luce fino alla fine del XIX secolo, quando divenne possibile risolvere le sue caratteristiche superficiali di dimensioni maggiori, come ad esempio le regioni polari rosso scure e le brillanti zone equatoriali. Nel 1979, le due sonde Voyager rivelarono l'attivit&agrave; geologica di Io, dotato di numerose formazioni vulcaniche, grandi montagne, e una superficie giovane priva di crateri da impatto. La sonda Galileo effettu&ograve; diversi passaggi ravvicinati tra gli anni novanta e l'inizio del XXI secolo, ottenendo dati sulla struttura interna e sulla composizione di Io, rivelando il rapporto tra Io e la magnetosfera di Giove e l'esistenza di una cintura di radiazioni centrata sull'orbita della luna. Io riceve circa 3600 rem (36 Sv) di radiazione al giorno. Ulteriori osservazioni furono eseguite dalla sonda Cassini-Huygens nel 2000 e dalla New Horizons nel 2007, e man mano che la tecnologia per l'osservazione progrediva, da telescopi terrestri e dal telescopio spaziale Hubble.
+ITA=Io &egrave; un satellite naturale di Giove, il pi&ugrave; interno dei quattro satelliti medicei, il quarto satellite del sistema solare per dimensione e quello pi&ugrave; denso di tutti. Il suo nome deriva da quello di Io, una delle molte amanti di Zeus secondo la mitologia greca. Con oltre 300 vulcani attivi, Io &egrave; l'oggetto geologicamente pi&ugrave; attivo del sistema solare. L'estrema attivit&agrave; geologica &egrave; il risultato del riscaldamento mareale dovuto all'attrito causato al suo interno da Giove e dagli altri satelliti galileani. Molti vulcani producono pennacchi di zolfo e biossido di zolfo che si elevano fino a 500 km sulla sua superficie. Questa &egrave; costellata di oltre 100 montagne che sono state sollevate dalla compressione della crosta di silicati, con alcuni di questi picchi che arrivano ad essere pi&ugrave; alti dell'Everest. A differenza di molti satelliti del sistema solare esterno, che sono per lo pi&ugrave; composti di ghiaccio d'acqua, Io &egrave; composto principalmente da rocce di silicati che circondano un nucleo di ferro o di solfuro di ferro fusi. La maggior parte della superficie di Io &egrave; composta da ampie piane ricoperte di zolfo e anidride solforosa congelata. Il vulcanismo su Io &egrave; responsabile di molte delle sue caratteristiche. Le colate laviche hanno prodotto grandi cambiamenti superficiali e dipinto la superficie in varie tonalit&agrave; di colore giallo, rosso, bianco, nero, verde, in gran parte dovuti ai diversi allotropi e composti di zolfo. Numerose colate laviche di oltre 500 km di lunghezza, segnano la superficie di Io, e i materiali prodotti dal vulcanismo hanno costituito una sottile atmosfera a chiazze, ed hanno anche creato un toro di plasma attorno a Giove. Io ha svolto un ruolo significativo nello sviluppo dell'astronomia nel XVII e XVIII secolo: scoperto nel 1610 da Galileo Galilei, assieme agli altri satelliti galileiani, il suo studio favor&igrave; l'adozione del modello copernicano del sistema solare, allo sviluppo delle leggi di Keplero sul moto dei pianeti, e serv&igrave; per una prima stima della velocit&agrave; della luce. Dalla Terra, Io &egrave; rimasto solo un punto di luce fino alla fine del XIX secolo, quando divenne possibile risolvere le sue caratteristiche superficiali di dimensioni maggiori, come ad esempio le regioni polari rosso scure e le brillanti zone equatoriali. Nel 1979, le due sonde Voyager rivelarono l'attivit&agrave; geologica di Io, dotato di numerose formazioni vulcaniche, grandi montagne, e una superficie giovane priva di crateri da impatto. La sonda Galileo effettu&ograve; diversi passaggi ravvicinati tra gli anni novanta e l'inizio del XXI secolo, ottenendo dati sulla struttura interna e sulla composizione di Io, rivelando il rapporto tra Io e la magnetosfera di Giove e l'esistenza di una cintura di radiazioni centrata sull'orbita della luna. Io riceve circa 3600 rem (36 Sv) di radiazione al giorno. Ulteriori osservazioni furono eseguite dalla sonda Cassini-Huygens nel 2000 e dalla New Horizons nel 2007, e man mano che la tecnologia per l'osservazione progrediva, da telescopi terrestri e dal telescopio spaziale Hubble.
+ENG=Io is a natural satellite of Jupiter, the innermost of the four Medici satellites, the fourth largest satellite in the solar system and the densest of all. Its name derives from that of Io, one of the many lovers of Zeus according to Greek mythology. With over 300 active volcanoes, Io is the geologically most active object in the solar system. The extreme geological activity is the result of the tidal heating due to the friction caused inside by Jupiter and other Galileo satellites. Many volcanoes produce sulfur plumes and sulfur dioxide which rise up to 500 km on its surface. This is dotted with over 100 mountains that have been raised by the compression of the silicate crust, with some of these peaks reaching taller than Everest. Unlike many satellites of the external solar system, which are mostly composed of water ice, Io is mainly composed of silicate rocks surrounding a molten iron or iron sulphide core. Most of Io&apos;s surface is made up of large plains covered with sulfur and frozen sulfur dioxide. Volcanism on Io is responsible for many of its characteristics. The lava flows produced major surface changes and painted the surface in various shades of yellow, red, white, black, green, largely due to the different allotropes and sulfur compounds. Numerous lava flows over 500 km long mark the surface of Io, and the materials produced by volcanism have formed a subtle patchy atmosphere, and have also created a plasma bull around Jupiter. Io played a significant role in the development of astronomy in the seventeenth and eighteenth centuries: discovered in 1610 by Galileo Galilei, together with the other Galilean satellites, his study favored the adoption of the Copernican model of the solar system, the development of laws of Kepler on the motion of the planets, and served for a first estimate of the speed of light. From Earth, Io remained only a point of light until the end of the nineteenth century, when it became possible to resolve its larger surface characteristics, such as the dark red polar regions and the bright equatorial zones. In 1979, the two Voyager probes revealed Io&apos;s geological activity, with numerous volcanic formations, large mountains, and a young surface free of impact craters. The Galileo spacecraft made several close passages between the nineties and the beginning of the 21st century, obtaining data on the internal structure and composition of Io, revealing the relationship between Io and the magnetosphere of Jupiter and the existence of a centered radiation belt on the orbit of the moon. I receive about 3600 rem (36 Sv) of radiation per day. Further observations were made by the Cassini-Huygens probe in 2000 and by New Horizons in 2007, and as the technology for observation progressed, by terrestrial telescopes and by the Hubble space telescope.
+
+
+
+
+CHIAVE=giorni
+ITA=giorni
+ENG=days
+
+
+
+
+CHIAVE=Cognome ospite
+ITA=Cognome ospite
+ENG=Guest's surname
+
+
+
+
+CHIAVE=Lista viaggi
+ITA=Lista viaggi
+ENG=Travels list
+
+
+
+
+CHIAVE=Back
+ITA=Indietro
+ENG=Back
+
+
+
+
+CHIAVE=Passengers
+ITA=Passeggeri
+ENG=Passengers
+
+
+
+
+CHIAVE=Space Club
+ITA=Space Club
+ENG=Space Club
+
+
+
+
+CHIAVE=MOON
+ITA=LUNA
+ENG=MOON
+
+
+
+
+CHIAVE=Plutone
+ITA=Plutone
+ENG=Pluto
+
+
+
+
+CHIAVE=See more infos about Arcasia
+ITA=Scopri di più sull'Arcasia
+ENG=See more infos about Arcasia
+
+
+
+
+CHIAVE=Female
+ITA=Femmina
+ENG=Female
+
+
+
+
+CHIAVE=Tipo di cabina
+ITA=Tipo di cabina
+ENG=Cabin's type
+
+
+
+
+CHIAVE=TRAVELS
+ITA=VIAGGI
+ENG=TRAVELS
+
+
+
+
+CHIAVE=Un giorno venusiano dura 243 giorni terrestri, mentre un anno è più breve visto che si articola in soli 224,7 giorni terrestri.
+ITA=Un giorno venusiano dura 243 giorni terrestri, mentre un anno è più breve visto che si articola in soli 224,7 giorni terrestri.
+ENG=A Venus day is equal to 243 Earth days, meanwhile a Venus year is shorter because it's only 224,7 earth days long.
+
+
+
+
+CHIAVE=COMPANY
+ITA=COMPAGNIA
+ENG=COMPANY
+
+
+
+
+CHIAVE=Lista viaggi:
+ITA=Lista viaggi:
+ENG=Travel list:
+
+
+
+
+CHIAVE=Administration panel
+ITA=Pannello di amministrazione
+ENG=Administration panel
+
+
+
+
+CHIAVE=First photo of the Blue Horizon's crew
+ITA=Prima foto dei membri di Blue Horizon
+ENG=First photo of the Blue Horizon's crew
+
+
+
+
+CHIAVE=Saturno &egrave; il sesto pianeta del sistema solare in ordine di distanza dal Sole e il secondo pianeta pi&ugrave; massiccio dopo Giove. Con un raggio medio 9,5 volte quello della Terra e una massa 95 volte superiore a quella terrestre Saturno, con Giove, Urano e Nettuno, &egrave; classificato come gigante gassoso. Il nome deriva dall'omonimo dio della mitologia romana, omologo del titano greco Crono. Il suo simbolo astronomico &egrave; una rappresentazione stilizzata della falce del dio dell'agricoltura e dello scorrere del tempo. Saturno &egrave; composto per il 95% da idrogeno e per il 3% da elio a cui seguono gli altri elementi. Il nucleo, consistente in silicati e ghiacci, &egrave; circondato da uno spesso strato di idrogeno metallico e quindi di uno strato esterno gassoso. I venti nell'atmosfera di Saturno possono raggiungere i 1 800 km/h, risultando significativamente pi&ugrave; veloci di quelli su Giove e leggermente meno veloci di quelli che spirano nell'atmosfera di Nettuno. Saturno ha un esteso e vistoso sistema di anelli che consiste principalmente in particelle di ghiaccio e polveri di silicati. Della sessantina di lune conosciute che orbitano intorno al pianeta, Titano &egrave; la maggiore ed anche l'unica luna del sistema solare ad avere un'atmosfera significativa.
+ITA=Saturno &egrave; il sesto pianeta del sistema solare in ordine di distanza dal Sole e il secondo pianeta pi&ugrave; massiccio dopo Giove. Con un raggio medio 9,5 volte quello della Terra e una massa 95 volte superiore a quella terrestre Saturno, con Giove, Urano e Nettuno, &egrave; classificato come gigante gassoso. Il nome deriva dall'omonimo dio della mitologia romana, omologo del titano greco Crono. Il suo simbolo astronomico &egrave; una rappresentazione stilizzata della falce del dio dell'agricoltura e dello scorrere del tempo. Saturno &egrave; composto per il 95% da idrogeno e per il 3% da elio a cui seguono gli altri elementi. Il nucleo, consistente in silicati e ghiacci, &egrave; circondato da uno spesso strato di idrogeno metallico e quindi di uno strato esterno gassoso. I venti nell'atmosfera di Saturno possono raggiungere i 1 800 km/h, risultando significativamente pi&ugrave; veloci di quelli su Giove e leggermente meno veloci di quelli che spirano nell'atmosfera di Nettuno. Saturno ha un esteso e vistoso sistema di anelli che consiste principalmente in particelle di ghiaccio e polveri di silicati. Della sessantina di lune conosciute che orbitano intorno al pianeta, Titano &egrave; la maggiore ed anche l'unica luna del sistema solare ad avere un'atmosfera significativa.
+ENG=Saturn is the sixth planet in the solar system in order of distance from the Sun and the second most massive planet after Jupiter. With an average radius 9.5 times that of the Earth and a mass 95 times greater than that of Earth, Saturn, with Jupiter, Uranus and Neptune, is classified as a gas giant. The name derives from the homonymous god of Roman mythology, counterpart of the Greek titan Cronus. Its astronomical symbol is a stylized representation of the sickle of the god of agriculture and the passage of time. Saturn is composed of 95% hydrogen and 3% helium followed by the other elements. The core, consisting of silicates and ice, is surrounded by a thick layer of metallic hydrogen and therefore by an external gaseous layer. The winds in Saturn&apos;s atmosphere can reach 1 800 km / h, resulting significantly faster than those on Jupiter and slightly less fast than those blowing in the atmosphere of Neptune. Saturn has an extensive and conspicuous ring system consisting mainly of ice particles and silicate dust. Of the sixty known moons that orbit the planet, Titan is the largest and also the only moon in the solar system to have a significant atmosphere.
+
+
+
+
+CHIAVE=Duration
+ITA=Durata
+ENG=Duration
+
+
+
+
+CHIAVE=ROCKETS
+ITA=NAVETTE
+ENG=ROCKETS
+
+
+
+
+CHIAVE=See more infos about Star Booster
+ITA=Scopri di più sul Millennium Balcon
+ENG=See more infos about Star Booster
+
+
+
+
+CHIAVE=pagina privata
+ITA=pagina privata
+ENG=private page
+
+
+
+
+CHIAVE=Cognome passeggero prenotante
+ITA=Cognome passeggero prenotante
+ENG=Your lastname
+
+
+
+
+CHIAVE=Marte &egrave; il quarto pianeta del sistema solare in ordine di distanza dal Sole; &egrave; visibile ad occhio nudo ed &egrave; l'ultimo dei pianeti di tipo terrestre dopo Mercurio, Venere e la Terra. Chiamato il Pianeta rosso a causa del suo colore caratteristico dovuto alle grandi quantit&agrave; di ossido di ferro che lo ricoprono. Marte prende il nome dall'omonima divinit&agrave; della mitologia romana e il suo simbolo astronomico &egrave; la rappresentazione stilizzata dello scudo e della lancia del dio. Pur presentando temperature medie superficiali piuttosto basse (tra -120 &deg;C e -14 &deg;C) e un'atmosfera molto rarefatta, &egrave; il pianeta pi&ugrave; simile alla Terra tra quelli del sistema solare. Le sue dimensioni sono intermedie fra quelle del nostro pianeta e della Luna, e presenta un'inclinazione dell'asse di rotazione e durata del giorno simili a quelle terrestri. La sua superficie presenta formazioni vulcaniche, valli, calotte polari e deserti sabbiosi, e formazioni geologiche che vi suggeriscono la presenza di un'idrosfera in un lontano passato. La superficie del pianeta appare fortemente craterizzata, a causa della quasi totale assenza di agenti erosivi (attivit&agrave; geologica, atmosferica e idrosferica, i principali) e dalla totale assenza di attivit&agrave; tettonica delle placche capace di formare e poi modellare le strutture tettoniche. La bassissima densit&agrave; dell'atmosfera non &egrave; poi in grado di consumare buona parte dei meteoriti, che pertanto raggiungono il suolo con maggior frequenza che non sulla Terra. Fra le formazioni geologiche pi&ugrave; notevoli di Marte si segnalano l'Olympus Mons o monte Olimpo, il vulcano pi&ugrave; grande del sistema solare (alto 27 ); le Valles Marineris, un lungo canyon notevolmente pi&ugrave; esteso di quelli terrestri e un enorme cratere sull'emisfero boreale ampio circa 40% dell'intera superficie marziana. All'osservazione diretta Marte presenta variazioni di colore, imputate storicamente alla presenza di vegetazione stagionale, che si modificano al variare dei periodi dell'anno. Successive osservazioni spettroscopiche dell'atmosfera hanno da tempo fatto abbandonare l'ipotesi che vi potessero essere mari, canali e fiumi oppure un'atmosfera sufficientemente densa. La smentita finale arriv&ograve; dalla missione Mariner 4, che nel 1965 mostr&ograve; un pianeta desertico e arido, caratterizzato da tempeste di sabbia periodiche e particolarmente violente. Missioni pi&ugrave; recenti hanno evidenziato presenza di acqua sotto forma di ghiaccio. Attorno al pianeta orbitano due satelliti naturali, Fobos e Deimos, di piccole dimensioni e dalla forma irregolare.
+ITA=Marte &egrave; il quarto pianeta del sistema solare in ordine di distanza dal Sole; &egrave; visibile ad occhio nudo ed &egrave; l'ultimo dei pianeti di tipo terrestre dopo Mercurio, Venere e la Terra. Chiamato il Pianeta rosso a causa del suo colore caratteristico dovuto alle grandi quantit&agrave; di ossido di ferro che lo ricoprono. Marte prende il nome dall'omonima divinit&agrave; della mitologia romana e il suo simbolo astronomico &egrave; la rappresentazione stilizzata dello scudo e della lancia del dio. Pur presentando temperature medie superficiali piuttosto basse (tra -120 &deg;C e -14 &deg;C) e un'atmosfera molto rarefatta, &egrave; il pianeta pi&ugrave; simile alla Terra tra quelli del sistema solare. Le sue dimensioni sono intermedie fra quelle del nostro pianeta e della Luna, e presenta un'inclinazione dell'asse di rotazione e durata del giorno simili a quelle terrestri. La sua superficie presenta formazioni vulcaniche, valli, calotte polari e deserti sabbiosi, e formazioni geologiche che vi suggeriscono la presenza di un'idrosfera in un lontano passato. La superficie del pianeta appare fortemente craterizzata, a causa della quasi totale assenza di agenti erosivi (attivit&agrave; geologica, atmosferica e idrosferica, i principali) e dalla totale assenza di attivit&agrave; tettonica delle placche capace di formare e poi modellare le strutture tettoniche. La bassissima densit&agrave; dell'atmosfera non &egrave; poi in grado di consumare buona parte dei meteoriti, che pertanto raggiungono il suolo con maggior frequenza che non sulla Terra. Fra le formazioni geologiche pi&ugrave; notevoli di Marte si segnalano l'Olympus Mons o monte Olimpo, il vulcano pi&ugrave; grande del sistema solare (alto 27 ); le Valles Marineris, un lungo canyon notevolmente pi&ugrave; esteso di quelli terrestri e un enorme cratere sull'emisfero boreale ampio circa 40% dell'intera superficie marziana. All'osservazione diretta Marte presenta variazioni di colore, imputate storicamente alla presenza di vegetazione stagionale, che si modificano al variare dei periodi dell'anno. Successive osservazioni spettroscopiche dell'atmosfera hanno da tempo fatto abbandonare l'ipotesi che vi potessero essere mari, canali e fiumi oppure un'atmosfera sufficientemente densa. La smentita finale arriv&ograve; dalla missione Mariner 4, che nel 1965 mostr&ograve; un pianeta desertico e arido, caratterizzato da tempeste di sabbia periodiche e particolarmente violente. Missioni pi&ugrave; recenti hanno evidenziato presenza di acqua sotto forma di ghiaccio. Attorno al pianeta orbitano due satelliti naturali, Fobos e Deimos, di piccole dimensioni e dalla forma irregolare.
+ENG=Mars is the fourth planet in the solar system in order of distance from the Sun; it is visible to the naked eye and is the last of the terrestrial planets after Mercury, Venus and Earth. Called the red planet because of its characteristic color due to the large quantities of iron oxide that cover it. Mars takes its name from the homonymous divinity of Roman mythology and its astronomical symbol is the stylized representation of the shield and spear of the god.  Pur presenting rather low average surface temperatures (between -120 &deg; C and -14 &deg; C) and a very rarefied atmosphere, it is the planet most similar to Earth among those of the solar system. Its dimensions are intermediate between those of our planet and of the Moon, and it presents an inclination of the axis of rotation and duration of the day similar to the terrestrial ones. Its surface has volcanic formations, valleys, polar caps and sandy deserts, and geological formations that suggest the presence of a hydrosphere in the distant past. The surface of the planet appears strongly cratered, due to the almost total absence of erosive agents (geological, atmospheric and hydrosphere activity, the main ones) and the total absence of plate tectonic activity capable of forming and then modeling the tectonic structures. The very low density of the atmosphere is then unable to consume a large part of the meteorites, which therefore reach the ground more frequently than on Earth. Among the most noteworthy geological formations on Mars, Olympus Mons or Mount Olympus, the largest volcano in the solar system (27 meters high); the Valles Marineris, a long canyon considerably larger than the terrestrial ones and a huge crater on the boreal hemisphere about 40% of the entire Martian surface.  At direct observation Mars presents color variations , historically attributed to the presence of seasonal vegetation, which change as the periods of the year change. Subsequent spectroscopic observations of the atmosphere have long since led to the hypothesis that there could be seas, canals and rivers or a sufficiently dense atmosphere. The final denial came from the Mariner 4 mission, which in 1965 showed a desert and arid planet, characterized by periodic and particularly violent sandstorms. More recent missions have highlighted the presence of water in the form of ice. Around the planet orbit two natural satellites, Fobos and Deimos, small in size and irregular in shape.
+
+
+
+
+CHIAVE=!
+ITA=!
+ENG=!
+
+
+
+
+CHIAVE=Urano &egrave; il settimo pianeta del sistema solare in ordine di distanza dal Sole, il terzo per diametro e il quarto per massa. Il suo simbolo astronomico Unicode &egrave;, stilizzazione della lettera H iniziale di William Herschel). Porta il nome del dio greco del cielo Urano, padre di Crono (Saturno), a sua volta padre di Zeus (Giove). Sebbene sia visibile anche ad occhio nudo, come gli altri cinque pianeti noti fin dall'antichit&agrave;, non fu mai riconosciuto come tale a causa della sua bassa luminosit&agrave; e della sua orbita particolarmente lenta e venne identificato come qualcosa di diverso da una stella soltanto il 13 marzo 1781 da William Herschel. Una curiosit&agrave; riguardo alla sua scoperta &egrave; che essa giunse del tutto inaspettata: i pianeti visibili ad occhio nudo (fino a Saturno) erano conosciuti da millenni e nessuno sospettava l'esistenza di altri pianeti, fino alla scoperta di Herschel che not&ograve; come una particolare stellina sembrava spostarsi. Da quel momento in poi nessuno fu pi&ugrave; sicuro del reale numero di pianeti del nostro sistema solare. La composizione chimica di Urano &egrave; simile a quella di Nettuno ed entrambi hanno una composizione differente rispetto a quella dei giganti gassosi pi&ugrave; grandi (Giove e Saturno). Per questa ragione gli astronomi talvolta preferiscono riferirsi a questi due pianeti trattandoli come una classe separata, i "giganti ghiacciati". L'atmosfera del pianeta, sebbene sia simile a quella di Giove e Saturno per la presenza abbondante di idrogeno ed elio, contiene una proporzione elevata di "ghiacci", come l'acqua, l'ammoniaca e il metano, assieme a tracce di idrocarburi. Quella di Urano &egrave; anche l'atmosfera pi&ugrave; fredda del sistema solare, con una temperatura minima che pu&ograve; scendere fino a 49 (-224 &deg;C). Possiede una complessa struttura di nubi ben stratificata, in cui si pensa che l'acqua si trovi negli strati inferiori e il metano in quelli pi&ugrave; in quota. L'interno del pianeta al contrario sarebbe composto principalmente di ghiacci e rocce. Una delle caratteristiche pi&ugrave; insolite del pianeta &egrave; l'orientamento del suo asse di rotazione. Tutti gli altri pianeti hanno il proprio asse quasi perpendicolare al piano dell'orbita, mentre quello di Urano &egrave; quasi parallelo. Ruota quindi esponendo al Sole uno dei suoi poli per met&agrave; del periodo di rivoluzione con conseguente estremizzazione delle fasi stagionali. Inoltre, poich&eacute; l'asse &egrave; inclinato di poco pi&ugrave; di 90&deg;, la rotazione &egrave; tecnicamente retrograda: Urano ruota nel verso opposto rispetto a quello di tutti gli altri pianeti del sistema solare (eccetto Venere) anche se, vista l'eccezionalit&agrave; dell'inclinazione la rotazione retrograda, &egrave; solo una nota minore. Il periodo della sua rivoluzione attorno al Sole &egrave; di circa 84 anni terrestri. L'orbita di Urano si discosta molto poco dell'eclittica (inclinazione di 0,7&deg;). Come gli altri pianeti giganti, Urano possiede un sistema di anelli planetari, una magnetosfera e numerosi satelliti; visti dalla Terra, a causa dell'inclinazione del pianeta, i suoi anelli possono talvolta apparire come un sistema concentrico che circonda il pianeta, oppure come nel 2007 e 2008 apparire di taglio. Nel 1986 la sonda Voyager 2 mostr&ograve; Urano come un pianeta senza alcun segno distintivo sulla sua superficie, senza le bande e tempeste tipiche degli altri giganti gassosi. Tuttavia, osservazioni successive condotte dalla Terra, hanno mostrato delle evidenze di cambiamenti legati alle stagioni e un aumento dell'attivit&agrave; climatica, quando il pianeta si &egrave; avvicinato all'equinozio.
+ITA=Urano &egrave; il settimo pianeta del sistema solare in ordine di distanza dal Sole, il terzo per diametro e il quarto per massa. Il suo simbolo astronomico Unicode &egrave;, stilizzazione della lettera H iniziale di William Herschel). Porta il nome del dio greco del cielo Urano, padre di Crono (Saturno), a sua volta padre di Zeus (Giove). Sebbene sia visibile anche ad occhio nudo, come gli altri cinque pianeti noti fin dall'antichit&agrave;, non fu mai riconosciuto come tale a causa della sua bassa luminosit&agrave; e della sua orbita particolarmente lenta e venne identificato come qualcosa di diverso da una stella soltanto il 13 marzo 1781 da William Herschel. Una curiosit&agrave; riguardo alla sua scoperta &egrave; che essa giunse del tutto inaspettata: i pianeti visibili ad occhio nudo (fino a Saturno) erano conosciuti da millenni e nessuno sospettava l'esistenza di altri pianeti, fino alla scoperta di Herschel che not&ograve; come una particolare stellina sembrava spostarsi. Da quel momento in poi nessuno fu pi&ugrave; sicuro del reale numero di pianeti del nostro sistema solare. La composizione chimica di Urano &egrave; simile a quella di Nettuno ed entrambi hanno una composizione differente rispetto a quella dei giganti gassosi pi&ugrave; grandi (Giove e Saturno). Per questa ragione gli astronomi talvolta preferiscono riferirsi a questi due pianeti trattandoli come una classe separata, i "giganti ghiacciati". L'atmosfera del pianeta, sebbene sia simile a quella di Giove e Saturno per la presenza abbondante di idrogeno ed elio, contiene una proporzione elevata di "ghiacci", come l'acqua, l'ammoniaca e il metano, assieme a tracce di idrocarburi. Quella di Urano &egrave; anche l'atmosfera pi&ugrave; fredda del sistema solare, con una temperatura minima che pu&ograve; scendere fino a 49 (-224 &deg;C). Possiede una complessa struttura di nubi ben stratificata, in cui si pensa che l'acqua si trovi negli strati inferiori e il metano in quelli pi&ugrave; in quota. L'interno del pianeta al contrario sarebbe composto principalmente di ghiacci e rocce. Una delle caratteristiche pi&ugrave; insolite del pianeta &egrave; l'orientamento del suo asse di rotazione. Tutti gli altri pianeti hanno il proprio asse quasi perpendicolare al piano dell'orbita, mentre quello di Urano &egrave; quasi parallelo. Ruota quindi esponendo al Sole uno dei suoi poli per met&agrave; del periodo di rivoluzione con conseguente estremizzazione delle fasi stagionali. Inoltre, poich&eacute; l'asse &egrave; inclinato di poco pi&ugrave; di 90&deg;, la rotazione &egrave; tecnicamente retrograda: Urano ruota nel verso opposto rispetto a quello di tutti gli altri pianeti del sistema solare (eccetto Venere) anche se, vista l'eccezionalit&agrave; dell'inclinazione la rotazione retrograda, &egrave; solo una nota minore. Il periodo della sua rivoluzione attorno al Sole &egrave; di circa 84 anni terrestri. L'orbita di Urano si discosta molto poco dell'eclittica (inclinazione di 0,7&deg;). Come gli altri pianeti giganti, Urano possiede un sistema di anelli planetari, una magnetosfera e numerosi satelliti; visti dalla Terra, a causa dell'inclinazione del pianeta, i suoi anelli possono talvolta apparire come un sistema concentrico che circonda il pianeta, oppure come nel 2007 e 2008 apparire di taglio. Nel 1986 la sonda Voyager 2 mostr&ograve; Urano come un pianeta senza alcun segno distintivo sulla sua superficie, senza le bande e tempeste tipiche degli altri giganti gassosi. Tuttavia, osservazioni successive condotte dalla Terra, hanno mostrato delle evidenze di cambiamenti legati alle stagioni e un aumento dell'attivit&agrave; climatica, quando il pianeta si &egrave; avvicinato all'equinozio.
+ENG=Uranus is the seventh planet in the solar system in order of distance from the Sun, third in diameter and fourth in mass. Its astronomical Unicode symbol is, stylization of the initial letter H by William Herschel). It bears the name of the Greek god of the sky Uranus, father of Cronus (Saturn), in turn father of Zeus (Jupiter). Although it is also visible to the naked eye, like the other five planets known since antiquity, it was never recognized as such due to its low brightness and its particularly slow orbit and was identified as something other than a star only the March 13, 1781 by William Herschel. A curiosity about his discovery is that it came completely unexpected: the planets visible to the naked eye (up to Saturn) had been known for millennia and no one suspected the existence of other planets, until the discovery of Herschel which he noticed as a particular starlet seemed to move. From that moment on, no one was more sure of the real number of planets in our solar system. The chemical composition of Uranus is similar to that of Neptune and both have a different composition than that of the larger gas giants (Jupiter and Saturn). For this reason, astronomers sometimes prefer to refer to these two planets by treating them as a separate class, the &quot;frozen giants&quot;. The atmosphere of the planet, although similar to that of Jupiter and Saturn due to the abundant presence of hydrogen and helium, contains a high proportion of &quot;ice&quot;, such as water, ammonia and methane, along with traces of hydrocarbons. Uranus is also the coldest atmosphere in the solar system, with a minimum temperature that can drop to 49 (-224 &deg; C). It has a complex well-layered cloud structure, in which the water is thought to be in the lower layers and methane in the higher ones. On the contrary, the interior of the planet would be composed mainly of ice and rocks. One of the most unusual characteristics of the planet is the orientation of its rotation axis. All the other planets have their own axis almost perpendicular to the plane of the orbit, while that of Uranus is almost parallel. It then rotates by exposing one of its poles to the Sun for half the revolution period with consequent extremes of the seasonal phases. Furthermore, since the axis is inclined by a little more than 90 &deg;, the rotation is technically retrograde: Uranus rotates in the opposite direction to that of all the other planets of the solar system (except Venus) even if, given the exceptionality of the inclination the retrograde rotation is only a minor note. The period of its revolution around the Sun is about 84 Earth years. The orbit of Uranus deviates very little from the ecliptic (inclination of 0.7 &deg;). Like the other giant planets, Uranus has a system of planetary rings, a magnetosphere and numerous satellites; seen from Earth, due to the inclination of the planet, its rings can sometimes appear as a concentric system that surrounds the planet, or as in 2007 and 2008 appear cut. In 1986 the Voyager 2 spacecraft showed Uranus as a planet with no distinctive mark on its surface, without the bands and storms typical of other gas giants. However, later observations from Earth showed evidence of changes related to the seasons and an increase in climatic activity when the planet approached the equinox.
+
+
+
+
+CHIAVE=Username
+ITA=Username
+ENG=Username
+
+
+
+
+CHIAVE=Sfondo Mobile
+ITA=Sfondo Mobile
+ENG=Mobile background
+
+
+
+
+CHIAVE=Ritorna alla
+ITA=Ritorna alla
+ENG=Back to
+
+
+
+
+CHIAVE=* required field
+ITA=* campo obbligatorio
+ENG=* required field

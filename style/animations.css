@@ -1,0 +1,114 @@
+/*animazioni div login*/
+    @keyframes enter-animation{
+        from{
+            right:-30%;
+            background-color: transparent;
+        }
+        to{
+            right: 9px;
+        }
+    }
+    @-webkit-keyframes enter-animation{
+        from{
+            right:-30%;
+            background-color: transparent;
+        }
+        to{
+            right: 9px;
+        }
+    }
+
+    @keyframes exit-animation{
+        from{
+            right: 9px;
+
+        }
+        to{
+            right:-30%;
+            background-color: transparent;
+        }
+    }
+    @-webkit-keyframes exit-animation{
+        from{
+            right: 9px;
+        }
+        to{
+            right:-30%;
+            background-color: transparent;
+        }
+    }
+
+    /*animazioni fade body*/
+    @-webkit-keyframes fade-body-animation{
+        from{
+            opacity: 1;
+        }
+        to {
+            opacity: 0.3;
+        }
+    }
+    @keyframes fade-body-animation{
+        from{
+            opacity: 1;
+        }
+        to {
+            opacity: 0.3;
+        }
+    }
+
+     @-webkit-keyframes unfade-body-animation{
+        from{
+            opacity: 0.3;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    @keyframes unfade-body-animation{
+        from{
+            opacity: 0.3;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@-webkit-keyframes showMenu{
+  from{ height: 0;}
+  to{height: auto;}
+}
+
+@keyframes showMenu{
+  from{ height: 0;}
+  to{height: auto;}
+}
+
+@-webkit-keyframes hideMenu{
+  from{ height: auto;}
+  to{height: 0;}
+}
+
+@keyframes hideMenu{
+  from{ height: auto;}
+  to{height: 0;}
+}

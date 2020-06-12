@@ -1,0 +1,30 @@
+
+/* @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700); */
+@font-face {
+  font-family: 'Lato', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
+}
+
+body {
+    color: black;
+
+    background-color: white;
+    background: url("../../img/admin-bg.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+section{
+  margin: 50px;
+}
+
+h1{
+  font-size: 30px;
+  color: rgba(#0e0d0d,.99);
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 15px;
+}

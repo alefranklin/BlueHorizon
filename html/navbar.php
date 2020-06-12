@@ -47,7 +47,7 @@
         <a class="space-font-small" tabindex="2" accesskey="e" href="<?= $host_path."language/language.php?lang=en" ?>">
           <?php echo "EN"; ?> </a></li>
         <li class="menuItem"><a class="<?= setActive($self, $home) ?>" tabindex="2" accesskey="h" href="http://<?= $_SERVER['SERVER_NAME'];?>/BlueHorizon/index.php" > <?php tr("HOME") ?> </a></li>
-        <li class="menuItem"><a class="<?= setActive($self, $company) ?>" tabindex="2" accesskey="c" href="html/company.php"> <?php tr("COMPANY") ?> </a></li>
+        <li class="menuItem"><a class="<?= setActive($self, $company) ?>" tabindex="2" accesskey="c" href="<?= $local_path. "html/company.php"?>"> <?php tr("COMPANY") ?> </a></li>
         <li class="menuItem"><a class="<?= setActive($self, $travels) ?>" tabindex="2" accesskey="t" href="<?= $host_path . "html/travels.php" ?>" > <?php tr("TRAVELS") ?> </a></li>
         <li class="menuItem"><a class="<?= setActive($self, $rockets) ?>" tabindex="2" accesskey="r" href="<?= $host_path . "html/rockets.php" ?>" > <?php tr("ROCKETS") ?> </a></li>
         <!-- login o, se loggato, username -->
