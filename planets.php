@@ -6,10 +6,9 @@ $PageTitle = "Destination";
 if (isset($_GET['planet'])) {
     $destination = $_GET['planet'];
 };
-function customPageHeader() {
-        //aggiungere tag specifici per questa pagina
-}
-?>
+  function customPageHeader() { ?>
+    <meta name="keywords" content="space, planets, voyage, books, trip">
+<?php } ?>
 
 
 <!-- head -->

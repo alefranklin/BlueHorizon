@@ -6,7 +6,7 @@
 
     function customPageHeader() { ?>
 
-        <!-- aggiungere tag specifici per questa pagina -->
+      <meta name="keywords" content="travels, interplanetary, planets, book, buy"/>
 
 <?php } ?>
 

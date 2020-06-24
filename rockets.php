@@ -4,15 +4,8 @@
     set_lang();
     $PageTitle="Rockets";
 
-    function customPageHeader() { ?>
-
-        <!-- aggiungere tag specifici per questa pagina -->
-
-<?php } ?>
-
-
-<!-- head -->
-<?php include("html/head.php"); ?>
+//head
+include("html/head.php"); ?>
 
 <!-- body -->
 <div id="header">

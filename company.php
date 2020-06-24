@@ -2,12 +2,11 @@
     session_start();
     include_once("utils/utility.php");
     set_lang();
-    #displayErrors();
     $PageTitle="Company";
 
     function customPageHeader() { ?>
 
-        <!-- aggiungere tag specifici per questa pagina -->
+      <meta name="keywords" content="space, rocket, sell, company, history"/>
 
 <?php } ?>
 

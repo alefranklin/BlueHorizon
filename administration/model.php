@@ -119,7 +119,6 @@
           break;
       }
       global $host_path;
-      #$result = get_query($query);
       $result = $db->query($query) or die(mysqli_error($db));
     }
 

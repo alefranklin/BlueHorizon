@@ -19,8 +19,6 @@
     $PageTitle="Administration panel";
 
     function customPageHeader() { ?>
-
-        <!-- aggiungere tag specifici per questa pagina -->
         <!--Pannello di gestione-->
         <link href="css/admin.css" rel="stylesheet" type="text/css" />
 

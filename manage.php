@@ -13,8 +13,6 @@
     $PageTitle="Pannello Admin";
 
     function customPageHeader() { ?>
-
-        <!-- aggiungere tag specifici per questa pagina -->
         <link href="css/admin.css" rel="stylesheet" type="text/css" />
 
 <?php }
@@ -47,7 +45,6 @@
         break;
 
       default:
-        // code...
         break;
     }
 

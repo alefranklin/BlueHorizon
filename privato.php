@@ -38,18 +38,8 @@
         }
     }
 
-
-    function customPageHeader() { ?>
-
-        <!-- aggiungere tag specifici per questa pagina -->
-
-        <!--Pannello di gestione-->
-
-
-<?php } ?>
-
-<!-- head -->
-<?php include("html/head.php") ?>
+//head 
+include("html/head.php") ?>
 
 <!-- body -->
 <div id="header">

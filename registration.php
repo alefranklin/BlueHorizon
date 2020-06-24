@@ -3,7 +3,7 @@
     include_once "administration/model_user.php";
 
     function customPageHeader() { ?>
-        <!-- aggiungere tag specifici per questa pagina -->
+        <meta name="keywords" content="registration, user, singup"/>
     <?php }
 
     $request = $_SERVER["REQUEST_METHOD"];

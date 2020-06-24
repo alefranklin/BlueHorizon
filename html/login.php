@@ -6,7 +6,7 @@
 
     function customPageHeader() { ?>
 
-        <!-- aggiungere tag specifici per questa pagina -->
+        <meta name="keywords" content="login"/>
 
 <?php } ?>
 <!-- head -->

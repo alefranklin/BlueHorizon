@@ -9,6 +9,8 @@
 
         <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 
+        <meta name="author" content="Stefano Baggio, Alessandro Franchin, Matteo Pagotto, Manuel Pagotto">
+
         <meta name="description" content="<?php tr("Vendita razzi") ?>"/>
 
         <meta name="keywords" content="space, rocket, sell"/>
