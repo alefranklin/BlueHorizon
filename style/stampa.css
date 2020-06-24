@@ -97,3 +97,7 @@ td:last-child{
 {
    text-align:left;
 }
+
+.back-up{
+    visibility: hidden;
+}

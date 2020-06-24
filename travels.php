@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include_once("../utils/utility.php");
+    include_once("utils/utility.php");
     set_lang();
     $PageTitle="Travels";
 
@@ -12,11 +12,11 @@
 
 
 <!-- head -->
-<?php include($local_path."html/head.php"); ?>
+<?php include("html/head.php"); ?>
 
 <!-- body -->
 <div id="header">
-    <?php include($local_path."html/navbar.php"); ?>
+    <?php include("html/navbar.php"); ?>
 </div>
 
 <div id="body-page" class="">
@@ -129,4 +129,4 @@
 
 
 <!-- footer -->
-<?php include($local_path."html/footer.php"); ?>
+<?php include("html/footer.php"); ?>

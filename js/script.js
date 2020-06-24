@@ -20,23 +20,6 @@ function toggleAccessibilityBottom() {
   else                                       div.className = "accessibility-hide"
 }
 
-function toggleUser() {
-    var userDiv = document.getElementById("user-div");
-    var bodyPage = document.getElementById("body-page");
-
-    if(userDiv.className === "initial"){
-        userDiv.className = "enter-animation";
-    } else {
-      if(userDiv.className === "enter-animation"){
-          bodyPage.className = "unfade-body";
-          userDiv.className = "exit-animation";
-      } else {
-          bodyPage.className = "fade-body";
-          userDiv.className = "enter-animation"
-      }
-    }
-}
-
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {

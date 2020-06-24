@@ -1,5 +1,5 @@
 <?php
-  include_once($local_path . "utils/utility.php");
+  include_once("../utils/utility.php");
 
   if (isAuth()) {
       $username = $_SESSION['user']['username'];
@@ -30,7 +30,7 @@
   <p>
   Horizon
   </p>
-  <img id="logo" src="<?php echo $host_path?>/img/logo1.png" alt="<?php tr("Blue Horizon's logo") ?>" aria-hidden="true"/>
+  <!-- <img id="logo" src="img/logo1.png" alt="<?php tr("Blue Horizon's logo") ?>" aria-hidden="true"/> -->
   </div>
   <!--<img id="logo" role="banner" src="?= $host_path."img/logo-placeholder.png" ?>" alt="Logo Blue Horizon"> -->
   <div id="menuShowMobile" onclick="toggleMenu()">
@@ -40,36 +40,36 @@
 
   <nav id="menu" class="topnav hideMenu">
       <ul>
-        <li id="lang"><!-- it -->
-        <a class="space-font-small" tabindex="2" accesskey="i" href="<?= $host_path."language/language.php?lang=it" ?>">
+        <li id="lang" class="menuItem"><!-- it -->
+        <a class="space-font-small" tabindex="2" accesskey="i" href="language/language.php?lang=it">
           <?php echo "IT"; ?> </a>
         <!-- en --><span class="separator"> |</span>
-        <a class="space-font-small" tabindex="2" accesskey="e" href="<?= $host_path."language/language.php?lang=en" ?>">
+        <a class="space-font-small" tabindex="2" accesskey="u" href="language/language.php?lang=en">
           <?php echo "EN"; ?> </a></li>
-        <li class="menuItem"><a class="<?= setActive($self, $home) ?>" tabindex="2" accesskey="h" href="http://<?= $_SERVER['SERVER_NAME'];?>/BlueHorizon/index.php" > <?php tr("HOME") ?> </a></li>
-        <li class="menuItem"><a class="<?= setActive($self, $company) ?>" tabindex="2" accesskey="c" href="<?= $local_path. "html/company.php"?>"> <?php tr("COMPANY") ?> </a></li>
-        <li class="menuItem"><a class="<?= setActive($self, $travels) ?>" tabindex="2" accesskey="t" href="<?= $host_path . "html/travels.php" ?>" > <?php tr("TRAVELS") ?> </a></li>
-        <li class="menuItem"><a class="<?= setActive($self, $rockets) ?>" tabindex="2" accesskey="r" href="<?= $host_path . "html/rockets.php" ?>" > <?php tr("ROCKETS") ?> </a></li>
+        <li class="menuItem"><a class="<?= setActive($self, $home) ?>" tabindex="2" accesskey="h" href="index.php" > <?php tr("HOME") ?> </a></li>
+        <li class="menuItem"><a class="<?= setActive($self, $company) ?>" tabindex="2" accesskey="p" href="company.php" > <?php tr("COMPANY") ?> </a></li>
+        <li class="menuItem"><a class="<?= setActive($self, $travels) ?>" tabindex="2" accesskey="t" href="travels.php" > <?php tr("TRAVELS") ?> </a></li>
+        <li class="menuItem"><a class="<?= setActive($self, $rockets) ?>" tabindex="2" accesskey="n" href="rockets.php" > <?php tr("ROCKETS") ?> </a></li>
         <!-- login o, se loggato, username -->
         <li>  <?php
   if (isAuth()) {
       if (isAdmin()) {
   ?>
-        <a class="<?= setActive($self, $admin) ?>" tabindex="2" accesskey="a" href="<?= $host_path . "user/privato.php" ?>"> <?php tr("ADMIN") ?> </a>
+        <a class="<?= setActive($self, $admin) ?>" tabindex="2" accesskey="a" href="privato.php"> <?php tr("ADMIN") ?> </a>
       <?php
       } else {
     ?>
-        <a class="<?= setActive($self, $user) ?>" tabindex="2" href="<?= $host_path . "user/privato.php" ?>">
+        <a class="<?= setActive($self, $user) ?>" tabindex="2" href="privato.php">
         <?php echo strtoupper($username); ?> </a>
     <?php
   } ?>
 	</li>
       <!-- logout -->
-      <li><a class="space-font" tabindex="2" accesskey="l" href="<?= $host_path."user/logout.php?" ?>"><?php tr("LOGOUT") ?> </a></li>
+      <li><a class="space-font" tabindex="2" accesskey="l" href="user/logout.php"><?php tr("LOGOUT") ?> </a></li>
   <?php
   } else {
   ?>
-      <a href="<?= $host_path . "html/login.php" ?>" tabindex="2" accesskey="k" class="<?= setActive($self, $login) ?>"> <?php tr("LOGIN") ?> </a>
+      <a href="login.php" tabindex="2" accesskey="l" class="<?= setActive($self, $login) ?>"> <?php tr("LOGIN") ?> </a>
         </li>
             <!-- login form -->
 

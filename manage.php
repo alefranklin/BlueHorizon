@@ -1,8 +1,8 @@
 <?php
     session_start();
-    include_once "../utils/utility.php"; // includo il file di connessione al database
-    include_once "model_travel.php";
-    include_once "model_user.php";
+    include_once "utils/utility.php"; // includo il file di connessione al database
+    include_once "administration/model_travel.php";
+    include_once "administration/model_user.php";
 
     if (!isAdmin()) {
         $msg = 4;
@@ -54,7 +54,7 @@
     //elimina tupla selezionata
     if($_GET['action'] == 'delete'){
       $model->apply();
-      smartRedir(5,$host_path."user/privato.php");
+      smartRedir(5,"privato.php");
     }
 
     if ($request == "POST") {
@@ -62,15 +62,15 @@
         //se non si sono verificati errori procedo con la registrazione dei dati
         if($model->controls()) {
           $model->apply();
-          smartRedir(5,$host_path."user/privato.php");
+          smartRedir(5,"privato.php");
         }
     }
 ?>
 
 
 <!-- head -->
-<?php include($local_path."../html/head.php"); ?>
-<?php include($local_path."../html/navbar.php"); ?>
+<?php include("html/head.php"); ?>
+<?php include("html/navbar.php"); ?>
 <section>
 
   <h2><?= $model->title ?></h2>
@@ -82,7 +82,7 @@
 </section>
 
 <!-- rimando alla pagina di amministrazione -->
- <a href="<?= $host_path."administration/admin.php" ?>" class="back-admin"><?php tr("Back");?></a>
+ <a href="admin.php" class="back-admin"><?php tr("Back");?></a>
 
 <!-- footer -->
-<?php include($local_path."../html/footer.php"); ?>
+<?php include("html/footer.php"); ?>

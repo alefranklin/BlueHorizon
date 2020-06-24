@@ -79,7 +79,7 @@
     }
 
     function smartRedir($msg,$link = "", $param=0){
-        global $local_path;
+        //global $local_path;
 
         if($link != ""){
           header("location:$link"."?snackmsg=$msg");
@@ -107,7 +107,7 @@
               header("location:$prev_page"."$getvar");
 
           } else {
-              header("location:$local_path"."?snackmsg=$msg"); // homepage
+              header("location:index.php"."?snackmsg=$msg"); // homepage
           }
         }
     }
@@ -210,12 +210,11 @@
       }
     }
 
-    function ErrorHandle($str=null) {
-      if ($DEBUG == 1 && isset($str)) {
-        print_r($str);
-      }
-      header("location:$host_path"."/html/errore.php"); // homepage
-    }
+    // function ErrorHandle($str=null) {
+    //   if ($DEBUG == 1 && isset($str)) {
+    //     print_r($str);
+    //   }
+    // }
 
     /**
      * [set_lang description]
@@ -250,18 +249,18 @@
     function tr($chiave) {
 
       global $DEBUG;
-      global $local_path;
+      //global $local_path;
       //guardo la lingua selezionata dalla variabile di Sessione
       //e apro il file json con la gista traduzione
       switch ($_SESSION['lang']) {
         case 'it':
-          $file_name = $local_path.'language/it.json';
+          $file_name = 'language/it.json';
           break;
         case 'en':
-          $file_name = $local_path.'language/en.json';
+          $file_name = 'language/en.json';
           break;
         default:
-          $file_name = $local_path.'language/it.json';
+          $file_name = 'language/it.json';
           break;
       }
 
@@ -281,7 +280,7 @@
       } else {
 
         if($DEBUG) {
-          $ferr = fopen($local_path.'language/chiavi.txt', 'a+');
+          $ferr = fopen('language/chiavi.txt', 'a+');
           fwrite($ferr, "$chiave\n");
           fclose($ferr);
         }

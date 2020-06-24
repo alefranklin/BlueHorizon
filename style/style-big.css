@@ -1,11 +1,8 @@
 @media only screen and (min-width: 595px){
     body {
-        /*padding-top:60px;*/
-        /*margin: auto;
-        width:80%;*/
+        height: 100%;
         margin:0;
-        background-color: #ffffff;
-       /* background-image: linear-gradient( white 75%, rgb(132, 132, 134))*/
+        overflow: hidden;
     }
 
     .fade-body{
@@ -23,12 +20,10 @@
     }
 
     #header_nav{
-        /*background-color: #404040;*/
         position:relative;
         top:0;
         width: 100%;
         text-align: left;
-        /*overflow: hidden;*/
         height:10vh;
         min-height: 62.5px;
         opacity: 1;
@@ -93,6 +88,16 @@
         position: absolute;
         top:10vh;
         width:100%;
+        height: 90vh;
+    }
+
+    .index-bg
+    {
+        background-image: url('../img/index-bg.jpg');
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     #title, .topnav
@@ -102,10 +107,6 @@
 
     #title
     {
-       /* position:relative;
-        bottom:5px;
-        height:inherit;
-        width:40%;*/
         margin-left:5%;
         font-size:2em;
         font-weight: bold;
@@ -126,13 +127,12 @@
     #home-title
     {
         position:relative;
+        font-weight: bold;
         z-index:2;
         color:white;
-        background-color:black;
         width:100%;
         height:10vh;
         padding:0 5% 0 5%;
-        box-shadow: 0 10px 10px black;
     }
 
     #home-title h1
@@ -248,14 +248,6 @@
       padding: 5px;
     }
 
-/*
-    .space-ship
-    {
-        width: 50%;
-        float:left;
-        overflow:auto;
-    }
-*/
     .topnav {
         position: absolute;
         right:5%;
@@ -301,35 +293,36 @@
     }
 
     #user-div{
+        width: 60%;
+        margin: 0% 20%;
         text-align:center;
-        position: fixed;
-        z-index:5;
-        height: 19em;
-        width: 25%;
-        top: 12%;
-        right: -30%;
-        float: right;
         background-color: white;
-        border-radius: 10px;
-        box-shadow: 0 0 10px black;
+        color: black;
+        min-height: 210px;
     }
 
     #user-div h2
     {
-        background-image: linear-gradient(to top left, rgb(60, 48, 170), rgb(11, 11, 82));
-        margin:0;
-        border-top-left-radius:10px;
-        border-top-right-radius:10px;
-        padding-top:0.5em;
-        padding-bottom:0.5em;
         font-size:2em;
         font-weight:bold;
         font-family:'lato', sans-serif;
-        color:white;
-        text-shadow: 2px 2px 2px black;
-        border-bottom: 3px solid darkorange;
     }
 
+    .registration-link{
+        text-align:center;
+        font-family: 'lato', sans-serif;
+        font-size: 12px;
+        color: #787878;
+        position: relative;
+        top: 10px;
+    }
+
+    .registration-link a
+    {
+        text-decoration: underline;
+        color:rgb(39, 39, 90);
+        font-size:1.3em;
+    }
 
 
     #username:focus
@@ -384,22 +377,15 @@
         margin-left:0.5em;
         padding-left:0.5em;
     }
-    /*.topnav a:visited{
-    }*/
+    
 
     .topnav ul li a:hover:before{
-        /*background: -webkit-linear-gradient(orange, lightgray);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;*/
+
         visibility: visible;
         -webkit-transform: scaleX(1);
         transform: scaleX(1);
     }
     .active{
-        /*background: -webkit-linear-gradient(#5294e2, #85b4ea);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;*/
-        /*pointer-events: none;*/
         color:yellow;
         font-weight: bolder;
     }
@@ -483,23 +469,7 @@
         border-radius: 3px;
     }
 
-    .registration-link{
-        width:100%;
-        text-align:center;
-        font-family: 'lato', sans-serif;
-        font-size: 12px;
-        color: rgb(78, 78, 78);
-        position:absolute;
-        left:0;
-        bottom:5%;
-    }
-
-    .registration-link a
-    {
-        text-decoration: underline;
-        color:rgb(39, 39, 90);
-        font-size:1.3em;
-    }
+    
 
 
         #snack-div {
@@ -836,10 +806,6 @@
       left:18em;
     }
 
-    .error{
-        /*float: right;*/
-    }
-
     #gender-select{
       height: 30px;
       width: auto;
@@ -899,12 +865,13 @@
 
     .company-content img
     {
-        width: 39%;
+        width: 50%;
+        object-fit: scale-down;
         margin: auto;
         position: absolute;
         right:0;
-        border: 3px solid grey;
-    }
+        height: auto;
+        }
 
     #planet-layout h1
     {
@@ -1108,7 +1075,7 @@
        width: auto;
        height: auto;
        text-decoration: underline;
-       position: fixed;
+       position: absolute;
        top: 0px;
        left: 0px;
        z-index: -1;
@@ -1123,13 +1090,10 @@
         left: 0px;
         z-index: 999;
         background-color: #fff;
+    }
+
+    .team-pic{
+        object-fit: scale-down;
+    }
 }
 
-}
-/*@media only screen and (min-width:595px and max-width:620px)
-{
-   #title p, #title img
-   {
-        display:block;
-   }
-}*/

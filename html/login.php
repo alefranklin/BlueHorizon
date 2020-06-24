@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include_once("../utils/utility.php");
+    include_once("utils/utility.php");
 
     $PageTitle="Blue Horizon";
 
@@ -10,19 +10,19 @@
 
 <?php } ?>
 <!-- head -->
-<?php include($local_path."html/head.php"); ?>
+<?php include("html/head.php"); ?>
 
 <!-- body -->
 <div id="header">
-    <?php include($local_path."html/navbar.php"); ?>
+    <?php include("html/navbar.php"); ?>
 </div>
 
 <?php
-  $verifica = $host_path."user/verifica.php";
-  $registration = $host_path."user/registration.php";
+  $verifica = "user/verifica.php";
+  $registration = "registration.php";
 ?>
 
-<div id="user-div">
+<div>
     <h2><?php tr("Accedi") ?></h2>
     <div>
         <form id="login" action="<?= $verifica ?>" method="post">
@@ -40,4 +40,4 @@
 </div>
 
 <!-- footer -->
-<?php include($local_path."html/footer.php"); ?>
+<?php include("html/footer.php"); ?>

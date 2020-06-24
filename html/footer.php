@@ -1,5 +1,5 @@
 
-  <i onclick="topFunction()" id="scroll-back-btn" class="fas fa-arrow-circle-up"> </i>
+  <i onclick="topFunction()" id="scroll-back-btn" class="fas fa-arrow-circle-up back-up"> </i>
 
   <div id="snack-div" class="">
       <div id="snack-img">

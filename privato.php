@@ -1,7 +1,7 @@
 <?php
     session_start();
-    include_once "../administration/model_user.php";
-    include_once("../utils/utility.php"); //includo i file necessari a collegarmi al db
+    include_once "administration/model_user.php";
+    include_once("utils/utility.php"); //includo i file necessari a collegarmi al db
 
     //se non c'è la sessione registrata
     if (isAuth()) {
@@ -9,7 +9,7 @@
         if(isAdmin()) {
             $snackstring = "";
             if(isset($_GET['snackmsg']))  $snackstring = "?snackmsg=".$_GET['snackmsg'];
-            header("location:".$host_path."administration/admin.php".$snackstring);
+            header("location:admin.php".$snackstring);
             die;
         }
         $title = "Benvenuto nella tua area riservata ";
@@ -17,6 +17,7 @@
     }
     else {
         $title = "Area riservata agli utenti";
+        header("location:login.php");
     }
 
     $request = $_SERVER["REQUEST_METHOD"];
@@ -48,11 +49,11 @@
 <?php } ?>
 
 <!-- head -->
-<?php include($local_path."../html/head.php"); ?>
+<?php include("html/head.php") ?>
 
 <!-- body -->
 <div id="header">
-    <?php include($local_path."../html/navbar.php"); ?>
+    <?php include("html/navbar.php"); ?>
 </div>
 
 <div id="body-page" class="">
@@ -70,7 +71,7 @@
 
           </form>
 
-          <?php tr("Ritorna alla") ?> <a href="<?= $host_path."user/privato.php" ?>" id="back"><?php tr("pagina privata") ?></a>
+          <?php tr("Ritorna alla") ?> <a href="privato.php" id="back"><?php tr("pagina privata") ?></a>
         </section>
 
       <?php } else { ?>
@@ -98,7 +99,7 @@
 
         </div>
 
-            <a href="<?= $host_path."user/privato.php?edit=1" ?>" class="blue-pill"> <?php tr("Modifica Info") ?> </a>
+            <a href="privato.php?edit=1" class="blue-pill"> <?php tr("Modifica Info") ?> </a>
             <br>
             <br>
 
@@ -150,11 +151,11 @@
             <br>
             <!--FINE PAGINA-->
 
-            <a href="<?= $host_path."user/logout.php" ?>" class="blue-pill"> Logout </a>
+            <a href="user/logout.php" class="blue-pill"> Logout </a>
 
         <?php } else { ?>
           <section>
-              <a href="<?= $host_path?>" class="blue-pill"> Home </a>
+              <a href="index.php" class="blue-pill"> Home </a>
           </section>
         <?php } ?>
 
@@ -164,4 +165,4 @@
 </div>
 
 <!-- footer -->
-<?php include($local_path."../html/footer.php"); ?>
+<?php include("html/footer.php"); ?>

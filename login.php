@@ -1,9 +1,28 @@
 <?php
+    session_start();
+    include_once("utils/utility.php");
+
+    $PageTitle="Blue Horizon";
+
+    function customPageHeader() { ?>
+
+        <!-- aggiungere tag specifici per questa pagina -->
+
+<?php } ?>
+<!-- head -->
+<?php include("html/head.php"); ?>
+
+<!-- body -->
+<div id="header">
+    <?php include("html/navbar.php"); ?>
+</div>
+
+<?php
   $verifica = "user/verifica.php";
   $registration = "registration.php";
 ?>
 
-<div>
+<div id="user-div">
     <h2><?php tr("Accedi") ?></h2>
     <div>
         <form id="login" action="<?= $verifica ?>" method="post">
@@ -19,3 +38,6 @@
         <?php tr("Non hai un account?") ?> <a href="<?= $registration ?>"><?php tr("Registrati qui!") ?></a>
     </span>
 </div>
+
+<!-- footer -->
+<?php include("html/footer.php"); ?>

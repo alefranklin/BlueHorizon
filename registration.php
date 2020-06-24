@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include_once "../administration/model_user.php";
+    include_once "administration/model_user.php";
 
     function customPageHeader() { ?>
         <!-- aggiungere tag specifici per questa pagina -->
@@ -21,7 +21,7 @@
             if(isset($ris_reg)) {
                 $vars = $model->get_vars();
                 get_user($vars["username"],$vars["password"]);
-                smartRedir(5);
+                smartRedir(5,"privato.php");
             } else {
               smartRedir(6);
             }
@@ -30,11 +30,11 @@
 ?>
 
 <!-- head -->
-<?php include($local_path."../html/head.php"); ?>
+<?php include("html/head.php") ?>
 
 <!-- body -->
 <div id="header">
-    <?php include($local_path."../html/navbar.php"); ?>
+    <?php include("html/navbar.php"); ?>
 </div>
 
 <div id="body-page">
@@ -46,9 +46,9 @@
       <?php $model->form(); ?>
 
     </form>
-    <?php tr("Ritorna alla") ?> <a href="<?= $host_path ?>" id="back">Home</a>
+    <?php tr("Ritorna alla") ?> <a href="index.php" id="back">Home</a>
   </section>
 </div>
 
 <!-- footer -->
-<?php include($local_path."../html/footer.php"); ?>
+<?php include("html/footer.php"); ?>

@@ -1,32 +1,26 @@
 <?php
 session_start();
-include_once ("../utils/utility.php");
+include_once ("utils/utility.php");
 set_lang();
 $PageTitle = "Destination";
 if (isset($_GET['planet'])) {
     $destination = $_GET['planet'];
 };
 function customPageHeader() {
-?>
-
-        <!-- aggiungere tag specifici per questa pagina -->
-
-<?php
+        //aggiungere tag specifici per questa pagina
 }
-
-$book = $local_path."html/book.php";
 ?>
 
 
 <!-- head -->
 <?php
-include ($local_path . "html/head.php");
+include ("html/head.php");
 ?>
 
 <!-- body -->
 <div id="header">
     <?php
-include ($local_path . "html/navbar.php");
+include ("html/navbar.php");
 ?>
 </div>
 
@@ -40,7 +34,7 @@ tr("← Return to Travels");
 if (!isset($_POST['pagato'])) {
     if (!isset($_POST['date'])) {
       if(!isset($_GET['planet'])){
-        header("location:".$host_path."html/travels.php");
+        header("location:travels.php");
       }
 ?>
 
@@ -232,7 +226,7 @@ if (!isset($_POST['pagato'])) {
             tr("Prezzo totale");
             echo ": ". $price['price']*$_POST['passengers']*$duration['duration'] . "<br>";
 ?>
-      <form method="post" action="<?= $book;?>">
+      <form method="post" action="html/book.php">
         <input type="hidden" name="id_user" value="<?php
             echo $_SESSION['user']['id'];
 ?>"/>
@@ -264,4 +258,4 @@ if (!isset($_POST['pagato'])) {
 </div>
 
 <!-- footer -->
-<?php include($local_path."html/footer.php"); ?>
+<?php include("html/footer.php"); ?>

@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include_once "../utils/utility.php"; // includo il file di connessione al database
+    include_once "utils/utility.php"; // includo il file di connessione al database
 
     //se non c'è la sessione registrata
     if (!isAdmin()) {
@@ -27,11 +27,11 @@
 <?php } ?>
 
 <!-- head -->
-<?php include($local_path."../html/head.php"); ?>
+<?php include("html/head.php"); ?>
 
 <!-- body -->
 <div id="header">
-    <?php include($local_path."../html/navbar.php"); ?>
+    <?php include("html/navbar.php"); ?>
 </div>
 
 <div id="body-page" class="">
@@ -127,9 +127,8 @@
           <br>
           <a class="blue-pill" href="manage.php?action=add&section=travel"><?php tr("Aggiungi") ?></a>
         </section>
-
-        
-            <a class="blue-pill" href="<?= $host_path."user/logout.php" ?>">Logout</a>
+          <br>
+          <a class="blue-pill" href="user/logout.php">Logout</a>
 
     <?php } ?>
 </div>
@@ -138,4 +137,4 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script src="js/table.js"></script>
 
-<?php include($local_path."../html/footer.php"); ?>
+<?php include("html/footer.php"); ?>

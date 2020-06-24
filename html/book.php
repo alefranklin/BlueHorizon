@@ -2,7 +2,7 @@
     session_start();
     include_once("../utils/utility.php");
 
-    $privato = $host_path."user/privato.php";
+    $privato = "../privato.php";
     global $db;
     $query = "INSERT INTO orders (id,id_user,id_travel,id_cabin,passengers_number) VALUES ";
     $query = $query . "(NULL,'" . $_POST['id_user'] . "','" . $_POST['id_travel'] . "','" . $_POST['id_cabin'] . "','" . $_POST['passengers_number'] . "')";

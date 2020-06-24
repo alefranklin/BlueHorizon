@@ -8,9 +8,11 @@
 
     if(get_user($username,$passwd)) {
         $msg = 1;
+        smartRedir($msg,"../privato.php");
     } else {
         // errore
         $msg = 3;
+        smartRedir($msg,"../login.php");
     }
-    smartRedir($msg);
+    
 ?>

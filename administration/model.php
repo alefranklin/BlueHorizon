@@ -15,7 +15,7 @@
    *    'delete'  : viene eliminata una tupla dal database
    *    'default' : permette di creare delle azioni personalizzate (ad esempio la registrazione dell'utente che è una modifica dell'azione 'add')
    */
-  include_once "../utils/utility.php"; // includo il file di connessione al database
+  include_once "utils/utility.php"; // includo il file di connessione al database
 
   interface Template {
     public function __construct($section, $action, $id);

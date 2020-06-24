@@ -7,33 +7,33 @@
 
 		<!-- <base href="<?= $base_url ?>"> -->
 
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 
-        <meta name="description" content="<?php tr("Vendita razzi") ?>">
+        <meta name="description" content="<?php tr("Vendita razzi") ?>"/>
 
-        <meta name="keywords" content="space, rocket, sell">
+        <meta name="keywords" content="space, rocket, sell"/>
 
         <!-- <meta charset="UTF-8"> -->
 
-				<script src="<?= $host_path."js/script.js" ?>"></script>
+				<script src="js/script.js"></script>
 
-        <link rel="stylesheet" type="text/css" href="<?= $host_path."style/animations.css" ?>">
+        <link rel="stylesheet" type="text/css" href="style/animations.css"/>
 
-        <link rel="stylesheet" type="text/css" href="<?= $host_path."style/style-small.css" ?>">
+        <link rel="stylesheet" type="text/css" href="style/style-small.css"/>
+        
+        <link rel="stylesheet" type="text/css" href="style/stampa.css" media="print"/>
 
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" type="text/css" href="style/style-big.css"/>
+        
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
 
-        <link rel="stylesheet" href= "<?= $host_path."style/stampa.css"?>"  media="print"  type="text/css" />
-
-        <link rel="stylesheet" type="text/css" href="<?= $host_path."style/style-big.css" ?>">
-
-        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type='text/css'>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" type='text/css'/>
 
 				<link
 				rel="stylesheet"
 				href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 				integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0="
-				crossorigin="anonymous">
+				crossorigin="anonymous"/>
 
         <link
 				rel="stylesheet"
