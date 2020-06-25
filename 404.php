@@ -2,7 +2,7 @@
     session_start();
     include_once("utils/utility.php");
     set_lang();
-    $PageTitle="Rockets";
+    $PageTitle="Error 404";
 
 //head
 include("html/head.php"); ?>
